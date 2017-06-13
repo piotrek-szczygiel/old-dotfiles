@@ -18,6 +18,12 @@ else if type -q nano
     set -xg EDITOR nano
 end
 
+if type -q alm
+    function almo
+        alm -o .
+    end
+end
+
 if type -q ls_colors_generator; and type -q ls-i
     set -xg LS_COLORS (ls_colors_generator)
 
