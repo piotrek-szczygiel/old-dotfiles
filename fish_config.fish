@@ -22,8 +22,8 @@ if type -q rg; and type -q fzf
             bind \cx '__fzf_find_and_execute'
             bind \cd '__fzf_cd'
 
-            bind \cq 'code (__fzfcmd)'
-            bind \cw 'nvim (__fzfcmd)'
+            bind \cq 'nvim (__fzfcmd)'
+            bind \cw 'code (__fzfcmd)'
     end
 
 end
