@@ -17,9 +17,15 @@ if type -q rg; and type -q fzf
     set -xg FZF_CD_COMMAND 'rg --hidden --sort-files --files --null -g "!{.git}/*" 2> /dev/null | xargs -0 dirname | uniq'
 
     function fish_user_key_bindings
-        bind \cp 'nvim (fzf)'
-        bind \co 'code (fzf)'
+            bind \ct '__fzf_find_file'
+            bind \cr '__fzf_reverse_isearch'
+            bind \cx '__fzf_find_and_execute'
+            bind \ec '__fzf_cd'
+
+            bind \cp 'nvim (__fzfcmd)'
+            bind \co 'code (__fzfcmd)'
     end
+
 end
 
 if type -q git
