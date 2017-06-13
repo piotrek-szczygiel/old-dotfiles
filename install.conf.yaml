@@ -1,6 +1,20 @@
 - clean: ['~']
 
+- defaults:
+    link:
+        create: true
+        force: true
+        relink: true
+
 - link:
     ~/.gitconfig: gitconfig
+    ~/.config/fish/config.fish: fish_config.fish
+    ~/.config/fish/fishfile: fish_plugins
+    ~/.config/nvim/init.vim: neovim_config.vim
+    ~/.local/bin/ls-i: bin/ls-i
+    ~/.local/bin/ls_colors_generator: bin/ls_colors_generator
+    ~/.local/bin/getip: bin/getip
 
-
+- shell:
+    - cp bin/adsl ~/.local/bin/
+    - cp bin/lte ~/.local/bin/

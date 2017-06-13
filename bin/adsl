@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+echo "Switching to ADSL connection"
+
+sudo ifconfig enp3s0 192.168.2.28 netmask 255.255.255.0
+sudo route add default gw 192.168.2.3 enp3s0
