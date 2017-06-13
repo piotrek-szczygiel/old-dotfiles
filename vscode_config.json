@@ -1,0 +1,7 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontFamily": "FuraCode Nerd Font",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "editor.renderWhitespace": "boundary"
+}
