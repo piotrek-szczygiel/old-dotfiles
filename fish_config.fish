@@ -10,7 +10,7 @@ if type -q nvim
     set -xg EDITOR nvim
 
     function n
-        nvim $args
+        nvim $argv
     end
 else if type -q vi
     set -xg EDITOR vi
