@@ -1,11 +1,13 @@
 colorscheme desert
 
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-set expandtab
-set autoindent
-set smartindent
-
 set number
 set ignorecase smartcase
+set wildmenu
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set fileencodings=utf-8
+set wildmode=longest,list,full
+set smartindent
+set autoindent
+set cindent
