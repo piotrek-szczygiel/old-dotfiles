@@ -20,10 +20,10 @@ if type -q rg; and type -q fzf
             bind \ct '__fzf_find_file'
             bind \cr '__fzf_reverse_isearch'
             bind \cx '__fzf_find_and_execute'
-            bind \ec '__fzf_cd'
+            bind \cd '__fzf_cd'
 
-            bind \cp 'nvim (__fzfcmd)'
-            bind \co 'code (__fzfcmd)'
+            bind \cq 'code (__fzfcmd)'
+            bind \cw 'nvim (__fzfcmd)'
     end
 
 end
