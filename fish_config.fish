@@ -1,10 +1,20 @@
 set -xg PATH ~/.local/bin $PATH
 
+if type -q go
+    set -xg GOPATH ~/Projekty/Go
+    set -xg PATH ~/Projekty/Go/bin $PATH
+end
+
 set -xg default_user piotr
 set -xg theme_nerd_fonts yes
 set -xg theme_title_use_abbreviated_path no
 set -xg theme_display_user yes
 
+if type -q git
+    function s
+        git status
+    end
+end
 
 if type -q nvim
     set -xg EDITOR nvim
