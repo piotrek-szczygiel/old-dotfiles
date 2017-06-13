@@ -3,5 +3,6 @@
     "editor.fontFamily": "FuraCode Nerd Font",
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
-    "editor.renderWhitespace": "boundary"
+    "editor.renderWhitespace": "boundary",
+    "workbench.colorTheme": "Monokai Dimmed"
 }
