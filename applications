@@ -15,7 +15,7 @@ confirm() {
 
 INSTALL="pacaur -S --noconfirm --noedit"
 
-confirm "Install fish?" && $INSTALL fish fisherman fzf
+confirm "Install fish?" && $INSTALL fish-git fisherman fzf
 confirm "Install virtualfish" && pip3 install --user virtualfish
 confirm "Install neovim?" && $INSTALL neovim python2-neovim python-neovim xsel
 confirm "Install vscode?" && $INSTALL visual-studio-code

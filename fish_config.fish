@@ -11,7 +11,15 @@ set -xg theme_title_use_abbreviated_path no
 set -xg theme_display_user yes
 
 if type -q rg; and type -q fzf
-    set -xg FZF_DEFAULT_COMMAND 'rg --files 2> /dev/null'
+    set -xg FZF_DEFAULT_COMMAND 'rg --sort-files --files -uu -g "!{.git}/*" 2> /dev/null'
+    set -xg FZF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
+
+    set -xg FZF_CD_COMMAND 'rg --hidden --sort-files --files --null -g "!{.git}/*" 2> /dev/null | xargs -0 dirname | uniq'
+
+    function fish_user_key_bindings
+        bind \cp 'nvim (fzf)'
+        bind \co 'code (fzf)'
+    end
 end
 
 if type -q git
