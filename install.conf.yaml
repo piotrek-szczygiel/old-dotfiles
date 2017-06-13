@@ -12,9 +12,10 @@
     ~/.config/fish/fishfile: fish_plugins
     ~/.config/nvim/init.vim: neovim_config.vim
     ~/.config/Code/User/settings.json: vscode_config.json
+    ~/.local/bin/ex: bin/ex
+    ~/.local/bin/getip: bin/getip
     ~/.local/bin/ls-i: bin/ls-i
     ~/.local/bin/ls_colors_generator: bin/ls_colors_generator
-    ~/.local/bin/getip: bin/getip
 
 - shell:
     - cp bin/adsl ~/.local/bin/
