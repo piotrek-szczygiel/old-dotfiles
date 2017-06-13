@@ -4,7 +4,7 @@ confirm() {
     read -r -p "${1:-Are you sure?} (y/N)" -n 1 response
     echo
     case "$response" in
-        [yY]) 
+        [yY])
             true
             ;;
         *)
