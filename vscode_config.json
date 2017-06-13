@@ -1,10 +1,14 @@
 // Place your settings in this file to overwrite the default settings
 {
+    "editor.dragAndDrop": false,
     "editor.fontFamily": "FuraCode Nerd Font",
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
-    "editor.renderWhitespace": "boundary",
+    "editor.formatOnPaste": true,
+    "editor.tabCompletion": true,
+    "editor.wordWrap": "bounded",
+    "files.trimTrailingWhitespace": true,
 
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "One Dark Pro"
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "vscode-icons"
 }
