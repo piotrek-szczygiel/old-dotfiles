@@ -12,16 +12,11 @@ if type -q nvim
     function n
         nvim $argv
     end
+
 else if type -q vi
     set -xg EDITOR vi
 else if type -q nano
     set -xg EDITOR nano
-end
-
-if type -q alm
-    function almo
-        alm -o .
-    end
 end
 
 if type -q ls_colors_generator; and type -q ls-i
