@@ -10,6 +10,10 @@ set -xg theme_nerd_fonts yes
 set -xg theme_title_use_abbreviated_path no
 set -xg theme_display_user yes
 
+if type -q rg; and type -q fzf
+    set -xg FZF_DEFAULT_COMMAND 'rg --files 2> /dev/null'
+end
+
 if type -q git
     function s
         git status
