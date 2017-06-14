@@ -5,6 +5,7 @@
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
     "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
     "editor.tabCompletion": true,
     "editor.wordWrap": "bounded",
     "files.trimTrailingWhitespace": true,
