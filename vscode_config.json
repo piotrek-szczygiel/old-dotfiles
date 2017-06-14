@@ -10,5 +10,7 @@
     "files.trimTrailingWhitespace": true,
 
     "workbench.colorTheme": "One Dark Pro",
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+
+    "remote.onstartup": true
 }
