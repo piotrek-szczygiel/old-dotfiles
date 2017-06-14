@@ -1,7 +1,7 @@
 {
     // Basic vscode configuration
     "editor.dragAndDrop": false,
-    "editor.fontFamily": "'FuraCode Nerd Font', monospace",
+    "editor.fontFamily": "FuraCode Nerd Font",
     "editor.fontLigatures": true,
     "editor.fontSize": 18,
     "editor.fontWeight": "500",
@@ -16,45 +16,5 @@
     "remote.onstartup": true,
 
     // Color theme
-    "workbench.colorTheme": "Atom One Dark",
-
-    // Vim basic configuration
-    "vim.leader": "<space>",
-    "vim.useSystemClipboard": true,
-    "vim.hlsearch": false,
-    "vim.statusBarColorControl": true,
-    "vim.visualstar": true,
-
-    // Vim custom keybindings
-    "vim.timeout": 400,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["f", "d"],
-            "after": ["<Esc>"]
-        },
-        {
-            "before": ["d", "f"],
-            "after": ["<Esc>"]
-        }
-    ],
-
-    "vim.otherModesKeyBindingsNonRecursive": [
-        {
-            "before": ["leader", "f", "s"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                }
-            ]
-        }
-    ],
-
-    // Neovim integration
-    "vim.disableAnnoyingNeovimMessage": true,
-    "vim.enableNeovim": true,
-
-    // Vim plugins configuration
-    "vim.easymotion": true
+    "workbench.colorTheme": "Atom One Dark"
 }
