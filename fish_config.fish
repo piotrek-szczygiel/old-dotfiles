@@ -3,16 +3,30 @@
 # Path settings
 set -xg PATH ~/.local/bin $PATH
 
+# GOPATH
 if type -q go
-    set -xg GOPATH ~/Projekty/Go
-    set -xg PATH ~/Projekty/Go/bin $PATH
+    set -xg PATH ~/go/bin $PATH
+    set -xg GOPATH ~/go
 end
+
+# virtualenv (Python3 virtualfish)
+if python3 -m virtualfish > /dev/null ^&1
+    eval (python3 -m virtualfish auto_activation) or true
+end
+
+# rbenv
+set -xg PATH ~/.rbenv/bin $PATH
+if type -q rbenv
+    status --is-interactive; and source (rbenv init -|psub)
+end
+
 
 # Theme settings
 set -xg default_user piotr
 set -xg theme_nerd_fonts yes
 set -xg theme_title_use_abbreviated_path no
 set -xg theme_display_user yes
+
 
 # Alias: s = git status
 if type -q git
@@ -43,10 +57,10 @@ end
 
 # fzf - fuzzy finder settings
 if type -q rg; and type -q fzf
-    set -xg FZF_DEFAULT_COMMAND 'rg --sort-files --files -uu -g "!{.git}/*" 2> /dev/null'
+    set -xg FZF_DEFAULT_COMMAND 'rg --sort-files --files -uu -g "!{.git}/*" ^ /dev/null'
     set -xg FZF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
 
-    set -xg FZF_CD_COMMAND 'rg --hidden --sort-files --files --null -g "!{.git}/*" 2> /dev/null | xargs -0 dirname | uniq'
+    set -xg FZF_CD_COMMAND 'rg --hidden --sort-files --files --null -g "!{.git}/*" ^ /dev/null | xargs -0 dirname | uniq'
 
     function fish_user_key_bindings --description 'My keybindings'
             bind \ct '__fzf_find_file'
@@ -79,9 +93,4 @@ if type -q ls_colors_generator; and type -q ls-i
     function l --description 'List files with fancy devicons'
         ls -a --group-directories-first $argv
     end
-end
-
-# Activate virtual fish (python virtualenv)
-if python3 -m virtualfish > /dev/null 2>&1
-    eval (python3 -m virtualfish auto_activation) or true
 end
