@@ -1,17 +1,60 @@
-// Place your settings in this file to overwrite the default settings
 {
+    // Basic vscode configuration
     "editor.dragAndDrop": false,
-    "editor.fontFamily": "FuraCode Nerd Font",
+    "editor.fontFamily": "'FuraCode Nerd Font', monospace",
     "editor.fontLigatures": true,
-    "editor.fontSize": 16,
+    "editor.fontSize": 18,
+    "editor.fontWeight": "500",
     "editor.formatOnPaste": true,
     "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderWhitespace": "boundary",
     "editor.tabCompletion": true,
+    "editor.wordWrapColumn": 80,
     "editor.wordWrap": "bounded",
-    "files.trimTrailingWhitespace": true,
 
-    "workbench.colorTheme": "One Dark Pro",
-    "workbench.iconTheme": "vscode-icons",
+    // Launch vscode-remote rmate server on startup
+    "remote.onstartup": true,
 
-    "remote.onstartup": true
+    // Color theme
+    "workbench.colorTheme": "Atom One Dark",
+
+    // Vim basic configuration
+    "vim.leader": "<space>",
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": false,
+    "vim.statusBarColorControl": true,
+    "vim.visualstar": true,
+
+    // Vim custom keybindings
+    "vim.timeout": 400,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["f", "d"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["d", "f"],
+            "after": ["<Esc>"]
+        }
+    ],
+
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["leader", "f", "s"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        }
+    ],
+
+    // Neovim integration
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.enableNeovim": true,
+
+    // Vim plugins configuration
+    "vim.easymotion": true
 }
