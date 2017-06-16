@@ -5,7 +5,7 @@ set -xg PATH ~/.local/bin $PATH
 
 # GOPATH
 set -xg PATH ~/go/bin $PATH
-set -xg PATH ~/usr/local/go/bin $PATH
+set -xg PATH /usr/local/go/bin $PATH
 set -xg GOPATH ~/go
 
 # virtualenv (Python3 virtualfish)
