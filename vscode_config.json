@@ -9,12 +9,12 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "boundary",
     "editor.tabCompletion": true,
-    "editor.wordWrapColumn": 80,
     "editor.wordWrap": "bounded",
 
     // Launch vscode-remote rmate server on startup
     "remote.onstartup": true,
 
-    // Color theme
-    "workbench.colorTheme": "Atom One Dark"
+    // Colors and icons
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.iconTheme": "vscode-icons"
 }
