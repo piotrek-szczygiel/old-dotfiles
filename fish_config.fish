@@ -4,10 +4,8 @@
 set -xg PATH ~/.local/bin $PATH
 
 # GOPATH
-if type -q go
-    set -xg PATH ~/go/bin $PATH
-    set -xg GOPATH ~/go
-end
+set -xg PATH ~/go/bin $PATH
+set -xg GOPATH ~/go
 
 # virtualenv (Python3 virtualfish)
 if python3 -m virtualfish > /dev/null ^&1
