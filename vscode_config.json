@@ -4,7 +4,7 @@
     "editor.fontFamily": "FuraCode NF",
     "editor.fontLigatures": true,
     "editor.fontSize": 18,
-    "editor.fontWeight": "500",
+    "editor.fontWeight": "400",
     "editor.formatOnPaste": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "boundary",
