@@ -16,5 +16,6 @@
 
     // Colors and icons
     "workbench.colorTheme": "Atom One Dark",
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.welcome.enabled": false
 }
