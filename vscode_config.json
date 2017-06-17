@@ -10,10 +10,8 @@
     "editor.renderWhitespace": "boundary",
     "editor.tabCompletion": true,
     "editor.wordWrap": "bounded",
-
     // Launch vscode-remote rmate server on startup
     "remote.onstartup": true,
-
     // Colors and icons
     "workbench.colorTheme": "Atom One Dark",
     "workbench.iconTheme": "vscode-icons",
