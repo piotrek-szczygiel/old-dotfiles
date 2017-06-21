@@ -4,7 +4,7 @@
     "editor.dragAndDrop": false,
     "editor.fontFamily": "FuraCode NF",
     "editor.fontLigatures": true,
-    "editor.fontSize": 18,
+    "editor.fontSize": 16,
     "editor.fontWeight": "400",
     "editor.formatOnPaste": true,
     "editor.multiCursorModifier": "ctrlCmd",
@@ -28,8 +28,11 @@
     "vim.easymotion": true,
     "vim.handleKeys": {
         "<C-a>": false,
+        "<C-b>": false,
         "<C-c>": false,
-        "<C-v>": false
+        "<C-f>": false,
+        "<C-v>": false,
+        "<C-w>": false
     },
     "vim.hlsearch": true,
     "vim.insertModeKeyBindings": [
