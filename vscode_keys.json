@@ -17,10 +17,5 @@
         "key": "ctrl+j",
         "command": "selectNextSuggestion",
         "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+enter",
-        "command": "acceptSelectedSuggestion",
-        "when": "editorTextFocus && suggestWidgetVisible"
     }
 ]

@@ -1,6 +1,5 @@
 {
     // Basic vscode configuration
-    "editor.acceptSuggestionOnEnter": "off",
     "editor.dragAndDrop": false,
     "editor.fontFamily": "FuraCode NF",
     "editor.fontLigatures": true,
@@ -38,10 +37,6 @@
     "vim.insertModeKeyBindings": [
         {
             "before": ["f", "d"],
-            "after": ["<Esc>"]
-        },
-        {
-            "before": ["d", "f"],
             "after": ["<Esc>"]
         }
     ],
