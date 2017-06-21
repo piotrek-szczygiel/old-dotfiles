@@ -20,13 +20,11 @@ if type -q rbenv
     status --is-interactive; and source (rbenv init -|psub)
 end
 
-
 # Theme settings
 set -xg default_user piotr
 set -xg theme_nerd_fonts yes
 set -xg theme_title_use_abbreviated_path no
 set -xg theme_display_user yes
-
 
 # Alias: s = git status
 if type -q git

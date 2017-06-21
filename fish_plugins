@@ -8,5 +8,6 @@ fisherman/get_file_age
 fisherman/getopts
 fisherman/last_job_id
 fisherman/menu
+oh-my-fish/plugin-thefuck
 fisherman/transfer
 fisherman/z
