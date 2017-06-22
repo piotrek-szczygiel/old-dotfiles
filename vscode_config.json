@@ -15,6 +15,8 @@
     "editor.renderWhitespace": "boundary",
     "editor.tabCompletion": true,
     "editor.wordWrap": "bounded",
+    // Python settings
+    "python.linting.pep8Enabled": true,
     // Launch vscode-remote rmate server on startup
     "remote.onstartup": true,
     // Colors and icons
