@@ -9,6 +9,16 @@ if type -q go
     set -xg GOPATH ~/go
 end
 
+# Angoland: connect SSH
+function angsh --description 'Connect with MOSH to angoland'
+    mosh svc@10.27.1.18
+end
+
+# Angoland: mount NFS
+function angfs --description 'Mount angoland NFS'
+    sudo mount angoland:/home/svc/piotrek/nfs /home/piotr/work/angoland/nfs
+end
+
 # virtualenv (Python3 virtualfish)
 if python3 -m virtualfish > /dev/null ^&1
     eval (python3 -m virtualfish auto_activation) or true
