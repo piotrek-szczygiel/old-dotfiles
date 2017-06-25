@@ -7,7 +7,7 @@
         "key": "ctrl+`",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
-    },
+    }/*,
     {
         "key": "ctrl+k",
         "command": "selectPrevSuggestion",
@@ -17,5 +17,5 @@
         "key": "ctrl+j",
         "command": "selectNextSuggestion",
         "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-    }
+    }*/
 ]
