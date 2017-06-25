@@ -25,10 +25,10 @@ if python3 -m virtualfish > /dev/null ^&1
 end
 
 # rbenv
-set -xg PATH ~/.rbenv/bin $PATH
-if type -q rbenv
-    status --is-interactive; and source (rbenv init -|psub)
-end
+# set -xg PATH ~/.rbenv/bin $PATH
+# if type -q rbenv
+#     status --is-interactive; and source (rbenv init -|psub)
+# end
 
 # Theme settings
 set -xg default_user piotr
