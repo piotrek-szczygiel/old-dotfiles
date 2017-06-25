@@ -5,27 +5,29 @@
     "editor.fontSize": 18,
     "editor.fontWeight": "400",
     "editor.formatOnPaste": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.quickSuggestions": {
-        "other": false,
-        "comments": false,
-        "strings": false
-    },
     "editor.renderWhitespace": "boundary",
-    "editor.tabCompletion": true,
     //Files settings
     "files.trimTrailingWhitespace": true,
     // Python settings
+    "python.linting.pylintEnabled": true,
     "python.linting.pep8Enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pydocstyleEnabled": true,
+    "python.linting.mypyEnabled": true,
     // Launch vscode-remote rmate server on startup
     "remote.onstartup": true,
     // Workbench settings
-    "workbench.colorTheme": "Spacemacs - light",
+    "workbench.colorTheme": "Spacemacs - dark",
     "workbench.iconTheme": "vscode-icons",
     "workbench.welcome.enabled": false,
     // Vim settings
     "vim.disableAnnoyingNeovimMessage": true,
     "vim.easymotion": true,
+    "vim.easymotionMarkerFontFamily": "Source Code Pro",
+    "vim.easymotionMarkerFontSize": "17",
+    "vim.easymotionMarkerHeight": 17,
+    "vim.easymotionMarkerWidthPerChar": 12,
+    "vim.easymotionMarkerYOffset": 13,
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-b>": false,
