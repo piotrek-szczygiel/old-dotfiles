@@ -1,8 +1,7 @@
 {
     // Basic vscode configuration
     "editor.dragAndDrop": false,
-    "editor.fontFamily": "FuraCode NF",
-    "editor.fontLigatures": true,
+    "editor.fontFamily": "Source Code Pro",
     "editor.fontSize": 18,
     "editor.fontWeight": "400",
     "editor.formatOnPaste": true,
@@ -20,12 +19,11 @@
     "python.linting.pep8Enabled": true,
     // Launch vscode-remote rmate server on startup
     "remote.onstartup": true,
-    // Colors and icons
-    "workbench.colorTheme": "Atom One Dark",
+    // Workbench settings
+    "workbench.colorTheme": "Spacemacs - light",
     "workbench.iconTheme": "vscode-icons",
     "workbench.welcome.enabled": false,
     // Vim settings
-    "vim.disableAnnoyingGcMessage": true,
     "vim.disableAnnoyingNeovimMessage": true,
     "vim.easymotion": true,
     "vim.handleKeys": {
@@ -33,6 +31,7 @@
         "<C-b>": false,
         "<C-c>": false,
         "<C-f>": false,
+        "<C-k>": false,
         "<C-v>": false,
         "<C-w>": false,
         "<C-x>": false
