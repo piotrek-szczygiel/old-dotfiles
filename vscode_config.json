@@ -6,6 +6,7 @@
     "editor.fontWeight": "400",
     "editor.formatOnPaste": true,
     "editor.renderWhitespace": "boundary",
+    "editor.rulers": [80],
     //Files settings
     "files.trimTrailingWhitespace": true,
     // Python settings
