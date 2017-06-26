@@ -14,7 +14,7 @@
     // Terminal settings
     "terminal.integrated.fontFamily": "MesloLGSDZ Nerd Font",
     // Workbench settings
-    "workbench.colorTheme": "Spacemacs - dark",
+    "workbench.colorTheme": "Spacemacs - light",
     "workbench.iconTheme": "vscode-icons",
     "workbench.welcome.enabled": false,
     // Vim settings
