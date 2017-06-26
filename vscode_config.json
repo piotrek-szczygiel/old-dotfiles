@@ -11,6 +11,8 @@
     "files.trimTrailingWhitespace": true,
     // Launch vscode-remote rmate server on startup
     "remote.onstartup": true,
+    // Terminal settings
+    "terminal.integrated.fontFamily": "MesloLGSDZ Nerd Font",
     // Workbench settings
     "workbench.colorTheme": "Spacemacs - dark",
     "workbench.iconTheme": "vscode-icons",
