@@ -38,16 +38,28 @@ set -xg theme_display_user yes
 
 # Alias: s = git status
 if type -q git
-    function gs --description 'Alias for git status'
-        git status $argv
-    end
+	function ga --description 'Alias for git add'
+		git add $argv
+	end
+
+	function gd --description 'Alias for git diff'
+		git diff $argv
+	end
 
     function gc --description 'Alias for git commit'
-        git commit $argv
+        git commit -m $argv
     end
+
+	function gca --description 'Alias for git commit -a'
+		git commit -am $argv
+	end
 
     function gp --description 'Alias for git push'
         git push $argv
+    end
+
+    function gs --description 'Alias for git status'
+        git status $argv
     end
 end
 
