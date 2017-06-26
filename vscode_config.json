@@ -9,12 +9,6 @@
     "editor.rulers": [80],
     //Files settings
     "files.trimTrailingWhitespace": true,
-    // Python settings
-    "python.linting.pylintEnabled": true,
-    "python.linting.pep8Enabled": true,
-    "python.linting.flake8Enabled": true,
-    "python.linting.pydocstyleEnabled": true,
-    "python.linting.mypyEnabled": true,
     // Launch vscode-remote rmate server on startup
     "remote.onstartup": true,
     // Workbench settings
