@@ -7,16 +7,19 @@
         relink: true
 
 - link:
-    ~/.gitconfig: gitconfig
+    ~/.config/Code/User/settings.json: vscode_config.json
+    ~/.config/Code/User/keybindings.json: vscode_keys.json
     ~/.config/fish/config.fish: fish_config.fish
     ~/.config/fish/fishfile: fish_plugins
     ~/.config/nvim/init.vim: neovim_config.vim
-    ~/.config/Code/User/settings.json: vscode_config.json
-    ~/.config/Code/User/keybindings.json: vscode_keys.json
+    ~/.config/systemd/user/emacsgui.service: emacsgui.service
+    ~/.config/systemd/user/emacsterm.service: emacsterm.service
+    ~/.gitconfig: gitconfig
     ~/.local/bin/ex: bin/ex
     ~/.local/bin/getip: bin/getip
     ~/.local/bin/ls-i: bin/ls-i
     ~/.local/bin/ls_colors_generator: bin/ls_colors_generator
+    ~/.spacemacs: spacemacs_config.el
 
 - shell:
     - cp bin/adsl ~/.local/bin/
