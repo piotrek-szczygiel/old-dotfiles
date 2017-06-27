@@ -10,13 +10,13 @@
     ~/.gitconfig: gitconfig
     ~/.config/fish/config.fish: fish_config.fish
     ~/.config/fish/fishfile: fish_plugins
+    ~/.config/nvim/init.vim: neovim_config.vim
     ~/.config/Code/User/settings.json: vscode_config.json
     ~/.config/Code/User/keybindings.json: vscode_keys.json
     ~/.local/bin/ex: bin/ex
     ~/.local/bin/getip: bin/getip
     ~/.local/bin/ls-i: bin/ls-i
     ~/.local/bin/ls_colors_generator: bin/ls_colors_generator
-    ~/.SpaceVim.d/init.vim: spacevim_config.vim
 
 - shell:
     - cp bin/adsl ~/.local/bin/
