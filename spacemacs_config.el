@@ -164,7 +164,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 16
+                               :size 18
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -341,9 +341,9 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
-  ;; Start scrolling when 5 lines above window border
-  (setq x-select-enable-clipboard-manager nil)
-  (setq smooth-scroll-margin 5)
+  (setq scroll-margin 5
+        vc-follow-symlinks t
+        x-select-enable-clipboard-manager nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
