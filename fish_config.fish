@@ -1,50 +1,65 @@
 #!/usr/bin/env fish
 
-# Path settings
+## PATH settings
+# Add local binary files to PATH
 set -xg PATH ~/.local/bin $PATH
 
-# GOPATH
+# Go binaries PATH
 if type -q go
     set -xg PATH ~/go/bin $PATH
     set -xg GOPATH ~/go
 end
 
-# Angoland: connect SSH
-function angsh --description 'Connect with MOSH to angoland'
-    mosh svc@10.27.1.18
-end
 
-# Angoland: mount NFS
-function angfs --description 'Mount angoland NFS'
-    sudo mount angoland:/home/svc/piotrek/nfs /home/piotr/work/angoland/nfs
-end
-
-# virtualenv (Python3 virtualfish)
-if python3 -m virtualfish > /dev/null ^&1
-    eval (python3 -m virtualfish auto_activation) or true
-end
-
-# rbenv
-# set -xg PATH ~/.rbenv/bin $PATH
-# if type -q rbenv
-#     status --is-interactive; and source (rbenv init -|psub)
-# end
-
-# Theme settings
+## Bobthefish theme settings
 set -xg default_user piotr
 set -xg theme_nerd_fonts yes
 set -xg theme_title_use_abbreviated_path no
 set -xg theme_display_user yes
 
-# Alias: s = git status
-if type -q git
-	function ga --description 'Alias for git add'
-		git add $argv
-	end
 
-	function gd --description 'Alias for git diff'
-		git diff $argv
-	end
+## Spacemacs settings
+# Emacs ansi-term support
+if test -n "$EMACS"
+    set -x TERM eterm-color
+end
+
+# Fix showing title in spacemacs shell
+function fish_title
+    true
+end
+
+
+## Aliases
+# Alias for spacemacs daemon gui
+function smdg
+    systemctl --user $argv emacsgui
+end
+
+# Alias for spacemacs daemon terminal
+function smdt
+    systemctl --user $argv emacsterm
+end
+
+# Alias for spacemacs gui client
+function smg
+    emacsclient -s gui -c $argv
+end
+
+# Alias for spacemacs terminal client
+function smt
+    emacsclient -s term -t $argv
+end
+
+# Some simple git aliases
+if type -q git
+    function ga --description 'Alias for git add'
+        git add $argv
+    end
+
+    function gd --description 'Alias for git diff'
+        git diff $argv
+    end
 
     function gc --description 'Alias for git commit'
         git commit -m $argv
@@ -63,25 +78,23 @@ if type -q git
     end
 end
 
+# Connect to ssh with rmate functionallity
 # Alias: rssh = ssh -R 52698:localhost:52698 user@host
 function rssh --description 'Start ssh connection with rmate forwarding'
     ssh -R 52698:localhost:52698 $argv
 end
 
-# Set default editor according to available programs
-# Alias: n = nvim
-if type -q nvim
+# Set EDITOR depending on which editor is installed
+if type -q smt
+    set -xg EDITOR smt
+else if type -q nvim
     set -xg EDITOR nvim
-
-    function n --description 'Alias for neovim'
-        nvim $argv
-    end
-
-else if type -q vi
-    set -xg EDITOR vi
+else if type -q vim
+    set -xg EDITOR vim
 else if type -q nano
     set -xg EDITOR nano
 end
+
 
 # Set up fancy colors and icons for ls
 if type -q ls_colors_generator; and type -q ls-i
@@ -102,4 +115,9 @@ if type -q ls_colors_generator; and type -q ls-i
     function l --description 'List files with fancy devicons'
         ls -a --group-directories-first $argv
     end
+end
+
+# virtualenv (Python3 virtualfish)
+if python3 -m virtualfish > /dev/null ^&1
+    eval (python3 -m virtualfish auto_activation) or true
 end
