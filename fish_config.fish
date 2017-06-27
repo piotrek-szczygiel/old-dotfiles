@@ -83,25 +83,6 @@ else if type -q nano
     set -xg EDITOR nano
 end
 
-# fzf - fuzzy finder settings
-if type -q rg; and type -q fzf
-    set -xg FZF_DEFAULT_COMMAND 'rg --sort-files --files -uu -g "!{.git}/*" ^ /dev/null'
-    set -xg FZF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
-
-    set -xg FZF_CD_COMMAND 'rg --hidden --sort-files --files --null -g "!{.git}/*" ^ /dev/null | xargs -0 dirname | uniq'
-
-    function fish_user_key_bindings --description 'My keybindings'
-            bind \ct '__fzf_find_file'
-            bind \cr '__fzf_reverse_isearch'
-            bind \cx '__fzf_find_and_execute'
-            bind \cd '__fzf_cd'
-
-            bind \cq 'nvim (__fzfcmd)'
-            bind \cw 'code (__fzfcmd)'
-    end
-
-end
-
 # Set up fancy colors and icons for ls
 if type -q ls_colors_generator; and type -q ls-i
     set -xg LS_COLORS (ls_colors_generator)
