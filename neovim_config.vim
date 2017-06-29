@@ -13,4 +13,13 @@ set smartcase
 " Show whitespace
 set listchars=tab:>-,trail:~,extends:>,precedes:<
 
-inoremap fd <Esc> 
+" Escape insert mode easily
+inoremap fd <Esc>
+set timeoutlen=300
+
+" Other mappings
+nnoremap fs :w<Cr>
+
+" Restore cursor position between sessions
+au BufWinLeave * mkview
+au VimEnter * silent loadview
