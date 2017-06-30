@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-echo -n "External IP address: "
-curl --retry 3 "http://canihazip.com/s"
-echo

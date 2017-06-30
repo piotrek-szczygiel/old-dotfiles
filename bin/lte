@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-echo "Switching to LTE connection"
-
-sudo ifconfig enp3s0 192.168.2.27 netmask 255.255.255.0
-sudo route add default gw 192.168.2.3 enp3s0
