@@ -22,6 +22,7 @@ set timeoutlen=300
 
 " Other mappings
 nnoremap fs :w<Cr>
+nnoremap fq :q<Cr>
 
 " Restore cursor position between sessions
 au BufWinLeave * mkview
