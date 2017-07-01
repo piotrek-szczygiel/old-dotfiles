@@ -11,6 +11,9 @@ URxvt*scrollTtyKeypress: true
 URxvt*secondaryScreen: 1
 URxvt*secondaryScroll: 0
 
+! Disable scrollbar
+URxvt*scrollBar: false
+
 ! Set terminal font
 URxvt*font: xft:Source Code Pro:size=12:antialias=true:hinting=true
 URxvt*boldFont: xft:Source Code Pro:bold:size=12:antialias=true:hinting=true
@@ -19,11 +22,20 @@ URxvt*iso14755: false
 URxvt*iso14755_52: false
 
 ! Perl extenstions
-URxvt*perl-ext-common: default,clipboard,matcher,tabbedex
 
-! Clickable URLs config
+! Extensions list
+URxvt*perl-ext-common: default,fullscreen,matcher,resize-font,tabbedex
+
+! Fullscreen config
+URxvt*keysym*F11: perl:fullscreen:switch
+
+! Matcher config
 URxvt*url-launcher: /usr/bin/xdg-open
 URxvt*matcher*button: 1
+
+! Resize-font config
+URxvt*resize-font*smaller: C-Down
+URxvt*resize-font*bigger: C-Up
 
 ! Color scheme generated from https://terminal.sexy
 ! special
