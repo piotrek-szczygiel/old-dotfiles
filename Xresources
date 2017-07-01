@@ -1,4 +1,5 @@
-URxvt*font: xft:Meslo LG S DZ:pixelsize=14
+URxvt*font: xft:Meslo LG S DZ:pixelsize=16
+URxvt*geometry: 80x25
 URxvt*iso14755: false
 URxvt*iso14755_52: false
 URxvt*scrollBar: false
