@@ -4,3 +4,6 @@
 [submodule "zplug"]
 	path = zplug
 	url = https://github.com/zplug/zplug
+[submodule "urxvt-perls"]
+	path = urxvt-perls
+	url = https://github.com/michaeltraxler/urxvt-perls
