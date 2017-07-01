@@ -10,5 +10,4 @@
     ~/.config/nvim/init.vim: init.vim
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
-    ~/.Xresources: Xresources
     ~/.zshrc: zshrc
