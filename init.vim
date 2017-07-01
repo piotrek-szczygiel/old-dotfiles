@@ -13,12 +13,15 @@ set smartcase
 " Show whitespace
 set listchars=tab:>-,trail:~,extends:>,precedes:<
 
+" Use different cursor shapes for different modes
+set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
+
 " Escape insert mode easily
 inoremap fd <Esc>
 set timeoutlen=300
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
-cmap w!! w !sudo tee > /dev/null %
+nnoremap fww :w !sudo tee > /dev/null %<Cr>
 
 " Other mappings
 nnoremap fs :w<Cr>
