@@ -11,6 +11,7 @@ set ignorecase
 set smartcase
 
 " Show whitespace
+set list
 set listchars=tab:>-,trail:~,extends:>,precedes:<
 
 " Use different cursor shapes for different modes
