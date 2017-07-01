@@ -22,7 +22,6 @@ URxvt*iso14755: false
 URxvt*iso14755_52: false
 
 ! Perl extenstions
-
 ! Extensions list
 URxvt*perl-ext-common: default,fullscreen,matcher,resize-font,tabbedex
 
