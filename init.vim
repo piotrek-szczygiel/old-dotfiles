@@ -1,6 +1,3 @@
-" Theme
-colorscheme desert
-
 " Indenting
 filetype plugin indent on
 
