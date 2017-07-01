@@ -12,6 +12,3 @@
     ~/.tmux.conf: tmux.conf
     ~/.Xresources: Xresources
     ~/.zshrc: zshrc
-
-- shell:
-    - xrdb ~/.Xresources
