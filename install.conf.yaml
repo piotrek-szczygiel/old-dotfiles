@@ -9,7 +9,6 @@
     ~/.config/alacritty/alacritty.yml: alacritty.yml
     ~/.config/nvim/init.vim: init.vim
     ~/.gitconfig: gitconfig
-    ~/.hyper.js: hyper.js
     ~/.tmux.conf: tmux.conf
     ~/.Xresources: Xresources
     ~/.zshrc: zshrc
