@@ -12,24 +12,53 @@ URxvt*secondaryScreen: 1
 URxvt*secondaryScroll: 0
 
 ! Set terminal font
-URxvt*font: xft:Source Code Pro:size=12
+URxvt*font: xft:Source Code Pro:size=12:antialias=true:hinting=true
+URxvt*boldFont: xft:Source Code Pro:bold:size=12:antialias=true:hinting=true
 
-! Dracula Xresources palette
-URxvt*foreground: #F8F8F2
-URxvt*background: #282A36
-URxvt*color0:     #000000
-URxvt*color8:     #4D4D4D
-URxvt*color1:     #FF5555
-URxvt*color9:     #FF6E67
-URxvt*color2:     #50FA7B
-URxvt*color10:    #5AF78E
-URxvt*color3:     #F1FA8C
-URxvt*color11:    #F4F99D
-URxvt*color4:     #BD93F9
-URxvt*color12:    #CAA9FA
-URxvt*color5:     #FF79C6
-URxvt*color13:    #FF92D0
-URxvt*color6:     #8BE9FD
-URxvt*color14:    #9AEDFE
-URxvt*color7:     #BFBFBF
-URxvt*color15:    #E6E6E6
+URxvt*iso14755: false
+URxvt*iso14755_52: false
+
+! Perl extenstions
+URxvt*perl-ext-common: default,clipboard,matcher,tabbedex
+
+! Clickable URLs config
+URxvt*url-launcher: /usr/bin/xdg-open
+URxvt*matcher*button: 1
+
+! Color scheme generated from https://terminal.sexy
+! special
+URxvt*foreground:   #c5c8c6
+URxvt*background:   #1d1f21
+URxvt*cursorColor:  #c5c8c6
+
+! black
+URxvt*color0:       #282a2e
+URxvt*color8:       #373b41
+
+! red
+URxvt*color1:       #a54242
+URxvt*color9:       #cc6666
+
+! green
+URxvt*color2:       #8c9440
+URxvt*color10:      #b5bd68
+
+! yellow
+URxvt*color3:       #de935f
+URxvt*color11:      #f0c674
+
+! blue
+URxvt*color4:       #5f819d
+URxvt*color12:      #81a2be
+
+! magenta
+URxvt*color5:       #85678f
+URxvt*color13:      #b294bb
+
+! cyan
+URxvt*color6:       #5e8d87
+URxvt*color14:      #8abeb7
+
+! white
+URxvt*color7:       #707880
+URxvt*color15:      #c5c8c6
