@@ -7,5 +7,6 @@
 
 - link:
     ~/.config/nvim/init.vim: init.vim
+    ~/.emacs: emacs
     ~/.gitconfig: gitconfig
     ~/.zshrc: zshrc
