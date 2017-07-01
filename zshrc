@@ -15,6 +15,11 @@ alias .....="cd ../../../.."
 alias k="k -h"
 alias ka="k -Ah"
 alias ls="ls --color"
+alias n="nvim"
+
+function mkcd() {
+    mkdir -p "$@"  && cd $_
+}
 
 # Source zplug
 source ~/.dotfiles/zplug/init.zsh
