@@ -45,6 +45,9 @@ URxvt*matcher*button: 1
 URxvt*resize-font*smaller: C-Down
 URxvt*resize-font*bigger: C-Up
 
+! Tabbedex config
+URxvt*tabbed*autohide: yes
+
 ! Color scheme generated from https://terminal.sexy
 ! special
 URxvt*foreground:   #c5c8c6
