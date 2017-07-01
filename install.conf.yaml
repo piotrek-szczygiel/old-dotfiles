@@ -8,4 +8,5 @@
 - link:
     ~/.config/nvim/init.vim: init.vim
     ~/.gitconfig: gitconfig
-    ~/.zshrc: zshrc
+    ~/.spacemacs: spacemacs.el
+    ~/.zshrc: zshrc.zsh
