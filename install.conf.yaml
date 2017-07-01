@@ -6,6 +6,7 @@
 - clean: ['~']
 
 - link:
+    ~/.config/alacritty/alacritty.yml: alacritty.yml
     ~/.config/nvim/init.vim: init.vim
     ~/.gitconfig: gitconfig
     ~/.hyper.js: hyper.js
