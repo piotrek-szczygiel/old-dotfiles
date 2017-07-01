@@ -14,7 +14,6 @@ alias .....="cd ../../../.."
 
 alias k="k -h"
 alias ka="k -Ah"
-alias ls="printf ''" # Force using 'k' instead of 'ls'
 
 # Source zplug
 source ~/.dotfiles/zplug/init.zsh
