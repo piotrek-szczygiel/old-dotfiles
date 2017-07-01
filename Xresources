@@ -23,7 +23,12 @@ URxvt*iso14755_52: false
 
 ! Perl extenstions
 ! Extensions list
-URxvt*perl-ext-common: default,fullscreen,keyboard-select,matcher,resize-font,tabbedex
+URxvt*perl-ext-common: default,autocomplete-ALL-the-things,fullscreen,keyboard-select,matcher,resize-font,tabbedex
+
+! Autocomplete config
+URxvt*keysym*M-slash: perl:aAtt:word-complete
+URxvt*keysym*M-question: perl:aAtt:fuzzy-complete
+URxvt*keysym*M-quotedbl: perl:aAtt:undo
 
 ! Fullscreen config
 URxvt*keysym*F11: perl:fullscreen:switch
