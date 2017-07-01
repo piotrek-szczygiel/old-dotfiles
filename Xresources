@@ -15,20 +15,24 @@ URxvt*secondaryScroll: 0
 URxvt*scrollBar: false
 
 ! Set terminal font
-URxvt*font: xft:Source Code Pro:size=12:antialias=true:hinting=true
-URxvt*boldFont: xft:Source Code Pro:bold:size=12:antialias=true:hinting=true
+URxvt*font: xft:Meslo LG S DZ:pixelsize=14
 
 URxvt*iso14755: false
 URxvt*iso14755_52: false
 
 ! Perl extenstions
 ! Extensions list
-URxvt*perl-ext-common: default,autocomplete-ALL-the-things,fullscreen,keyboard-select,matcher,resize-font,tabbedex
+URxvt*perl-ext-common: default,autocomplete-ALL-the-things,clipboard,fullscreen,keyboard-select,matcher,resize-font,tabbedex
 
 ! Autocomplete config
 URxvt*keysym*M-slash: perl:aAtt:word-complete
 URxvt*keysym*M-question: perl:aAtt:fuzzy-complete
 URxvt*keysym*M-quotedbl: perl:aAtt:undo
+
+! Clipboard config
+URxvt*keysym*Shift-Control-C: perl:clipboard:copy
+URxvt*keysym*Shift-Control-V: perl:clipboard:paste
+URxvt*clipboard*autocopy: true
 
 ! Fullscreen config
 URxvt*keysym*F11: perl:fullscreen:switch
@@ -48,40 +52,24 @@ URxvt*resize-font*bigger: C-Up
 ! Tabbedex config
 URxvt*tabbed*autohide: yes
 
-! Color scheme generated from https://terminal.sexy
-! special
-URxvt*foreground:   #c5c8c6
-URxvt*background:   #1d1f21
-URxvt*cursorColor:  #c5c8c6
+! Snazzy color scheme
+URxvt*background:   [97]#282a36
+URxvt*foreground:   #eff0eb
+URxvt*cursorColor:  #9aedfe
 
-! black
-URxvt*color0:       #282a2e
-URxvt*color8:       #373b41
-
-! red
-URxvt*color1:       #a54242
-URxvt*color9:       #cc6666
-
-! green
-URxvt*color2:       #8c9440
-URxvt*color10:      #b5bd68
-
-! yellow
-URxvt*color3:       #de935f
-URxvt*color11:      #f0c674
-
-! blue
-URxvt*color4:       #5f819d
-URxvt*color12:      #81a2be
-
-! magenta
-URxvt*color5:       #85678f
-URxvt*color13:      #b294bb
-
-! cyan
-URxvt*color6:       #5e8d87
-URxvt*color14:      #8abeb7
-
-! white
-URxvt*color7:       #707880
-URxvt*color15:      #c5c8c6
+URxvt*color0:      #33303b
+URxvt*color8:      #4f4b58
+URxvt*color1:      #ff5c57
+URxvt*color9:      #ff5c57
+URxvt*color2:      #5af78e
+URxvt*color10:     #5af78e
+URxvt*color3:      #f3f99d
+URxvt*color11:     #f3f99d
+URxvt*color4:      #57c7ff
+URxvt*color12:     #57c7ff
+URxvt*color5:      #ff6ac1
+URxvt*color13:     #ff6ac1
+URxvt*color6:      #9aedfe
+URxvt*color14:     #9aedfe
+URxvt*color7:      #eff0eb
+URxvt*color15:     #eff0eb
