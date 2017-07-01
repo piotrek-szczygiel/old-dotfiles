@@ -12,6 +12,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+alias gs="gst"
 alias k="k -h"
 alias ka="k -Ah"
 alias kf="ka | fpp"
