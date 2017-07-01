@@ -33,6 +33,7 @@ zplug "supercrabtree/k"
 zplug "zdharma/fast-syntax-highlighting", defer:2
 zplug "zdharma/history-search-multi-word"
 
+zplug "plugins/archlinux", from:oh-my-zsh
 zplug "plugins/git",  from:oh-my-zsh
 
 zplug "zsh-users/zsh-autosuggestions"
