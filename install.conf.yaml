@@ -8,4 +8,8 @@
 - link:
     ~/.config/nvim/init.vim: init.vim
     ~/.gitconfig: gitconfig
+    ~/.Xresources: Xresources
     ~/.zshrc: zshrc
+
+- shell:
+    - xrdb ~/.Xresources
