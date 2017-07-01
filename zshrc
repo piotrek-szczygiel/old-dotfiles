@@ -12,12 +12,12 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+alias e="$EDITOR"
 alias gs="gst"
 alias k="k -h"
 alias ka="k -Ah"
 alias kf="ka | fpp"
 alias ls="ls --color"
-alias n="nvim"
 
 function mkcd() {
     mkdir -p "$@"  && cd $_
