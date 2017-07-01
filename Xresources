@@ -1,3 +1,15 @@
+! Do not scroll with output
 URxvt*scrollTtyOutput: false
+
+! Scroll in relation to buffer
 URxvt*scrollWithBuffer: true
+
+! Scroll back to the bottom on keypress
 URxvt*scrollTtyKeypress: true
+
+! Disable scrollback buffer for secondary screen
+URxvt*secondaryScreen: 1
+URxvt*secondaryScroll: 0
+
+! Set terminal font
+URxvt*font: xft:Source Code Pro:size=12
