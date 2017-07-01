@@ -9,7 +9,7 @@ URxvt*secondaryScreen: 1
 URxvt*secondaryScroll: 0
 
 ! Plugin list
-URxvt*perl-ext-common: default,autocomplete-ALL-the-things,clipboard,fullscreen,keyboard-select,matcher,resize-font,tabbedex
+URxvt*perl-ext-common: default,autocomplete-ALL-the-things,clipboard,fullscreen,keyboard-select,matcher,tabbedex
 
 ! Autocomplete config
 URxvt*keysym*M-slash: perl:aAtt:word-complete
@@ -31,10 +31,6 @@ URxvt*keysym*M-s: perl:keyboard-select:search
 ! Matcher config
 URxvt*url-launcher: /usr/bin/xdg-open
 URxvt*matcher*button: 1
-
-! Resize-font config
-URxvt*resize-font*smaller: C-Down
-URxvt*resize-font*bigger: C-Up
 
 ! Tabbedex config
 URxvt*tabbed*autohide: yes
