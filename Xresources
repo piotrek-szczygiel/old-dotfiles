@@ -1,27 +1,14 @@
-! Do not scroll with output
-URxvt*scrollTtyOutput: false
-
-! Scroll in relation to buffer
-URxvt*scrollWithBuffer: true
-
-! Scroll back to the bottom on keypress
+URxvt*font: xft:Meslo LG S DZ:pixelsize=14
+URxvt*iso14755: false
+URxvt*iso14755_52: false
+URxvt*scrollBar: false
 URxvt*scrollTtyKeypress: true
-
-! Disable scrollback buffer for secondary screen
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
 URxvt*secondaryScreen: 1
 URxvt*secondaryScroll: 0
 
-! Disable scrollbar
-URxvt*scrollBar: false
-
-! Set terminal font
-URxvt*font: xft:Meslo LG S DZ:pixelsize=14
-
-URxvt*iso14755: false
-URxvt*iso14755_52: false
-
-! Perl extenstions
-! Extensions list
+! Plugin list
 URxvt*perl-ext-common: default,autocomplete-ALL-the-things,clipboard,fullscreen,keyboard-select,matcher,resize-font,tabbedex
 
 ! Autocomplete config
@@ -53,23 +40,23 @@ URxvt*resize-font*bigger: C-Up
 URxvt*tabbed*autohide: yes
 
 ! Snazzy color scheme
-URxvt*background:   [97]#282a36
+URxvt*background:   #282a36
 URxvt*foreground:   #eff0eb
 URxvt*cursorColor:  #9aedfe
 
-URxvt*color0:      #33303b
-URxvt*color8:      #4f4b58
-URxvt*color1:      #ff5c57
-URxvt*color9:      #ff5c57
-URxvt*color2:      #5af78e
-URxvt*color10:     #5af78e
-URxvt*color3:      #f3f99d
-URxvt*color11:     #f3f99d
-URxvt*color4:      #57c7ff
-URxvt*color12:     #57c7ff
-URxvt*color5:      #ff6ac1
-URxvt*color13:     #ff6ac1
-URxvt*color6:      #9aedfe
-URxvt*color14:     #9aedfe
-URxvt*color7:      #eff0eb
-URxvt*color15:     #eff0eb
+URxvt*color0:       #33303b
+URxvt*color8:       #4f4b58
+URxvt*color1:       #ff5c57
+URxvt*color9:       #ff5c57
+URxvt*color2:       #5af78e
+URxvt*color10:      #5af78e
+URxvt*color3:       #f3f99d
+URxvt*color11:      #f3f99d
+URxvt*color4:       #57c7ff
+URxvt*color12:      #57c7ff
+URxvt*color5:       #ff6ac1
+URxvt*color13:      #ff6ac1
+URxvt*color6:       #9aedfe
+URxvt*color14:      #9aedfe
+URxvt*color7:       #eff0eb
+URxvt*color15:      #eff0eb
