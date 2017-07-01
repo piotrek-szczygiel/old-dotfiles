@@ -16,6 +16,7 @@ alias k="k -h"
 alias ka="k -Ah"
 alias ls="ls --color"
 alias n="nvim"
+alias tpminstall="$TMUX_PLUGIN_MANAGER_PATH/tpm/scripts/install_plugins.sh"
 
 function mkcd() {
     mkdir -p "$@"  && cd $_
