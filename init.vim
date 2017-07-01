@@ -17,6 +17,9 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<
 inoremap fd <Esc>
 set timeoutlen=300
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 " Other mappings
 nnoremap fs :w<Cr>
 nnoremap fq :q<Cr>
