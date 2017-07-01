@@ -14,6 +14,7 @@ alias .....="cd ../../../.."
 
 alias k="k -h"
 alias ka="k -Ah"
+alias kf="ka | fpp"
 alias ls="ls --color"
 alias n="nvim"
 alias tpminstall="$TMUX_PLUGIN_MANAGER_PATH/tpm/scripts/install_plugins.sh"
