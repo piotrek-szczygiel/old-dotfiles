@@ -17,7 +17,6 @@ alias ka="k -Ah"
 alias kf="ka | fpp"
 alias ls="ls --color"
 alias n="nvim"
-alias tpminstall="$TMUX_PLUGIN_MANAGER_PATH/tpm/scripts/install_plugins.sh"
 
 function mkcd() {
     mkdir -p "$@"  && cd $_
@@ -28,7 +27,6 @@ source ~/.dotfiles/zplug/init.zsh
 
 # Plugins settings
 ENHANCD_DOT_ARG=...
-SPACESHIP_TIME_SHOW=true
 
 # Plugins list
 zplug "b4b4r07/enhancd", use:init.sh # Requires fzy
