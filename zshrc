@@ -24,9 +24,10 @@ SPACESHIP_TIME_SHOW=true
 
 # Plugins list
 zplug "b4b4r07/enhancd", use:init.sh # Requires fzy
-zplug "denysdovhan/spaceship-zsh-theme", use:spaceship.zsh, from:github, as:theme
 zplug "djui/alias-tips"
 zplug "chrissicool/zsh-256color"
+zplug "mafredri/zsh-async"
+zplug "sindresorhus/pure", use:pure.zsh, as:theme
 zplug "supercrabtree/k"
 zplug "zdharma/fast-syntax-highlighting", defer:2
 zplug "zdharma/history-search-multi-word"
