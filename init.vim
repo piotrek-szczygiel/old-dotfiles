@@ -28,11 +28,12 @@ set timeoutlen=500
 let mapleader=" "
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
-nnoremap <Leader>fW :w !sudo tee > /dev/null %<Cr>
+nnoremap <Leader>sw :w !sudo tee > /dev/null %<Cr>
 
 " Other mappings
-nnoremap <Leader>fs :w<Cr>
-nnoremap <Leader>qq :q<Cr>
+nnoremap fs :w<Cr>
+nnoremap qq :qa<Cr>
+nnoremap qw :q<Cr>
 
 " Restore cursor position between sessions
 if has("autocmd")
