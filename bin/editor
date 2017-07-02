@@ -6,9 +6,7 @@ else
     file="$@"
 fi
 
-if type emacsclient > /dev/null; then
-    emacsclient -c --alternate-editor emacs "${file}"
-elif type nvim > /dev/null; then
+if type nvim > /dev/null; then
     nvim "${file}"
 elif type vim > /dev/null; then
     vim "${file}"
