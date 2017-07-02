@@ -24,12 +24,15 @@ set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr
 inoremap fd <Esc>
 set timeoutlen=300
 
+" Set map leader
+let mapleader=" "
+
 " Allow saving of files as sudo when I forgot to start vim using sudo.
-nnoremap fww :w !sudo tee > /dev/null %<Cr>
+nnoremap <Leader>fW :w !sudo tee > /dev/null %<Cr>
 
 " Other mappings
-nnoremap fs :w<Cr>
-nnoremap fq :q<Cr>
+nnoremap <Leader>fs :w<Cr>
+nnoremap <Leader>qw :q<Cr>
 
 " Restore cursor position between sessions
 if has("autocmd")
