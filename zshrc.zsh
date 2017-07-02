@@ -20,6 +20,7 @@ alias ka="k -Ah"
 alias kf="ka | fpp"
 alias ls="ls --color"
 alias n="nvim"
+alias q="exit"
 
 function mkcd() {
     mkdir -p "$@"  && cd $_
@@ -51,3 +52,6 @@ zplug "zsh-users/zsh-completions"
 
 # Load plugins
 zplug load
+
+# virtualenvwrapper
+source virtualenvwrapper.sh
