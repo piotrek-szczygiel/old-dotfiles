@@ -6,4 +6,16 @@ else
     file="$@"
 fi
 
-emacsclient -c --alternate-editor emacs "${file}"
+if type emacsclient; then
+    emacsclient -c --alternate-editor emacs "${file}"
+elif type nvim; then
+    nvim "${file}"
+elif type vim; then
+    vim "${file}"
+elif type vi; then
+    vi "${file}"
+elif type nano; then
+    nano "${file}"
+else
+    echo "No editor found!"
+fi
