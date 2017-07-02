@@ -1,4 +1,5 @@
-export EDITOR=nvim
+export EDITOR="emacsclient -c"
+export PATH=~/.dotfiles/bin:$PATH
 
 HISTFILE=~/.zsh_history
 HISTSIZE=5000
