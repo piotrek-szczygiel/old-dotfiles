@@ -1,4 +1,4 @@
-export EDITOR="emacsclient -c"
+export EDITOR="editor"
 export PATH=~/.dotfiles/bin:$PATH
 
 HISTFILE=~/.zsh_history
