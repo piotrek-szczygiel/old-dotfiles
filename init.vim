@@ -22,7 +22,7 @@ set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr
 
 " Escape insert mode easily
 inoremap fd <Esc>
-set timeoutlen=300
+set timeoutlen=500
 
 " Set map leader
 let mapleader=" "
@@ -32,7 +32,7 @@ nnoremap <Leader>fW :w !sudo tee > /dev/null %<Cr>
 
 " Other mappings
 nnoremap <Leader>fs :w<Cr>
-nnoremap <Leader>q :q<Cr>
+nnoremap <Leader>qq :q<Cr>
 
 " Restore cursor position between sessions
 if has("autocmd")
