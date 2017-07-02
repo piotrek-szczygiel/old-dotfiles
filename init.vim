@@ -32,7 +32,7 @@ nnoremap <Leader>fW :w !sudo tee > /dev/null %<Cr>
 
 " Other mappings
 nnoremap <Leader>fs :w<Cr>
-nnoremap <Leader>qw :q<Cr>
+nnoremap <Leader>q :q<Cr>
 
 " Restore cursor position between sessions
 if has("autocmd")
