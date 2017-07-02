@@ -19,6 +19,7 @@ alias k="k -h"
 alias ka="k -Ah"
 alias kf="ka | fpp"
 alias ls="ls --color"
+alias n="nvim"
 
 function mkcd() {
     mkdir -p "$@"  && cd $_
