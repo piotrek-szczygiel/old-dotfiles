@@ -31,12 +31,14 @@ source ~/.dotfiles/zplug/init.zsh
 # Plugins settings
 ENHANCD_DOT_ARG=...
 
+SPACESHIP_PROMPT_SYMBOL="❯"
+SPACESHIP_TIME_SHOW=true
+
 # Plugins list
 zplug "b4b4r07/enhancd", use:init.sh # Requires fzy
 zplug "djui/alias-tips"
 zplug "chrissicool/zsh-256color"
-zplug "mafredri/zsh-async"
-zplug "sindresorhus/pure", use:pure.zsh, as:theme
+zplug "denysdovhan/spaceship-zsh-theme", use:spaceship.zsh, from:github, as:theme
 zplug "supercrabtree/k"
 zplug "zdharma/fast-syntax-highlighting", defer:2
 zplug "zdharma/history-search-multi-word"
