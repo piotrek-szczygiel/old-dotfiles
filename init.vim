@@ -1,3 +1,7 @@
+" If neovim is launched on remote machine (through SSH)
+" this value will equal false
+let g:local_session = ($SSH_CLIENT == "")
+
 " Color scheme
 colorscheme desert
 
@@ -34,12 +38,6 @@ nnoremap <Leader>sw :w !sudo tee > /dev/null %<Cr>
 nnoremap fs :w<Cr>
 nnoremap qq :qa<Cr>
 nnoremap qw :q<Cr>
-
-" Testing for future plugin disabling while in ssh
-let g:remote_session = ($SSH_CLIENT != "")
-if g:remote_session
-    set number
-endif
 
 " Restore cursor position between sessions
 if has("autocmd")
