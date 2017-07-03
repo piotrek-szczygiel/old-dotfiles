@@ -9,4 +9,4 @@
     ~/.config/nvim/init.vim: init.vim
     ~/.gitconfig: gitconfig
     ~/.local/share/konsole/Dracula.colorscheme: Dracula.colorscheme
-    ~/.zshrc: zshrc.zsh
+    ~/.zshrc: zshrc
