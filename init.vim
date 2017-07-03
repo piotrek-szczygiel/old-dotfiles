@@ -2,6 +2,12 @@
 " this value will equal false
 let g:local_session = ($SSH_CLIENT == "")
 
+" Launch plugins only if on local machine
+if g:local_session
+    call plug#begin('~/.local/share/nvim/plugged')
+    call plug#end()
+endif
+
 " Color scheme
 colorscheme desert
 
