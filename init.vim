@@ -59,6 +59,8 @@ let g:local_session = ($SSH_CLIENT == "")
 if g:local_session
     call plug#begin('~/.local/share/nvim/plugged')
 
+    Plug 'airblade/vim-gitgutter'
+
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
     Plug 'junegunn/fzf.vim'
 
