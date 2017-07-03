@@ -35,7 +35,7 @@ nnoremap <Leader>sw :w !sudo tee > /dev/null %<Cr>
 nnoremap <Leader>fs :w<Cr>
 
 " Open neovim configuration
-nnoremap <Leader>fed :edit $MYVIMRC<Cr>
+nnoremap <Leader>fed :edit ~/.dotfiles/init.vim<Cr>
 
 " Reload neovim configuration
 nnoremap <Leader>fer :source $MYVIMRC<Cr>
