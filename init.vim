@@ -34,6 +34,12 @@ nnoremap <Leader>sw :w !sudo tee > /dev/null %<Cr>
 " Save file
 nnoremap <Leader>fs :w<Cr>
 
+" Open neovim configuration
+nnoremap <Leader>fed :edit $MYVIMRC<Cr>
+
+" Reload neovim configuration
+nnoremap <Leader>fer :source $MYVIMRC<Cr>
+
 " Close neovim
 nnoremap <Leader>qq :qa<Cr>
 
