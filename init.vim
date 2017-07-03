@@ -57,6 +57,9 @@ let g:local_session = ($SSH_CLIENT == "")
 
 " Launch plugins only if on local machine
 if g:local_session
+    let g:python_host_prog = $HOME . "/.virtualenvs/neovim2/bin/python"
+    let g:python3_host_prog = $HOME . "/.virtualenvs/neovim3/bin/python"
+
     call plug#begin('~/.local/share/nvim/plugged')
 
     Plug 'airblade/vim-gitgutter'
@@ -64,24 +67,30 @@ if g:local_session
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
     Plug 'junegunn/fzf.vim'
 
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
     Plug 'tpope/vim-fugitive'
 
+    Plug 'zchee/deoplete-jedi'
+
     call plug#end()
+
+    " Plugin configuration
+    " deoplete
+    call deoplete#enable()
+    " fzf
+    nnoremap <Leader>ff :Files<Cr>
+    nnoremap <Leader>pf :GFiles<Cr>
+
+    " vim-fugitive
+    nnoremap <Leader>gb :Gblame<Cr>
+    nnoremap <Leader>gc :Gcommit<Cr>
+    nnoremap <Leader>gd :Gdelete<Cr>
+    nnoremap <Leader>ge :Gedit<Cr>
+    nnoremap <Leader>gg :Ggrep<Cr>
+    nnoremap <Leader>gl :Glog<Cr>
+    nnoremap <Leader>gm :Gmove<Cr>
+    nnoremap <Leader>gr :Gread<Cr>
+    nnoremap <Leader>gw :Gwrite<Cr>
+    nnoremap <Leader>gs :Gstatus<Cr>
 endif
-
-" Plugin configuration
-" fzf
-nnoremap <Leader>ff :Files<Cr>
-nnoremap <Leader>pf :GFiles<Cr>
-
-" vim-fugitive
-nnoremap <Leader>gb :Gblame<Cr>
-nnoremap <Leader>gc :Gcommit<Cr>
-nnoremap <Leader>gd :Gdelete<Cr>
-nnoremap <Leader>ge :Gedit<Cr>
-nnoremap <Leader>gg :Ggrep<Cr>
-nnoremap <Leader>gl :Glog<Cr>
-nnoremap <Leader>gm :Gmove<Cr>
-nnoremap <Leader>gr :Gread<Cr>
-nnoremap <Leader>gw :Gwrite<Cr>
-nnoremap <Leader>gs :Gstatus<Cr>
