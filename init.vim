@@ -35,6 +35,12 @@ nnoremap fs :w<Cr>
 nnoremap qq :qa<Cr>
 nnoremap qw :q<Cr>
 
+" Testing for future plugin disabling while in ssh
+let g:remote_session = ($STY == "")
+if g:remote_session
+    set number
+endif
+
 " Restore cursor position between sessions
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
