@@ -36,7 +36,7 @@ nnoremap qq :qa<Cr>
 nnoremap qw :q<Cr>
 
 " Testing for future plugin disabling while in ssh
-let g:remote_session = ($STY == "")
+let g:remote_session = ($SSH_CLIENT != "")
 if g:remote_session
     set number
 endif
