@@ -62,12 +62,24 @@ if g:local_session
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
     Plug 'junegunn/fzf.vim'
 
+    Plug 'tpope/vim-fugitive'
+
     call plug#end()
 endif
 
 " Plugin configuration
-" fzf find files
+" fzf
 nnoremap <Leader>ff :Files<Cr>
-
-" fzf find project (git) files
 nnoremap <Leader>pf :GFiles<Cr>
+
+" vim-fugitive
+nnoremap <Leader>gb :Gblame<Cr>
+nnoremap <Leader>gc :Gcommit<Cr>
+nnoremap <Leader>gd :Gdelete<Cr>
+nnoremap <Leader>ge :Gedit<Cr>
+nnoremap <Leader>gg :Ggrep<Cr>
+nnoremap <Leader>gl :Glog<Cr>
+nnoremap <Leader>gm :Gmove<Cr>
+nnoremap <Leader>gr :Gread<Cr>
+nnoremap <Leader>gw :Gwrite<Cr>
+nnoremap <Leader>gs :Gstatus<Cr>
