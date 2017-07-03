@@ -1,13 +1,3 @@
-" If neovim is launched on remote machine (through SSH)
-" this value will equal false
-let g:local_session = ($SSH_CLIENT == "")
-
-" Launch plugins only if on local machine
-if g:local_session
-    call plug#begin('~/.local/share/nvim/plugged')
-    call plug#end()
-endif
-
 " Color scheme
 colorscheme desert
 
@@ -41,11 +31,37 @@ let mapleader=" "
 nnoremap <Leader>sw :w !sudo tee > /dev/null %<Cr>
 
 " Other mappings
-nnoremap fs :w<Cr>
-nnoremap qq :qa<Cr>
-nnoremap qw :q<Cr>
+" Save file
+nnoremap <Leader>fs :w<Cr>
+
+" Close neovim
+nnoremap <Leader>qq :qa<Cr>
+
+" Close current buffer
+nnoremap <Leader>qw :q<Cr>
 
 " Restore cursor position between sessions
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" If neovim is launched on remote machine (through SSH)
+" this value will equal false
+let g:local_session = ($SSH_CLIENT == "")
+
+" Launch plugins only if on local machine
+if g:local_session
+    call plug#begin('~/.local/share/nvim/plugged')
+
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+    Plug 'junegunn/fzf.vim'
+
+    call plug#end()
+endif
+
+" Plugin configuration
+" fzf find files
+nnoremap <Leader>ff :Files<Cr>
+
+" fzf find project (git) files
+nnoremap <Leader>pf :GFiles<Cr>
