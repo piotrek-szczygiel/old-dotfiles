@@ -19,7 +19,6 @@ alias k="k -h"
 alias ka="k -Ah"
 alias kf="ka | fpp"
 alias ls="ls --color"
-alias n="nvim"
 alias q="exit"
 
 function mkcd() {
