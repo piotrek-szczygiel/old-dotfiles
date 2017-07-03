@@ -51,15 +51,16 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+" Use python from virtualenvs
+let g:python_host_prog = $HOME . "/.virtualenvs/neovim2/bin/python"
+let g:python3_host_prog = $HOME . "/.virtualenvs/neovim3/bin/python"
+
 " If neovim is launched on remote machine (through SSH)
 " this value will equal false
 let g:local_session = ($SSH_CLIENT == "")
 
 " Launch plugins only if on local machine
 if g:local_session
-    let g:python_host_prog = $HOME . "/.virtualenvs/neovim2/bin/python"
-    let g:python3_host_prog = $HOME . "/.virtualenvs/neovim3/bin/python"
-
     call plug#begin('~/.local/share/nvim/plugged')
 
     Plug 'airblade/vim-gitgutter'
