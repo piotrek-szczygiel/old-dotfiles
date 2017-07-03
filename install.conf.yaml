@@ -6,6 +6,7 @@
 - clean: ['~']
 
 - link:
+    ~/.config/Code/User/settings.json: vs_settings.json
     ~/.config/nvim/init.vim: init.vim
     ~/.gitconfig: gitconfig
     ~/.local/share/konsole/Dracula.colorscheme: Dracula.colorscheme
