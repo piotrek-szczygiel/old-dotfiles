@@ -35,7 +35,7 @@ set termguicolors
 if g:local_session
     set background=dark
 else
-    set background=ligh
+    set background=light
 endif
 
 " Use different cursor shapes for different modes
