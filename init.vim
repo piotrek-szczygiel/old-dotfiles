@@ -65,6 +65,8 @@ if g:local_session
 
     Plug 'airblade/vim-gitgutter'
 
+    Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
     Plug 'junegunn/fzf.vim'
 
@@ -79,6 +81,11 @@ if g:local_session
     " Plugin configuration
     " deoplete
     call deoplete#enable()
+
+    let g:tern_request_timeout = 1
+    " This do disable full signature type on autocomplete
+    let g:tern_show_signature_in_pum = '0'
+
     " fzf
     nnoremap <Leader>ff :Files<Cr>
     nnoremap <Leader>pf :GFiles<Cr>
@@ -86,7 +93,7 @@ if g:local_session
     " vim-fugitive
     nnoremap <Leader>gb :Gblame<Cr>
     nnoremap <Leader>gc :Gcommit<Cr>
-    nnoremap <Leader>gd :Gdelete<Cr>
+    nnoremap <Leader>gd :Gdiff<Cr>
     nnoremap <Leader>ge :Gedit<Cr>
     nnoremap <Leader>gg :Ggrep<Cr>
     nnoremap <Leader>gl :Glog<Cr>
