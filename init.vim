@@ -22,6 +22,12 @@ set scrolloff=5
 set wildmode=longest,list,full
 set wildmenu
 
+" 256 colors
+set termguicolors
+
+" Dark theme
+set background=dark
+
 " Use different cursor shapes for different modes
 set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
 
@@ -63,7 +69,7 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Color schemes
-Plug 'dracula/vim'
+Plug 'morhetz/gruvbox'
 
 " Easy motion
 Plug 'easymotion/vim-easymotion'
@@ -91,7 +97,7 @@ call plug#end()
 
 " Airline configuration
 let g:airline_powerline_fonts=1
-let g:airline_theme='dark'
+let g:airline_theme='gruvbox'
 
 " Ale configuration
 let g:airline#extensions#ale#enabled=1
@@ -100,7 +106,7 @@ let g:ale_sign_error='✗✗'
 let g:ale_sign_warning='∆∆'
 
 " Color scheme configuration
-colorscheme dracula
+colorscheme gruvbox
 
 " Easy motion configuration
 function! s:config_easyfuzzymotion(...) abort
