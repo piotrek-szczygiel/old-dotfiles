@@ -63,7 +63,8 @@ let g:local_session = ($SSH_CLIENT == "")
 if g:local_session
     call plug#begin('~/.local/share/nvim/plugged')
 
-    Plug 'airblade/vim-gitgutter'
+    " Color schemes
+    Plug 'dracula/vim'
 
     " Deoplete
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -80,9 +81,8 @@ if g:local_session
 
     call plug#end()
 
-    " Plugin configuration
-    " deoplete
-    call deoplete#enable()
+    " Color scheme configuration
+    colorscheme dracula
 
     " Deoplete configuration
     call deoplete#enable()
