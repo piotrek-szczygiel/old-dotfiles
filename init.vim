@@ -1,8 +1,6 @@
-" Color scheme
 colorscheme desert
-
-" Indenting
 filetype plugin indent on
+set relativenumber
 
 " Tab is 4 spaces
 set tabstop=4
