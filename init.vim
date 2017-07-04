@@ -28,15 +28,9 @@ set scrolloff=5
 set wildmode=longest,list,full
 set wildmenu
 
-" 256 colors
+" Colors
 set termguicolors
-
-" Day/night theme settings
-if g:local_session
-    set background=dark
-else
-    set background=light
-endif
+set background=dark
 
 " Use different cursor shapes for different modes
 set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
@@ -61,6 +55,9 @@ nnoremap <Leader>qq :qa<Cr>
 
 " Close current buffer
 nnoremap <Leader>qw :q<Cr>
+
+" Switch between light and dark themes
+nnoremap <Leader>tt :let &background = ( &background == "dark"? "light" : "dark" )<Cr>
 
 " Restore cursor position between sessions
 if has("autocmd")
