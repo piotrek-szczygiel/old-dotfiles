@@ -101,6 +101,11 @@ if g:local_session
     Plug 'w0rp/ale'
 endif
 
+" Syntax highlighting
+Plug 'othree/html5.vim'
+Plug 'othree/yajs.vim'
+Plug 'HerringtonDarkholme/yats.vim'
+
 " Other
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
