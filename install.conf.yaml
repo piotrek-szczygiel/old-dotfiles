@@ -9,7 +9,7 @@
     ~/.config/Code/User/settings.json: vs_settings.json
     ~/.config/nvim/init.vim: init.vim
     ~/.gitconfig: gitconfig
-    ~/.local/share/konsole/Dracula.colorscheme: Dracula.colorscheme
+    ~/.local/share/konsole/Gruvbox.colorscheme: Gruvbox.colorscheme
     ~/.zshrc: zshrc
 - shell:
     - curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
