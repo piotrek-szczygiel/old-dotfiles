@@ -40,7 +40,6 @@ zplug "djui/alias-tips"
 zplug "chrissicool/zsh-256color"
 zplug "denysdovhan/spaceship-zsh-theme", use:spaceship.zsh, from:github, as:theme
 zplug "supercrabtree/k"
-zplug "unixorn/zsh-gvm"
 zplug "zdharma/fast-syntax-highlighting", defer:2
 zplug "zdharma/history-search-multi-word"
 
