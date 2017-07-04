@@ -64,9 +64,6 @@ Plug 'vim-airline/vim-airline-themes'
 " Color schemes
 Plug 'dracula/vim'
 
-" Commenter
-Plug 'scrooloose/nerdcommenter'
-
 " Easy motion
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
@@ -79,8 +76,11 @@ Plug 'junegunn/fzf.vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
+
+" Other
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
