@@ -46,6 +46,7 @@ zplug "zdharma/history-search-multi-word"
 
 zplug "plugins/archlinux", from:oh-my-zsh
 zplug "plugins/git",  from:oh-my-zsh
+zplug "plugins/ng", from:oh-my-zsh
 
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
