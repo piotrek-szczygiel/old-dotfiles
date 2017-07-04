@@ -94,11 +94,7 @@ if g:local_session
     nnoremap <Leader>gb :Gblame<Cr>
     nnoremap <Leader>gc :Gcommit<Cr>
     nnoremap <Leader>gd :Gdiff<Cr>
-    nnoremap <Leader>ge :Gedit<Cr>
-    nnoremap <Leader>gg :Ggrep<Cr>
-    nnoremap <Leader>gl :Glog<Cr>
-    nnoremap <Leader>gm :Gmove<Cr>
-    nnoremap <Leader>gr :Gread<Cr>
-    nnoremap <Leader>gw :Gwrite<Cr>
+    nnoremap <Leader>gl :Gpull<Cr>
+    nnoremap <Leader>gp :Gpush<Cr>
     nnoremap <Leader>gs :Gstatus<Cr>
 endif
