@@ -31,6 +31,7 @@ source ~/.dotfiles/zplug/init.zsh
 # Plugins settings
 ENHANCD_DOT_ARG=...
 
+SPACESHIP_NODE_DEFAULT_VERSION="v8.0.0"
 SPACESHIP_PROMPT_SYMBOL="❯"
 SPACESHIP_TIME_SHOW=true
 
