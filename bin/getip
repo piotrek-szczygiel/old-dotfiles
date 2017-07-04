@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+revolver start "Getting external IP adress"
+ip_address=$(curl "http://canihazip.com/s" 2> /dev/null)
+sleep 0.5
+revolver stop
+
+echo "Your external IP address: $ip_address"
