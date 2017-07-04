@@ -1,5 +1,7 @@
 if empty($SSH_CLIENT)
     let g:local_session=1
+else
+    let g:local_session=0
 endif
 
 filetype plugin indent on
@@ -114,7 +116,10 @@ let g:ale_sign_error='✗✗'
 let g:ale_sign_warning='∆∆'
 
 " Color scheme configuration
-colorscheme gruvbox
+try
+    colorscheme gruvbox
+catch
+endtry
 
 " Easy motion configuration
 function! s:config_easyfuzzymotion(...) abort
