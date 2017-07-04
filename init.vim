@@ -103,8 +103,11 @@ Plug 'zhou13/vim-easyescape'
 call plug#end()
 
 " Airline configuration
-let g:airline_powerline_fonts=1
 let g:airline_theme='gruvbox'
+" Don't user powerline fonts when editing through SSH
+if g:local_session
+    let g:airline_powerline_fonts=1
+endif
 
 " Ale configuration
 let g:airline#extensions#ale#enabled=1
