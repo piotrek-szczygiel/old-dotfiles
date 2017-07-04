@@ -84,6 +84,10 @@ Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
+" Airline configuration
+let g:airline_powerline_fonts=1
+let g:airline_theme='dark'
+
 " Color scheme configuration
 colorscheme dracula
 
