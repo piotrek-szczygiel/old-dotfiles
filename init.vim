@@ -1,4 +1,3 @@
-colorscheme desert
 filetype plugin indent on
 set relativenumber
 
@@ -55,50 +54,33 @@ endif
 let g:python_host_prog = $HOME . "/.virtualenvs/neovim2/bin/python"
 let g:python3_host_prog = $HOME . "/.virtualenvs/neovim3/bin/python"
 
-" If neovim is launched on remote machine (through SSH)
-" this value will equal false
-let g:local_session = ($SSH_CLIENT == "")
+" Plugins
+call plug#begin('~/.local/share/nvim/plugged')
 
-" Launch plugins only if on local machine
-if g:local_session
-    call plug#begin('~/.local/share/nvim/plugged')
+" Color schemes
+Plug 'dracula/vim'
 
-    " Color schemes
-    Plug 'dracula/vim'
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
 
-    " Deoplete
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-    Plug 'zchee/deoplete-go', { 'do': 'make'}
-    Plug 'zchee/deoplete-jedi'
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
-    " Fuzzy finder
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-    Plug 'junegunn/fzf.vim'
+call plug#end()
 
-    " Git
-    Plug 'tpope/vim-fugitive'
-    Plug 'airblade/vim-gitgutter'
+" Color scheme configuration
+colorscheme dracula
 
-    call plug#end()
+" Fzf configuration
+nnoremap <Leader>ff :Files<Cr>
+nnoremap <Leader>pf :GFiles<Cr>
 
-    " Color scheme configuration
-    colorscheme dracula
-
-    " Deoplete configuration
-    call deoplete#enable()
-    let g:tern_request_timeout = 1
-    let g:tern_show_signature_in_pum = '0'
-
-    " Fzf configuration
-    nnoremap <Leader>ff :Files<Cr>
-    nnoremap <Leader>pf :GFiles<Cr>
-
-    " Git configuration
-    nnoremap <Leader>gb :Gblame<Cr>
-    nnoremap <Leader>gc :Gcommit<Cr>
-    nnoremap <Leader>gd :Gdiff<Cr>
-    nnoremap <Leader>gl :Gpull<Cr>
-    nnoremap <Leader>gp :Gpush<Cr>
-    nnoremap <Leader>gs :Gstatus<Cr>
-endif
+" Git configuration
+nnoremap <Leader>gb :Gblame<Cr>
+nnoremap <Leader>gc :Gcommit<Cr>
+nnoremap <Leader>gd :Gdiff<Cr>
+nnoremap <Leader>gl :Gpull<Cr>
+nnoremap <Leader>gp :Gpush<Cr>
+nnoremap <Leader>gs :Gstatus<Cr>
