@@ -1,3 +1,7 @@
+if empty($SSH_CLIENT)
+    let g:local_session=1
+endif
+
 filetype plugin indent on
 set relativenumber
 set number
@@ -25,8 +29,12 @@ set wildmenu
 " 256 colors
 set termguicolors
 
-" Dark theme
-set background=dark
+" Day/night theme settings
+if g:local_session
+    set background=dark
+else
+    set background=ligh
+endif
 
 " Use different cursor shapes for different modes
 set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
