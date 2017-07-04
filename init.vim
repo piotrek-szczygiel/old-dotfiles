@@ -57,8 +57,21 @@ let g:python3_host_prog = $HOME . "/.virtualenvs/neovim3/bin/python"
 " Plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
+" airline
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " Color schemes
 Plug 'dracula/vim'
+
+" Commenter
+Plug 'scrooloose/nerdcommenter'
+
+" Easy motion
+Plug 'easymotion/vim-easymotion'
+Plug 'haya14busa/incsearch.vim'
+Plug 'haya14busa/incsearch-fuzzy.vim'
+Plug 'haya14busa/incsearch-easymotion.vim'
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
@@ -66,12 +79,27 @@ Plug 'junegunn/fzf.vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
 " Color scheme configuration
 colorscheme dracula
+
+" Easy motion configuration
+function! s:config_easyfuzzymotion(...) abort
+  return extend(copy({
+  \   'converters': [incsearch#config#fuzzyword#converter()],
+  \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
+  \   'keymap': {"\<CR>": '<Over>(easymotion)'},
+  \   'is_expr': 0,
+  \   'is_stay': 1
+  \ }), get(a:, 1, {}))
+endfunction
+
+noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
+nnoremap <Leader><Cr> :nohl<Cr>
 
 " Fzf configuration
 nnoremap <Leader>ff :Files<Cr>
