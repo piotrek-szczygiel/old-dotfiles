@@ -104,7 +104,7 @@ call plug#end()
 
 " Airline configuration
 let g:airline_theme='gruvbox'
-" Don't user powerline fonts when editing through SSH
+" Use powerline fonts only on local machine
 if g:local_session
     let g:airline_powerline_fonts=1
 endif
@@ -112,8 +112,11 @@ endif
 " Ale configuration
 let g:airline#extensions#ale#enabled=1
 let g:ale_sign_column_always=1
-let g:ale_sign_error='✗✗'
-let g:ale_sign_warning='∆∆'
+" Use fancy symbols only on local machine
+if g:local_session
+    let g:ale_sign_error='✗✗'
+    let g:ale_sign_warning='∆∆'
+endif
 
 " Color scheme configuration
 try
