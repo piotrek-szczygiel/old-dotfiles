@@ -75,6 +75,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
+" Syntax checking
+Plug 'w0rp/ale'
+
 " Other
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -85,6 +88,9 @@ call plug#end()
 " Airline configuration
 let g:airline_powerline_fonts=1
 let g:airline_theme='dark'
+
+" Ale configuration
+let g:airline#extensions#ale#enabled=1
 
 " Color scheme configuration
 colorscheme dracula
