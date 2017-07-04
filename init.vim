@@ -85,12 +85,16 @@ Plug 'haya14busa/incsearch-fuzzy.vim'
 Plug 'haya14busa/incsearch-easymotion.vim'
 
 " Fuzzy finder
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-Plug 'junegunn/fzf.vim'
+if g:local_session
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+    Plug 'junegunn/fzf.vim'
+endif
 
 " Git
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+if g:local_session
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
+endif
 
 " Syntax checking
 Plug 'w0rp/ale'
