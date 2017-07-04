@@ -20,6 +20,7 @@ alias ka="k -Ah"
 alias kf="ka | fpp"
 alias ls="ls --color"
 alias q="exit"
+alias tb="nc termbin.com 9999"
 
 function mkcd() {
     mkdir -p "$@"  && cd $_
