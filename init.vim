@@ -69,6 +69,7 @@ if g:local_session
     " Deoplete
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+    Plug 'zchee/deoplete-go', { 'do': 'make'}
     Plug 'zchee/deoplete-jedi'
 
     " Fuzzy finder
