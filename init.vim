@@ -17,9 +17,8 @@ set expandtab
 set ignorecase
 set smartcase
 
-" Show whitespace
-set list
-set listchars=tab:>-,trail:~,extends:>,precedes:<
+" Whitespace settings
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 
 " Scroll margin
 set scrolloff=5
@@ -56,8 +55,13 @@ nnoremap <Leader>qq :qa<Cr>
 " Close current buffer
 nnoremap <Leader>qw :q<Cr>
 
+nnoremap <Leader>wc :%s/\s\+$//e<Cr>
+
 " Switch between light and dark themes
 nnoremap <Leader>tt :let &background = ( &background == "dark"? "light" : "dark" )<Cr>
+
+" Toogle showing whitespace characters
+nnoremap <Leader>tw :set list!<Cr>
 
 " Restore cursor position between sessions
 if has("autocmd")
@@ -107,6 +111,7 @@ Plug 'othree/yajs.vim'
 Plug 'HerringtonDarkholme/yats.vim'
 
 " Other
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'zhou13/vim-easyescape'
