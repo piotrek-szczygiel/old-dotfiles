@@ -18,6 +18,10 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<
 " Scroll margin
 set scrolloff=5
 
+" Wild menu bash-like
+set wildmode=longest,list,full
+set wildmenu
+
 " Use different cursor shapes for different modes
 set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
 
