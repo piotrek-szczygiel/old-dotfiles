@@ -54,3 +54,6 @@ zplug load
 
 # virtualenvwrapper
 source virtualenvwrapper.sh
+
+# n - Node Version Manager
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
