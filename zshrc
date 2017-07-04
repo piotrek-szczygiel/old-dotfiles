@@ -39,7 +39,6 @@ zplug "b4b4r07/enhancd", use:init.sh # Requires fzy
 zplug "djui/alias-tips"
 zplug "chrissicool/zsh-256color"
 zplug "denysdovhan/spaceship-zsh-theme", use:spaceship.zsh, from:github, as:theme
-zplug "molovo/revolver", as:command, use:revolver
 zplug "supercrabtree/k"
 zplug "zdharma/fast-syntax-highlighting", defer:2
 zplug "zdharma/history-search-multi-word"
