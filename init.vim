@@ -25,15 +25,14 @@ set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr
 inoremap fd <Esc>
 set timeoutlen=500
 
-" Set map leader
+" Set leader key
 let mapleader=" "
 
-" Allow saving of files as sudo when I forgot to start vim using sudo.
-nnoremap <Leader>sw :w !sudo tee > /dev/null %<Cr>
-
-" Other mappings
 " Save file
 nnoremap <Leader>fs :w<Cr>
+
+" Save file as root
+nnoremap <Leader>sw :w !sudo tee > /dev/null %<Cr>
 
 " Open neovim configuration
 nnoremap <Leader>fed :edit ~/.dotfiles/init.vim<Cr>
@@ -66,16 +65,18 @@ if g:local_session
 
     Plug 'airblade/vim-gitgutter'
 
+    " Deoplete
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+    Plug 'zchee/deoplete-jedi'
 
+    " Fuzzy finder
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
     Plug 'junegunn/fzf.vim'
 
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
+    " Git
     Plug 'tpope/vim-fugitive'
-
-    Plug 'zchee/deoplete-jedi'
+    Plug 'airblade/vim-gitgutter'
 
     call plug#end()
 
@@ -83,15 +84,16 @@ if g:local_session
     " deoplete
     call deoplete#enable()
 
+    " Deoplete configuration
+    call deoplete#enable()
     let g:tern_request_timeout = 1
-    " This do disable full signature type on autocomplete
     let g:tern_show_signature_in_pum = '0'
 
-    " fzf
+    " Fzf configuration
     nnoremap <Leader>ff :Files<Cr>
     nnoremap <Leader>pf :GFiles<Cr>
 
-    " vim-fugitive
+    " Git configuration
     nnoremap <Leader>gb :Gblame<Cr>
     nnoremap <Leader>gc :Gcommit<Cr>
     nnoremap <Leader>gd :Gdiff<Cr>
