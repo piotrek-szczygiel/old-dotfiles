@@ -97,7 +97,9 @@ if g:local_session
 endif
 
 " Syntax checking
-Plug 'w0rp/ale'
+if g:local_session
+    Plug 'w0rp/ale'
+endif
 
 " Other
 Plug 'tpope/vim-commentary'
