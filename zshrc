@@ -36,7 +36,7 @@ source ~/.dotfiles/zplug/init.zsh
 # Plugins settings
 ENHANCD_DOT_ARG=...
 
-SPACESHIP_NODE_DEFAULT_VERSION="v8.0.0"
+SPACESHIP_DOCKER_SHOW=false
 SPACESHIP_PROMPT_SYMBOL="❯"
 SPACESHIP_TIME_SHOW=true
 
@@ -50,6 +50,7 @@ zplug "zdharma/fast-syntax-highlighting", defer:2
 zplug "zdharma/history-search-multi-word"
 
 zplug "plugins/archlinux", from:oh-my-zsh
+zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/git",  from:oh-my-zsh
 zplug "plugins/ng", from:oh-my-zsh
 
