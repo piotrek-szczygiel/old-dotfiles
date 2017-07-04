@@ -1,5 +1,6 @@
 filetype plugin indent on
 set relativenumber
+set number
 
 " Tab is 4 spaces
 set tabstop=4
@@ -19,10 +20,6 @@ set scrolloff=5
 
 " Use different cursor shapes for different modes
 set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
-
-" Escape insert mode easily
-inoremap fd <Esc>
-set timeoutlen=500
 
 " Set leader key
 let mapleader=" "
@@ -81,6 +78,7 @@ Plug 'airblade/vim-gitgutter'
 " Other
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'zhou13/vim-easyescape'
 
 call plug#end()
 
@@ -116,3 +114,9 @@ nnoremap <Leader>gd :Gdiff<Cr>
 nnoremap <Leader>gl :Gpull<Cr>
 nnoremap <Leader>gp :Gpush<Cr>
 nnoremap <Leader>gs :Gstatus<Cr>
+
+" Easyescape configuration
+let g:easyescape_chars = { "f": 1, "d": 1 }
+let g:easyescape_timeout = 100
+cnoremap fd <ESC>
+cnoremap df <ESC>
