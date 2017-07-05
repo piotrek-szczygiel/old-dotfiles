@@ -37,31 +37,74 @@ set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr
 " Set leader key
 let mapleader=" "
 
-" Save file
-nnoremap <Leader>fs :w<Cr>
+" Set how many spaces you want to enter every TAB press
+function! IndentationWidth()
+    call inputsave()
+    let indent_width = input('Enter indentation width: ')
+    call inputrestore()
+    let &shiftwidth=indent_width
+    let &tabstop=indent_width
+endfunction
 
-" Save file as root
-nnoremap <Leader>sw :w !sudo tee > /dev/null %<Cr>
+" Toggle between light and dark background
+function! ToggleBackground()
+    if &background ==# "dark"
+        set background=light
+    else
+        set background=dark
+    endif
+endfunction
+
+" Toggle between spaces and tabs
+function! ToggleIndentation()
+    if &expandtab
+        set noexpandtab
+        echom "Using TABS"
+    else
+        set expandtab
+        echom "Using SPACES"
+    endif
+endfunction
+
+" Toogle showing whitespace characters
+function! ToggleShowWhitespace()
+    if &list
+        set nolist
+        echom "Hiding whitespace characters"
+    else
+        set list
+        echom "Showing whitespace characters"
+    endif
+endfunction
 
 " Open neovim configuration
 nnoremap <Leader>fed :edit ~/.dotfiles/init.vim<Cr>
-
 " Reload neovim configuration
 nnoremap <Leader>fer :source $MYVIMRC<Cr>
-
-" Close neovim
+" Save current file
+nnoremap <Leader>fs :w<Cr>
+" Sudo save current file
+nnoremap <Leader>fS :w !sudo tee > /dev/null %<Cr>
+" Indentation - spaces
+nnoremap <Leader>is :set expandtab<Cr>
+" Indentation - tabs
+nnoremap <Leader>it :set noexpandtab<Cr>
+" Indentation - width
+nnoremap <Leader>iw :call IndentationWidth()<Cr>
+" Close all
 nnoremap <Leader>qq :qa<Cr>
-
-" Close current buffer
+" Close current file
 nnoremap <Leader>qw :q<Cr>
-
-nnoremap <Leader>wc :%s/\s\+$//e<Cr>
-
-" Switch between light and dark themes
-nnoremap <Leader>tt :let &background = ( &background == "dark"? "light" : "dark" )<Cr>
-
-" Toogle showing whitespace characters
-nnoremap <Leader>tw :set list!<Cr>
+" Toggle indentation between tabs and spaces
+nnoremap <Leader>ti :call ToggleIndentation()<Cr>
+" Toggle background between light and dark
+nnoremap <Leader>tb :call ToggleBackground()<Cr>
+" Toggle showing whitespace
+nnoremap <Leader>tw :call ToggleShowWhitespace()<Cr>
+" Trailing whitespace stripping
+nnoremap <Leader>ws :StripWhitespace<Cr>
+" Utilities - sort selected lines
+vnoremap <Leader>us :!sort -u<Cr>
 
 " Restore cursor position between sessions
 if has("autocmd")
@@ -154,6 +197,12 @@ endfunction
 noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
 nnoremap <Leader><Cr> :nohl<Cr>
 
+" Easyescape configuration
+let g:easyescape_chars = { "f": 1, "d": 1 }
+let g:easyescape_timeout = 100
+cnoremap fd <ESC>
+cnoremap df <ESC>
+
 " Fzf configuration
 nnoremap <Leader>ff :Files<Cr>
 nnoremap <Leader>pf :GFiles<Cr>
@@ -166,8 +215,3 @@ nnoremap <Leader>gl :Gpull<Cr>
 nnoremap <Leader>gp :Gpush<Cr>
 nnoremap <Leader>gs :Gstatus<Cr>
 
-" Easyescape configuration
-let g:easyescape_chars = { "f": 1, "d": 1 }
-let g:easyescape_timeout = 100
-cnoremap fd <ESC>
-cnoremap df <ESC>
