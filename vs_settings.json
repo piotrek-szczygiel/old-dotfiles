@@ -2,7 +2,7 @@
     "editor.fontFamily": "Source Code Pro",
     "editor.fontSize": 16,
     "editor.renderWhitespace": "boundary",
-    "workbench.colorTheme": "Gruvbox Light (Medium)",
+    "workbench.colorTheme": "Gruvbox Dark (Soft)",
     "workbench.iconTheme": "vscode-icons"
 }
 
