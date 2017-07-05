@@ -1,43 +1,116 @@
-if empty($SSH_CLIENT)
-    let g:local_session=1
+filetype plugin indent on
+
+if &diff
+    let g:diff_mode=1
 else
-    let g:local_session=0
+    let g:diff_mode=0
 endif
 
-filetype plugin indent on
-set relativenumber
-set number
+if empty($SSH_CLIENT)
+    let g:normal_mode=1
+    let g:ssh_mode=0
+else
+    let g:normal_mode=0
+    let g:ssh_mode=1
+endif
 
-" Tab is 4 spaces
-set tabstop=4
-set shiftwidth=4
-set expandtab
+call plug#begin('~/.local/share/nvim/plugged')
 
-" Case insensitive searching
-set ignorecase
-set smartcase
+Plug 'morhetz/gruvbox'
 
-" Whitespace settings
-set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+if g:normal_mode
+    Plug 'bling/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+    Plug 'junegunn/fzf.vim'
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'w0rp/ale'
+    Plug 'othree/html5.vim'
+    Plug 'othree/yajs.vim'
+    Plug 'HerringtonDarkholme/yats.vim'
+endif
 
-" Scroll margin
-set scrolloff=5
+if !g:diff_mode
+    Plug 'easymotion/vim-easymotion'
+    Plug 'ntpeters/vim-better-whitespace'
+    Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-surround'
+    Plug 'zhou13/vim-easyescape'
+endif
 
-" Wild menu bash-like
-set wildmode=longest,list,full
-set wildmenu
+call plug#end()
 
-" Colors
-set termguicolors
+colorscheme gruvbox
 set background=dark
-
-" Use different cursor shapes for different modes
+set expandtab
 set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
+set ignorecase
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+set number
+set relativenumber
+set scrolloff=5
+set shiftwidth=4
+set smartcase
+set tabstop=4
+set termguicolors
+set wildmenu
+set wildmode=longest,list,full
 
-" Set leader key
+if g:diff_mode
+    nnoremap q :qa<Cr>
+    set norelativenumber
+endif
+
 let mapleader=" "
 
-" Set how many spaces you want to enter every TAB press
+let g:python_host_prog = $HOME . "/.virtualenvs/neovim2/bin/python"
+let g:python3_host_prog = $HOME . "/.virtualenvs/neovim3/bin/python"
+
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+let g:airline_theme='gruvbox'
+let g:airline_powerline_fonts=1
+
+let g:airline#extensions#ale#enabled=1
+let g:ale_sign_column_always=1
+let g:ale_sign_error='✗✗'
+let g:ale_sign_warning='∆∆'
+
+let g:easyescape_chars = { "f": 1, "d": 1 }
+let g:easyescape_timeout = 100
+cnoremap fd <ESC>
+cnoremap df <ESC>
+
+nnoremap <Leader><Cr> :nohl<Cr>
+nnoremap <Leader>fS :w !sudo tee > /dev/null %<Cr>
+nnoremap <Leader>fed :edit ~/.dotfiles/init.vim<Cr>
+nnoremap <Leader>fer :source $MYVIMRC<Cr>
+nnoremap <Leader>fs :w<Cr>
+nnoremap <Leader>is :set expandtab<Cr>
+nnoremap <Leader>it :set noexpandtab<Cr>
+nnoremap <Leader>iw :call IndentationWidth()<Cr>
+nnoremap <Leader>qq :qa<Cr>
+nnoremap <Leader>qw :q<Cr>
+nnoremap <Leader>tb :call ToggleBackground()<Cr>
+nnoremap <Leader>ti :call ToggleIndentation()<Cr>
+nnoremap <Leader>tw :call ToggleShowWhitespace()<Cr>
+nnoremap <Leader>ws :StripWhitespace<Cr>
+vnoremap <Leader>us :sort u<Cr>
+
+if g:normal_mode
+    nnoremap <Leader>ff :Files<Cr>
+    nnoremap <Leader>pf :GFiles<Cr>
+    nnoremap <Leader>gb :Gblame<Cr>
+    nnoremap <Leader>gc :Gcommit<Cr>
+    nnoremap <Leader>gd :Gdiff<Cr>
+    nnoremap <Leader>gl :Gpull<Cr>
+    nnoremap <Leader>gp :Gpush<Cr>
+    nnoremap <Leader>gs :Gstatus<Cr>
+endif
+
 function! IndentationWidth()
     call inputsave()
     let indent_width = input('Enter indentation width: ')
@@ -46,7 +119,6 @@ function! IndentationWidth()
     let &tabstop=indent_width
 endfunction
 
-" Toggle between light and dark background
 function! ToggleBackground()
     if &background ==# "dark"
         set background=light
@@ -55,7 +127,6 @@ function! ToggleBackground()
     endif
 endfunction
 
-" Toggle between spaces and tabs
 function! ToggleIndentation()
     if &expandtab
         set noexpandtab
@@ -66,7 +137,6 @@ function! ToggleIndentation()
     endif
 endfunction
 
-" Toogle showing whitespace characters
 function! ToggleShowWhitespace()
     if &list
         set nolist
@@ -76,142 +146,4 @@ function! ToggleShowWhitespace()
         echom "Showing whitespace characters"
     endif
 endfunction
-
-" Open neovim configuration
-nnoremap <Leader>fed :edit ~/.dotfiles/init.vim<Cr>
-" Reload neovim configuration
-nnoremap <Leader>fer :source $MYVIMRC<Cr>
-" Save current file
-nnoremap <Leader>fs :w<Cr>
-" Sudo save current file
-nnoremap <Leader>fS :w !sudo tee > /dev/null %<Cr>
-" Indentation - spaces
-nnoremap <Leader>is :set expandtab<Cr>
-" Indentation - tabs
-nnoremap <Leader>it :set noexpandtab<Cr>
-" Indentation - width
-nnoremap <Leader>iw :call IndentationWidth()<Cr>
-" Close all
-nnoremap <Leader>qq :qa<Cr>
-" Close current file
-nnoremap <Leader>qw :q<Cr>
-" Toggle indentation between tabs and spaces
-nnoremap <Leader>ti :call ToggleIndentation()<Cr>
-" Toggle background between light and dark
-nnoremap <Leader>tb :call ToggleBackground()<Cr>
-" Toggle showing whitespace
-nnoremap <Leader>tw :call ToggleShowWhitespace()<Cr>
-" Trailing whitespace stripping
-nnoremap <Leader>ws :StripWhitespace<Cr>
-" Utilities - sort selected lines
-vnoremap <Leader>us :!sort -u<Cr>
-
-" Restore cursor position between sessions
-if has("autocmd")
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
-
-" Use python from virtualenvs
-let g:python_host_prog = $HOME . "/.virtualenvs/neovim2/bin/python"
-let g:python3_host_prog = $HOME . "/.virtualenvs/neovim3/bin/python"
-
-" Plugins
-call plug#begin('~/.local/share/nvim/plugged')
-
-" airline
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" Color schemes
-Plug 'morhetz/gruvbox'
-
-" Easy motion
-Plug 'easymotion/vim-easymotion'
-Plug 'haya14busa/incsearch.vim'
-Plug 'haya14busa/incsearch-fuzzy.vim'
-Plug 'haya14busa/incsearch-easymotion.vim'
-
-" Fuzzy finder
-if g:local_session
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-    Plug 'junegunn/fzf.vim'
-endif
-
-" Git
-if g:local_session
-    Plug 'tpope/vim-fugitive'
-    Plug 'airblade/vim-gitgutter'
-endif
-
-" Syntax checking
-if g:local_session
-    Plug 'w0rp/ale'
-endif
-
-" Syntax highlighting
-Plug 'othree/html5.vim'
-Plug 'othree/yajs.vim'
-Plug 'HerringtonDarkholme/yats.vim'
-
-" Other
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'zhou13/vim-easyescape'
-
-call plug#end()
-
-" Airline configuration
-let g:airline_theme='gruvbox'
-" Use powerline fonts only on local machine
-if g:local_session
-    let g:airline_powerline_fonts=1
-endif
-
-" Ale configuration
-let g:airline#extensions#ale#enabled=1
-let g:ale_sign_column_always=1
-" Use fancy symbols only on local machine
-if g:local_session
-    let g:ale_sign_error='✗✗'
-    let g:ale_sign_warning='∆∆'
-endif
-
-" Color scheme configuration
-try
-    colorscheme gruvbox
-catch
-endtry
-
-" Easy motion configuration
-function! s:config_easyfuzzymotion(...) abort
-  return extend(copy({
-  \   'converters': [incsearch#config#fuzzyword#converter()],
-  \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
-  \   'keymap': {"\<CR>": '<Over>(easymotion)'},
-  \   'is_expr': 0,
-  \   'is_stay': 1
-  \ }), get(a:, 1, {}))
-endfunction
-
-noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
-nnoremap <Leader><Cr> :nohl<Cr>
-
-" Easyescape configuration
-let g:easyescape_chars = { "f": 1, "d": 1 }
-let g:easyescape_timeout = 100
-cnoremap fd <ESC>
-cnoremap df <ESC>
-
-" Fzf configuration
-nnoremap <Leader>ff :Files<Cr>
-nnoremap <Leader>pf :GFiles<Cr>
-
-" Git configuration
-nnoremap <Leader>gb :Gblame<Cr>
-nnoremap <Leader>gc :Gcommit<Cr>
-nnoremap <Leader>gd :Gdiff<Cr>
-nnoremap <Leader>gl :Gpull<Cr>
-nnoremap <Leader>gp :Gpush<Cr>
-nnoremap <Leader>gs :Gstatus<Cr>
 
