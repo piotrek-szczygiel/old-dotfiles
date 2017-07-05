@@ -7,11 +7,15 @@ else
 endif
 
 if empty($SSH_CLIENT)
-    let g:normal_mode=1
     let g:ssh_mode=0
 else
-    let g:normal_mode=0
     let g:ssh_mode=1
+endif
+
+if !g:diff_mode && !g:ssh_mode
+    let g:normal_mode=1
+else
+    let g:normal_mode=0
 endif
 
 call plug#begin('~/.local/share/nvim/plugged')
