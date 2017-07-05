@@ -1,8 +1,9 @@
 {
     "editor.fontFamily": "Source Code Pro",
-    "editor.fontSize": 16,
+    "editor.fontWeight": "500",
+    "editor.fontSize": 18,
     "editor.renderWhitespace": "boundary",
-    "workbench.colorTheme": "Gruvbox Dark (Soft)",
+    "workbench.colorTheme": "Atom One Dark",
     "workbench.iconTheme": "vscode-icons"
 }
 
