@@ -56,6 +56,7 @@ zplug "plugins/archlinux", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/git",  from:oh-my-zsh
 zplug "plugins/ng", from:oh-my-zsh
+zplug "plugins/pip", from:oh-my-zsh
 
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
