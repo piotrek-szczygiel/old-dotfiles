@@ -4,6 +4,6 @@
     "editor.fontSize": 18,
     "editor.renderWhitespace": "boundary",
     "workbench.colorTheme": "Atom One Dark",
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "editor.renderIndentGuides": false
 }
-
