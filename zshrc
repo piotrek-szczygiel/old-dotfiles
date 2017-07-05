@@ -61,6 +61,9 @@ zplug "zsh-users/zsh-completions"
 # Load plugins
 zplug load
 
+# Overwrite plugins/git alias
+alias gd="g difftool"
+
 # virtualenvwrapper
 source virtualenvwrapper.sh
 
