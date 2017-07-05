@@ -5,6 +5,8 @@ HISTFILE=~/.zsh_history
 HISTSIZE=5000
 SAVEHIST=5000
 
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 bindkey -e
 bindkey "\e[3~" delete-char
 
