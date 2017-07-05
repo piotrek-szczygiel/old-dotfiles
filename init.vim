@@ -28,6 +28,7 @@ set relativenumber
 set scrolloff=7
 set shiftwidth=4
 set smartcase
+set splitbelow
 set tabstop=4
 set termguicolors
 set wildmenu
@@ -70,7 +71,22 @@ nnoremap <Leader>tb :call ToggleBackground()<Cr>
 nnoremap <Leader>ti :call ToggleIndentation()<Cr>
 nnoremap <Leader>tw :call ToggleShowWhitespace()<Cr>
 nnoremap <Leader>uw :%s/\s\+$//e<Cr>
+nnoremap <Leader>' :split<Cr>:resize 10<Cr>:terminal<Cr>
+tnoremap fd <C-\><C-N>
 vnoremap <Leader>us :sort i<Cr>
+
+tnoremap <A-h> <C-\><C-N><C-w>h
+tnoremap <A-j> <C-\><C-N><C-w>j
+tnoremap <A-k> <C-\><C-N><C-w>k
+tnoremap <A-l> <C-\><C-N><C-w>l
+inoremap <A-h> <C-\><C-N><C-w>h
+inoremap <A-j> <C-\><C-N><C-w>j
+inoremap <A-k> <C-\><C-N><C-w>k
+inoremap <A-l> <C-\><C-N><C-w>l
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
 
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
