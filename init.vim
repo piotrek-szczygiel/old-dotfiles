@@ -5,9 +5,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'easymotion/vim-easymotion'
+Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -16,7 +16,7 @@ Plug 'zhou13/vim-easyescape'
 
 call plug#end()
 
-colorscheme gruvbox
+colorscheme onedark
 let mapleader=" "
 set background=dark
 set expandtab
@@ -38,7 +38,7 @@ if &diff
     set norelativenumber
 endif
 
-let g:airline_theme='gruvbox'
+let g:airline_theme='onedark'
 let g:airline_powerline_fonts=1
 
 let g:easyescape_chars = { "d": 1, "f": 1 }
