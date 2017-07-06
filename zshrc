@@ -16,7 +16,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 alias e="$EDITOR"
-alias fed="source ~/.zshrc"
+alias fer="source ~/.zshrc"
 alias gs="gst"
 alias k="k -h"
 alias ka="k -Ah"
