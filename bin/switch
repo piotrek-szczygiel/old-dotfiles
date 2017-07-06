@@ -12,7 +12,14 @@ trap error ERR
 sudo echo > /dev/null
 
 # Get local IP and interface
-my_ip=$(ip route get 8.8.8.8 | awk '/8.8.8.8/ {print $NF}')
+if ip addr | grep "192.168.2.28" &> /dev/null; then
+    current_ip="adsl"
+elif ip addr | grep "192.168.2.27" &> /dev/null; then
+    current_ip="lte"
+else
+    current_ip="unknown"
+fi
+
 my_interface=$(ip route get 8.8.8.8 | awk '/dev/ {f=NR} f&&NR-1==f' RS=" ")
 
 adsl() {
