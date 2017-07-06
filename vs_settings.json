@@ -1,9 +1,52 @@
 {
     "editor.fontFamily": "Source Code Pro",
-    "editor.fontWeight": "500",
     "editor.fontSize": 18,
+    "editor.fontWeight": "500",
+    "editor.renderIndentGuides": false,
     "editor.renderWhitespace": "boundary",
     "workbench.colorTheme": "Atom One Dark",
     "workbench.iconTheme": "vscode-icons",
-    "editor.renderIndentGuides": false
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.easymotion": true,
+    "vim.enableNeovim": true,
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.timeout": 500,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-b>": false,
+        "<C-c>": false,
+        "<C-f>": false,
+        "<C-s>": false,
+        "<C-v>": false,
+        "<C-x>": false,
+        "<C-z>": false
+    },
+    "vim.insertModeKeyBindings": [{
+        "before": ["f", "d"],
+        "after": ["<Esc>"]
+    }],
+    "vim.otherModesKeyBindingsNonRecursive": [{
+            "before": ["<leader>", "f", "s"],
+            "after": [],
+            "commands": [{
+                "command": ":w"
+            }]
+        },
+        {
+            "before": ["<leader>", "<cr>"],
+            "after": [],
+            "commands": [{
+                "command": ":nohl"
+            }]
+        },
+        {
+            "before": [":"],
+            "after": [],
+            "commands": [{
+                "command": "workbench.action.showCommands",
+                "args": []
+            }]
+        }
+    ]
 }
