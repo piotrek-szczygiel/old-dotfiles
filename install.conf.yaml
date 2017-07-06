@@ -3,7 +3,11 @@
         create: true
         relink: true
 
-- clean: ['~']
+- clean:
+    ~
+    ~/.config/Code/User
+    ~/.config/nvim
+    ~/.local/share/konsole
 
 - link:
     ~/.config/Code/User/keybindings.json: vs_keybindings.json
