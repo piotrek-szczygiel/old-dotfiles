@@ -30,6 +30,13 @@
             }]
         },
         {
+            "before": ["<leader>", "q", "w"],
+            "after": [],
+            "commands": [{
+                "command": ":q"
+            }]
+        },
+        {
             "before": ["<leader>", "<cr>"],
             "after": [],
             "commands": [{
