@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 error() {
-    revolver stop
+    revolver stop &> /dev/null
     echo "Error occured while switching connection!"
     exit 1
 }
