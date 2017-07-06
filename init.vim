@@ -42,8 +42,9 @@ let g:airline_theme='onedark'
 let g:airline_powerline_fonts=1
 
 nnoremap <Leader><Cr> :nohl<Cr>
-nnoremap <Leader>fed :edit ~/.dotfiles/init.vim<Cr>
+nnoremap <Leader>fed :edit $MYVIMRC<Cr>
 nnoremap <Leader>fer :source $MYVIMRC<Cr>
+nnoremap <Leader>fez :edit ~/.zshrc<Cr>
 nnoremap <Leader>ff :Files<Cr>
 nnoremap <Leader>fS :w !sudo tee > /dev/null %<Cr>
 nnoremap <Leader>fs :w<Cr>
