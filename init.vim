@@ -79,6 +79,8 @@ nnoremap <Leader>pf :GFiles<Cr>
 nnoremap <Leader>is :set expandtab<Cr>
 nnoremap <Leader>it :set noexpandtab<Cr>
 nnoremap <Leader>iw :call IndentationWidth()<Cr>
+nnoremap <Leader>i24 :call Spaces2to4()<Cr>
+nnoremap <Leader>i42 :call Spaces4to2()<Cr>
 
 " Quit
 nnoremap <Leader>qq :qa<Cr>
@@ -162,6 +164,40 @@ function! ToggleShowWhitespace()
         set list
         echom "Showing whitespace characters"
     endif
+endfunction
+
+function! Spaces2to4()
+    " 2 spaces -> TAB
+    set tabstop=2
+    set softtabstop=2
+    set noexpandtab
+    retab!
+
+    " TAB -> 4 spaces
+    set tabstop=4
+    set softtabstop=4
+    set expandtab
+    retab
+
+    set shiftwidth=4
+    echom "Converted 2 spaces to 4"
+endfunction
+
+function! Spaces4to2()
+    " 4 spaces -> TAB
+    set tabstop=4
+    set softtabstop=4
+    set noexpandtab
+    retab!
+
+    " TAB -> 2 spaces
+    set tabstop=2
+    set softtabstop=2
+    set expandtab
+    retab
+
+    set shiftwidth=2
+    echom "Converted 4 spaces to 2"
 endfunction
 
 function! SwitchToActualFile()
