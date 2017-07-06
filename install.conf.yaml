@@ -6,6 +6,7 @@
 - clean: ['~']
 
 - link:
+    ~/.config/Code/User/keybindings.json: vs_keybindings.json
     ~/.config/Code/User/settings.json: vs_settings.json
     ~/.config/nvim/init.vim: init.vim
     ~/.gitconfig: gitconfig
