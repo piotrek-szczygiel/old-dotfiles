@@ -53,12 +53,12 @@ elif [ "$1" = "lte" ]; then
         lte
     fi
 elif [ "$1" = "" ]; then
-    if [ "$my_ip" = "192.168.2.28" ]; then
+    if [ "$current_ip" = "adsl" ]; then
         lte
-    elif [ "$my_ip" = "192.168.2.27" ]; then
+    elif [ "$current_ip" = "lte" ]; then
         adsl
     else
-        echo "Unable to detect current connection! Defaulting to ADSL."
+        echo "Unable to detect current connection! Defaulting to ADSL"
         adsl
     fi
 else
