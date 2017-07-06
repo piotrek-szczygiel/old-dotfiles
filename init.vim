@@ -208,4 +208,5 @@ function! SwitchToActualFile()
         bwipeout
     endif
     exec "edit " . fname
+    echom "Switched to actual file"
 endfunction
