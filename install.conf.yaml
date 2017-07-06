@@ -17,5 +17,16 @@
     ~/.local/share/konsole/Dracula.colorscheme: Dracula.colorscheme
     ~/.zshrc: zshrc
 - shell:
-    - curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    - curl -sL https://git.io/n-install | bash -s -- -q -n latest
+    - 
+      command: curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+      stderr: true
+      stdout: true
+    -
+      command: curl -L https://git.io/n-install | bash -s -- -y
+      stderr: true
+      stdout: true
+    - 
+      command: zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+      stderr: true
+      stdout: true
+
