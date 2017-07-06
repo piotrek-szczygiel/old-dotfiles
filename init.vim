@@ -59,6 +59,7 @@ nnoremap <Leader>it :set noexpandtab<Cr>
 nnoremap <Leader>iw :call IndentationWidth()<Cr>
 nnoremap <Leader>pf :GFiles<Cr>
 nnoremap <Leader>qq :qa<Cr>
+nnoremap <Leader>qs :wq<Cr>
 nnoremap <Leader>qw :q<Cr>
 nnoremap <Leader>sf :Lines<Cr>
 nnoremap <Leader>ss :BLines<Cr>
