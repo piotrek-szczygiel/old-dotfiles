@@ -12,7 +12,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'zhou13/vim-easyescape'
 
 call plug#end()
 
@@ -41,11 +40,6 @@ endif
 
 let g:airline_theme='onedark'
 let g:airline_powerline_fonts=1
-
-let g:easyescape_chars = { "d": 1, "f": 1 }
-let g:easyescape_timeout = 100
-cnoremap df <ESC>
-cnoremap fd <ESC>
 
 nnoremap <Leader><Cr> :nohl<Cr>
 nnoremap <Leader>fed :edit ~/.dotfiles/init.vim<Cr>
