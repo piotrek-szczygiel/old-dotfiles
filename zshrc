@@ -72,5 +72,8 @@ alias gd="g difftool"
 # virtualenvwrapper
 source virtualenvwrapper.sh
 
-# n - Node Version Manager
+# n - Node version manager
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+
+# gvm - Go version manager
+[[ -s "/home/piotr/.gvm/scripts/gvm" ]] && source "/home/piotr/.gvm/scripts/gvm"
