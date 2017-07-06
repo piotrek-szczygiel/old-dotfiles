@@ -12,7 +12,8 @@ if [ -d "$HOME/n" ]; then
     echo "N - Node version manager already installed - skipping"
 else
     echo "Installing N - node version manager"
-    curl -L https://git.io/n-install | bash -s -- -y -n latest
+    curl -L https://git.io/n-install | bash -s -- -y -n -
+    export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 fi
 
 if [ -d "$HOME/.gvm" ]; then
