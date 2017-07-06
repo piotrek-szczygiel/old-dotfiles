@@ -11,7 +11,7 @@
     "vim.enableNeovim": true,
     "vim.hlsearch": true,
     "vim.leader": "<space>",
-    "vim.timeout": 500,
+    "vim.timeout": 1000,
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-b>": false,
@@ -22,10 +22,6 @@
         "<C-x>": false,
         "<C-z>": false
     },
-    "vim.insertModeKeyBindings": [{
-        "before": ["f", "d"],
-        "after": ["<Esc>"]
-    }],
     "vim.otherModesKeyBindingsNonRecursive": [{
             "before": ["<leader>", "f", "s"],
             "after": [],
