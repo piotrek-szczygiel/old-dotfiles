@@ -20,7 +20,10 @@ if [ -d "$HOME/.gvm" ]; then
     echo "Gvm - Go version manager already installed - skipping"
 else
     echo "Installing Gvm - Go version manager"
-    zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+    git clone https://github.com/moovweb/gvm.git ~/.gvm
+    echo "export GVM_ROOT=$HOME/.gvm" > "$HOME/.gvm/scripts/gvm"
+    echo ". $HOME/.gvm/scripts/gvm-default" >> "$HOME/.gvm/scripts/gvm"
+    source "$HOME/.gvm/scripts/gvm"
 fi
 
 # Install essential programs (neovim, zsh)
@@ -67,4 +70,3 @@ else
     echo "Aborting installation! Operating system not supported!"
     exit 1
 fi
-
