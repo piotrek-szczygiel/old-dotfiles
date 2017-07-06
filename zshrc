@@ -67,11 +67,11 @@ zplug "zsh-users/zsh-completions"
 # Load plugins
 zplug load
 
-# Overwrite plugins/git alias
+# Overwrite oh-my-zsh git plugin alias
 alias gd="g difftool"
 
-# virtualenvwrapper
-type virtualenvwrapper.sh &> /dev/null && source virtualenvwrapper.sh
+# Python virtualenvwrapper
+command virtualenvwrapper.sh && source virtualenvwrapper.sh
 
 # n - Node version manager
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
