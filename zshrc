@@ -16,7 +16,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 alias e="$EDITOR"
-alias fer="source ~/.zshrc"
+alias fer="source $HOME/.zshrc"
 alias gs="gst"
 alias k="k -h"
 alias ka="k -Ah"
@@ -35,7 +35,7 @@ function haste() {
 }
 
 # Source zplug
-source ~/.dotfiles/zplug/init.zsh
+source "$HOME/.dotfiles/zplug/init.zsh"
 
 # Plugins settings
 ENHANCD_DOT_ARG=...
