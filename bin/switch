@@ -41,7 +41,11 @@ lte() {
 }
 
 if [ "$1" = "adsl" ]; then
-    adsl
+    if [ "$current_ip" = "adsl" ]; then
+        echo "You are already connected via ADSL"
+    else
+        adsl
+    fi
 elif [ "$1" = "lte" ]; then
     lte
 elif [ "$1" = "" ]; then
