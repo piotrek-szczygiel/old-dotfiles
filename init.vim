@@ -152,7 +152,7 @@ function! ToggleIndentation()
         echom "Using TABS"
     else
         set expandtab
-        echom "Using SPACES"
+        echom "Using " . &shiftwidth . " SPACES"
     endif
 endfunction
 
