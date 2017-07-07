@@ -19,7 +19,10 @@ call plug#end()
 " Don't let colorscheme remove trailing whitespace highlighting
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
-colorscheme onedark
+try
+    colorscheme onedark
+catch
+endtry
 
 " Set leader key to <space>
 let mapleader=" "
