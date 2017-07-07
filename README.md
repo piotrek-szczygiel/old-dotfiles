@@ -16,10 +16,5 @@ HTTPS: &nbsp; `git clone https://github.com/szczygi/dotfiles.git ~/.dotfiles`
 
 ## Essential programs
 
+* fish
 * neovim
-* zsh
-
-## Optional programs
-
-* virtualenvwrapper
-* xsel / xclip
