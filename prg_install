@@ -31,7 +31,7 @@ if command -v pacman > /dev/null 2>&1; then
     if ! command -v nvim > /dev/null 2>&1; then
         echo "Installing Neovim"
 
-        sudo pacman --no-confirm -S neovim python2-neovim python-neovim xclip xsel
+        sudo pacman --noconfirm -S neovim python2-neovim python-neovim xclip xsel
     else
         echo "Neovim already installed - skipping"
     fi
@@ -39,7 +39,7 @@ if command -v pacman > /dev/null 2>&1; then
     if ! command -v zsh > /dev/null 2>&1; then
         echo "Installing Zsh"
 
-        sudo pacman --no-confirm -S zsh
+        sudo pacman --noconfirm -S zsh
     else
         echo "Zsh already installed - skipping"
     fi
@@ -47,9 +47,25 @@ if command -v pacman > /dev/null 2>&1; then
     if ! python -c "import virtualenvwrapper" > /dev/null 2>&1; then
         echo "Installing Virtualenvwrapper"
 
-        sudo pacman --no-confirm -S python-virtualenvwrapper
+        sudo pacman --noconfirm -S python-virtualenvwrapper
     else
         echo "Virtualenvwrapper already installed - skipping"
+    fi
+
+    if ! command -v pacaur > /dev/null 2>&1; then
+        echo "Installing pacaur"
+
+        sudo pacman --noconfirm -S pacaur
+    else
+        echo "Pacaur already installed - skipping"
+    fi
+
+    if ! command -v fzy > /dev/null 2>&1; then
+        echo "Installing FZY"
+
+        pacaur --noconfirm -S fzy
+    else
+        echo "FZY already installed - skipping"
     fi
 elif command -v apt-get > /dev/null 2>&1; then
     if ! command -v nvim > /dev/null 2>&1; then
@@ -82,6 +98,15 @@ elif command -v apt-get > /dev/null 2>&1; then
         sudo apt-get -y install virtualenvwrapper
     else
         echo "Virtualenvwrapper already installed - skipping"
+    fi
+
+    if ! command -v fzy > /dev/null 2>&1; then
+        echo "Installing FZY"
+
+        wget -O /tmp/fzy.deb https://github.com/jhawthorn/fzy/releases/download/0.9/fzy_0.9-1_amd64.deb
+        sudo dpkg -i /tmp/fzy.deb
+    else
+        echo "FZY already installed - skipping"
     fi
 else
     echo "Aborting installation! Operating system not supported!"
