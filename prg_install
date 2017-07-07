@@ -31,7 +31,7 @@ if command -v pacman > /dev/null 2>&1; then
     if ! command -v nvim > /dev/null 2>&1; then
         echo "Installing Neovim"
 
-        sudo pacman --no-confirm -S neovim python2-neovim python-neovim
+        sudo pacman --no-confirm -S neovim python2-neovim python-neovim xclip xsel
     else
         echo "Neovim already installed - skipping"
     fi
