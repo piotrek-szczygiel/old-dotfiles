@@ -72,7 +72,10 @@ zplug load
 alias gd="g difftool"
 
 # Python virtualenvwrapper
-command virtualenvwrapper.sh && source virtualenvwrapper.sh
+VEW_ARCH="/usr/bin/virtualenvwrapper.sh"
+VEW_UBUNTU="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
+[[ -s "$VEW_ARCH" ]] && source "$VEW_ARCH"
+[[ -s "$VEW_UBUNTU" ]] && source "$VEW_UBUNTU"
 
 # n - Node version manager
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
