@@ -43,6 +43,14 @@ if command -v pacman > /dev/null 2>&1; then
     else
         echo "Zsh already installed - skipping"
     fi
+
+    if ! command -v virtualenvwrapper > /dev/null 2>&1; then
+        echo "Installing Virtualenvwrapper"
+
+        sudo pacman --no-confirm -S python-virtualenvwrapper
+    else
+        echo "Virtualenvwrapper already installed - skipping"
+    fi
 elif command -v apt-get > /dev/null 2>&1; then
     if ! command -v nvim > /dev/null 2>&1; then
         echo "Installing Neovim"
@@ -66,6 +74,14 @@ elif command -v apt-get > /dev/null 2>&1; then
         sudo apt-get -y install zsh
     else
         echo "Zsh already installed - skipping"
+    fi
+
+    if ! command -v virtualenvwrapper > /dev/null 2>&1; then
+        echo "Installing Virtualenvwrapper"
+
+        sudo apt-get -y install virtualenvwrapper
+    else
+        echo "Virtualenvwrapper already installed - skipping"
     fi
 else
     echo "Aborting installation! Operating system not supported!"
