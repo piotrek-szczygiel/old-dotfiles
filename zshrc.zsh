@@ -1,7 +1,7 @@
 export EDITOR="editor"
-export PATH=~/.dotfiles/bin:$PATH
+export PATH=$HOME/.dotfiles/bin:$PATH
 
-HISTFILE=~/.zsh_history
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=5000
 SAVEHIST=5000
 
@@ -16,7 +16,8 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 alias e="$EDITOR"
-alias fer="source $HOME/.zshrc"
+alias fed="e $HOME/.dotfiles/zshrc.zsh"
+alias fer="source $HOME/.dotfiles/zshrc.zsh"
 alias gs="gst"
 alias k="k -h"
 alias ka="k -Ah"
