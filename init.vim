@@ -58,9 +58,9 @@ let g:airline_powerline_fonts=1
 nnoremap <Leader><Cr> :nohl<Cr>
 
 " File
-nnoremap <Leader>fed :edit $MYVIMRC<Cr>:call SwitchToActualFile()<Cr>
-nnoremap <Leader>fer :source $MYVIMRC<Cr>:call SwitchToActualFile()<Cr>
-nnoremap <Leader>fez :edit ~/.zshrc<Cr>
+nnoremap <Leader>fed :edit ~/.dotfiles/init.vim<Cr>
+nnoremap <Leader>fer :source ~/.dotfiles/init.vim<Cr>
+nnoremap <Leader>fez :edit ~/.dotfiles/zshrc.zsh<Cr>
 nnoremap <Leader>fa :call SwitchToActualFile()<Cr>
 nnoremap <Leader>ff :Files<Cr>
 nnoremap <Leader>fS :w !sudo tee > /dev/null %<Cr>
