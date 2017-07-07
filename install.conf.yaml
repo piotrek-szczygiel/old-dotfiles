@@ -5,21 +5,8 @@
 
 - clean:
     ~
-    ~/.config/Code/User
     ~/.config/nvim
-    ~/.local/share/konsole
 
 - link:
-    ~/.config/Code/User/keybindings.json: vs_keybindings.json
-    ~/.config/Code/User/settings.json: vs_settings.json
     ~/.config/nvim/init.vim: init.vim
     ~/.gitconfig: gitconfig
-    ~/.local/share/konsole/Dracula.colorscheme: Dracula.colorscheme
-    ~/.zshrc: zshrc.zsh
-- shell:
-    -
-      command: ./prg_install
-      stderr: true
-      stdin: true
-      stdout: true
-
