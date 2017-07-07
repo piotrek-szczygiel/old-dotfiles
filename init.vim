@@ -98,7 +98,7 @@ nnoremap <Leader>tw :call ToggleShowWhitespace()<Cr>
 
 " Utilities
 " Strip trailing whitespace
-nnoremap <Leader>uw :%s/\s\+$//e<Cr>
+nnoremap <Leader>uw :call StripTrailingWhitespace()<Cr>
 " Sort selected lines
 vnoremap <Leader>us :sort i<Cr>
 
@@ -209,4 +209,12 @@ function! SwitchToActualFile()
     endif
     exec "edit " . fname
     echom "Switched to actual file"
+endfunction
+
+function! StripTrailingWhitespace()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+    echom "Stripped trailing whitespace"
 endfunction
