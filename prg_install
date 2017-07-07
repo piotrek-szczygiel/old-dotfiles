@@ -44,7 +44,7 @@ if command -v pacman > /dev/null 2>&1; then
         echo "Zsh already installed - skipping"
     fi
 
-    if ! command -v virtualenvwrapper > /dev/null 2>&1; then
+    if ! python -c "import virtualenvwrapper" > /dev/null 2>&1; then
         echo "Installing Virtualenvwrapper"
 
         sudo pacman --no-confirm -S python-virtualenvwrapper
@@ -76,7 +76,7 @@ elif command -v apt-get > /dev/null 2>&1; then
         echo "Zsh already installed - skipping"
     fi
 
-    if ! command -v virtualenvwrapper > /dev/null 2>&1; then
+    if ! python -c "import virtualenvwrapper" > /dev/null 2>&1; then
         echo "Installing Virtualenvwrapper"
 
         sudo apt-get -y install virtualenvwrapper
