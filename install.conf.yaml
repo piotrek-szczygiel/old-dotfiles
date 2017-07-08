@@ -10,4 +10,5 @@
 - link:
     ~/.config/i3: i3
     ~/.config/nvim: neovim
+    ~/.config/termite: termite
     ~/.gitconfig: gitconfig
