@@ -1,1 +1,0 @@
-/home/piotr/.config/fisherman/menu/menu.fish

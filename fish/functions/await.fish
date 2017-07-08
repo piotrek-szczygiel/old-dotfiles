@@ -1,1 +1,0 @@
-/home/piotr/.config/fisherman/await/functions/await.fish

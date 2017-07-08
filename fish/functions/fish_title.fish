@@ -1,1 +1,0 @@
-/home/piotr/.config/fisherman/pure/fish_title.fish

@@ -1,1 +1,0 @@
-/home/piotr/.config/fisherman/fnm/functions/node.fish
