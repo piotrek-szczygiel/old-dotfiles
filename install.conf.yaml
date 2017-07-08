@@ -8,6 +8,7 @@
     ~/.config
 
 - link:
+    ~/.config/compton.conf: compton/compton.conf
     ~/.config/fish: fish
     ~/.config/i3: i3
     ~/.config/nvim: neovim
