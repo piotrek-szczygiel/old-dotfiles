@@ -13,4 +13,3 @@
     ~/.config/nvim: neovim
     ~/.config/termite: termite
     ~/.gitconfig: gitconfig
-    ~/.xprofile: xprofile
