@@ -5,11 +5,12 @@
 
 - clean:
     ~
-    ~/.config/nvim
+    ~/.config
 
 - link:
     ~/.config/fish: fish
     ~/.config/i3: i3
     ~/.config/nvim: neovim
+    ~/.config/omf: omf
     ~/.config/termite: termite
     ~/.gitconfig: gitconfig
