@@ -1,8 +1,9 @@
 fisherman/await
+oh-my-fish/plugin-extract
 fisherman/fnm
 fisherman/get_file_age
 fisherman/getopts
-oh-my-fish/plugin-gi
+fisherman/gitignore
 fisherman/last_job_id
 fisherman/menu
 oh-my-fish/plugin-python
