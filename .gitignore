@@ -4,6 +4,3 @@ fish/*
 !fish/functions
 fish/functions/*
 !fish/functions/fisher.fish
-!fish/completions
-fish/completions/*
-!fish/completions/git.fish
