@@ -1,0 +1,4 @@
+fish/*
+!fish/config.fish
+!fish/fishfile
+!fish/function/fisher.fish

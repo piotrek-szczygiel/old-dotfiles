@@ -1,5 +1,4 @@
-xrandr --output DVI-I-1 --mode 1920x1080 --refresh 144 &
-xrandr --output DVI-D-1 --mode 1440x900 --refresh 75 &
-setxkbmap pl -option caps:escape &
+setxkbmap -option caps:escape &
+xrandr -r 144 &
 
 exec i3

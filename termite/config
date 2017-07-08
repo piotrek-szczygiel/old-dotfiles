@@ -1,64 +1,28 @@
 [options]
-allow_bold = true
-audible_bell = false
-clickable_url = true
-dynamic_title = true
-font = DejaVuSansMonoForPowerline Nerd Font 14
-fullscreen = true
-geometry = 640x480
-icon_name = terminal
+font = Hack 12
 mouse_autohide = true
-scroll_on_output = false
-scroll_on_keystroke = true
-scrollback_lines = -1
-search_wrap = true
-urgent_on_bell = true
-browser = xdg-open
-cursor_blink = system
-cursor_shape = block
-filter_unmatched_urls = true
-modify_other_keys = false
-size_hints = false
+scrollback_lines = 10000
 
 [colors]
+background = #1d2021
+foreground = #ebdbb2
+foreground_bold = #ebdbb2
 
-foreground = #d0d0d0
-background = #151515
-
-# black
-color0  = #151515
-color8  = #505050
-# red
-color1  = #ac4142
-color9  = #ac4142
-# green
-color2  = #90a959
-color10 = #90a959
-# yellow
-color3  = #f4bf75
-color11 = #f4bf75
-# blue
-color4  = #6a9fb5
-color12 = #6a9fb5
-# magenta
-color5  = #aa759f
-color13 = #aa759f
-# cyan
-color6  = #75b5aa
-color14 = #75b5aa
-# white
-color7  = #d0d0d0
-color15 = #f5f5f5
-
-[hints]
-font = Source Code Pro 12
-foreground = #dcdccc
-background = #3f3f3f
-active_foreground = #e68080
-active_background = #3f3f3f
-padding = 2
-border = #3f3f3f
-border_width = 0.5
-roundness = 2.0
+color0  = #282828
+color1  = #cc241d
+color2  = #98971a
+color3  = #d79921
+color4  = #458588
+color5  = #b16286
+color6  = #689d6a
+color7  = #a89984
+color8  = #928374
+color9  = #fb4934
+color10 = #b8bb26
+color11 = #fabd2f
+color12 = #83a598
+color13 = #d3869b
+color14 = #8ec07c
+color15 = #ebdbb2
 
 # vim: ft=dosini cms=#%s
