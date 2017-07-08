@@ -1,8 +1,12 @@
 fisherman/await
+fisherman/cprintf
+fisherman/debug
 oh-my-fish/plugin-extract
 fisherman/fnm
+fisherman/g2
 fisherman/get_file_age
 fisherman/getopts
+fisherman/git_util
 fisherman/gitignore
 fisherman/last_job_id
 fisherman/menu
