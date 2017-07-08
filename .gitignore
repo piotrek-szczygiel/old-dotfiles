@@ -1,4 +1,6 @@
 fish/*
 !fish/config.fish
 !fish/fishfile
+!fish/functions
+fish/functions/*
 !fish/functions/fisher.fish
