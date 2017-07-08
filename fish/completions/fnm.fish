@@ -1,0 +1,1 @@
+/home/piotr/.config/fisherman/fnm/completions/fnm.fish
