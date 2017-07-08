@@ -8,5 +8,6 @@
     ~/.config/nvim
 
 - link:
-    ~/.config/nvim/init.vim: init.vim
+    ~/.config/i3: i3
+    ~/.config/nvim: neovim
     ~/.gitconfig: gitconfig
