@@ -14,4 +14,4 @@
     ~/.config/omf: omf
     ~/.config/termite: termite
     ~/.gitconfig: gitconfig
-    ~/.Xprofile: Xprofile
+    ~/.xprofile: xprofile
