@@ -1,1 +1,4 @@
+package config
+package spark
 theme default
+theme pure
