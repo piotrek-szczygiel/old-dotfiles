@@ -1,4 +1,5 @@
 set -xg EDITOR nvim
+set -xg VISUAL nvim
 
 alias finddir="find -type d | fzy"
 alias findfile="find -type f | fzy"
