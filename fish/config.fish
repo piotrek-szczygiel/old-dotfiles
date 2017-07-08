@@ -14,4 +14,20 @@ function fish_user_key_bindings
     bind \cd "__fzf_cd_with_hidden"
     bind \ct "__fzf_find_file"
 end
+
+# Colored man pages
+function man
+    which man | read MAN
+
+    set -x LESS_TERMCAP_md (printf "\e[01;31m")
+    set -x LESS_TERMCAP_me (printf "\e[0m")
+    set -x LESS_TERMCAP_se (printf "\e[0m")
+    set -x LESS_TERMCAP_so (printf "\e[01;44;33m")
+    set -x LESS_TERMCAP_ue (printf "\e[0m")
+    set -x LESS_TERMCAP_us (printf "\e[01;32m")
+
+    eval $MAN $argv
+end
+
+# Virtualfish initialization
 eval (python -m virtualfish)
