@@ -1,48 +1,44 @@
+[options]
+font = Source Code Pro 12
+
 [colors]
-# Base16 Default Dark
-# Author: Chris Kempson (http://chriskempson.com)
 
-foreground      = #d8d8d8
-foreground_bold = #e8e8e8
-cursor          = #e8e8e8
-background      = #181818
+# special
+foreground      = #c5c8c6
+foreground_bold = #c5c8c6
+cursor          = #c5c8c6
+background      = #1d1f21
 
-# 16 color space
+# black
+color0  = #282a2e
+color8  = #373b41
 
-# Black, Gray, Silver, White
-color0  = #181818
-color8  = #585858
-color7  = #d8d8d8
-color15 = #f8f8f8
+# red
+color1  = #a54242
+color9  = #cc6666
 
-# Red
-color1  = #ab4642
-color9  = #ab4642
+# green
+color2  = #8c9440
+color10 = #b5bd68
 
-# Green
-color2  = #a1b56c
-color10 = #a1b56c
+# yellow
+color3  = #de935f
+color11 = #f0c674
 
-# Yellow
-color3  = #f7ca88
-color11 = #f7ca88
+# blue
+color4  = #5f819d
+color12 = #81a2be
 
-# Blue
-color4  = #7cafc2
-color12 = #7cafc2
+# magenta
+color5  = #85678f
+color13 = #b294bb
 
-# Purple
-color5  = #ba8baf
-color13 = #ba8baf
+# cyan
+color6  = #5e8d87
+color14 = #8abeb7
 
-# Teal
-color6  = #86c1b9
-color14 = #86c1b9
+# white
+color7  = #707880
+color15 = #c5c8c6
 
-# Extra colors
-color16 = #dc9656
-color17 = #a16946
-color18 = #282828
-color19 = #383838
-color20 = #b8b8b8
-color21 = #e8e8e8
+# vim: ft=dosini cms=#%s
