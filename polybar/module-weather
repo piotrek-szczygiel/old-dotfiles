@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 
 import pyowm
+import time
+
+time.sleep(10)
 
 owm = pyowm.OWM('04c5661a471dfc3a911c979b93af5056')
 

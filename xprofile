@@ -1,8 +1,6 @@
-pulseaudio &
 xrandr -r 144 &
+pulseaudio &
 ~/.fehbg &
 compton -cb &
 setxkbmap -option caps:escape &
 redshift &
-
-exec i3
