@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 ip_address=$(curl "http://canihazip.com/s" 2> /dev/null)
 echo "Your external IP address: $ip_address"

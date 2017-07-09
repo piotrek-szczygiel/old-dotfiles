@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 my_interface=$(ip route get 8.8.8.8 | awk '/dev/ {f=NR} f&&NR-1==f' RS=" ")
 
