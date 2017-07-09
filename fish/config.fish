@@ -31,4 +31,4 @@ function man
 end
 
 # Virtualfish initialization
-eval (python -m virtualfish)
+eval (python -m virtualfish ^ /dev/null)
