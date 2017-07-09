@@ -13,8 +13,3 @@ HTTPS: &nbsp; `git clone https://github.com/szczygi/dotfiles.git ~/.dotfiles`
 ### Apply configuration
 
 `~/.dotfiles/install`
-
-## Essential programs
-
-* fish
-* neovim
