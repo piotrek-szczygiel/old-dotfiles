@@ -1,5 +1,5 @@
 [options]
-font = Hack 12
+font = MesloLGSDZ Nerd Font 14
 mouse_autohide = true
 scrollback_lines = 10000
 
@@ -26,4 +26,4 @@ color13 = #ff6ac1
 color14 = #9aedfe
 color15 = #f1f1f0
 
-# vim: ft=dosini cms=#%s
+# vim: ft=dosini
