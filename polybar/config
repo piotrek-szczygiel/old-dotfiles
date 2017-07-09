@@ -1,0 +1,172 @@
+[colors]
+foreground-alt = #67b563
+arch = #4286f4
+
+[bar/top]
+monitor = ${env:MONITOR:DVI-I-1}
+
+fixed-center = true
+
+width = 100%
+height = 35
+
+background = #141021
+foreground = #c4b7c5
+
+font-0 = MesloLGS Nerd Font:pixelsize=11:weight=bold;0
+
+locale = pl_PL.UTF-8
+
+modules-left = i3
+modules-center = date weather
+modules-right = cpu memory net updates music volume redshift
+
+[module/i3]
+type = internal/i3
+
+ws-icon-0 = term;
+ws-icon-1 = web;
+ws-icon-2 = code;
+ws-icon-3 = music;
+ws-icon-4 = irssi;
+ws-icon-default = 
+
+pin-workspaces = true
+strip-wsnumbers = true
+index-sort = true
+enable-scroll = false
+
+format = <label-state>
+format-padding-right = 2
+
+label-unfocused-foreground = #8a7f8f
+label-unfocused-padding = 1
+
+label-focused-foreground = #c16772
+label-focused-padding = 1
+
+label-urgent-foreground = #e4b226
+label-urgent-padding = 1
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format = <label> <ramp-coreload>
+format-padding = 2
+label = CPU
+
+ramp-coreload-0 = ▁
+ramp-coreload-0-font = 2
+ramp-coreload-0-foreground = #aaff77
+ramp-coreload-1 = ▂
+ramp-coreload-1-font = 2
+ramp-coreload-1-foreground = #aaff77
+ramp-coreload-2 = ▃
+ramp-coreload-2-font = 2
+ramp-coreload-2-foreground = #aaff77
+ramp-coreload-3 = ▄
+ramp-coreload-3-font = 2
+ramp-coreload-3-foreground = #aaff77
+ramp-coreload-4 = ▅
+ramp-coreload-4-font = 2
+ramp-coreload-4-foreground = #fba922
+ramp-coreload-5 = ▆
+ramp-coreload-5-font = 2
+ramp-coreload-5-foreground = #fba922
+ramp-coreload-6 = ▇
+ramp-coreload-6-font = 2
+ramp-coreload-6-foreground = #ff5555
+ramp-coreload-7 = █
+ramp-coreload-7-font = 2
+ramp-coreload-7-foreground = #ff5555
+
+
+[module/memory]
+type = internal/memory
+
+interval = 1
+
+format = <label> <bar-used>
+label = RAM
+bar-used-indicator = 
+bar-used-width = 9
+bar-used-foreground-0 = #55aa55
+bar-used-foreground-1 = #557755
+bar-used-foreground-2 = #f5a70a
+bar-used-foreground-3 = #ff5555
+bar-used-fill = ▐
+bar-used-empty = ▐
+bar-used-empty-foreground = #444444
+
+[module/date]
+type = internal/date
+
+interval = 1
+
+date = %a %b %d, 
+time = %H:%M:%S
+
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
+
+format = <label>
+format-padding = 2
+
+label = %date% %time%
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+
+[module/volume]
+type = internal/volume
+format-volume = <ramp-volume> <label-volume>
+format-volume-padding = 2
+format-muted-padding = 2
+label-volume = %percentage%%
+label-volume-foreground = #aaaaaa
+label-muted =  %percentage%%
+label-muted-foreground = #663333
+ramp-volume-0 =  
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-foreground = ${colors.foreground-alt}
+
+[module/net]
+type = custom/script
+interval = 10
+format = <label>
+format-padding = 2
+exec = .config/polybar/module-net
+
+[module/redshift]
+type = custom/script
+interval = 10
+format = <label>
+format-padding = 2
+exec = .config/polybar/module-redshift
+
+[module/updates]
+type = custom/script
+interval = 1200
+format = <label>
+format-underline = #dc322f
+format-padding = 2
+format-prefix = ""
+format-prefix-foreground = ${colors.arch}
+exec = .config/polybar/module-updates
+exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
+
+[module/weather]
+type = custom/script
+interval = 1200
+format = <label>
+format-padding = 2
+exec = .config/polybar/module-weather
+
+[module/music]
+type = custom/script
+interval = 5
+format-padding = 2
+label = %output:0:45:...%
+exec = .config/polybar/module-music
+
+# vim:ft=dosini

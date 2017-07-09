@@ -1,0 +1,49 @@
+#!/usr/bin/env python
+
+import pyowm
+
+owm = pyowm.OWM('04c5661a471dfc3a911c979b93af5056')
+
+observation = owm.weather_at_place('Chelmiec,pl')
+w = observation.get_weather()
+
+temp = w.get_temperature('celsius')['temp']
+clouds = w.get_clouds()
+rain = w.get_rain()
+snow = w.get_snow()
+status = w.get_status()
+
+color_normal="%{F#feeffe}"
+color_end="%{F-}"
+color_clouds="%{F#989378}"
+color_rain="%{F#1232fa}"
+color_snow="%{F#afbaff}"
+color_temps=["%{F#3675c1}", "%{F#2ba531}", "%{F#e2d42f}"]
+
+icon_clouds=""
+icon_rain=""
+icon_snow=""
+icon_temps=["","",""]
+
+if temp > 20:
+    icon_temp=icon_temps[2]
+    color_temp=color_temps[2]
+elif temp > 10:
+    icon_temp=icon_temps[1]
+    color_temp=color_temps[1]
+else:
+    icon_temp=icon_temps[0]
+    color_temp=color_temps[0]
+
+output = "{}{}{}".format(color_temp,icon_temp,color_end)
+output += "{}{}°C{}  ".format(color_normal,temp,color_end)
+
+if clouds:
+    output += "{}{}{}".format(color_clouds,icon_clouds,color_end)
+if rain:
+    output += "{}{}{}".format(color_rain,icon_rain,color_end)
+if snow:
+    output += "{}{}{}".format(color_snow,icon_snow,color_end)
+
+output += status
+print(output)
