@@ -8,7 +8,7 @@ alias q="exit"
 # Git aliases
 alias ga="git add"
 alias gc="git commit"
-alias gca"git commit -A"
+alias gca="git commit -a"
 alias gd="git diff"
 alias gl="git pull"
 alias gp="git push"
