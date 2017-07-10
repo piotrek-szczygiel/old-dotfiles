@@ -8,4 +8,6 @@ if [ $status -ne 0 ]; then
     termite -e "fish -c ncmpcpp" &
     sleep 0.1
     termite -e "fish -c vis" &
+    sleep 0.1
+    i3-msg "focus left" > /dev/null 2>&1
 fi
