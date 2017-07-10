@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-icon=""
+icon="%{F#126a3d}%{F-}"
 
 mpc | grep playing > /dev/null 2>&1
 
 if [ $? -eq 0 ]; then
     metadata="$(mpc | head -1)"
     metadata=${metadata#*-}
-    echo "%{F#aee8e6}$icon $metadata%{F-}"
+    echo "$icon%{root.foreground}$metadata%{F-}"
 else
-    echo "%{F#626853}$icon%{F-}"
+    echo "$icon"
 fi

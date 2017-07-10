@@ -40,7 +40,7 @@ type = internal/i3
 ws-icon-0 = term;
 ws-icon-1 = web;
 ws-icon-2 = code;
-ws-icon-3 = music;
+ws-icon-3 = music;
 ws-icon-4 = slack;
 ws-icon-5 = pass;
 ws-icon-6 = dotfiles;
@@ -149,7 +149,7 @@ ramp-volume-foreground = ${colors.foreground-alt}
 
 [module/net]
 type = custom/script
-interval = 10
+interval = 3
 format = <label>
 format-padding = 2
 exec = .config/polybar/module-net
@@ -183,7 +183,7 @@ exec = .config/polybar/module-weather
 type = custom/script
 interval = 2
 format-padding = 2
-label = %output:0:45:...%
+label = %output:0:80:...%
 exec = .config/polybar/module-music
 
 # vim:ft=dosini

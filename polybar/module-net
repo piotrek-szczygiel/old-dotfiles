@@ -3,9 +3,9 @@
 import socket
 ip = socket.gethostbyname(socket.gethostname())
 
-if ip == '192.168.2.27':
-    print('%{F#8bbcd2}LTE%{F-}') 
-elif ip == '192.168.2.28':
-    print('%{F#d3cc8b}ADSL%{F-}')
+if ip == "192.168.2.27":
+    print("%{F#8bbcd2}%{F-} LTE") 
+elif ip == "192.168.2.28":
+    print("%{F#e89a00}%{F-} ADSL")
 else:
-    print('%{F#a0d18a}DHCP%{F-}')
+    print("%{F#a0d18a}%{F-}")
