@@ -1,5 +1,6 @@
 xrandr -r 144 &
 pulseaudio &
+mopidy &
 ~/.fehbg &
 compton -cb &
 setxkbmap -option caps:escape &
