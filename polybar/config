@@ -19,7 +19,7 @@ locale = pl_PL.UTF-8
 
 modules-left = i3
 modules-center = date weather
-modules-right = cpu memory net updates music volume redshift mpd
+modules-right = cpu memory net updates music volume redshift mpd powermenu
 
 tray-position = right
 
@@ -185,5 +185,48 @@ interval = 2
 format-padding = 2
 label = %output:0:80:...%
 exec = .config/polybar/module-music
+
+[module/powermenu]
+type = custom/menu
+
+label-open =   
+
+label-close = cancel
+
+label-close-background = #312842
+label-close-foreground = #ffeefc
+label-open-padding-left = 2
+label-open-padding-right = 2
+label-close-padding = 3
+
+menu-0-0 = lock
+menu-0-0-exec = lock
+menu-0-0-background = #312842
+menu-0-0-foreground = #c05c47
+menu-0-0-padding-right = 3
+
+menu-0-1 = reboot
+menu-0-1-exec = menu-open-1
+menu-0-1-background = #312842
+menu-0-1-foreground = #c05c47
+menu-0-1-padding-right = 3
+
+menu-0-2 = power off
+menu-0-2-exec = menu-open-2
+menu-0-2-background = #312842
+menu-0-2-foreground = #c05c47
+menu-0-2-padding-right = 3
+
+menu-1-0 = reboot?  
+menu-1-0-exec = reboot
+menu-1-0-background = #312842
+menu-1-0-foreground = #e4b226
+menu-1-0-padding-right = 3
+
+menu-2-0 = power off?  
+menu-2-0-exec = poweroff
+menu-2-0-background = #312842
+menu-2-0-foreground = #e4b226
+menu-2-0-padding-right = 3
 
 # vim:ft=dosini
