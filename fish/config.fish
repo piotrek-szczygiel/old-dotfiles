@@ -2,6 +2,7 @@ set -xg EDITOR nvim
 set -xg BROWSER google-chrome-stable
 
 alias e="$EDITOR"
+alias q="exit"
 
 # FZF settings
 set -xg FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
