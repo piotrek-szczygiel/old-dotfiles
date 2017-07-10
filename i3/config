@@ -19,7 +19,7 @@ font pango:MesloLGSDZ Nerd Font 9
 
 focus_follows_mouse no
 bindsym $win+Shift+q kill
-bindsym $win+Shift+w exec --release "termite --name=_xkill_ -e xkill"
+bindsym --release $win+x exec xkill
 
 bindsym $alt+Tab exec rofi -show window
 bindsym $win+o exec rofi -show run -eh 2 -padding 400 -fullscreen
