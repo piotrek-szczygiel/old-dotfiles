@@ -28,10 +28,10 @@ icon_rain=""
 icon_snow=""
 icon_temps=["","",""]
 
-if temp > 20:
+if temp > 25:
     icon_temp=icon_temps[2]
     color_temp=color_temps[2]
-elif temp > 10:
+elif temp > 15:
     icon_temp=icon_temps[1]
     color_temp=color_temps[1]
 else:
