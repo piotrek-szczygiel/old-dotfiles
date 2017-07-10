@@ -7,14 +7,6 @@
 	autocrlf = input
 	ignorecase = false
 	safecrlf = warn
-[g2 "panic"]
-	excludes = -e .classpath -e .settings -e *.iml
-[diff]
-	tool = meld
-[merge]
-	tool = meld
-[mergetool "meld"]
-	trustExitCode = false
 [color]
 	branch = auto
 	diff = auto
@@ -22,5 +14,3 @@
 	status = auto
 [push]
 	default = current
-[mergetool]
-	keepBackup = false
