@@ -10,7 +10,9 @@ hide_edge_borders smart
 set $gaps_default 50
 set $gaps_code 20
 set $gaps_term 100
+set $gaps_music 100
 set $gaps_web 0
+set $gaps_task 20
 
 gaps inner $gaps_default
 
@@ -41,7 +43,7 @@ workspace $w_code gaps inner $gaps_code
 bindsym $win+c workspace $w_code
 
 set $w_music "4:music"
-workspace $w_music gaps inner 100
+workspace $w_music gaps inner $gaps_music
 bindsym $win+m exec $psst start_music
 
 set $w_pass "5:pass"
@@ -51,6 +53,10 @@ bindsym $win+p exec $psst start_pass
 set $w_slack "6:slack"
 assign [class="Slack"] $w_slack
 bindsym $win+t exec $psst start_slack
+
+set $w_task "7:task"
+workspace $w_task gaps inner $gaps_task
+bindsym $win+BackSpace exec $psst start_task
 
 set $w_dotfiles "10:dotfiles"
 bindsym $win+u workspace $w_dotfiles
