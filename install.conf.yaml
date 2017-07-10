@@ -16,5 +16,6 @@
     ~/.config/nvim: neovim
     ~/.config/polybar: polybar
     ~/.config/termite: termite
+    ~/.config/vis: vis
     ~/.fehbg: wallpaper
     ~/.gitconfig: gitconfig
