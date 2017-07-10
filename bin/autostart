@@ -3,7 +3,7 @@
 xrandr -r 144 &
 pulseaudio &
 mopidy &
-~/.fehbg &
+~/.dotfiles/bin/wallpaper &
 compton -cb &
 setxkbmap -option caps:escape &
 redshift &
