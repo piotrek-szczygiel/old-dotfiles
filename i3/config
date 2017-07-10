@@ -1,135 +1,143 @@
-# Modkey
-set $mod Mod4
+set $alt Mod1
+set $win Mod4
+set $psst --no-startup-id
+set $TERMINAL termite
 
-# Font
-font pango:MesloLGSDZ Nerd Font 12
+new_window pixel 0
+new_float pixel 3
+hide_edge_borders smart
 
-# Hide borders
-new_window none
+set $gaps_default 50
+set $gaps_code 20
+set $gaps_term 100
+set $gaps_web 0
 
-# Gaps :>
-gaps inner 50
-gaps outer 0
+gaps inner $gaps_default
+
+font pango:MesloLGSDZ Nerd Font 9
 
 focus_follows_mouse no
+bindsym $win+Shift+q kill
+bindsym $win+Shift+w exec --release "termite --name=_xkill_ -e xkill"
+
+bindsym $alt+Tab exec rofi -show window
+bindsym $win+o exec rofi -show run -eh 2 -padding 400 -fullscreen
 
 # Workspaces settings
 workspace_auto_back_and_forth yes
 
-assign [class="Google-chrome"] "1:web"
-workspace "1:web" gaps inner 0
-bindsym $mod+g workspace "1:web"
+set $w_web "1:web"
+assign [class="Google-chrome"] $w_web
+workspace $w_web gaps inner $gaps_web
+bindsym $win+g exec $psst start_web
+bindsym $win+Shift+g move container to workspace $w_web
 
-bindsym $mod+u workspace "6:dotfiles"
+set $w_term "2:term"
+workspace $w_term gaps inner $gaps_term
+bindsym $win+space exec $psst start_term
 
-workspace "7:music" gaps inner 100
-bindsym $mod+m workspace "7:music"
+set $w_code "3:code"
+workspace $w_code gaps inner $gaps_code
+bindsym $win+c workspace $w_code
 
-assign [class="keepassxc"] "8:pass"
-bindsym $mod+p workspace "8:pass"
+set $w_music "4:music"
+workspace $w_music gaps inner 100
+bindsym $win+m exec $psst start_music
 
-assign [class="Slack"] "9:slack"
-bindsym $mod+t workspace "9:slack"
+set $w_pass "5:pass"
+assign [class="keepassxc"] $w_pass
+bindsym $win+p exec $psst start_pass
 
-workspace "5:code" gaps inner 10
-bindsym $mod+semicolon workspace "5:code"
+set $w_slack "6:slack"
+assign [class="Slack"] $w_slack
+bindsym $win+t exec $psst start_slack
 
-workspace "2:term" gaps inner 100
-bindsym $mod+space workspace "2:term"
+set $w_dotfiles "10:dotfiles"
+bindsym $win+u workspace $w_dotfiles
 
-bindsym $mod+n workspace next
-bindsym $mod+b workspace prev
+set $w_term1 "11:term"
+workspace $w_term1 gaps inner $gaps_term
+bindsym $win+1 workspace $w_term1
 
-# Split horizontal/vertical
-bindsym $mod+v split v
-bindsym $mod+c split h
+set $w_term2 "12:term"
+workspace $w_term2 gaps inner $gaps_term
+bindsym $win+2 workspace $w_term2
 
-# Lock screen
-bindsym $mod+F12 exec "$HOME/.dotfiles/bin/lock"
+set $w_term3 "13:term"
+workspace $w_term3 gaps inner $gaps_term
+bindsym $win+3 workspace $w_term3
 
-# Launch polybar
-exec_always --no-startup-id $HOME/.dotfiles/polybar/launch
+set $w_term4 "14:term"
+workspace $w_term4 gaps inner $gaps_term
+bindsym $win+4 workspace $w_term4
 
-# Launch termite
-bindsym $mod+Return exec termite
+set $w_term5 "15:term"
+workspace $w_term5 gaps inner $gaps_term
+bindsym $win+5 workspace $w_term5
 
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+set $w_term6 "16:term"
+workspace $w_term6 gaps inner $gaps_term
+bindsym $win+6 workspace $w_term6
 
-# kill focused window
-bindsym $mod+Shift+q kill
+set $w_term7 "17:term"
+workspace $w_term7 gaps inner $gaps_term
+bindsym $win+7 workspace $w_term7
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+set $w_term8 "18:term"
+workspace $w_term8 gaps inner $gaps_term
+bindsym $win+8 workspace $w_term8
 
-# change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+set $w_term9 "19:term"
+workspace $w_term9 gaps inner $gaps_term
+bindsym $win+9 workspace $w_term9
 
-# move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $win+period workspace next
+bindsym $win+comma workspace prev
 
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $win+v split v
+bindsym $win+Shift+v split h
 
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $win+F12 exec "$HOME/.dotfiles/bin/lock"
 
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+exec_always $psst $HOME/.dotfiles/polybar/launch
+exec $psst $HOME/.dotfiles/bin/autostart
 
-# switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $win+Return exec $TERMINAL
 
-# move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+floating_modifier $win
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $win+h focus left
+bindsym $win+j focus down
+bindsym $win+k focus up
+bindsym $win+l focus right
 
-# resize window (you can also use the mouse for that)
+bindsym $win+Shift+h move left
+bindsym $win+Shift+j move down
+bindsym $win+Shift+k move up
+bindsym $win+Shift+l move right
+
+bindsym $win+f fullscreen toggle
+
+bindsym $win+s layout stacking
+bindsym $win+w layout tabbed
+bindsym $win+e layout toggle split
+
+bindsym $win+Shift+space floating toggle
+
+bindsym $win+Shift+c reload
+bindsym $win+Shift+r restart
+bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
         bindsym h resize shrink width 5 px or 5 ppt
         bindsym j resize grow height 5 px or 5 ppt
         bindsym k resize shrink height 5 px or 5 ppt
         bindsym l resize grow width 5 px or 5 ppt
 
-        # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $win+r mode "resize"
 
 # vim:ft=conf
