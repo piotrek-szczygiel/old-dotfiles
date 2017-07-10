@@ -23,17 +23,6 @@ modules-right = cpu memory net updates music volume redshift mpd powermenu
 
 tray-position = right
 
-[module/mpd]
-type = internal/mpd
-
-host = 127.0.0.1
-port = 6600
-password = mysecretpassword
-
-; Seconds to sleep between progressbar/song timer sync
-; Default: 1
-interval = 2
-
 [module/i3]
 type = internal/i3
 
@@ -149,7 +138,7 @@ ramp-volume-foreground = ${colors.foreground-alt}
 
 [module/net]
 type = custom/script
-interval = 3
+interval = 10
 format = <label>
 format-padding = 2
 exec = .config/polybar/module-net
@@ -163,7 +152,7 @@ exec = .config/polybar/module-redshift
 
 [module/updates]
 type = custom/script
-interval = 1200
+interval = 120
 format = <label>
 format-underline = #dc322f
 format-padding = 2
@@ -181,7 +170,7 @@ exec = .config/polybar/module-weather
 
 [module/music]
 type = custom/script
-interval = 2
+interval = 5
 format-padding = 2
 label = %output:0:80:...%
 exec = .config/polybar/module-music
