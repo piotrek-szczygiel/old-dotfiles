@@ -4,3 +4,4 @@ fish/*
 !fish/functions
 fish/functions/*
 !fish/functions/fisher.fish
+ncmpcpp/error.log
