@@ -11,7 +11,9 @@ new_window none
 gaps inner 50
 gaps outer 0
 
-workspace 1 gaps inner 0
+workspace web gaps inner 0
+
+#assign [class="Google-chrome"] web
 
 # Launch polybar
 exec_always --no-startup-id $HOME/.dotfiles/polybar/launch
