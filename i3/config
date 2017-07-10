@@ -16,26 +16,26 @@ focus_follows_mouse no
 # Workspaces settings
 workspace_auto_back_and_forth yes
 
-assign [class="Google-chrome"] "1: web"
-workspace "1: web" gaps inner 0
-bindsym $mod+g workspace "1: web"
+assign [class="Google-chrome"] "1:web"
+workspace "1:web" gaps inner 0
+bindsym $mod+g workspace "1:web"
 
-bindsym $mod+u workspace "6: dotfiles"
+bindsym $mod+u workspace "6:dotfiles"
 
-workspace "7: music" gaps inner 100
-bindsym $mod+m workspace "7: music"
+workspace "7:music" gaps inner 100
+bindsym $mod+m workspace "7:music"
 
-assign [class="keepassxc"] "8: pass"
-bindsym $mod+p workspace "8: pass"
+assign [class="keepassxc"] "8:pass"
+bindsym $mod+p workspace "8:pass"
 
-assign [class="Slack"] "9: slack"
-bindsym $mod+t workspace "9: slack"
+assign [class="Slack"] "9:slack"
+bindsym $mod+t workspace "9:slack"
 
-workspace "5: code" gaps inner 10
-bindsym $mod+semicolon workspace "5: code"
+workspace "5:code" gaps inner 10
+bindsym $mod+semicolon workspace "5:code"
 
-workspace "2: term" gaps inner 100
-bindsym $mod+space workspace "2: term"
+workspace "2:term" gaps inner 100
+bindsym $mod+space workspace "2:term"
 
 bindsym $mod+n workspace next
 bindsym $mod+b workspace prev
