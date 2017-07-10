@@ -1,8 +1,17 @@
 set -xg EDITOR nvim
 set -xg BROWSER google-chrome-stable
 
+# Basic aliases
 alias e="$EDITOR"
 alias q="exit"
+
+# Git aliases
+alias ga="git add"
+alias gc="git commit"
+alias gd="git diff"
+alias gl="git pull"
+alias gp="git push"
+alias gs="git status"
 
 # FZF settings
 set -xg FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
