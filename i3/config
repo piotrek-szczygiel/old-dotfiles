@@ -1,7 +1,6 @@
 set $alt Mod1
 set $win Mod4
 set $psst --no-startup-id
-set $TERMINAL termite
 
 new_window pixel 0
 new_float pixel 3
@@ -108,7 +107,7 @@ bindsym $win+F12 exec "$HOME/.dotfiles/bin/lock"
 exec_always $psst $HOME/.dotfiles/polybar/launch
 exec $psst $HOME/.dotfiles/bin/autostart
 
-bindsym $win+Return exec $TERMINAL
+bindsym $win+Return exec cd $(xcwd) && exec termite
 
 floating_modifier $win
 
