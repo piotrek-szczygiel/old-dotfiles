@@ -17,7 +17,7 @@ now_playing_suffix = $/b
 song_columns_list_format = (20)[red]{a} (6f)[green]{NE} (50)[blue]{t|f:Title} (20)[yellow]{b} (7f)[magenta]{l}
 
 browser_display_mode = columns
-search_engine_display_mode = columns 
+search_engine_display_mode = columns
 playlist_editor_display_mode = columns
 incremental_seeking = yes
 autocenter_mode = yes
