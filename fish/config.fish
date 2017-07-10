@@ -40,5 +40,10 @@ function man
     eval $MAN $argv
 end
 
+set -xg LS_COLORS (ls_colors_generator)
+function ls
+    ls-i --color=always -A --group-directories-first -h -w (tput cols) $argv
+end
+
 # Virtualfish initialization
 eval (python -m virtualfish ^ /dev/null)
