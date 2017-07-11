@@ -21,3 +21,4 @@
     ~/.fehbg: fehbg
     ~/.gitconfig: gitconfig
     ~/.ncmpcpp: ncmpcpp
+    ~/.spacemacs.d: spacemacs
