@@ -5,25 +5,24 @@ scrollback_lines = 10000
 
 [colors]
 
-foreground      = #eff0eb
-foreground_bold = #eff0eb
-background      = #20232c
+background = #282a36
+foreground = #cccccc
+cursor = #b9b9b9
 
-color0  = #000000
-color1  = #ff5c57
-color2  = #5af78e
-color3  = #f3f99d
-color4  = #57c7ff
-color5  = #ff6ac1
-color6  = #9aedfe
-color7  = #f1f1f0
-color8  = #686868
-color9  = #ff5c57
-color10 = #5af78e
-color11 = #f3f99d
-color12 = #57c7ff
-color13 = #ff6ac1
-color14 = #9aedfe
-color15 = #f1f1f0
-
+color0 = #666666
+color1 = #cc6699
+color2 = #99cc66
+color3 = #cc9966
+color4 = #6699cc
+color5 = #9966cc
+color6 = #66cc99
+color7 = #cccccc
+color8 = #999999
+color9 = #ff99cc
+color10 = #ccff99
+color11 = #ffcc99
+color12 = #99ccff
+color13 = #cc99ff
+color14 = #99ffcc
+color15 = #ffffff
 # vim:ft=dosini
