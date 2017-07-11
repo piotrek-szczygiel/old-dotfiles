@@ -17,5 +17,6 @@
     ~/.config/rofi: rofi
     ~/.config/termite: termite
     ~/.config/vis: vis
+    ~/.emacs.d: emacs.d
     ~/.gitconfig: gitconfig
     ~/.ncmpcpp: ncmpcpp
