@@ -5,8 +5,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
+Plug 'dracula/vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
@@ -19,7 +19,7 @@ call plug#end()
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
 try
-    colorscheme onedark
+    colorscheme dracula
 catch
 endtry
 
@@ -51,12 +51,13 @@ if &diff
 endif
 
 " Airline configuration
-let g:airline_theme='onedark'
+let g:airline_theme = 'dracula'
 let g:airline_powerline_fonts = 1
 
 " Keybindings
 nnoremap <Leader>sc :nohl<Cr>
 
+nnoremap <Leader>fed :e ~/.config/nvim/init.vim<Cr>
 nnoremap <Leader>ff :Files<Cr>
 nnoremap <Leader>fs :w<Cr>
 
