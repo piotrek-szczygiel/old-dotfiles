@@ -2,9 +2,8 @@ set $alt Mod1
 set $win Mod4
 set $psst --no-startup-id
 
-new_window pixel 2
+new_window pixel 1
 new_float pixel 4
-#hide_edge_borders smart
 
 set $gaps_code 0
 set $gaps_default 50
@@ -52,6 +51,8 @@ bindsym $win+$alt+bracketright $cmd_volume_high
 set $cmd_volume_low exec $psst pactl set-sink-volume 0 -5%
 bindsym XF86AudioLowerVolume $cmd_volume_low
 bindsym $win+$alt+bracketleft $cmd_volume_low
+
+bindsym --release Print exec $psst scrot '%Y-%m-%d_%H:%M_$wx$h.png' -e 'mv $f ~/Pictures/$f'
 
 # Workspaces settings
 workspace_auto_back_and_forth yes
