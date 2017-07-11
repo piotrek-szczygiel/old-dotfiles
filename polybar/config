@@ -10,7 +10,7 @@ fixed-center = true
 width = 100%
 height = 35
 
-background = #141021
+background = #020011
 foreground = #c4b7c5
 
 font-0 = MesloLGSDZ Nerd Font:pixelsize=11:weight=bold;0
@@ -18,8 +18,7 @@ font-0 = MesloLGSDZ Nerd Font:pixelsize=11:weight=bold;0
 locale = pl_PL.UTF-8
 
 modules-left = i3
-modules-center = date weather
-modules-right = cpu memory net updates music volume redshift mpd powermenu
+modules-right = cpu memory music net updates weather date redshift volume powermenu
 
 tray-position = right
 
