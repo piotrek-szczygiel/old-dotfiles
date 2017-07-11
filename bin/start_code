@@ -5,5 +5,5 @@ status=$?
 i3-msg "workspace 3:code" > /dev/null 2>&1
 
 if [ $status -ne 0 ]; then
-    emacs &
+    termite -d $HOME -e "fish -c \"neofetch; and fish\"" &
 fi
