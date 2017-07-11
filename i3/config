@@ -7,7 +7,7 @@ new_float pixel 3
 hide_edge_borders smart
 
 set $gaps_default 50
-set $gaps_code 20
+set $gaps_code 0
 set $gaps_term 100
 set $gaps_music 100
 set $gaps_web 0
@@ -39,7 +39,7 @@ bindsym $win+space exec $psst start_term
 
 set $w_code "3:code"
 workspace $w_code gaps inner $gaps_code
-bindsym $win+c workspace $w_code
+bindsym $win+c exec $psst start_code
 
 set $w_music "4:music"
 workspace $w_music gaps inner $gaps_music
