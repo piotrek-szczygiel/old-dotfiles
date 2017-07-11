@@ -18,7 +18,8 @@ font-0 = MesloLGSDZ Nerd Font:pixelsize=11:weight=bold;0
 locale = pl_PL.UTF-8
 
 modules-left = i3
-modules-right = cpu memory music net updates weather date redshift volume powermenu
+modules-center = date weather
+modules-right = cpu memory music net updates redshift volume powermenu
 
 tray-position = right
 
