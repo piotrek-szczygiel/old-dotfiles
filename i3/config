@@ -130,10 +130,10 @@ bindsym $win+comma workspace prev
 bindsym $win+v split v
 bindsym $win+Shift+v split h
 
-bindsym $win+F12 exec "$HOME/.dotfiles/bin/lock"
+bindsym $win+F12 exec lock
 
-exec_always $psst $HOME/.dotfiles/polybar/launch
-exec $psst $HOME/.dotfiles/bin/autostart
+exec_always $psst start_polybar
+exec $psst autostart
 
 bindsym $win+Return exec cd $(xcwd) && exec termite
 
