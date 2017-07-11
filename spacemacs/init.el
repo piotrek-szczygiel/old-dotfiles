@@ -49,6 +49,17 @@ This function should only modify configuration layer settings."
             c-c++-enable-clang-support t
             c-c++-enable-clang-format-on-save t)
      emacs-lisp
+     html
+     javascript
+     (markdown :variables
+               markdown-live-preview-engine 'vmd)
+     python
+     shell-scripts
+     typescript
+     vimscript
+     yaml
+
+     ;; Source control
      git
      markdown
      (shell :variables
