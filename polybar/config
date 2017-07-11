@@ -32,7 +32,9 @@ ws-icon-2 = code;
 ws-icon-3 = music;
 ws-icon-4 = slack;
 ws-icon-5 = pass;
-ws-icon-6 = dotfiles;
+ws-icon-6 = dotfiles;
+ws-icon-7 = task;
+ws-icon-8 = space;
 ws-icon-default = 
 
 fuzzy-match = true
