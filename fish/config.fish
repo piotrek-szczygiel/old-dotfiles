@@ -42,6 +42,15 @@ function man
     eval $MAN $argv
 end
 
+# Emacs ansi-term support
+if test -n "$EMACS"
+  set -x TERM eterm-color
+end
+
+function fish_title
+  true
+end
+
 set -xg LS_COLORS (ls_colors_generator)
 function ls
     ls-i --color=always -A --group-directories-first -h -w (tput cols) $argv
