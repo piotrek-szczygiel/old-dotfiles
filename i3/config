@@ -22,13 +22,13 @@ bindsym $win+Shift+q kill
 bindsym --release $win+x exec xkill
 
 bindsym $alt+Tab exec rofi -show window
-bindsym $win+o exec rofi -show run -eh 2 -padding 400 -fullscreen
+bindsym $win+d exec rofi -show run
+bindsym $win+o exec rofi -show drun
 
 # Workspaces settings
 workspace_auto_back_and_forth yes
 
 set $w_web "1:web"
-assign [class="Google-chrome"] $w_web
 workspace $w_web gaps inner $gaps_web
 bindsym $win+g exec $psst start_web
 bindsym $win+Shift+g move container to workspace $w_web
