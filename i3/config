@@ -10,6 +10,7 @@ set $gaps_default 50
 set $gaps_music 100
 set $gaps_pass 200
 set $gaps_slack 150
+set $gaps_space 10
 set $gaps_task 20
 set $gaps_term 90
 set $gaps_web 0
@@ -86,6 +87,10 @@ set $w_task "7:task"
 workspace $w_task gaps inner $gaps_task
 bindsym $win+BackSpace exec $psst start_task
 
+set $w_space "8:space"
+workspace $w_space gaps inner $gaps_space
+bindsym $win+s exec $psst start_space
+
 set $w_dotfiles "10:dotfiles"
 bindsym $win+u workspace $w_dotfiles
 
@@ -152,7 +157,7 @@ bindsym $win+Shift+l move right
 
 bindsym $win+f fullscreen toggle
 
-bindsym $win+s layout stacking
+#bindsym $win+s layout stacking
 bindsym $win+w layout tabbed
 bindsym $win+e layout toggle split
 
