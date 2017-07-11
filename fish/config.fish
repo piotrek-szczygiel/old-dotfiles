@@ -6,7 +6,7 @@ alias e="$EDITOR"
 alias n="nvim"
 alias o="xdg-open"
 alias q="exit"
-alias s="emacsclient -c -F \"'(fullscreen . fullboth)\""
+alias s="emacsclient -n -c -F \"'(fullscreen . fullboth)\""
 
 # Git aliases
 alias ga="git add"
