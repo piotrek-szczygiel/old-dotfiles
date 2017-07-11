@@ -170,7 +170,7 @@ exec = .config/polybar/module-weather
 
 [module/music]
 type = custom/script
-interval = 5
+interval = 1
 format-padding = 2
 label = %output:0:80:...%
 exec = .config/polybar/module-music
