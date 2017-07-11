@@ -1,11 +1,12 @@
-set -xg EDITOR nvim
+set -xg EDITOR s
 set -xg BROWSER google-chrome-stable
 
 # Basic aliases
 alias e="$EDITOR"
+alias n="nvim"
 alias o="xdg-open"
 alias q="exit"
-alias s="emacsclient -c"
+alias s="emacsclient -c -F \"'(fullscreen . fullboth)\""
 
 # Git aliases
 alias ga="git add"
@@ -22,9 +23,10 @@ set -xg FZF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
 
 # Keybindings
 function fish_user_key_bindings
-    bind \ce "$EDITOR (fzf)"
     bind \cd "__fzf_cd_with_hidden"
+    bind \cn "n (fzf)"
     bind \cr "__fzf_reverse_isearch"
+    bind \cs "s (fzf)"
     bind \ct "__fzf_find_file"
 end
 
