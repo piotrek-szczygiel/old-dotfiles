@@ -2,7 +2,7 @@ set $alt Mod1
 set $win Mod4
 set $psst --no-startup-id
 
-new_window pixel 1
+new_window pixel 0
 new_float pixel 4
 
 set $gaps_code 0
