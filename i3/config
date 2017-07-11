@@ -27,10 +27,14 @@ bindsym $alt+Tab exec rofi -show window
 bindsym $win+d exec rofi -show run
 bindsym $win+o exec rofi -show drun
 
-bindsym XF86AudioNext exec $psst mpc next
-bindsym $win+bracketright exec $psst mpc next
-bindsym XF86AudioPrev exec $psst mpc prev
-bindsym $win+bracketleft exec $psst mpc prev
+set $cmd_next_song exec $psst mpc next
+bindsym XF86AudioNext $cmd_next_song
+bindsym $win+bracketright $cmd_next_song
+
+set $cmd_prev_song exec $psst mpc prev
+bindsym XF86AudioPrev $cmd_prev_song
+bindsym $win+bracketleft $cmd_prev_song
+
 bindsym XF86AudioStop exec $psst mpc stop
 bindsym XF86AudioPlay exec $psst mpc toggle
 bindsym $win+backslash exec $psst mpc toggle
