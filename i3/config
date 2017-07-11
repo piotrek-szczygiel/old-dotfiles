@@ -20,7 +20,7 @@ font pango:MesloLGSDZ Nerd Font 9
 
 focus_follows_mouse no
 bindsym $win+Shift+q kill
-bindsym --release $win+x exec xkill
+#bindsym --release $win+x exec xkill
 
 bindsym $alt+Tab exec rofi -show window
 bindsym $win+d exec rofi -show run
