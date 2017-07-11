@@ -9,6 +9,7 @@
 
 - link:
     ~/.config/compton.conf: compton/compton.conf
+    ~/.config/dunst: dunst
     ~/.config/fish: fish
     ~/.config/gtk-3.0: gtk-3.0
     ~/.config/i3: i3
