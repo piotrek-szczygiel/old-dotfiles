@@ -5,6 +5,7 @@ set -xg BROWSER google-chrome-stable
 alias e="$EDITOR"
 alias o="xdg-open"
 alias q="exit"
+alias s="emacsclient -c"
 
 # Git aliases
 alias ga="git add"
