@@ -12,10 +12,10 @@
     ~/.config/fish: fish
     ~/.config/gtk-3.0: gtk-3.0
     ~/.config/i3: i3
-    ~/.ncmpcpp: ncmpcpp
     ~/.config/nvim: neovim
     ~/.config/polybar: polybar
+    ~/.config/rofi: rofi
     ~/.config/termite: termite
     ~/.config/vis: vis
-    ~/.fehbg: wallpaper
     ~/.gitconfig: gitconfig
+    ~/.ncmpcpp: ncmpcpp
