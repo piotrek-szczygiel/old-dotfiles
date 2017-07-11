@@ -370,6 +370,9 @@ before packages are loaded."
   (setq-default scroll-margin 7
                 magit-repository-directories '("~/Projects")
 
+                ;; C-v <unicode> entering
+                read-quoted-char-radix 16
+
                 ;; Use intel flavor for disassembly
                 disaster-objdump "objdump -d -M intel -Sl --no-show-raw-insn")
   )
