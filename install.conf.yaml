@@ -18,5 +18,6 @@
     ~/.config/termite: termite
     ~/.config/vis: vis
     ~/.emacs.d: emacs.d
+    ~/.fehbg: fehbg
     ~/.gitconfig: gitconfig
     ~/.ncmpcpp: ncmpcpp
