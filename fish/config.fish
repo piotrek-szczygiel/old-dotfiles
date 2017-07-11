@@ -3,6 +3,7 @@ set -xg BROWSER google-chrome-stable
 
 # Basic aliases
 alias e="$EDITOR"
+alias o="xdg-open"
 alias q="exit"
 
 # Git aliases
