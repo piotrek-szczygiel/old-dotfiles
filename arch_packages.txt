@@ -1,5 +1,6 @@
 cli-visualizer
 compton
+dunst
 emacs
 feh
 fzf
