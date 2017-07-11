@@ -2,9 +2,9 @@ set $alt Mod1
 set $win Mod4
 set $psst --no-startup-id
 
-new_window pixel 0
-new_float pixel 3
-hide_edge_borders smart
+new_window pixel 2
+new_float pixel 4
+#hide_edge_borders smart
 
 set $gaps_code 0
 set $gaps_default 50
@@ -12,7 +12,7 @@ set $gaps_music 100
 set $gaps_pass 200
 set $gaps_slack 150
 set $gaps_task 20
-set $gaps_term 100
+set $gaps_term 90
 set $gaps_web 0
 
 gaps inner $gaps_default
