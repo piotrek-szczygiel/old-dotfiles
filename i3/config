@@ -36,8 +36,22 @@ bindsym XF86AudioPrev $cmd_prev_song
 bindsym $win+bracketleft $cmd_prev_song
 
 bindsym XF86AudioStop exec $psst mpc stop
-bindsym XF86AudioPlay exec $psst mpc toggle
-bindsym $win+backslash exec $psst mpc toggle
+
+set $cmd_play_song exec $psst mpc toggle
+bindsym XF86AudioPlay $cmd_play_song
+bindsym $win+backslash $cmd_play_song
+
+set $cmd_volume_mute exec $psst pactl set-sink-mute 0 toggle
+bindsym XF86AudioMute $cmd_volume_mute
+bindsym $win+$alt+backslash $cmd_volume_mute
+
+set $cmd_volume_high exec $psst pactl set-sink-volume 0 +5%
+bindsym XF86AudioRaiseVolume $cmd_volume_high
+bindsym $win+$alt+bracketright $cmd_volume_high
+
+set $cmd_volume_low exec $psst pactl set-sink-volume 0 -5%
+bindsym XF86AudioLowerVolume $cmd_volume_low
+bindsym $win+$alt+bracketleft $cmd_volume_low
 
 # Workspaces settings
 workspace_auto_back_and_forth yes
