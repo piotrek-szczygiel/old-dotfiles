@@ -67,6 +67,7 @@ nnoremap <Leader>i24 :call Spaces2to4()<Cr>
 nnoremap <Leader>i42 :call Spaces4to2()<Cr>
 
 nnoremap <Leader>qf :qa<Cr>
+nnoremap <Leader>qq :wq<Cr>
 
 nnoremap <Leader>S :Lines<Cr>
 nnoremap <Leader>s :BLines<Cr>
