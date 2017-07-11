@@ -23,7 +23,7 @@ try
 catch
 endtry
 
-let mapleader=","
+let mapleader=" "
 
 set background=dark
 set expandtab
@@ -55,10 +55,10 @@ let g:airline_theme='onedark'
 let g:airline_powerline_fonts = 1
 
 " Keybindings
-nnoremap <Leader>l :nohl<Cr>
+nnoremap <Leader>sc :nohl<Cr>
 
-nnoremap <Leader>f :Files<Cr>
-nnoremap <Leader>w :w<Cr>
+nnoremap <Leader>ff :Files<Cr>
+nnoremap <Leader>fs :w<Cr>
 
 nnoremap <Leader>is :set expandtab<Cr>
 nnoremap <Leader>it :set noexpandtab<Cr>
@@ -66,7 +66,7 @@ nnoremap <Leader>iw :call IndentationWidth()<Cr>
 nnoremap <Leader>i24 :call Spaces2to4()<Cr>
 nnoremap <Leader>i42 :call Spaces4to2()<Cr>
 
-nnoremap <Leader>q :wq<Cr>
+nnoremap <Leader>qf :qa<Cr>
 
 nnoremap <Leader>S :Lines<Cr>
 nnoremap <Leader>s :BLines<Cr>
@@ -78,7 +78,7 @@ nnoremap <Leader>uw :call StripTrailingWhitespace()<Cr>
 vnoremap <Leader>us :sort i<Cr>
 
 " Terminal
-nnoremap <Leader>t :split<Cr>:resize 10<Cr>:terminal<Cr>
+nnoremap <Leader>' :split<Cr>:resize 10<Cr>:terminal<Cr>
 tnoremap <Esc> <C-\><C-N>
 
 " Move between all windows with Alt+hjkl
