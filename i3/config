@@ -25,6 +25,14 @@ bindsym $alt+Tab exec rofi -show window
 bindsym $win+d exec rofi -show run
 bindsym $win+o exec rofi -show drun
 
+bindsym XF86AudioNext exec $psst mpc next
+bindsym $win+bracketright exec $psst mpc next
+bindsym XF86AudioPrev exec $psst mpc prev
+bindsym $win+bracketleft exec $psst mpc prev
+bindsym XF86AudioStop exec $psst mpc stop
+bindsym XF86AudioPlay exec $psst mpc toggle
+bindsym $win+backslash exec $psst mpc toggle
+
 # Workspaces settings
 workspace_auto_back_and_forth yes
 
