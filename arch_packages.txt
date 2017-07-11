@@ -1,3 +1,4 @@
+bashate
 cli-visualizer
 compton
 dunst
@@ -23,6 +24,7 @@ redshift
 ripgrep
 rofi
 scrot
+shellcheck
 slack-desktop
 termite
 unrar
