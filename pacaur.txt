@@ -5,6 +5,7 @@ dunst
 emacs
 feh
 fzf
+go
 google-chrome
 i3-gaps
 imagemagick
