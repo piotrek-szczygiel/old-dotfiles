@@ -1,12 +1,16 @@
-set -xg EDITOR s
+set -xg EDITOR nvim
 set -xg BROWSER google-chrome-stable
 
 # Basic aliases
 alias e="$EDITOR"
-alias n="nvim"
 alias o="xdg-open"
 alias q="exit"
-alias s="emacsclient -n -c -F \"'(fullscreen . fullboth)\""
+
+function s
+    if emacsclient -n $argv > /dev/null ^&1
+        i3-msg "workspace 8:space" > /dev/null ^&1
+    end
+end
 
 # Git aliases
 alias ga="git add"
