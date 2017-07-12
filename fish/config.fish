@@ -63,4 +63,4 @@ function ls
 end
 
 # Virtualfish initialization
-eval (python -m virtualfish ^ /dev/null)
+eval (python -m virtualfish auto_activation ^ /dev/null)
