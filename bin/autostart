@@ -9,3 +9,4 @@ dunst &
 setxkbmap -option caps:escape &
 redshift &
 unclutter &
+emacs --daemon &

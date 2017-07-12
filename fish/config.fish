@@ -7,12 +7,7 @@ set -xg PATH $PATH $GOPATH/bin
 alias e="$EDITOR"
 alias o="xdg-open"
 alias q="exit"
-
-function s
-    if emacsclient -n $argv > /dev/null ^&1
-        i3-msg "workspace 8:space" > /dev/null ^&1
-    end
-end
+alias s="emacsclient -n -c"
 
 # Git aliases
 alias ga="git add"
@@ -30,7 +25,7 @@ set -xg FZF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
 # Keybindings
 function fish_user_key_bindings
     bind \cd "__fzf_cd_with_hidden"
-    bind \cn "n (fzf)"
+    bind \cn "nvim (fzf)"
     bind \cr "__fzf_reverse_isearch"
     bind \cs "s (fzf)"
     bind \ct "__fzf_find_file"

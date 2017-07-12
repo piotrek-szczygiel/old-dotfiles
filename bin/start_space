@@ -5,5 +5,5 @@ status=$?
 i3-msg "workspace 8:space" > /dev/null 2>&1
 
 if [ $status -ne 0 ]; then
-    emacs &
+    emacsclient -n -c "$HOME/Projects"
 fi
