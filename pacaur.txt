@@ -32,3 +32,4 @@ unclutter-xfixes-git
 unrar
 xclip
 xcwd-git
+yapf
