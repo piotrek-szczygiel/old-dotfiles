@@ -27,6 +27,7 @@ scrot
 shellcheck
 slack-desktop
 termite
+unclutter-xfixes-git
 unrar
 xclip
 xcwd-git

@@ -8,3 +8,4 @@ compton -cb &
 dunst &
 setxkbmap -option caps:escape &
 redshift &
+unclutter &
