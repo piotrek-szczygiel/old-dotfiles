@@ -5,7 +5,7 @@ set $psst --no-startup-id
 new_window pixel 0
 new_float pixel 4
 
-set $gaps_code 90
+set $gaps_code 20
 set $gaps_default 50
 set $gaps_dotfiles 90
 set $gaps_music 100
