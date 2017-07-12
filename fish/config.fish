@@ -1,5 +1,7 @@
 set -xg EDITOR nvim
 set -xg BROWSER google-chrome-stable
+set -xg GOPATH $HOME/go
+set -xg PATH $PATH $GOPATH/bin
 
 # Basic aliases
 alias e="$EDITOR"
