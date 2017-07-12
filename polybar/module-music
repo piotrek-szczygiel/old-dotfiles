@@ -5,8 +5,10 @@ icon="%{F#126a3d}%{F-}"
 mpc | grep playing > /dev/null 2>&1
 
 if [ $? -eq 0 ]; then
-    metadata="$(mpc | head -1)"
-    metadata=${metadata#*-}
+    metadata=$(mpc | \
+        head -1 | \
+        awk -v len=25 '{ if (length($0) > len) print substr($0, 1, len-3) "..."; else print; }')
+
     echo "$icon %{root.foreground}$metadata%{F-}"
 else
     echo "$icon"
