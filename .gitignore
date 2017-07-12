@@ -5,3 +5,4 @@ fish/*
 fish/functions/*
 !fish/functions/fisher.fish
 ncmpcpp/error.log
+vis/vis.log
