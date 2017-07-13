@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-i3-msg -t get_workspaces | grep "8:space" > /dev/null 2>&1
-status=$?
-i3-msg "workspace 8:space" > /dev/null 2>&1
-
-if [ $status -ne 0 ]; then
-    emacsclient -n -c "$HOME/Projects"
-fi
