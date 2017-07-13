@@ -19,7 +19,7 @@ locale = pl_PL.UTF-8
 
 modules-left = i3
 modules-center = date weather
-modules-right = cpu memory net updates volume powermenu
+modules-right = cpu memory net updates volume
 
 tray-position = right
 
@@ -55,6 +55,31 @@ label-focused-padding = 1
 label-urgent-foreground = #e4b226
 label-urgent-padding = 1
 
+[module/date]
+type = internal/date
+
+interval = 1
+
+date = %a %b %d,
+time = %H:%M:%S
+
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
+
+format = <label>
+format-padding = 2
+
+label = %date% %time%
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+
+[module/weather]
+type = custom/script
+interval = 300
+format = <label>
+format-padding = 2
+exec = .config/polybar/module-weather
+
 [module/cpu]
 type = internal/cpu
 interval = 0.5
@@ -87,7 +112,6 @@ ramp-coreload-7 = █
 ramp-coreload-7-font = 2
 ramp-coreload-7-foreground = #ff5555
 
-
 [module/memory]
 type = internal/memory
 
@@ -105,23 +129,12 @@ bar-used-fill = ▐
 bar-used-empty = ▐
 bar-used-empty-foreground = #444444
 
-[module/date]
-type = internal/date
-
-interval = 1
-
-date = %a %b %d,
-time = %H:%M:%S
-
-date-alt = %A, %d %B %Y
-time-alt = %H:%M:%S
-
+[module/net]
+type = custom/script
+interval = 10
 format = <label>
 format-padding = 2
-
-label = %date% %time%
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+exec = .config/polybar/module-net
 
 [module/volume]
 type = internal/volume
@@ -136,16 +149,9 @@ ramp-volume-1 = 
 ramp-volume-2 = 
 ramp-volume-foreground = ${colors.foreground-alt}
 
-[module/net]
-type = custom/script
-interval = 10
-format = <label>
-format-padding = 2
-exec = .config/polybar/module-net
-
 [module/updates]
 type = custom/script
-interval = 120
+interval = 30
 format = <label>
 format-underline = #dc322f
 format-padding = 2
@@ -153,55 +159,5 @@ format-prefix = ""
 format-prefix-foreground = ${colors.arch}
 exec = .config/polybar/module-updates
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
-
-[module/weather]
-type = custom/script
-interval = 300
-format = <label>
-format-padding = 2
-exec = .config/polybar/module-weather
-
-[module/powermenu]
-type = custom/menu
-
-label-open = 
-
-label-close = cancel
-
-label-close-background = #312842
-label-close-foreground = #ffeefc
-label-open-padding-left = 2
-label-open-padding-right = 2
-label-close-padding = 3
-
-menu-0-0 = lock
-menu-0-0-exec = lock
-menu-0-0-background = #312842
-menu-0-0-foreground = #c05c47
-menu-0-0-padding-right = 3
-
-menu-0-1 = reboot
-menu-0-1-exec = menu-open-1
-menu-0-1-background = #312842
-menu-0-1-foreground = #c05c47
-menu-0-1-padding-right = 3
-
-menu-0-2 = power off
-menu-0-2-exec = menu-open-2
-menu-0-2-background = #312842
-menu-0-2-foreground = #c05c47
-menu-0-2-padding-right = 3
-
-menu-1-0 = reboot?
-menu-1-0-exec = reboot
-menu-1-0-background = #312842
-menu-1-0-foreground = #e4b226
-menu-1-0-padding-right = 3
-
-menu-2-0 = power off?
-menu-2-0-exec = poweroff
-menu-2-0-background = #312842
-menu-2-0-foreground = #e4b226
-menu-2-0-padding-right = 3
 
 # vim:ft=dosini
