@@ -2,7 +2,7 @@
 	name = Piotr Szczygieł
 	email = szczygiel.p@gmail.com
 [core]
-	editor = nvim
+	editor = emacsclient -nw -c
 	pager = cat
 	autocrlf = input
 	ignorecase = false
