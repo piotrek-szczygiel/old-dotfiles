@@ -10,8 +10,8 @@ fixed-center = true
 width = 100%
 height = 35
 
-background = #020011
-foreground = #c4b7c5
+background = #020116
+foreground = #727caf
 
 font-0 = MesloLGSDZ Nerd Font:pixelsize=11:weight=bold;0
 
@@ -50,7 +50,7 @@ format-padding-right = 2
 label-unfocused-foreground = #8a7f8f
 label-unfocused-padding = 1
 
-label-focused-foreground = #c16772
+label-focused-foreground = #1ebcbf
 label-focused-padding = 1
 
 label-urgent-foreground = #e4b226
@@ -130,9 +130,8 @@ format-volume = <ramp-volume> <label-volume>
 format-volume-padding = 2
 format-muted-padding = 2
 label-volume = %percentage%%
-label-volume-foreground = #aaaaaa
 label-muted =  %percentage%%
-label-muted-foreground = #663333
+label-muted-foreground = #333333
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
