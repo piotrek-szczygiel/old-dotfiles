@@ -60,7 +60,7 @@ format-prefix-foreground = ${colors.icon}
 
 [module/weather]
 type = custom/script
-interval = 300
+interval = 120
 format = <label>
 format-padding = 2
 exec = .config/polybar/module-weather
