@@ -20,7 +20,6 @@ ncmpcpp
 neofetch
 nerd-fonts-complete
 polybar
-python-neovim
 python-pip
 qbittorrent
 redshift
@@ -32,6 +31,5 @@ slack-desktop
 termite
 unclutter-xfixes-git
 unrar
-xclip
 xcwd-git
 yapf
