@@ -7,8 +7,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'dracula/vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline-themes'
@@ -68,7 +66,6 @@ nnoremap <Leader>i24 :call Spaces2to4()<Cr>
 nnoremap <Leader>i42 :call Spaces4to2()<Cr>
 
 nnoremap <Leader>qf :qa<Cr>
-nnoremap <Leader>qq :wq<Cr>
 
 nnoremap <Leader>S :Lines<Cr>
 nnoremap <Leader>s :BLines<Cr>
@@ -78,24 +75,6 @@ nnoremap <Leader>tw :call ToggleShowWhitespace()<Cr>
 
 nnoremap <Leader>uw :call StripTrailingWhitespace()<Cr>
 vnoremap <Leader>us :sort i<Cr>
-
-" Terminal
-nnoremap <Leader>' :split<Cr>:resize 10<Cr>:terminal<Cr>
-tnoremap <Esc> <C-\><C-N>
-
-" Move between all windows with Alt+hjkl
-tnoremap <A-h> <C-\><C-N><C-w>h
-tnoremap <A-j> <C-\><C-N><C-w>j
-tnoremap <A-k> <C-\><C-N><C-w>k
-tnoremap <A-l> <C-\><C-N><C-w>l
-inoremap <A-h> <C-\><C-N><C-w>h
-inoremap <A-j> <C-\><C-N><C-w>j
-inoremap <A-k> <C-\><C-N><C-w>k
-inoremap <A-l> <C-\><C-N><C-w>l
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
 
 " Trailing whitespace highlighting
 highlight ExtraWhitespace ctermbg=red guibg=red
