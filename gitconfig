@@ -2,7 +2,7 @@
 	name = Piotr Szczygieł
 	email = szczygiel.p@gmail.com
 [core]
-	editor = emacsclient -nw -c
+	editor = smt
 	pager = cat
 	autocrlf = input
 	ignorecase = false
