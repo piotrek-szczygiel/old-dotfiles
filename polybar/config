@@ -19,7 +19,7 @@ locale = pl_PL.UTF-8
 
 modules-left = i3
 modules-center = date weather
-modules-right = cpu memory music net updates redshift volume powermenu
+modules-right = cpu memory net updates redshift volume powermenu
 
 tray-position = right
 
@@ -167,12 +167,6 @@ interval = 300
 format = <label>
 format-padding = 2
 exec = .config/polybar/module-weather
-
-[module/music]
-type = custom/script
-interval = 1
-format-padding = 2
-exec = .config/polybar/module-music
 
 [module/powermenu]
 type = custom/menu
