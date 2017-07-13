@@ -4,9 +4,11 @@ compton
 dunst
 emacs
 feh
+fish
 fzf
 go
 google-chrome
+htop
 i3-gaps
 imagemagick
 keepassxc
@@ -16,6 +18,7 @@ mopidy-spotify
 mpc
 ncmpcpp
 neofetch
+neovim
 nerd-fonts-complete
 polybar
 python-neovim
