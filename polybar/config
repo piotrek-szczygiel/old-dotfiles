@@ -2,6 +2,7 @@
 background = #0f0000ff
 foreground = #9ca7d8
 icon = #1da7e8
+
 i3-unfocused = #8a7f8f
 i3-focused = #1ebcbf
 i3-urgent = #e4b226
