@@ -22,37 +22,6 @@ font pango:MesloLGSDZ Nerd Font 9
 focus_follows_mouse no
 bindsym $win+x kill
 
-bindsym $alt+Tab exec rofi -show window
-bindsym $win+d exec rofi -show run
-bindsym $win+o exec rofi -show drun
-
-set $cmd_next_song exec $psst mpc next
-bindsym XF86AudioNext $cmd_next_song
-bindsym $win+bracketright $cmd_next_song
-
-set $cmd_prev_song exec $psst mpc prev
-bindsym XF86AudioPrev $cmd_prev_song
-bindsym $win+bracketleft $cmd_prev_song
-
-bindsym XF86AudioStop exec $psst mpc stop
-
-set $cmd_play_song exec $psst mpc toggle
-bindsym XF86AudioPlay $cmd_play_song
-bindsym $win+backslash $cmd_play_song
-
-set $cmd_volume_mute exec $psst pactl set-sink-mute 0 toggle
-bindsym XF86AudioMute $cmd_volume_mute
-bindsym $win+$alt+backslash $cmd_volume_mute
-
-set $cmd_volume_high exec $psst pactl set-sink-volume 0 +5%
-bindsym XF86AudioRaiseVolume $cmd_volume_high
-bindsym $win+$alt+bracketright $cmd_volume_high
-
-set $cmd_volume_low exec $psst pactl set-sink-volume 0 -5%
-bindsym XF86AudioLowerVolume $cmd_volume_low
-bindsym $win+$alt+bracketleft $cmd_volume_low
-
-bindsym --release Print exec $psst scrot '%Y-%m-%d_%H:%M_$wx$h.png' -e 'mv $f ~/Pictures/$f'
 
 # Workspaces settings
 workspace_auto_back_and_forth yes
@@ -67,7 +36,7 @@ bindsym $win+space exec $psst start_term
 
 set $w_code "3:code"
 workspace $w_code gaps inner $gaps_code
-bindsym $win+c exec $psst start_code
+bindsym $win+c workspace $w_code
 
 set $w_music "4:music"
 workspace $w_music gaps inner $gaps_music
@@ -132,6 +101,38 @@ bindsym $win+v split v
 bindsym $win+Shift+v split h
 
 bindsym $win+F12 exec lock
+
+bindsym $alt+Tab exec rofi -show window
+bindsym $win+d exec rofi -show run
+bindsym $win+o exec rofi -show drun
+
+set $cmd_next_song exec $psst mpc next
+bindsym XF86AudioNext $cmd_next_song
+bindsym $win+bracketright $cmd_next_song
+
+set $cmd_prev_song exec $psst mpc prev
+bindsym XF86AudioPrev $cmd_prev_song
+bindsym $win+bracketleft $cmd_prev_song
+
+bindsym XF86AudioStop exec $psst mpc stop
+
+set $cmd_play_song exec $psst mpc toggle
+bindsym XF86AudioPlay $cmd_play_song
+bindsym $win+backslash $cmd_play_song
+
+set $cmd_volume_mute exec $psst pactl set-sink-mute 0 toggle
+bindsym XF86AudioMute $cmd_volume_mute
+bindsym $win+$alt+backslash $cmd_volume_mute
+
+set $cmd_volume_high exec $psst pactl set-sink-volume 0 +5%
+bindsym XF86AudioRaiseVolume $cmd_volume_high
+bindsym $win+$alt+bracketright $cmd_volume_high
+
+set $cmd_volume_low exec $psst pactl set-sink-volume 0 -5%
+bindsym XF86AudioLowerVolume $cmd_volume_low
+bindsym $win+$alt+bracketleft $cmd_volume_low
+
+bindsym --release Print exec $psst scrot '%Y-%m-%d_%H:%M_$wx$h.png' -e 'mv $f ~/Pictures/$f'
 
 exec_always $psst start_polybar
 exec $psst autostart
