@@ -7,7 +7,7 @@ set -xg EDITOR "emacsclient -n -c"
 alias e="$EDITOR"
 alias o="xdg-open"
 alias q="exit"
-alias st="spacemacs_term"
+alias s="spacemacs_term"
 
 # Git aliases
 alias ga="git add"
@@ -19,7 +19,7 @@ alias gp="git push"
 alias gs="git status"
 
 function spacemacs_term
-  emacsclient -n -nw -c $argv
+  emacsclient -nw -c $argv
 end
 
 # FZF settings
