@@ -3,7 +3,7 @@
 import pyowm
 import time
 
-time.sleep(5)
+time.sleep(2)
 
 owm = pyowm.OWM("04c5661a471dfc3a911c979b93af5056")
 
