@@ -18,7 +18,6 @@ mopidy-spotify
 mpc
 ncmpcpp
 neofetch
-neovim
 nerd-fonts-complete
 polybar
 python-neovim

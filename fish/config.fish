@@ -1,7 +1,7 @@
-set -xg EDITOR nvim
-set -xg BROWSER google-chrome-stable
 set -xg GOPATH $HOME/go
 set -xg PATH $PATH $GOPATH/bin
+
+set -xg EDITOR "emacsclient -nw -c"
 
 # Basic aliases
 alias e="$EDITOR"
@@ -18,18 +18,18 @@ alias gl="git pull"
 alias gp="git push"
 alias gs="git status"
 
-# FZF settings
-set -xg FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
-set -xg FZF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
-
 function spacemacs
   emacsclient -n -c $argv
 end
 
-function __fzf_spacemacs
+# FZF settings
+set -xg FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
+set -xg FZF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
+
+function __fzf_edit
   set -l filename (fzf)
   if [ $filename ]
-    spacemacs $filename
+    eval $EDITOR $filename
   end
 end
 
@@ -37,7 +37,7 @@ end
 function fish_user_key_bindings
   bind \cd "__fzf_cd_with_hidden"
   bind \cr "__fzf_reverse_isearch"
-  bind \cs "__fzf_spacemacs"
+  bind \cs "__fzf_edit"
   bind \ct "__fzf_find_file"
 end
 
