@@ -1,13 +1,12 @@
 set -xg GOPATH $HOME/go
 set -xg PATH $PATH $GOPATH/bin
 
-set -xg EDITOR "emacsclient -n -c"
+set -xg EDITOR "emacsclient -nw -c"
 
 # Basic aliases
 alias e="$EDITOR"
 alias o="xdg-open"
 alias q="exit"
-alias s="spacemacs_term"
 
 # Git aliases
 alias ga="git add"
@@ -17,10 +16,6 @@ alias gd="git diff"
 alias gl="git pull"
 alias gp="git push"
 alias gs="git status"
-
-function spacemacs_term
-  emacsclient -nw -c $argv
-end
 
 # FZF settings
 set -xg FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
