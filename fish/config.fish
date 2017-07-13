@@ -1,10 +1,9 @@
 set -xg GOPATH $HOME/go
 set -xg PATH $PATH $GOPATH/bin
 
-set -xg EDITOR "emacsclient -nw -c"
+set -xg EDITOR "smt"
 
 # Basic aliases
-alias e="$EDITOR"
 alias o="xdg-open"
 alias q="exit"
 
@@ -24,15 +23,16 @@ set -xg FZF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
 function __fzf_edit
   set -l filename (fzf)
   if [ $filename ]
-    eval $EDITOR $filename
+    eval $argv $filename
   end
 end
 
 # Keybindings
 function fish_user_key_bindings
   bind \cd "__fzf_cd_with_hidden"
+  bind \cn "__fzf_edit smt"
   bind \cr "__fzf_reverse_isearch"
-  bind \cs "__fzf_edit"
+  bind \cs "__fzf_edit smg"
   bind \ct "__fzf_find_file"
 end
 

@@ -3,10 +3,11 @@
 xrandr -r 144 &
 pulseaudio &
 mopidy &
-~/.fehbg
+~/.fehbg &
 compton -cb &
 dunst &
 setxkbmap -option caps:escape &
 redshift &
 unclutter &
-emacs --daemon &
+emacs-daemon-gui &
+emacs-daemon-term &
