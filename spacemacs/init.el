@@ -145,9 +145,9 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("SauceCodePro Nerd Font"
+   dotspacemacs-default-font '("FuraMonoForPowerline Nerd Font"
                                :size 18
-                               :weight semi-bold
+                               :weight bold
                                :width normal
                                :powerline-scale 1.1)
    ;; The leader key
