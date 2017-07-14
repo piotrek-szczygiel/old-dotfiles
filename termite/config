@@ -3,27 +3,4 @@ font = SauceCodePro Nerd Font semibold 16
 mouse_autohide = true
 scrollback_lines = 10000
 
-[colors]
-
-background = #080a0f
-foreground = #cccccc
-cursor = #013476
-
-color0 = #666666
-color1 = #cc6699
-color2 = #99cc66
-color3 = #cc9966
-color4 = #6699cc
-color5 = #9966cc
-color6 = #66cc99
-color7 = #cccccc
-color8 = #999999
-color9 = #ff99cc
-color10 = #ccff99
-color11 = #ffcc99
-color12 = #99ccff
-color13 = #cc99ff
-color14 = #99ffcc
-color15 = #ffffff
-
 # vim:ft=dosini
