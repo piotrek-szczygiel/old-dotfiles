@@ -58,39 +58,39 @@ set $w_dotfiles "10:dotfiles"
 workspace $w_dotfiles gaps inner $gaps_dotfiles
 bindsym $win+u exec $psst start_dotfiles
 
-set $w_term1 "11:term"
+set $w_term1 "11:1"
 workspace $w_term1 gaps inner $gaps_term
 bindsym $win+1 workspace $w_term1
 
-set $w_term2 "12:term"
+set $w_term2 "12:2"
 workspace $w_term2 gaps inner $gaps_term
 bindsym $win+2 workspace $w_term2
 
-set $w_term3 "13:term"
+set $w_term3 "13:3"
 workspace $w_term3 gaps inner $gaps_term
 bindsym $win+3 workspace $w_term3
 
-set $w_term4 "14:term"
+set $w_term4 "14:4"
 workspace $w_term4 gaps inner $gaps_term
 bindsym $win+4 workspace $w_term4
 
-set $w_term5 "15:term"
+set $w_term5 "15:5"
 workspace $w_term5 gaps inner $gaps_term
 bindsym $win+5 workspace $w_term5
 
-set $w_term6 "16:term"
+set $w_term6 "16:6"
 workspace $w_term6 gaps inner $gaps_term
 bindsym $win+6 workspace $w_term6
 
-set $w_term7 "17:term"
+set $w_term7 "17:7"
 workspace $w_term7 gaps inner $gaps_term
 bindsym $win+7 workspace $w_term7
 
-set $w_term8 "18:term"
+set $w_term8 "18:8"
 workspace $w_term8 gaps inner $gaps_term
 bindsym $win+8 workspace $w_term8
 
-set $w_term9 "19:term"
+set $w_term9 "19:9"
 workspace $w_term9 gaps inner $gaps_term
 bindsym $win+9 workspace $w_term9
 
