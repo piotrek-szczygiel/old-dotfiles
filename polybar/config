@@ -13,7 +13,7 @@ width = 100%
 height = 30
 background = ${colors.background}
 foreground = ${colors.foreground}
-font-0 = MesloLGSDZ Nerd Font:pixelsize=11:weight=bold;0
+font-0 = FuraMonoForPowerline Nerd Font:pixelsize=12:weight=bold;0
 locale = pl_PL.UTF-8
 modules-left = i3
 modules-center = date weather

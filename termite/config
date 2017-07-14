@@ -1,5 +1,5 @@
 [options]
-font = SauceCodePro Nerd Font semibold 16
+font = FuraMonoForPowerline Nerd Font semibold 14
 mouse_autohide = true
 scrollback_lines = 10000
 
