@@ -2,7 +2,7 @@
 	name = Piotr Szczygieł
 	email = szczygiel.p@gmail.com
 [core]
-	editor = smgw
+	editor = sm_wait
 	pager = cat
 	autocrlf = input
 	ignorecase = false
