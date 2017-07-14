@@ -8,11 +8,13 @@ fish
 fzf
 go
 google-chrome
+gtk-theme-arc-git
 htop
 i3-gaps
 imagemagick
 keepassxc
 lightdm-webkit-theme-litarvan
+lxappearance
 megasync
 mopidy-spotify
 mpc
