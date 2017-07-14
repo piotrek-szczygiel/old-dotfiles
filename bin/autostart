@@ -9,3 +9,4 @@ dunst &
 setxkbmap -option caps:escape &
 redshift &
 sm_daemon &
+start_term &
