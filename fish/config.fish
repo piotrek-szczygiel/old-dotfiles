@@ -1,7 +1,7 @@
 set -xg GOPATH $HOME/go
 set -xg PATH $PATH $GOPATH/bin
 
-set -xg EDITOR "smt"
+set -xg EDITOR "sm"
 
 # Basic aliases
 alias o="xdg-open"
