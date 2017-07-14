@@ -28,9 +28,14 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
+" Smart searching
+set ignorecase
+set smartcase
+
 " Spacemacs keybindings for consistency
 let mapleader = " "
 nnoremap <leader>fed :e $MYVIMRC<cr>
 nnoremap <leader>feR :so $MYVIMRC<cr>
 nnoremap <leader>fs :w<cr>
 nnoremap <leader>qf :qa<cr>
+nnoremap <leader>sc :nohl<cr>
