@@ -7,7 +7,6 @@ new_float pixel 4
 
 set $gaps_code 20
 set $gaps_default 20
-set $gaps_dotfiles 20
 set $gaps_music 100
 set $gaps_pass 200
 set $gaps_slack 100
@@ -53,10 +52,6 @@ bindsym $win+t exec $psst start_slack
 set $w_task "7:task"
 workspace $w_task gaps inner $gaps_task
 bindsym $win+BackSpace exec $psst start_task
-
-set $w_dotfiles "10:dotfiles"
-workspace $w_dotfiles gaps inner $gaps_dotfiles
-bindsym $win+u exec $psst start_dotfiles
 
 set $w_term1 "11:1"
 workspace $w_term1 gaps inner $gaps_term
