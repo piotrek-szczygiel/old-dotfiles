@@ -1,5 +1,4 @@
 fisherman/await
-oh-my-fish/theme-bobthefish
 oh-my-fish/plugin-extract
 fisherman/fnm
 fisherman/fzf
@@ -10,6 +9,7 @@ fisherman/gitignore
 fisherman/last_job_id
 fisherman/menu
 oh-my-fish/plugin-python
+simnalamburt/shellder
 fisherman/spin
 fisherman/transfer
 fisherman/z
