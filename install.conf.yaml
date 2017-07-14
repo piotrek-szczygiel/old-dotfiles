@@ -17,7 +17,7 @@
     ~/.config/rofi: rofi
     ~/.config/termite: termite
     ~/.config/vis: vis
-    ~/.fehbg: fehbg
+    ~/.fehbg: bin/wallpaper
     ~/.gitconfig: gitconfig
     ~/.ncmpcpp: ncmpcpp
     ~/.spacemacs.d: spacemacs
