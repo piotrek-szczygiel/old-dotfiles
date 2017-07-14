@@ -27,6 +27,7 @@ set relativenumber
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:·
 
 " Smart searching
 set ignorecase
@@ -39,3 +40,4 @@ nnoremap <leader>feR :so $MYVIMRC<cr>
 nnoremap <leader>fs :w<cr>
 nnoremap <leader>qf :qa<cr>
 nnoremap <leader>sc :nohl<cr>
+nnoremap <leader>tw :set list!<cr>
