@@ -37,8 +37,10 @@ set smartcase
 " Smart command completion
 set wildmode=longest,list,full
 
+" Airline configuration
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'base16_google'
+let g:airline#extensions#tabline#enabled = 1
 
 " Spacemacs keybindings for consistency
 let mapleader = " "
