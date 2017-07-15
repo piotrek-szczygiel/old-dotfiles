@@ -8,6 +8,7 @@ new_float pixel 4
 set $gaps_code 20
 set $gaps_default 20
 set $gaps_music 100
+set $gaps_other 0
 set $gaps_pass 200
 set $gaps_slack 100
 set $gaps_task 20
@@ -53,41 +54,41 @@ set $w_task "7:task"
 workspace $w_task gaps inner $gaps_task
 bindsym $win+BackSpace exec $psst start_task
 
-set $w_term1 "11:1"
-workspace $w_term1 gaps inner $gaps_term
-bindsym $win+1 workspace $w_term1
+set $w_other1 "11:1"
+workspace $w_other1 gaps inner $gaps_term
+bindsym $win+1 workspace $w_other1
 
-set $w_term2 "12:2"
-workspace $w_term2 gaps inner $gaps_term
-bindsym $win+2 workspace $w_term2
+set $w_other2 "12:2"
+workspace $w_other2 gaps inner $gaps_other
+bindsym $win+2 workspace $w_other2
 
-set $w_term3 "13:3"
-workspace $w_term3 gaps inner $gaps_term
-bindsym $win+3 workspace $w_term3
+set $w_other3 "13:3"
+workspace $w_other3 gaps inner $gaps_other
+bindsym $win+3 workspace $w_other3
 
-set $w_term4 "14:4"
-workspace $w_term4 gaps inner $gaps_term
-bindsym $win+4 workspace $w_term4
+set $w_other4 "14:4"
+workspace $w_other4 gaps inner $gaps_other
+bindsym $win+4 workspace $w_other4
 
-set $w_term5 "15:5"
-workspace $w_term5 gaps inner $gaps_term
-bindsym $win+5 workspace $w_term5
+set $w_other5 "15:5"
+workspace $w_other5 gaps inner $gaps_other
+bindsym $win+5 workspace $w_other5
 
-set $w_term6 "16:6"
-workspace $w_term6 gaps inner $gaps_term
-bindsym $win+6 workspace $w_term6
+set $w_other6 "16:6"
+workspace $w_other6 gaps inner $gaps_other
+bindsym $win+6 workspace $w_other6
 
-set $w_term7 "17:7"
-workspace $w_term7 gaps inner $gaps_term
-bindsym $win+7 workspace $w_term7
+set $w_other7 "17:7"
+workspace $w_other7 gaps inner $gaps_other
+bindsym $win+7 workspace $w_other7
 
-set $w_term8 "18:8"
-workspace $w_term8 gaps inner $gaps_term
-bindsym $win+8 workspace $w_term8
+set $w_other8 "18:8"
+workspace $w_other8 gaps inner $gaps_other
+bindsym $win+8 workspace $w_other8
 
-set $w_term9 "19:9"
-workspace $w_term9 gaps inner $gaps_term
-bindsym $win+9 workspace $w_term9
+set $w_other9 "19:9"
+workspace $w_other9 gaps inner $gaps_other
+bindsym $win+9 workspace $w_other9
 
 bindsym $win+period workspace next
 bindsym $win+comma workspace prev
