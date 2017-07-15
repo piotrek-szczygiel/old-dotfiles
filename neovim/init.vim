@@ -44,6 +44,9 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Spacemacs keybindings for consistency
 let mapleader = " "
+nnoremap <leader>bd :bd<cr>
+nnoremap <leader>bn :bn<cr>
+nnoremap <leader>bp :bp<cr>
 nnoremap <leader>fed :e $MYVIMRC<cr>
 nnoremap <leader>feR :so $MYVIMRC<cr>
 nnoremap <leader>fs :w<cr>
