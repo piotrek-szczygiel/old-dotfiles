@@ -10,6 +10,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'colepeters/spacemacs-theme.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -31,6 +33,12 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:·
 " Smart searching
 set ignorecase
 set smartcase
+
+" Smart command completion
+set wildmode=longest,list,full
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'base16_google'
 
 " Spacemacs keybindings for consistency
 let mapleader = " "
