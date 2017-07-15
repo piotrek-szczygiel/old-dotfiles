@@ -42,11 +42,17 @@ This function should only modify configuration layer settings."
                       auto-completion-return-key-behavior nil)
      helm
 
+     ;; Emacs
+     ibuffer
+     org
+     semantic
+
      ;; Languages
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode
             c-c++-enable-clang-support t
             c-c++-enable-clang-format-on-save t)
+
      emacs-lisp
      go
      html
