@@ -149,9 +149,8 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(gotham
-                         spacemacs-light
-                         spacemacs-dark)
+   dotspacemacs-themes '(dracula
+                         spacemacs-light)
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
@@ -374,7 +373,6 @@ before packages are loaded."
 
   (setq-default disaster-objdump "objdump -d -M intel -Sl --no-show-raw-insn"
                 magit-repository-directories '("~/Projects")
-                powerline-default-separator 'utf-8
                 read-quoted-char-radix 16
                 rust-format-on-save t
                 scroll-margin 5)
