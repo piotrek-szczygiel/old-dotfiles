@@ -372,17 +372,12 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
-  (setq-default scroll-margin 7
-
-                powerline-default-separator 'utf-8
-
+  (setq-default disaster-objdump "objdump -d -M intel -Sl --no-show-raw-insn"
                 magit-repository-directories '("~/Projects")
-
-                ;; C-v <unicode> entering
+                powerline-default-separator 'utf-8
                 read-quoted-char-radix 16
-
-                ;; Use intel flavor for disassembly
-                disaster-objdump "objdump -d -M intel -Sl --no-show-raw-insn")
+                rust-format-on-save t
+                scroll-margin 5)
 
   ;; Scons configuration file parsed as python
   (add-to-list 'auto-mode-alist '("SConstruct" . python-mode)))
