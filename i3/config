@@ -98,6 +98,10 @@ bindsym $alt+Tab exec rofi -show window
 bindsym $win+d exec rofi -show run
 bindsym $win+o exec rofi -show drun
 
+bindsym $win+p [class="keepassxc"] scratchpad show
+for_window [class="keepassxc"] floating enable
+for_window [class="keepassxc"] move scratchpad
+
 set $cmd_next_song exec $psst mpc next
 bindsym XF86AudioNext $cmd_next_song
 bindsym $win+bracketright $cmd_next_song
@@ -145,7 +149,6 @@ bindsym $win+Shift+l move right
 
 bindsym $win+f fullscreen toggle
 
-#bindsym $win+s layout stacking
 bindsym $win+w layout tabbed
 bindsym $win+e layout toggle split
 
