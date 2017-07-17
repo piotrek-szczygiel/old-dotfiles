@@ -9,7 +9,6 @@ set $gaps_code 20
 set $gaps_default 20
 set $gaps_music 100
 set $gaps_other 0
-set $gaps_pass 200
 set $gaps_slack 100
 set $gaps_task 20
 set $gaps_term 20
@@ -21,7 +20,6 @@ font pango:MesloLGSDZ Nerd Font 9
 
 focus_follows_mouse no
 bindsym $win+x kill
-
 
 # Workspaces settings
 workspace_auto_back_and_forth yes
@@ -42,15 +40,11 @@ set $w_music "4:music"
 workspace $w_music gaps inner $gaps_music
 bindsym $win+m exec $psst start_music
 
-set $w_pass "5:pass"
-workspace $w_pass gaps inner $gaps_pass
-bindsym $win+p exec $psst start_pass
-
-set $w_slack "6:slack"
+set $w_slack "5:slack"
 workspace $w_slack gaps inner $gaps_slack
 bindsym $win+t exec $psst start_slack
 
-set $w_task "7:task"
+set $w_task "6:task"
 workspace $w_task gaps inner $gaps_task
 bindsym $win+BackSpace exec $psst start_task
 
