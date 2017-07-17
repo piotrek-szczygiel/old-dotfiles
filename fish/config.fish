@@ -1,5 +1,5 @@
 set -xg GOPATH $HOME/go
-set -xg PATH $PATH $GOPATH/bin
+set -xg PATH $HOME/.cargo/bin $GOPATH/bin $PATH
 
 set -xg EDITOR "sm"
 
