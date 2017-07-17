@@ -358,6 +358,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
   ;; Add node version manager binaries to PATH
   (add-to-list 'exec-path "~/.config/fnm/bin" t)
+  (add-to-list 'exec-path "~/.cargo/bin" t)
   )
 
 (defun dotspacemacs/user-config ()
