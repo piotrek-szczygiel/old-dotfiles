@@ -62,7 +62,7 @@ interval = 120
 format = <label>
 format-padding = 2
 exec = .config/polybar/module-weather
-click-left = xdg-open "http://www.accuweather.com/pl/pl/podrzecze/1393494/weather-forecast/1393494"
+click-left = google-chrome-stable --app="http://www.accuweather.com/pl/pl/podrzecze/1393494/weather-forecast/1393494"
 
 [module/cpu]
 type = internal/cpu

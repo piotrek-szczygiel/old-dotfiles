@@ -102,6 +102,8 @@ bindsym $win+p [class="keepassxc"] scratchpad show
 for_window [class="keepassxc"] floating enable
 for_window [class="keepassxc"] move scratchpad
 
+for_window [title="AccuWeather"] floating enable
+
 set $cmd_next_song exec $psst mpc next
 bindsym XF86AudioNext $cmd_next_song
 bindsym $win+bracketright $cmd_next_song
