@@ -88,7 +88,7 @@ bindsym $win+period workspace next
 bindsym $win+comma workspace prev
 
 bindsym $win+v split v
-bindsym $win+Shift+v split h
+bindsym $win+b split h
 
 bindsym $win+F12 exec lock
 
