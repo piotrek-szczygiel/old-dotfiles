@@ -10,3 +10,4 @@ setxkbmap -option caps:escape &
 redshift &
 sm_daemon &
 start_term &
+unclutter --timeout 2 &
