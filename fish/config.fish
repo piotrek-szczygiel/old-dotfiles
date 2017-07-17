@@ -66,5 +66,15 @@ function ls
   ls-i --color=always -A --group-directories-first -h -w (tput cols) $argv
 end
 
+# Grc aliases
+set -U grc_plugin_execs cat df diff gcc g++ \
+  make mount ping ps tail ip
+
+for executable in $grc_plugin_execs
+  if type -q $executable
+    alias $executable "grc $executable"
+  end
+end
+
 # Virtualfish initialization
 eval (python -m virtualfish auto_activation ^ /dev/null)
