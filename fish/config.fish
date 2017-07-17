@@ -31,7 +31,7 @@ end
 
 # Keybindings
 function fish_user_key_bindings
-  bind \cd "__fzf_cd_with_hidden"
+  bind \cx "__fzf_cd_with_hidden"
   bind \cn "__fzf_edit nvim"
   bind \cr "__fzf_reverse_isearch"
   bind \cs "__fzf_edit sm"
