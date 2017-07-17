@@ -3,4 +3,44 @@ font = FuraMonoForPowerline Nerd Font semibold 14
 mouse_autohide = true
 scrollback_lines = 10000
 
+[colors]
+
+# special
+foreground      = #ebece6
+foreground_bold = #ebece6
+cursor          = #ebece6
+background      = #1e1f29
+
+# black
+color0  = #000000
+color8  = #555555
+
+# red
+color1  = #fc4346
+color9  = #fc4346
+
+# green
+color2  = #50fb7c
+color10 = #50fb7c
+
+# yellow
+color3  = #f0fb8c
+color11 = #f0fb8c
+
+# blue
+color4  = #49baff
+color12 = #49baff
+
+# magenta
+color5  = #fc4cb4
+color13 = #fc4cb4
+
+# cyan
+color6  = #8be9fe
+color14 = #8be9fe
+
+# white
+color7  = #ededec
+color15 = #ededec
+
 # vim:ft=dosini
