@@ -3,7 +3,6 @@ set $win Mod4
 set $psst --no-startup-id
 
 new_window pixel 0
-new_float pixel 4
 
 set $gaps_code 20
 set $gaps_default 20
@@ -89,6 +88,9 @@ bindsym $win+comma workspace prev
 
 bindsym $win+v split v
 bindsym $win+b split h
+
+bindsym $win+s scratchpad show
+bindsym $win+Shift+s move scratchpad
 
 bindsym $win+F12 exec lock
 
