@@ -1,4 +1,5 @@
 bashate
+cargo
 cli-visualizer
 compton
 dunst
