@@ -59,8 +59,11 @@ This function should only modify configuration layer settings."
      javascript
      (markdown :variables
                markdown-live-preview-engine 'vmd)
-     markdown
-     python
+
+     (python :variables
+             python-enable-yapf-format-on-save t
+             python-test-runner 'pytest)
+
      rust
      shell-scripts
      typescript
