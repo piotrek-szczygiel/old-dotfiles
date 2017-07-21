@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-SHELL=/bin/bash emacs --daemon
