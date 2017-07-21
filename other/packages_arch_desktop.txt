@@ -3,3 +3,5 @@ lightdm-webkit2-greeter
 fish
 google-chrome
 ttf-hack
+cmus
+libmad
