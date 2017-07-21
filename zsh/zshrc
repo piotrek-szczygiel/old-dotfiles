@@ -68,6 +68,8 @@ else
   export EDITOR='nvim'
 fi
 
+SPACESHIP_PROMPT_SYMBOL="❯"
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
