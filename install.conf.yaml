@@ -1,0 +1,18 @@
+- defaults:
+    link:
+        create: true
+        force: true
+        relink: true
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.gitconfig: gitconfig
+
+    ~/.xprofile: xprofile
+    ~/.Xresources: Xresources
+    
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/fishfile: fish/fishfile
+
+    ~/.config/nvim/init.vim: neovim/config.vim
