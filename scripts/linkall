@@ -1,6 +1,0 @@
-#!/bin/sh
-
-ln -s ~/.dotfiles/gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/xprofile ~/.xprofile
-ln -s ~/.dotfiles/Xresources ~/.Xresources
-
