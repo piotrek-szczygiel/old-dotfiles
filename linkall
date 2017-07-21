@@ -1,4 +1,0 @@
-#!/bin/sh
-
-./x/link
-./zsh/link

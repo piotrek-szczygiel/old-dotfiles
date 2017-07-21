@@ -1,4 +1,0 @@
-#!/bin/sh
-
-ln -s ~/.dotfiles/x/xprofile ~/.xprofile
-ln -s ~/.dotfiles/x/Xresources ~/.Xresources
