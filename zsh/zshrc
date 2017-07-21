@@ -1,9 +1,0 @@
-export EDITOR="nvim"
-
-source ~/.zplug/init.zsh
-
-zplug plugins/git,   from:oh-my-zsh
-zplug mafredri/zsh-async, from:github
-zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
-
-zplug load --verbose
