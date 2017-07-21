@@ -1,2 +1,2 @@
 xrandr --refresh 144 &
-setxkbmap -option caps:swapescape &
+setxkbmap -option caps:escape &
