@@ -1,5 +1,6 @@
 i3-gaps
 lightdm-webkit2-greeter
+polybar
 fish
 google-chrome
 ttf-hack
