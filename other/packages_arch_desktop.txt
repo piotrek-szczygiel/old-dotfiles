@@ -3,8 +3,6 @@ lightdm-webkit2-greeter
 polybar
 fish
 google-chrome
-ttf-fira-mono
-ttf-fira-code
 cmus
 libmad
 cava
