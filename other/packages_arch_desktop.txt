@@ -1,6 +1,7 @@
 i3-gaps
 lightdm-webkit2-greeter
 polybar
+compton
 fish
 google-chrome
 cmus
