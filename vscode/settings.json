@@ -1,0 +1,9 @@
+{
+    "editor.fontFamily": "FuraCode Nerd Font",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 18,
+    "keyboard.dispatch": "keyCode",
+    "workbench.colorTheme": "Dracula",
+    "vim.enableNeovim": true,
+    "vim.disableAnnoyingNeovimMessage": true
+}

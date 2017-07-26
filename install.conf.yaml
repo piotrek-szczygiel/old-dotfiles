@@ -12,6 +12,8 @@
     ~/.xprofile: xprofile
     ~/.Xresources: Xresources
     
+    ~/.config/Code/User/settings.json: vscode/settings.json
+
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/fishfile: fish/fishfile
 
