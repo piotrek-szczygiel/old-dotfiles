@@ -6,3 +6,5 @@ google-chrome
 ttf-hack
 cmus
 libmad
+cava
+qbittorrent
