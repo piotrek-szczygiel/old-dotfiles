@@ -5,9 +5,10 @@ URxvt*scrollBar: false
 
 URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 0
-URxvt.secondaryWheel: 1
 
 URxvt.font: xft:FuraMonoForPowerline Nerd Font:bold:pixelsize=15
+
+URxvt.perl-ext-common: vtwheel
 
 ! Dracula Xresources palette
 *.foreground: #F8F8F2
