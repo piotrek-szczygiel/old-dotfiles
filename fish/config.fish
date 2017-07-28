@@ -10,3 +10,5 @@ alias gp "git push"
 alias gs "git status"
 
 alias o "xdg-open"
+
+alias q "exit"
