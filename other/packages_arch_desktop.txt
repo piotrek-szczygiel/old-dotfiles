@@ -1,5 +1,6 @@
 i3-gaps
 i3lock-fancy-git
+scrot
 lightdm-webkit2-greeter
 polybar
 compton
