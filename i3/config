@@ -13,20 +13,24 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:FuraMonoForPowerline Nerd Font 14
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+client.focused          #333344 #11111a #eeeeee #2e9ef4  #222222
+client.focused_inactive #333333 #5f676a #ffffff #484e50  #5f676a
+client.unfocused        #111111 #000000 #666666 #292d2e  #111111
+client.urgent           #2f343a #900000 #ffffff #900000  #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000  #0c0c0c
+
+client.background       #000000
 
 gaps outer 10
-gaps inner 10
+gaps inner 40
 
 workspace 1 gaps inner 0
 workspace 1 gaps outer 0
 
 for_window [class="Google-chrome"] border pixel 0
-for_window [class="URxvt"] border pixel 2
+#for_window [class="URxvt"] border pixel 2
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -69,7 +73,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+c split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v
