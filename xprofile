@@ -2,5 +2,6 @@ xrandr --refresh 144 &
 ~/.fehbg &
 compton -cb &
 setxkbmap -option caps:escape &
-megasync &
-nm-applet &
+
+(sleep 5s; megasync) &
+(sleep 5s; nm-applet) &
