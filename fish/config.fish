@@ -1,6 +1,8 @@
 set -xg EDITOR nvim
 set -xg PATH $HOME/.dotfiles/bin $PATH
 
+alias ls "better_ls"
+
 alias ga "git add"
 alias gc "git commit"
 alias gca "git commit -a"

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+LS_COLORS=$(better_ls_colors) better_ls_bin --color=always -A --group-directories-first -h -w $(tput cols) $@
