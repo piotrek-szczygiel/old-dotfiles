@@ -7,6 +7,8 @@ compton
 rxvt-unicode-patched
 urxvt-vtwheel
 fish
+neovim
+xclip
 google-chrome
 cmus
 libmad
