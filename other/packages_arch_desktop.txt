@@ -14,3 +14,4 @@ cmus
 libmad
 cava
 qbittorrent
+redshift-gtk-git
