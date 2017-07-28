@@ -3,6 +3,8 @@ i3lock-fancy-git
 lightdm-webkit2-greeter
 polybar
 compton
+rxvt-unicode-patched
+urxvt-vtwheel
 fish
 google-chrome
 cmus
