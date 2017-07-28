@@ -28,7 +28,7 @@ module-margin-right = 2
 font-0 = FuraMonoForPowerline Nerd Font:pixelsize=11:weight=bold
 
 modules-left = i3
-modules-right = date
+modules-right = weather date
 
 tray-position = right
 tray-padding = 2
@@ -36,44 +36,20 @@ tray-padding = 2
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
-[bar/top]
-width = 100%
-height = 28
-fixed-center = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 3
-line-color = #f00
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 2
-
-font-0 = FuraMonoForPowerline Nerd Font:pixelsize=11:weight=bold
-
-modules-center = cmus
-
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
-
 [module/i3]
 type = internal/i3
-ws-icon-0 = term;
-ws-icon-1 = web;
-ws-icon-2 = code;
-ws-icon-3 = music;
-ws-icon-4 = slack;
-ws-icon-5 = task;
+;ws-icon-0 = term;
+;ws-icon-1 = web;
+;ws-icon-2 = code;
+;ws-icon-3 = music;
+;ws-icon-4 = slack;
+;ws-icon-5 = task;
 ws-icon-default = 
-fuzzy-match = true
+;fuzzy-match = true
 pin-workspaces = true
-strip-wsnumbers = true
+;strip-wsnumbers = true
 index-sort = true
-enable-scroll = false
+;enable-scroll = false
 format = <label-state>
 format-padding-right = 2
 label-unfocused-foreground = ${colors.i3-unfocused}
@@ -83,18 +59,13 @@ label-focused-padding = 1
 label-urgent-foreground = ${colors.i3-urgent}
 label-urgent-padding = 1
 
-[module/cmus]
+[module/weather]
 type = custom/script
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-
-exec = .dotfiles/polybar/cmus.sh
-exec-if = pgrep -x cmus
-interval = 1
-
-click-left = cmus-remote --pause
-click-right = cmus-remote --stop
+interval = 120
+format = <label>
+;format-padding = 2
+exec = .dotfiles/polybar/weather.sh
+click-left = google-chrome-stable --app="http://www.accuweather.com/pl/pl/podrzecze/1393494/weather-forecast/1393494"
 
 [module/date]
 type = internal/date
@@ -108,5 +79,108 @@ format = <label>
 label = %date% %time%
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
+
+[bar/top]
+width = 100%
+height = 28
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+padding-left = 2
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = FuraMonoForPowerline Nerd Font:pixelsize=11:weight=bold
+
+modules-left = cpu memory
+modules-center = cmus
+modules-right = updates net
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format = <label> <ramp-coreload>
+format-foreground = ${colors.foreground}
+label = CPU
+ramp-coreload-0 = ▁
+ramp-coreload-0-font = 2
+ramp-coreload-0-foreground = #aaff77
+ramp-coreload-1 = ▂
+ramp-coreload-1-font = 2
+ramp-coreload-1-foreground = #aaff77
+ramp-coreload-2 = ▃
+ramp-coreload-2-font = 2
+ramp-coreload-2-foreground = #aaff77
+ramp-coreload-3 = ▄
+ramp-coreload-3-font = 2
+ramp-coreload-3-foreground = #aaff77
+ramp-coreload-4 = ▅
+ramp-coreload-4-font = 2
+ramp-coreload-4-foreground = #fba922
+ramp-coreload-5 = ▆
+ramp-coreload-5-font = 2
+ramp-coreload-5-foreground = #fba922
+ramp-coreload-6 = ▇
+ramp-coreload-6-font = 2
+ramp-coreload-6-foreground = #ff5555
+ramp-coreload-7 = █
+ramp-coreload-7-font = 2
+ramp-coreload-7-foreground = #ff5555
+
+[module/memory]
+type = internal/memory
+interval = 1
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format = <label> <bar-used>
+format-foreground = ${colors.foreground}
+label = RAM
+bar-used-indicator =
+bar-used-width = 9
+bar-used-foreground-0 = #55aa55
+bar-used-foreground-1 = #557755
+bar-used-foreground-2 = #f5a70a
+bar-used-foreground-3 = #ff5555
+bar-used-fill = ▐
+bar-used-empty = ▐
+bar-used-empty-foreground = #444444
+
+[module/cmus]
+type = custom/script
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-foreground = ${colors.foreground}
+
+exec = .dotfiles/polybar/cmus.sh
+exec-if = pgrep -x cmus
+interval = 1
+
+click-left = cmus-remote --pause
+click-right = cmus-remote --stop
+
+[module/updates]
+type = custom/script
+interval = 30
+format = <label>
+format-prefix = " "
+format-prefix-foreground = #8be9fd
+exec = .dotfiles/polybar/updates.sh
+exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
+
+[module/net]
+type = custom/script
+interval = 10
+format = <label>
+exec = .dotfiles/polybar/net.sh
 
 ; vim:ft=dosini
