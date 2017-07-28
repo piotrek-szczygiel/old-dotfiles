@@ -15,3 +15,4 @@ libmad
 cava
 qbittorrent
 redshift-gtk-git
+volumeicon
