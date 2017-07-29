@@ -3,12 +3,12 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 URxvt*scrollBar: false
 
-URxvt.secondaryScreen: 1
-URxvt.secondaryScroll: 0
+URxvt*secondaryScreen: 1
+URxvt*secondaryScroll: 0
 
-URxvt.font: xft:FuraMonoForPowerline Nerd Font:bold:pixelsize=15
+URxvt*font: xft:DejaVuSansMono Nerd Font:weight=bold:pixelsize=16
 
-URxvt.perl-ext-common: vtwheel
+URxvt*perl-ext-common: vtwheel
 
 ! Dracula Xresources palette
 *.foreground: #F8F8F2

@@ -1,6 +1,5 @@
 {
-    "editor.fontFamily": "FuraCode Nerd Font",
-    "editor.fontLigatures": true,
+    "editor.fontFamily": "DejaVuSansMono Nerd Font",
     "editor.fontSize": 18,
     "keyboard.dispatch": "keyCode",
     "workbench.colorTheme": "Dracula",
