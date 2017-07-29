@@ -21,11 +21,17 @@ workspace_auto_back_and_forth yes
 gaps outer 10
 gaps inner 40
 
-workspace 1 gaps inner 0
-workspace 1 gaps outer 0
+workspace web gaps inner 0
+workspace web gaps outer 0
+
+workspace music gaps inner 100
+workspace music gaps outer 50
+
+smart_borders no_gaps
 
 for_window [class="Google-chrome"] border pixel 0
 for_window [class="URxvt"] border pixel 4
+for_window [title="AccuWeather"] floating enable
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -68,7 +74,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+g split h
+bindsym $mod+c split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -92,6 +98,14 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+
+set $start_music exec --no-startup-id ~/.dotfiles/i3/music.sh
+bindsym XF86Tools $start_music
+bindsym $mod+m $start_music
+
+set $start_web exec --no-startup-id ~/.dotfiles/i3/web.sh
+bindsym XF86HomePage $start_web
+bindsym $mod+g $start_web
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -126,6 +140,17 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # lock
 bindsym $mod+F12 exec i3lock-fancy -pf Fura-Mono-Regular-for-Powerline-Nerd-Font-Complete-Mono -- scrot -z
+
+# media
+
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+
+bindsym XF86AudioNext exec --no-startup-id cmus-remote --next
+bindsym XF86AudioPrev exec --no-startup-id cmus-remote --prev
+bindsym XF86AudioPlay exec --no-startup-id cmus-remote --pause
+bindsym XF86AudioStop exec --no-startup-id cmus-remote --stop
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
