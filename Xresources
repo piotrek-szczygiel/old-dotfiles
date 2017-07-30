@@ -10,9 +10,12 @@ URxvt*font: xft:DejaVuSansMono Nerd Font:weight=bold:pixelsize=16
 
 URxvt*perl-ext-common: vtwheel
 
-! Dracula Xresources palette
+URxvt*depth: 32
+!urxvt*background: rgba:0000/0000/0200/c800
+
+! Draculx Xresources palette
 *.foreground: #F8F8F2
-*.background: #282A36
+*.background: rgba:2800/2A00/3600/d2b4
 *.color0:     #000000
 *.color8:     #4D4D4D
 *.color1:     #FF5555
