@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if uname -m | grep 64; then
+if uname -m | grep 64 > /dev/null 2>&1; then
     BIN=better_ls_bin64
 else
     BIN=better_ls_bin32
