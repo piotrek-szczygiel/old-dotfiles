@@ -1,3 +1,9 @@
 #!/bin/bash
 
-LS_COLORS=$(better_ls_colors) better_ls_bin --color=always -A --group-directories-first -h -w $(tput cols) $@
+if uname -m | grep 64; then
+    BIN=better_ls_bin64
+else
+    BIN=better_ls_bin32
+fi
+
+LS_COLORS=$(better_ls_colors) $BIN --color=always -A --group-directories-first -h -w $(tput cols) $@
