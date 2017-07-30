@@ -38,7 +38,7 @@ scroll-down = i3wm-wsprev
 type = internal/i3
 
 ws-icon-default = 
-ws-icon-0 = web;
+ws-icon-0 = web;
 ws-icon-1 = music;
 
 pin-workspaces = true
@@ -96,7 +96,7 @@ modules-right = updates ping net
 [module/cpu]
 type = internal/cpu
 interval = 0.5
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format = <label> <ramp-coreload>
 format-foreground = ${colors.foreground}
