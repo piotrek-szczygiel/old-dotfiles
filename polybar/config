@@ -38,8 +38,9 @@ scroll-down = i3wm-wsprev
 type = internal/i3
 
 ws-icon-default = 
-ws-icon-0 = web;%{F#f1fa8c}%{F-}
-ws-icon-1 = music;%{F#50fa7b}%{F-}
+ws-icon-0 = web;
+ws-icon-1 = music;
+
 pin-workspaces = true
 strip-wsnumbers = true
 index-sort = true
@@ -62,7 +63,7 @@ date-alt = %A, %d %B %Y
 time-alt = %H:%M:%S
 format = <label>
 label = %date% %time%
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 
 [module/weather]
@@ -86,7 +87,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = DejaVuSansMono Nerd Font:weight=bold:pixelsize=12
+font-0 = MesloLGSDZ NF:weight=bold:pixelsize=12
 
 modules-left = cpu memory
 modules-center = cmus
@@ -146,9 +147,10 @@ bar-used-empty-foreground = #444444
 [module/cmus]
 type = custom/script
 
+format = <label>
+format-foreground = ${colors.foreground}
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-foreground = ${colors.foreground}
 
 exec = .dotfiles/polybar/cmus.sh
 exec-if = pgrep -x cmus
@@ -159,8 +161,10 @@ click-right = cmus-remote --stop
 
 [module/updates]
 type = custom/script
+
 interval = 60
 format = <label>
+format-foreground = ${colors.foreground}
 format-prefix = " "
 format-prefix-foreground = #8be9fd
 exec = .dotfiles/polybar/updates.sh
@@ -168,13 +172,18 @@ exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 [module/ping]
 type = custom/script
+
 interval = 5
+format = <label>
+format-foreground = ${colors.foreground}
 exec = .dotfiles/polybar/ping.sh
 
 [module/net]
 type = custom/script
+
 interval = 1
 format = <label>
+format-foreground = ${colors.foreground}
 exec = .dotfiles/polybar/net.sh
 
 ; vim:ft=dosini
