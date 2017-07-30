@@ -6,7 +6,7 @@ URxvt*scrollBar: false
 URxvt*secondaryScreen: 1
 URxvt*secondaryScroll: 0
 
-URxvt*font: xft:DejaVuSansMono Nerd Font:weight=bold:pixelsize=16
+URxvt*font: xft:MesloLGSDZ NF:pixelsize=16
 
 URxvt*perl-ext-common: vtwheel
 
