@@ -11,7 +11,6 @@
 
     ~/.gitconfig: gitconfig
 
-    ~/.xprofile: xprofile_i3
     ~/.Xresources: Xresources
     
     ~/.config/Code/User/settings.json: vscode/settings.json
