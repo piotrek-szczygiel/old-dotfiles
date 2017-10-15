@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-address="https://api.darksky.net/forecast/550a6e71cd0cb8090ce35592bca57140/49.6249,20.6913?units=si&exclude=minutely,hourly,daily,alerts,flags"
+address="https://api.darksky.net/forecast/550a6e71cd0cb8090ce35592bca57140/50.0675,19.9050?units=si&exclude=minutely,hourly,daily,alerts,flags"
 weather="$(wget -q -O- $address)"
 
 [[ "$weather" =~ \"icon\":\"([^\"]*)\" ]]

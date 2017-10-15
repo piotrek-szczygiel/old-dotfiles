@@ -22,7 +22,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = MesloLGSDZ NF:weight=bold:pixelsize=12
+font-0 = MesloLGSDZ Nerd Font:weight=bold:pixelsize=12
 
 modules-left = i3
 modules-center = date
@@ -87,7 +87,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = MesloLGSDZ NF:weight=bold:pixelsize=12
+font-0 = MesloLGSDZ Nerd Font:weight=bold:pixelsize=12
 
 modules-left = cpu memory
 modules-center = cmus
