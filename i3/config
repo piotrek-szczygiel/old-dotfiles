@@ -30,7 +30,7 @@ workspace music gaps outer 50
 smart_borders no_gaps
 
 for_window [class="Google-chrome"] border pixel 0
-for_window [class="URxvt"] border pixel 4
+for_window [class="Termite"] border pixel 4
 for_window [title="AccuWeather"] floating enable
 
 # Use Mouse+$mod to drag floating windows to their wanted position
