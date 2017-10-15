@@ -3,7 +3,7 @@ compton -cb &
 setxkbmap -option caps:escape &
 
 # VAIO Keyboard backlighting
-echo 1 | sudo tee /sys/devices/platform/sony-laptop/kbd_backlight &
+#echo 1 > /sys/devices/platform/sony-laptop/kbd_backlight &
 
 # VAIO Touchpad settings
 xinput set-prop 17 318 0, 0, 0, 0, 1, 3, 2
