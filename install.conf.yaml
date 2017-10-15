@@ -25,3 +25,5 @@
 
     ~/.config/polybar/config: polybar/config
     ~/.config/polybar/launch.sh: polybar/launch.sh
+
+    ~/.config/termite/config: termite/config
