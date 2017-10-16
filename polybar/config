@@ -108,7 +108,7 @@ exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 [module/ping]
 type = custom/script
 
-interval = 5
+interval = 1
 
 format = <label>
 format-foreground = ${colors.foreground}
@@ -147,10 +147,10 @@ font-0 = MesloLGSDZ Nerd Font:weight=bold:pixelsize=14
 
 modules-left = i3
 modules-center = date
-modules-right = weather battery redshift volume
+modules-right = weather redshift battery volume
 
 tray-position = right
-tray-padding = 2
+tray-padding = 1
 
 [module/i3]
 type = internal/i3
@@ -195,6 +195,15 @@ format-foreground = ${colors.foreground}
 
 exec = .dotfiles/polybar/weather.sh
 
+[module/redshift]
+type = custom/script
+interval = 5
+
+format = <label>
+format-foreground = ${colors.foreground}
+
+exec = .dotfiles/polybar/redshift.sh
+
 [module/battery]
 type = internal/battery
 
@@ -220,15 +229,6 @@ animation-charging-3 = 
 animation-charging-4 = 
 
 animation-charging-framerate = 750
-
-[module/redshift]
-type = custom/script
-interval = 5
-
-format = <label>
-format-foreground = ${colors.foreground}
-
-exec = .dotfiles/polybar/redshift.sh
 
 [module/volume]
 type = internal/volume
