@@ -2,11 +2,7 @@
 compton -cb &
 setxkbmap -option caps:escape &
 
-# VAIO Keyboard backlighting
-#echo 1 > /sys/devices/platform/sony-laptop/kbd_backlight &
-
-# VAIO Touchpad settings
-xinput set-prop 17 318 0, 0, 0, 0, 1, 3, 2
+~/.dotilfes/vaio/startup &
 
 (sleep 5s; megasync) &
 (sleep 5s; nm-applet) &
