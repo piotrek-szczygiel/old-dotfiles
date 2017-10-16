@@ -108,7 +108,7 @@ exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 [module/ping]
 type = custom/script
 
-interval = 1
+interval = 5
 
 format = <label>
 format-foreground = ${colors.foreground}
