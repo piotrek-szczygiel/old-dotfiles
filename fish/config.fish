@@ -12,6 +12,8 @@ alias gl "git pull"
 alias gp "git push"
 alias gs "git status"
 
+alias nmt "nmtui-connect"
+
 alias o "xdg-open"
 
 alias q "exit"
