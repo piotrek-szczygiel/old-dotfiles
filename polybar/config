@@ -8,7 +8,7 @@ i3-urgent = #ffb86c
 
 [bar/bottom]
 width = 100%
-height = 30
+height = 34
 fixed-center = true
 
 bottom = true
@@ -22,7 +22,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = MesloLGSDZ Nerd Font:weight=bold:pixelsize=12
+font-0 = MesloLGSDZ Nerd Font:weight=bold:pixelsize=14
 
 modules-left = i3
 modules-center = date
@@ -100,7 +100,7 @@ animation-charging-framerate = 750
 
 [bar/top]
 width = 100%
-height = 30
+height = 34
 fixed-center = true
 
 background = ${colors.background}
@@ -112,7 +112,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = MesloLGSDZ Nerd Font:weight=bold:pixelsize=12
+font-0 = MesloLGSDZ Nerd Font:weight=bold:pixelsize=14
 
 modules-left = cpu memory
 modules-center = cmus
