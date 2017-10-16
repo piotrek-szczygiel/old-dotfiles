@@ -17,3 +17,5 @@ alias nmt "nmtui-connect"
 alias o "xdg-open"
 
 alias q "exit"
+
+alias td "nvim ~/.todo"
