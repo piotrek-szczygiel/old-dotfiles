@@ -14,7 +14,7 @@ try:
 except:
     pass
 
-if ip == "192.168.2.27":
+if ip == "192.168.2.27" or ip == "192.168.8.100":
     print "%{F#8bbcd2}%{F-} LTE"
 elif ip == "192.168.2.28":
     print "%{F#e89a00}%{F-} ADSL"
