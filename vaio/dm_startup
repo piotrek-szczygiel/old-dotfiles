@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+/home/piotr/.dotfiles/vaio/backlight &
+/home/piotr/.dotfiles/vaio/touchpad &
