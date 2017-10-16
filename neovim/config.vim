@@ -15,7 +15,6 @@ set mouse=a
 set number
 set relativenumber
 
-set nowrap
 set scrolloff=5
 
 colorscheme desert
@@ -43,6 +42,10 @@ vnoremap <leader>y "+y
 
 " Clear search highlighting
 nnoremap <silent><leader><cr> :nohl<cr>
+
+" Quitting
+nnoremap <leader>qq :qa<cr>
+nnoremap <leader>qw :wq<cr>
 
 " Go to the last cursor location when a file is opened, unless this is a
 " git commit (in which case it's annoying)
