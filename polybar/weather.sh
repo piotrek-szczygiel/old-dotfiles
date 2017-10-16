@@ -4,7 +4,8 @@ address="https://api.darksky.net/forecast/550a6e71cd0cb8090ce35592bca57140/50.06
 weather="$(wget -q -O- $address)"
 
 if [ -z "$weather" ]; then
-    exit 1
+    echo "Look out the window"
+    exit
 fi
 
 [[ "$weather" =~ \"icon\":\"([^\"]*)\" ]]
