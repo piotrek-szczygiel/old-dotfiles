@@ -22,6 +22,7 @@
     ~/.config/i3/config: i3/config
 
     ~/.config/nvim/init.vim: neovim/config.vim
+    ~/.local/share/nvim/site/autoload/plug.vim: neovim/plug.vim
 
     ~/.config/polybar/config: polybar/config
     ~/.config/polybar/launch.sh: polybar/launch.sh
