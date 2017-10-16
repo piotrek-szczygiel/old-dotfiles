@@ -1,10 +1,11 @@
 ~/.fehbg &
 compton -cb &
 setxkbmap -option caps:escape &
+unclutter &
 
 ~/.dotilfes/vaio/startup &
 
-(sleep 5s; megasync) &
-(sleep 5s; nm-applet) &
-(sleep 5s; redshift-gtk) &
-(sleep 5s; volumeicon) &
+#(sleep 5s; megasync) &
+#(sleep 5s; nm-applet) &
+#(sleep 5s; redshift-gtk) &
+#(sleep 5s; volumeicon) &
