@@ -87,7 +87,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 #bindsym $mod+a focus parent
@@ -95,14 +95,16 @@ bindsym $mod+space focus mode_toggle
 # focus the child container
 #bindsym $mod+d focus child
 
+# Launch main temrinal workspace
+set $start_terminal exec --no-startup-id .dotfiles/i3/main_terminal.sh
+bindsym  $mod+space $start_terminal
+
 # Launch music workspace
 set $start_music exec --no-startup-id .dotfiles/i3/music.sh
-bindsym XF86Tools $start_music
 bindsym $mod+m $start_music
 
 # Launch web workspace
 set $start_web exec --no-startup-id .dotfiles/i3/web.sh
-bindsym XF86HomePage $start_web
 bindsym $mod+g $start_web
 
 # switch to workspace
