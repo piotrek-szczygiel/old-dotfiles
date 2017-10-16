@@ -69,6 +69,9 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+bindsym $mod+comma workspace prev
+bindsym $mod+period workspace next
+
 # split in horizontal orientation
 bindsym $mod+c split h
 
