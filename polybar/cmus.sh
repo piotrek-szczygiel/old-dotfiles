@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 artist=$(echo -n $(cmus-remote -C status | grep artist -m 1 | cut -c 12-))
 song=$(echo -n $(cmus-remote -C status | grep title -m 1 | cut -c 11-))
