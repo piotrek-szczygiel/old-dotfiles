@@ -83,6 +83,7 @@ poll-interval = 5
 
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> Full
 
 ramp-capacity-0 = %{F#9e0007}%{F-}
 ramp-capacity-1 = %{F#863f07}%{F-}
