@@ -2,7 +2,7 @@
 
 i3-msg -t get_workspaces | grep "music"
 status=$?
-i3-msg "workspace music"
+i3-msg "workspace 101:music"
 
 if [ $status -ne 0 ]; then
     termite -e cmus &
