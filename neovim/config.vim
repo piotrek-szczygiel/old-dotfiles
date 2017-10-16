@@ -22,6 +22,8 @@ set scrolloff=5
 
 set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
 
+set wildmode=longest,list,full
+
 colorscheme desert
 
 try
