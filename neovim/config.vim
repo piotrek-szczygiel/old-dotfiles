@@ -2,6 +2,9 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'dracula/vim'
+Plug 'vim-airline/vim-airline'
+
+Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()
 
@@ -16,6 +19,8 @@ set number
 set relativenumber
 
 set scrolloff=5
+
+set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
 
 colorscheme desert
 
@@ -43,8 +48,12 @@ vnoremap <leader>y "+y
 " Clear search highlighting
 nnoremap <silent><leader><cr> :nohl<cr>
 
+" Toggle whitespace
+nnoremap <silent><leader>tw :set list!<cr>
+
 " Quitting
-nnoremap <leader>qq :qa<cr>
+nnoremap <leader>qq :q<cr>
+nnoremap <leader>qa :qa<cr>
 nnoremap <leader>qw :wq<cr>
 
 " Go to the last cursor location when a file is opened, unless this is a
@@ -53,3 +62,6 @@ au BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") && &filetype != "gitcommit" |
         \ execute("normal `\"") |
     \ endif
+
+
+let g:airline_powerline_fonts=1
