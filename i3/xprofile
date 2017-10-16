@@ -3,7 +3,7 @@ compton -cb &
 setxkbmap -option caps:escape &
 unclutter &
 
-~/.dotilfes/vaio/startup &
+~/.dotfiles/vaio/touchpad &
 
 #(sleep 5s; megasync) &
 #(sleep 5s; nm-applet) &
