@@ -28,8 +28,9 @@ modules-left = cpu memory
 modules-center = cmus
 modules-right = updates ping net
 
-tray-position = right
-tray-padding = 1
+# Uncomment to enable tray
+#tray-position = right
+#tray-padding = 1
 
 [module/cpu]
 type = internal/cpu
