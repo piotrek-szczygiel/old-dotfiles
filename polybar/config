@@ -88,8 +88,6 @@ type = custom/script
 
 format = <label>
 format-foreground = ${colors.foreground}
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
 
 exec = .dotfiles/polybar/cmus.sh
 exec-if = pgrep -x cmus
