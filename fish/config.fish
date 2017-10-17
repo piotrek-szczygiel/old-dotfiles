@@ -1,6 +1,8 @@
 set -xg EDITOR nvim
 set -xg PATH $HOME/.dotfiles/bin $PATH
 
+set -g theme_title_display_process yes
+
 alias ls "better_ls"
 
 alias ga "git add"
