@@ -5,20 +5,24 @@ import json
 import socket
 import urllib
 
-ip = "unknown"
+local_ip = "unknown"
 external_ip = "unknown"
 
 try:
-    ip = socket.gethostbyname(socket.gethostname())
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(("8.8.8.8", 80))
+    local_ip = s.getsockname()[0]
+    s.close()
+
     external_ip = json.loads(urllib.urlopen("http://ip.jsontest.com/").read())["ip"]
 except:
     pass
 
-if ip == "192.168.2.27" or ip == "192.168.8.100":
+if local_ip == "192.168.2.27" or local_ip == "192.168.8.100":
     print "%{F#8bbcd2}%{F-} LTE"
-elif ip == "192.168.2.28":
+elif local_ip == "192.168.2.28":
     print "%{F#e89a00}%{F-} ADSL"
 elif external_ip == "149.156.124.14":
     print "%{F#13eb34}%{F-} AGH"
 else:
-    print "%{F#a0d18a}%{F-}", ip
+    print "%{F#a0d18a}%{F-}", local_ip
