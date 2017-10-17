@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-i3-msg -t get_workspaces | grep "music"
+i3-msg -t get_workspaces | grep "101:music"
 status=$?
 i3-msg "workspace 101:music"
 

@@ -100,7 +100,7 @@ bindsym $mod+Shift+space floating toggle
 #bindsym $mod+d focus child
 
 # Launch main temrinal workspace
-set $start_terminal exec --no-startup-id .dotfiles/i3/main_terminal.sh
+set $start_terminal exec --no-startup-id .dotfiles/i3/terminal.sh
 bindsym  $mod+space $start_terminal
 
 # Launch music workspace
