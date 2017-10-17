@@ -12,7 +12,7 @@
     ~/.gitconfig: gitconfig
 
     ~/.Xresources: Xresources
-    
+
     ~/.config/cava/config: cava/config
 
     ~/.config/Code/User/settings.json: vscode/settings.json
@@ -30,5 +30,7 @@
 
     ~/.config/polybar/config: polybar/config
     ~/.config/polybar/launch.sh: polybar/launch.sh
+
+    ~/.config/rofi/config.rasi: rofi/config.rasi
 
     ~/.config/termite/config: termite/config
