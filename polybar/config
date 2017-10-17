@@ -103,8 +103,6 @@ type = custom/script
 interval = 15
 format = <label>
 format-foreground = ${colors.foreground}
-format-prefix = " "
-format-prefix-foreground = #8be9fd
 exec = .dotfiles/polybar/updates.sh
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
