@@ -12,6 +12,7 @@ alias gco "git checkout --"
 alias gd "git diff"
 alias gl "git pull"
 alias gp "git push"
+alias grh "git reset HEAD"
 alias gs "git status"
 
 alias nmt "nmtui-connect"
