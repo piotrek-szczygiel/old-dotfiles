@@ -33,7 +33,7 @@ tray-padding = 1
 
 [module/cpu]
 type = internal/cpu
-interval = 0.5
+interval = 0.25
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format = <label> <ramp-coreload>
@@ -66,7 +66,7 @@ ramp-coreload-7-foreground = #ff5555
 
 [module/memory]
 type = internal/memory
-interval = 1
+interval = 0.5
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format = <label> <bar-used>
@@ -100,7 +100,7 @@ click-right = cmus-remote --stop
 [module/updates]
 type = custom/script
 
-interval = 60
+interval = 15
 format = <label>
 format-foreground = ${colors.foreground}
 format-prefix = " "
@@ -111,7 +111,7 @@ exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 [module/ping]
 type = custom/script
 
-interval = 1
+interval = 2
 
 format = <label>
 format-foreground = ${colors.foreground}
@@ -121,7 +121,7 @@ exec = .dotfiles/polybar/ping.sh
 [module/net]
 type = custom/script
 
-interval = 5
+interval = 2
 
 format = <label>
 format-foreground = ${colors.foreground}
@@ -197,7 +197,7 @@ exec = .dotfiles/polybar/weather.sh
 
 [module/redshift]
 type = custom/script
-interval = 5
+interval = 3
 
 format = <label>
 format-foreground = ${colors.foreground}
@@ -210,7 +210,7 @@ type = internal/battery
 battery = BAT1
 adapter = ACAD
 
-poll-interval = 5
+poll-interval = 3
 
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
