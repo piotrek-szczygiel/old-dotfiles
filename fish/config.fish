@@ -1,5 +1,5 @@
 set -xg EDITOR nvim
-set -xg PATH $HOME/.dotfiles/bin $PATH
+set -xg PATH $HOME/.dotfiles/bin $HOME/.local/bin $PATH
 
 set -g theme_title_display_process yes
 
