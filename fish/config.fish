@@ -22,3 +22,7 @@ alias o "xdg-open"
 alias q "exit"
 
 alias td "nvim ~/.todo"
+
+function g
+    g++ "$argv" -o /tmp/x; and /tmp/x
+end
