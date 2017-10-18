@@ -147,7 +147,7 @@ font-0 = MesloLGSDZ Nerd Font:weight=bold:pixelsize=14
 
 modules-left = i3
 modules-center = date
-modules-right = weather redshift battery volume
+modules-right = weather battery volume
 
 [module/i3]
 type = internal/i3
@@ -191,15 +191,6 @@ format-padding = 2
 format-foreground = ${colors.foreground}
 
 exec = .dotfiles/polybar/weather.sh
-
-[module/redshift]
-type = custom/script
-interval = 3
-
-format = <label>
-format-foreground = ${colors.foreground}
-
-exec = .dotfiles/polybar/redshift.sh
 
 [module/battery]
 type = internal/battery
