@@ -1,28 +1,22 @@
-#!/usr/bin/env python2
-# -*- encoding: utf-8 -*-
+#!/usr/bin/env bash
 
-import json
-import socket
-import urllib
+LOCAL_IP=$(timeout 1 ip route get 8.8.8.8 2> /dev/null |\
+    head -1 | cut -d' ' -f7)
 
-local_ip = "unknown"
-external_ip = "unknown"
+EXTERNAL_IP=$(timeout 2 curl icanhazip.com 2> /dev/null)
 
-try:
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.connect(("8.8.8.8", 80))
-    local_ip = s.getsockname()[0]
-    s.close()
+if [ "$LOCAL_IP" == "192.168.2.27" ] || \
+   [ "$LOCAL_IP" == "192.168.8.100" ]; then
+    echo -n "%{F#8bbcd2}%{F-} LTE"
+elif [ "$LOCAL_IP" == "192.168.2.28" ]; then
+    echo -n "%{F#e89a00}%{F-} ADSL"
+elif [ "$EXTERNAL_IP" == "149.156.124.14" ]; then
+    echo -n "%{F#13eb34}%{F-} AGH"
+elif [ ! -z "$EXTERNAL_IP" ]; then
+    echo -n "%{F#a0d18a}%{F-} $EXTERNAL_IP"
+elif [ ! -z "$LOCAL_IP" ]; then
+    echo -n "%{F#ef9329}%{F-} $LOCAL_IP"
+else
+    echo -n "%{F#ef9329}%{F-} Unknown IP"
+fi
 
-    external_ip = json.loads(urllib.urlopen("http://ip.jsontest.com/").read())["ip"]
-except:
-    pass
-
-if local_ip == "192.168.2.27" or local_ip == "192.168.8.100":
-    print "%{F#8bbcd2}%{F-} LTE"
-elif local_ip == "192.168.2.28":
-    print "%{F#e89a00}%{F-} ADSL"
-elif external_ip == "149.156.124.14":
-    print "%{F#13eb34}%{F-} AGH"
-else:
-    print "%{F#a0d18a}%{F-}", local_ip
