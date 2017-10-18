@@ -29,8 +29,8 @@ modules-center = cmus
 modules-right = updates ping net
 
 # Uncomment to enable tray
-#tray-position = right
-#tray-padding = 1
+tray-position = right
+tray-padding = 1
 
 [module/cpu]
 type = internal/cpu
