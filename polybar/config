@@ -99,7 +99,7 @@ click-right = cmus-remote --stop
 [module/updates]
 type = custom/script
 
-interval = 15
+interval = 5
 format = <label>
 format-foreground = ${colors.foreground}
 exec = .dotfiles/polybar/updates.sh
@@ -108,7 +108,7 @@ exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 [module/ping]
 type = custom/script
 
-interval = 2
+interval = 1
 
 format = <label>
 format-foreground = ${colors.foreground}
@@ -118,7 +118,7 @@ exec = .dotfiles/polybar/ping.sh
 [module/net]
 type = custom/script
 
-interval = 2
+interval = 1
 
 format = <label>
 format-foreground = ${colors.foreground}
