@@ -28,3 +28,11 @@ alias yt "youtube-viewer"
 function g
     g++ "$argv" -o /tmp/x; and /tmp/x
 end
+
+function n
+    nvim $argv
+end
+
+function sn
+    sudo -E nvim $argv
+end
