@@ -31,7 +31,7 @@ smart_borders no_gaps
 
 for_window [class="Google-chrome"] border pixel 0
 for_window [class="Termite"] border pixel 4
-for_window [title="AccuWeather"] floating enable
+for_window [class="keepassxc"] floating enable
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

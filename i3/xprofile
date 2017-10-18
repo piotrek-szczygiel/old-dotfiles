@@ -10,3 +10,4 @@ vaio_touchpad &
 (sleep 5s; nm-applet) &
 (sleep 5s; blueman-applet) &
 (sleep 5s; redshift-gtk) &
+(sleep 5s; keepassxc) &
