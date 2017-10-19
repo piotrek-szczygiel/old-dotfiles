@@ -29,10 +29,10 @@ function g
     g++ "$argv" -o /tmp/x; and /tmp/x
 end
 
-function n
+function vi
     nvim $argv
 end
 
-function sn
+function svi
     sudo -E nvim $argv
 end
