@@ -71,7 +71,7 @@ elif grep -qi 'clear-night' <<< $condition; then
 elif grep -qi 'snow' <<< $condition; then
     printf "$snowing It's snowing!"
 elif grep -qi 'fog' <<< $condition; then
-    printf "$foggy Spooky."
+    printf "$foggy Spooky"
 elif grep -qi 'wind' <<< $condition; then
     printf "$windy Don't fly away"
 elif grep -qi 'sleet' <<< $condition; then
@@ -81,7 +81,7 @@ elif grep -qi 'thunderstorm' <<< $condition; then
 elif grep -qi 'hail' <<< $condition; then
     printf "$hail Hail. Stay inside"
 elif grep -qi 'tornado' <<< $condition; then
-    printf "$tornado Tornado. Yeah."
+    printf "$tornado Tornado. Yeah..."
 else
     printf "Look out the window"
 fi
