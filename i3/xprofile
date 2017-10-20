@@ -3,7 +3,8 @@ compton -cb &
 setxkbmap -option caps:escape &
 unclutter &
 xautolock -time 3 -locker lock &
-
+mopidy &
+~/dtella/dtella.py &
 vaio_touchpad &
 
 (sleep 5s; megasync) &
