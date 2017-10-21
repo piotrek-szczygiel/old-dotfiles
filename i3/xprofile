@@ -4,10 +4,10 @@ setxkbmap -option caps:escape &
 unclutter &
 xautolock -time 3 -locker lock &
 mopidy &
-vaio_touchpad &
 
-(sleep 5s; megasync) &
-(sleep 5s; nm-applet) &
-(sleep 5s; blueman-applet) &
-(sleep 5s; redshift-gtk) &
-(sleep 5s; keepassxc) &
+(sleep 2s; vaio_touchpad) &
+(sleep 2s; megasync) &
+(sleep 2s; nm-applet) &
+(sleep 2s; blueman-applet) &
+(sleep 2s; redshift-gtk) &
+(sleep 2s; keepassxc) &
