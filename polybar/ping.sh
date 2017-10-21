@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PING=$(timeout 1 ping -c 1 www.wp.pl 2> /dev/null |\
+PING=$(timeout 2 ping -c 1 www.wp.pl 2> /dev/null |\
     tail -1| awk '{print $4}' | cut -d '/' -f 2 |\
     cut -f1 -d".")
 
