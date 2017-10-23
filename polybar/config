@@ -26,7 +26,8 @@ font-0 = MesloLGSDZ Nerd Font:weight=bold:pixelsize=14
 
 modules-left = cpu memory network-usage
 modules-center = cmus
-modules-right = updates ping net
+#modules-right = updates ping net
+modules-right = ping net
 
 # Uncomment to enable tray
 tray-position = right
