@@ -3,7 +3,7 @@
 LOCAL_IP=$(timeout 1 ip route get 8.8.8.8 2> /dev/null |\
     head -1 | cut -d' ' -f7)
 
-EXTERNAL_IP=$(timeout 2 curl icanhazip.com 2> /dev/null)
+EXTERNAL_IP=$(timeout 5 curl icanhazip.com 2> /dev/null)
 
 if [ "$LOCAL_IP" == "192.168.2.27" ] || \
    [ "$LOCAL_IP" == "192.168.8.100" ]; then
