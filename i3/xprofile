@@ -1,7 +1,7 @@
 ~/.fehbg &
 compton -cb &
 setxkbmap -option caps:escape &
-unclutter &
+#unclutter &
 xautolock -time 3 -locker lock &
 mopidy &
 
