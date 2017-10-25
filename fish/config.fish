@@ -29,6 +29,10 @@ function g
     g++ "$argv" -o /tmp/x; and /tmp/x
 end
 
+function plan
+    feh ~/MEGA/plan.png
+end
+
 function vi
     nvim $argv
 end
