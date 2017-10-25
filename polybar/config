@@ -24,9 +24,8 @@ module-margin-right = 2
 
 font-0 = MesloLGSDZ Nerd Font:weight=bold:pixelsize=14
 
-modules-left = cpu memory network-usage
-modules-center = ncmpcpp
-modules-right = ping net
+modules-left = cpu memory ncmpcpp
+modules-right = network-eth network-wifi ping net
 
 #modules-center = cmus
 #modules-right = updates ping net
