@@ -6,4 +6,4 @@ else
     BIN=better_ls_bin32
 fi
 
-LS_COLORS=$(better_ls_colors) $BIN --color=always -A --group-directories-first -h -w $(tput cols) $@
+LS_COLORS=$(better_ls_colors) $BIN --color=always --group-directories-first -h -w $(tput cols) $@
