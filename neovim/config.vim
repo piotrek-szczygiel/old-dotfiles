@@ -6,6 +6,9 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'ntpeters/vim-better-whitespace'
 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 " Some basic settings
@@ -18,7 +21,6 @@ set mouse=a
 set number
 set relativenumber
 
-set nowrap
 set scrolloff=5
 
 set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
@@ -41,6 +43,12 @@ nnoremap <silent><leader>fer :source $MYVIMRC<cr>
 
 " Save file
 nnoremap <silent><leader>fs :write<cr>
+
+" fzf
+nnoremap ; :Buffers<cr>
+nnoremap <silent><leader>ff :Files<cr>
+nnoremap <silent><leader>r :Tags<cr>
+nnoremap <silent><leader>pf :GFiles<cr>
 
 " Clipboard operations
 nnoremap <leader>p "+p
