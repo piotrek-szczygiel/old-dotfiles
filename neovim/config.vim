@@ -18,6 +18,7 @@ set mouse=a
 set number
 set relativenumber
 
+set nowrap
 set scrolloff=5
 
 set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
