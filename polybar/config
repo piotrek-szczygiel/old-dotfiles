@@ -25,9 +25,11 @@ module-margin-right = 2
 font-0 = MesloLGSDZ Nerd Font:weight=bold:pixelsize=14
 
 modules-left = cpu memory network-usage
-modules-center = cmus
-#modules-right = updates ping net
+modules-center = ncmpcpp
 modules-right = ping net
+
+#modules-center = cmus
+#modules-right = updates ping net
 
 # Uncomment to enable tray
 tray-position = right
@@ -107,6 +109,19 @@ interval = 1
 
 click-left = cmus-remote --pause
 click-right = cmus-remote --stop
+
+[module/ncmpcpp]
+type = custom/script
+
+format = <label>
+format-foreground = ${colors.foreground}
+
+exec = .dotfiles/polybar/ncmpcpp.sh
+exec-if = pgrep -x ncmpcpp
+interval = 1
+
+click-left = mpc toggle
+click-right = mpc stop
 
 [module/updates]
 type = custom/script
