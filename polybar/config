@@ -67,16 +67,23 @@ ramp-coreload-7 = █
 ramp-coreload-7-font = 2
 ramp-coreload-7-foreground = #ff5555
 
-[module/network-usage]
+[module/network-eth]
 type = internal/network
 interface = enp0s20u1u4
 
-accumulate-stats = true
-
-format-connected-prefix = ""
+format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 format-connected = <label-connected>
-label-connected = %downspeed:9%  %upspeed:9% 
+label-connected = %downspeed% %upspeed%
+
+[module/network-wifi]
+type = internal/network
+interface = wlp2s0
+
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected = <label-connected>
+label-connected = %downspeed% %upspeed%
 
 [module/memory]
 type = internal/memory
