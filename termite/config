@@ -62,7 +62,7 @@ color13 = #ec93d3
 color14 = #93e0e3
 color15 = #ffffff
 
-[hints]
+#[hints]
 #font = Monospace 12
 #foreground = #dcdccc
 #background = #3f3f3f

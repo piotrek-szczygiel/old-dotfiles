@@ -5,9 +5,9 @@ status=$?
 i3-msg "workspace 101:music"
 
 if [ $status -ne 0 ]; then
-    termite -e ncmpcpp &
+    st -e ncmpcpp &
     sleep 0.2s
-    termite -e cava &
+    st -e cava &
     sleep 0.2s
     i3-msg "focus left"
 fi

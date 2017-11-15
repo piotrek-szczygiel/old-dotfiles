@@ -7,8 +7,6 @@ i3-focused = #aaaaaa
 i3-unfocused = #333333
 i3-urgent = #ffffff
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 [bar/top]
 width = 100%
 height = 32
@@ -28,44 +26,8 @@ font-0 = MesloLGSDZ Nerd Font:weight=bold:pixelsize=14
 modules-left = i3
 modules-right = updates net date time weather volume battery
 
-#modules-center = cmus
-#modules-right = updates ping net
-
-# Uncomment to enable tray
-tray-position = right
-tray-padding = 1
-
-[module/ncmpcpp]
-type = custom/script
-
-format = <label>
-format-foreground = ${colors.foreground}
-
-exec = .dotfiles/polybar/ncmpcpp.sh
-exec-if = pgrep -x ncmpcpp
-interval = 1
-
-click-left = mpc toggle
-click-right = mpc stop
-
-[module/updates]
-type = custom/script
-
-interval = 5
-format = <label>
-format-foreground = ${colors.foreground}
-exec = .dotfiles/polybar/updates.sh
-exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
-
-[module/net]
-type = custom/script
-
-interval = 1
-
-format = <label>
-format-foreground = ${colors.foreground}
-
-exec = .dotfiles/polybar/net.sh
+#tray-position = right
+#tray-padding = 2
 
 [module/i3]
 type = internal/i3
@@ -87,6 +49,25 @@ label-focused-foreground = ${colors.i3-focused}
 label-focused-padding = 1
 label-urgent-foreground = ${colors.i3-urgent}
 label-urgent-padding = 1
+
+[module/updates]
+type = custom/script
+
+interval = 5
+format = <label>
+format-foreground = ${colors.foreground}
+exec = .dotfiles/polybar/updates.sh
+exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
+
+[module/net]
+type = custom/script
+
+interval = 1
+
+format = <label>
+format-foreground = ${colors.foreground}
+
+exec = .dotfiles/polybar/net.sh
 
 [module/date]
 type = internal/date
@@ -117,6 +98,20 @@ format-prefix-foreground = ${colors.icon}
 
 exec = .dotfiles/polybar/weather.sh
 
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume> <label-volume>
+
+format-muted-prefix = " "
+format-muted-prefix-foreground = ${colors.icon}
+label-muted = muted
+
+ramp-volume-foreground = ${colors.icon}
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
 [module/battery]
 type = internal/battery
 
@@ -144,19 +139,5 @@ animation-charging-3 = 
 animation-charging-4 = 
 
 animation-charging-framerate = 750
-
-[module/volume]
-type = internal/volume
-
-format-volume = <ramp-volume> <label-volume>
-
-format-muted-prefix = " "
-format-muted-prefix-foreground = ${colors.icon}
-label-muted = muted
-
-ramp-volume-foreground = ${colors.icon}
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
 
 ; vim:ft=dosini

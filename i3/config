@@ -30,14 +30,14 @@ workspace 101:music gaps outer 50
 smart_borders no_gaps
 
 for_window [class="Google-chrome"] border pixel 0
-for_window [class="Termite"] border pixel 4
+for_window [class="st-256color"] border pixel 4
 for_window [class="keepassxc"] floating enable
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
