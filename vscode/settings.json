@@ -20,6 +20,7 @@
     "vim.leader": " ",
     "vim.handleKeys": {
         "<C-a>": false,
+        "<C-b>": false,
         "<C-c>": false,
         "<C-k>": false,
         "<C-v>": false,
