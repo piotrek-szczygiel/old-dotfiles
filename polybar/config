@@ -90,7 +90,7 @@ format-prefix-foreground = ${colors.icon}
 
 [module/weather]
 type = custom/script
-interval = 120
+interval = 30
 
 format = <label>
 format-foreground = ${colors.foreground}
