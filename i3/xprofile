@@ -1,12 +1,10 @@
 ~/.fehbg &
 compton -cb &
 setxkbmap -option caps:escape &
-#unclutter &
 xautolock -time 3 -locker lock &
 mopidy &
 
 (sleep 2s; /home/piotr/.dotfiles/bin/vaio_touchpad) &
-(sleep 2s; megasync) &
 (sleep 2s; nm-applet) &
 (sleep 2s; blueman-applet) &
 (sleep 2s; redshift-gtk) &
