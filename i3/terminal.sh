@@ -5,5 +5,5 @@ status=$?
 i3-msg "workspace 0:terminal"
 
 if [ $status -ne 0 ]; then
-    st -e fish -c "screenfetch; and fish" &
+    st &
 fi

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-i3-msg -t get_workspaces | grep "101:music"
+i3-msg -t get_workspaces | grep "102:music"
 status=$?
-i3-msg "workspace 101:music"
+i3-msg "workspace 102:music"
 
 if [ $status -ne 0 ]; then
     st -e ncmpcpp &

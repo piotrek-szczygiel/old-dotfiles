@@ -13,24 +13,28 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:MesloLGSDZ Nerd Font 14
+font pango:MesloLGSDZ Nerd Font 10
 
 focus_follows_mouse false
 workspace_auto_back_and_forth yes
 
-gaps outer 10
-gaps inner 40
+gaps outer 50
+gaps inner 50
 
 workspace 100:web gaps inner 0
 workspace 100:web gaps outer 0
 
-workspace 101:music gaps inner 100
-workspace 101:music gaps outer 50
+workspace 101:code gaps inner 0
+workspace 101:code gaps outer 0
+
+workspace 102:music gaps inner 100
+workspace 102:music gaps outer 100
 
 smart_borders no_gaps
 
+for_window [class="Code"] border pixel 0
 for_window [class="Google-chrome"] border pixel 0
-for_window [class="st-256color"] border pixel 4
+for_window [class="st-256color"] border pixel 0
 for_window [class="keepassxc"] floating enable
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -103,6 +107,10 @@ bindsym $mod+Shift+space floating toggle
 # Launch main temrinal workspace
 set $start_terminal exec --no-startup-id .dotfiles/i3/terminal.sh
 bindsym  $mod+space $start_terminal
+
+# Launch coding workspace
+set $start_code exec --no-startup-id .dotfiles/i3/code.sh
+bindsym $mod+semicolon $start_code
 
 # Launch music workspace
 set $start_music exec --no-startup-id .dotfiles/i3/music.sh

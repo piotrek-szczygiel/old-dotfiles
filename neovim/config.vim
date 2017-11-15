@@ -1,7 +1,7 @@
 " Plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'dracula/vim'
+Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 
 Plug 'ntpeters/vim-better-whitespace'
@@ -30,7 +30,7 @@ set wildmode=longest,list,full
 colorscheme desert
 
 try
-    colorscheme dracula
+    colorscheme gruvbox
 catch
 endtry
 
@@ -48,13 +48,16 @@ nnoremap <silent><leader>fs :write<cr>
 nnoremap ; :Buffers<cr>
 nnoremap <silent><leader>ff :Files<cr>
 nnoremap <silent><leader>r :Tags<cr>
-nnoremap <silent><leader>pf :GFiles<cr>
+nnoremap <silent><leader>fg :GFiles<cr>
 
 " Clipboard operations
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
+" Keep selection while indenting
+vnoremap < <gv
+vnoremap > >gv
 
 " Clear search highlighting
 nnoremap <silent><leader><cr> :nohl<cr>

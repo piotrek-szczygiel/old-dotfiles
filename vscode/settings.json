@@ -1,8 +1,58 @@
 {
-    "editor.fontFamily": "DejaVuSansMono Nerd Font",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
     "editor.fontSize": 18,
     "keyboard.dispatch": "keyCode",
-    "workbench.colorTheme": "Dracula",
+    "window.menuBarVisibility": "toggle",
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Gruvbox Dark (Hard)",
+
+    "vim.easymotion": true,
+    "vim.easymotionMarkerBackgroundColor": "black",
+    "vim.easymotionMarkerFontFamily": "Fira Code",
+    "vim.easymotionMarkerFontSize": "20",
+    "vim.easymotionMarkerForegroundColorOneChar": "lightgreen",
+    "vim.easymotionMarkerForegroundColorTwoChar": "yellow",
+    "vim.easymotionMarkerHeight": 22,
+    "vim.easymotionMarkerWidthPerChar": 12,
     "vim.enableNeovim": true,
-    "vim.disableAnnoyingNeovimMessage": true
+    "vim.hlsearch": true,
+    "vim.leader": " ",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-c>": false,
+        "<C-k>": false,
+        "<C-v>": false,
+        "<C-w>": false
+    },
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before":["<leader>", "<cr>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": ":nohl"
+                }
+            ]
+        },
+        {
+            "before":["<leader>", "f", "s"],
+            "after":[],
+            "commands": [
+                {
+                    "command": ":w"
+                }
+            ]
+        },
+        {
+            "before":["<leader>", "q"],
+            "after":[],
+            "commands":[
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        }
+    ]
 }
