@@ -1,7 +1,7 @@
 " Plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'morhetz/gruvbox'
+Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline'
 
 Plug 'ntpeters/vim-better-whitespace'
@@ -27,12 +27,14 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
 
 set wildmode=longest,list,full
 
-colorscheme desert
+set termguicolors
 
-try
-    colorscheme gruvbox
-catch
-endtry
+colorscheme one
+set background=dark
+
+let g:one_allow_italics=1
+let g:airline_powerline_fonts=1
+let g:airline_theme='one'
 
 " Space bindings
 let mapleader=" "
@@ -77,5 +79,3 @@ au BufReadPost *
         \ execute("normal `\"") |
     \ endif
 
-
-let g:airline_powerline_fonts=1

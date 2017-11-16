@@ -22,17 +22,14 @@ font pango:MesloLGSDZ Nerd Font 14
 focus_follows_mouse false
 workspace_auto_back_and_forth yes
 
-gaps outer 50
-gaps inner 50
+gaps outer 0
+gaps inner 80
 
 workspace 100:web gaps inner 0
 workspace 100:web gaps outer 0
 
 workspace 101:code gaps inner 0
 workspace 101:code gaps outer 0
-
-workspace 102:music gaps inner 100
-workspace 102:music gaps outer 100
 
 smart_borders no_gaps
 

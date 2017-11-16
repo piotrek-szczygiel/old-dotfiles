@@ -3,7 +3,7 @@ st.termname:     st-256color
 st.shell:        /bin/fish
 
 ! The following options options can be reloaded via USR1 signal.
-st.font:         MesloLGSDZ Nerd Font:pixelsize=20:antialias=true:autohint=true;
+st.font:         MesloLGSDZ Nerd Font:pixelsize=19:antialias=true:autohint=true;
 st.borderpx:     0
 ! Available cursor values: 2 4 6 7 = █ _ | ☃ ( 1 3 5 are blinking versions)
 st.cursorshape:  2
@@ -21,7 +21,7 @@ st.bellvolume:   100
 st.prompt_char:  $
 
 ! opacity==255 means what terminal will be not transparent, 0 - fully transparent
-st.opacity:      192! special
+st.opacity:      224! special
 
 ! special
 *.foreground:   #d0d0d0
