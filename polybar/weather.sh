@@ -11,5 +11,4 @@ fi
 [[ "$weather" =~ \"apparentTemperature\":([^,]*), ]]
 temperature="${BASH_REMATCH[1]}"
 
-printf -v temperature "%d" "$temperature" > /dev/null 2>&1
-printf "$temperature°C"
+printf "%d°C" "$temperature" 2> /dev/null
