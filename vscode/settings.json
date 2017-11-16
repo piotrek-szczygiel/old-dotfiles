@@ -5,7 +5,7 @@
     "keyboard.dispatch": "keyCode",
     "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 1,
-    "workbench.colorTheme": "Gruvbox Dark (Hard)",
+    "workbench.colorTheme": "One Dark Pro",
 
     "vim.easymotion": true,
     "vim.easymotionMarkerBackgroundColor": "black",
