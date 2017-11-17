@@ -2,6 +2,7 @@
 compton -cb &
 setxkbmap -option caps:escape &
 xautolock -time 3 -locker lock &
+unclutter &
 mopidy &
 
 (sleep 2s; /home/piotr/.dotfiles/bin/vaio_touchpad) &
