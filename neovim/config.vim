@@ -20,6 +20,7 @@ set mouse=a
 
 set number
 set relativenumber
+set splitbelow
 
 set scrolloff=5
 
@@ -29,8 +30,8 @@ set wildmode=longest,list,full
 
 set termguicolors
 
-colorscheme one
 set background=dark
+colorscheme one
 
 let g:one_allow_italics=1
 let g:airline_powerline_fonts=1
@@ -72,10 +73,58 @@ nnoremap <leader>qq :q<cr>
 nnoremap <leader>qa :qa<cr>
 nnoremap <leader>qw :wq<cr>
 
-" Go to the last cursor location when a file is opened, unless this is a
-" git commit (in which case it's annoying)
+" Alt+[hjkl] to navigate through windows
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+inoremap <A-h> <Esc><C-w>h
+inoremap <A-j> <Esc><C-w>j
+inoremap <A-k> <Esc><C-w>k
+inoremap <A-l> <Esc><C-w>l
+vnoremap <A-h> <C-w>h
+vnoremap <A-j> <C-w>j
+vnoremap <A-k> <C-w>k
+vnoremap <A-l> <C-w>l
+
+" Terminal
+nnoremap <silent><leader>' :call ToggleTerminal(5)<cr>
+
+" Allow hitting <Esc> to switch to normal mode
+tnoremap <Esc> <C-\><C-n>
+
+" Alt+[hjkl] to navigate through windows in terminal mode
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
+
+" Switch to insert mode when enering terminal pane
+autocmd BufWinEnter,WinEnter term://* startinsert
+autocmd BufLeave term://* stopinsert
+
+" Go to the last cursor location when a file is opened
 au BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") && &filetype != "gitcommit" |
         \ execute("normal `\"") |
     \ endif
 
+let g:term_buf = 0
+let g:term_win = 0
+
+function! ToggleTerminal(height)
+    if win_gotoid(g:term_win)
+        hide
+    else
+        botright new
+        exec "resize " . a:height
+        try
+            exec "buffer " . g:term_buf
+        catch
+            call termopen($SHELL, {"detach": 0})
+            let g:term_buf = bufnr("")
+        endtry
+        startinsert!
+        let g:term_win = win_getid()
+    endif
+endfunction
