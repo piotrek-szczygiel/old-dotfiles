@@ -13,11 +13,12 @@ alias gca "git commit -a"
 alias gco "git checkout --"
 alias gd "git diff"
 alias gl "git pull"
+alias glg "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gp "git push"
 alias grh "git reset HEAD"
 alias gs "git status"
 
-alias nmt "nmtui-connect"
+alias wifi "nmtui-connect"
 
 alias o "xdg-open"
 
