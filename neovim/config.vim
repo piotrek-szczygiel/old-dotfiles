@@ -9,6 +9,8 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+Plug 'dag/vim-fish'
+
 call plug#end()
 
 " Some basic settings
