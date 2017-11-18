@@ -12,3 +12,4 @@ fi
 temperature="${BASH_REMATCH[1]}"
 
 printf "%d°C" "$temperature" 2> /dev/null
+exit 0
