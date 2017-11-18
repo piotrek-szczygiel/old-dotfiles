@@ -27,10 +27,6 @@ alias td "nvim ~/.todo"
 
 alias yt "youtube-viewer"
 
-function g
-    g++ "$argv" -o /tmp/x; and /tmp/x
-end
-
 function plan
     feh ~/MEGA/plan.png
 end

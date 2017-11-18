@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+if [[ -x "$1" ]]; then
+    "$1"
+else
+    filetype=$(file --mime-type -b -L "$1" 2> /dev/null)
+
+    case "$filetype" in
+        "text/x-c")
+            runpath="/tmp/$1.run"
+            g++ "$1" -o "$runpath"
+
+            if [[ -x "$runpath" ]]; then
+                "$runpath"
+            fi
+            ;;
+
+        "text/x-python")
+            python "$1"
+            ;;
+
+        *)
+            echo "Unsupported filetype: $filetype"
+            ;;
+    esac
+
+fi

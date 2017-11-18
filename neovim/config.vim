@@ -97,7 +97,7 @@ vnoremap <A-l> <C-w>l
 nnoremap <silent><leader>' :call ToggleTerminal(10)<cr>
 nnoremap <silent><leader>cd :lcd %:p:h<cr>
 
-nnoremap <silent>,r :call RunCommandOnCurrentFile("g")<cr>
+nnoremap <silent><leader>r :call RunCommandOnCurrentFile("run")<cr>
 
 " Allow hitting <Esc> to switch to normal mode
 tnoremap <Esc> <C-\><C-n>
