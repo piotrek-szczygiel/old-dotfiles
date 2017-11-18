@@ -69,9 +69,15 @@ nnoremap <silent><leader><cr> :nohl<cr>
 nnoremap <silent><leader>tw :set list!<cr>
 
 " Quitting
-nnoremap <leader>qq :q<cr>
-nnoremap <leader>qa :qa<cr>
-nnoremap <leader>qw :wq<cr>
+nnoremap <silent>q :q<cr>
+nnoremap <silent><leader>qq :q<cr>
+nnoremap <silent><leader>qa :qa<cr>
+nnoremap <silent><leader>qw :wq<cr>
+
+" Moving through buffers
+nnoremap <silent><tab> :b#<cr>
+nnoremap <silent><leader>bn :bn<cr>
+nnoremap <silent><leader>bp :bp<cr>
 
 " Alt+[hjkl] to navigate through windows
 nnoremap <A-h> <C-w>h
@@ -88,7 +94,10 @@ vnoremap <A-k> <C-w>k
 vnoremap <A-l> <C-w>l
 
 " Terminal
-nnoremap <silent><leader>' :call ToggleTerminal(5)<cr>
+nnoremap <silent><leader>' :call ToggleTerminal(10)<cr>
+nnoremap <silent><leader>cd :lcd %:p:h<cr>
+
+nnoremap <silent>,r :call RunCommandOnCurrentFile("g")<cr>
 
 " Allow hitting <Esc> to switch to normal mode
 tnoremap <Esc> <C-\><C-n>
@@ -116,6 +125,8 @@ function! ToggleTerminal(height)
     if win_gotoid(g:term_win)
         hide
     else
+        "lcd %:p:h
+
         botright new
         exec "resize " . a:height
         try
@@ -127,4 +138,23 @@ function! ToggleTerminal(height)
         startinsert!
         let g:term_win = win_getid()
     endif
+endfunction
+
+let g:cmd_win = 0
+
+function! RunCommand(command)
+    if win_gotoid(g:cmd_win)
+        quit!
+    endif
+
+    topleft new
+    exec "resize 10"
+    call termopen(a:command)
+    startinsert!
+    let g:cmd_win = win_getid()
+endfunction
+
+function! RunCommandOnCurrentFile(command)
+    let file = expand("%")
+    call RunCommand(a:command . " " . file)
 endfunction
