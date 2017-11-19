@@ -23,39 +23,40 @@ st.prompt_char:  $
 ! opacity==255 means what terminal will be not transparent, 0 - fully transparent
 st.opacity:      224! special
 
+! Atom One Dark
 ! special
-*.foreground:   #d0d0d0
-*.background:   #151515
-*.cursorColor:  #d0d0d0
+*.foreground:   #abb2bf
+*.background:   #1e2127
+*.cursorColor:  #5c6370
 
 ! black
-*.color0:       #151515
-*.color8:       #505050
+*.color0:       #1e2127
+*.color8:       #5c6370
 
 ! red
-*.color1:       #ac4142
-*.color9:       #ac4142
+*.color1:       #e06c75
+*.color9:       #e06c75
 
 ! green
-*.color2:       #90a959
-*.color10:      #90a959
+*.color2:       #98c379
+*.color10:      #98c379
 
 ! yellow
-*.color3:       #f4bf75
-*.color11:      #f4bf75
+*.color3:       #d19a66
+*.color11:      #d19a66
 
 ! blue
-*.color4:       #6a9fb5
-*.color12:      #6a9fb5
+*.color4:       #61afef
+*.color12:      #61afef
 
 ! magenta
-*.color5:       #aa759f
-*.color13:      #aa759f
+*.color5:       #c678dd
+*.color13:      #c678dd
 
 ! cyan
-*.color6:       #75b5aa
-*.color14:      #75b5aa
+*.color6:       #56b6c2
+*.color14:      #56b6c2
 
 ! white
-*.color7:       #d0d0d0
-*.color15:      #f5f5f5
+*.color7:       #abb2bf
+*.color15:      #ffffff
