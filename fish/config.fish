@@ -26,6 +26,8 @@ alias q "exit"
 
 alias td "nvim ~/.todo"
 
+alias update "pacaur -Syu"
+
 alias yt "youtube-viewer"
 
 function plan
