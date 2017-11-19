@@ -95,6 +95,13 @@ vnoremap <A-j> <C-w>j
 vnoremap <A-k> <C-w>k
 vnoremap <A-l> <C-w>l
 
+" Don't resize other windows after closing a split
+set noequalalways
+
+" Resizing windows
+nnoremap <silent><A-J> :resize -1<cr>
+nnoremap <silent><A-K> :resize +1<cr>
+
 " Terminal
 nnoremap <silent><leader>' :call ToggleTerminal(10)<cr>
 nnoremap <silent><leader>cd :lcd %:p:h<cr>
