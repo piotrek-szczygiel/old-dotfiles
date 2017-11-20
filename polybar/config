@@ -36,7 +36,7 @@ type = internal/i3
 
 ws-icon-default = 
 ws-icon-0 = 0:terminal;
-ws-icon-1 = 100:web;
+ws-icon-1 = 100:web;
 ws-icon-2 = 101:code;
 ws-icon-3 = 102:music;
 
