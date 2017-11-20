@@ -19,10 +19,8 @@ cursor_shape = block
 filter_unmatched_urls = true
 
 [colors]
-# Atom One Dark
 
-cursor = #5c6370
-cursor_foreground = #5c6370
+# Atom One Dark
 foreground = #abb2bf
 foreground_bold = #ffffff
 background = rgba(0x1e, 0x21, 0x27, 0.9)
