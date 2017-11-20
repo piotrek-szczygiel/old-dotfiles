@@ -164,6 +164,6 @@ function! RunCommand(command)
 endfunction
 
 function! RunCommandOnCurrentFile(command)
-    let file = expand("%")
+    let file = expand("%:p")
     call RunCommand(a:command . " " . file)
 endfunction
