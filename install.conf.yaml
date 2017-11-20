@@ -33,6 +33,8 @@
 
     ~/.config/ranger/rc.conf: ranger/config
     ~/.config/ranger/scope.sh: ranger/scope.sh
+    ~/.config/ranger/plugins: ranger/plugins
+    ~/.config/ranger/devicons.py: ranger/devicons.py
 
     ~/.config/rofi/config.rasi: rofi/config.rasi
 
