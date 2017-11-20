@@ -34,7 +34,7 @@ for_window [class="keepassxc"] floating enable
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -43,7 +43,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show drun
 
 # start ranger
-bindsym $mod+o exec termite -e "fish -c ranger"
+bindsym $mod+o exec st -e fish -c ranger
 
 # change focus
 bindsym $mod+h focus left
