@@ -1,30 +1,32 @@
 [colors]
-background = #00282a36
-foreground = #666666
-icon = #ffffff
+background = #00000000
+foreground = ${xrdb:foreground}
+icon = ${xrdb:color10}
 
-i3-focused = #aaaaaa
-i3-unfocused = #333333
-i3-urgent = #ffffff
+i3-focused = ${xrdb:color10}
+i3-unfocused = ${xrdb:foreground}
+i3-urgent = ${xrdb:color11}
 
 [bar/top]
 width = 100%
-height = 32
+height = 42
 fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-padding-left = 0
+padding-left = 2
 padding-right = 2
 
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = MesloLGSDZ Nerd Font:weight=bold:pixelsize=14
+font-0 = Fira Code:weight=semibold:pixelsize=14
+font-1 = MesloLGSDZ Nerd Font:pixelsize=24
 
-modules-left = i3
-modules-right = updates net date time weather volume battery
+modules-left = wifi net updates
+modules-center = i3
+modules-right = weather date time volume battery
 
 #tray-position = right
 #tray-padding = 2
@@ -44,12 +46,31 @@ index-sort = true
 
 format = <label-state>
 format-padding-right = 2
+
+label-unfocused = %icon%
 label-unfocused-foreground = ${colors.i3-unfocused}
 label-unfocused-padding = 1
+
+label-focused = %icon%
 label-focused-foreground = ${colors.i3-focused}
 label-focused-padding = 1
+
+label-urgent = %icon%
 label-urgent-foreground = ${colors.i3-urgent}
 label-urgent-padding = 1
+
+[module/wifi]
+type = internal/network
+interface = wlp2s0
+
+interval = 1
+
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.icon}
+format-connected = <label-connected>
+
+label-connected = %essid%
+label-connected-foreground = ${colors.foreground}
 
 [module/updates]
 type = custom/script
@@ -70,6 +91,15 @@ format-foreground = ${colors.foreground}
 
 exec = .dotfiles/polybar/net.sh
 
+[module/weather]
+type = custom/script
+interval = 30
+
+format = <label>
+format-foreground = ${colors.foreground}
+
+exec = .dotfiles/polybar/weather.sh
+
 [module/date]
 type = internal/date
 interval = 1
@@ -88,25 +118,14 @@ label = %time%
 format-prefix = " "
 format-prefix-foreground = ${colors.icon}
 
-[module/weather]
-type = custom/script
-interval = 30
-
-format = <label>
-format-foreground = ${colors.foreground}
-format-prefix = " "
-format-prefix-foreground = ${colors.icon}
-
-exec = .dotfiles/polybar/weather.sh
-
 [module/volume]
 type = internal/volume
 
-format-volume = <ramp-volume> <label-volume>
+format-volume = <ramp-volume>
+#format-volume = <ramp-volume> <label-volume>
 
-format-muted-prefix = " "
-format-muted-prefix-foreground = ${colors.icon}
-label-muted = muted
+format-muted-foreground = ${colors.icon}
+label-muted = ""
 
 ramp-volume-foreground = ${colors.icon}
 ramp-volume-0 = 
@@ -121,9 +140,12 @@ adapter = ACAD
 
 poll-interval = 3
 
-format-charging = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
-format-full = <ramp-capacity> Full
+format-charging = <animation-charging>
+format-discharging = <ramp-capacity>
+format-full = <ramp-capacity>
+#format-charging = <animation-charging> <label-charging>
+#format-discharging = <ramp-capacity> <label-discharging>
+#format-full = <ramp-capacity> Full
 
 ramp-capacity-foreground = ${colors.icon}
 ramp-capacity-0 = 
