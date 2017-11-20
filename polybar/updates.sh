@@ -8,7 +8,7 @@ aur=$(cower -u 2> /dev/null | wc -l)
 check=$((pac + aur))
 
 if [[ "$check" != "0" ]]; then
-    echo "%{F${COLOR}}%{F-} $pac %{F${COLOR}}%{F-} $aur"
+    echo "%{F${COLOR}}%{F-} $pac %{F${COLOR}}%{F-} $aur"
 else
     echo " "
 fi

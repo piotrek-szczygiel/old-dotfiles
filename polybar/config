@@ -2,6 +2,7 @@
 background = #00000000
 foreground = ${xrdb:foreground}
 icon = ${xrdb:color10}
+inactive = ${xrdb:color8}
 
 i3-focused = ${xrdb:color10}
 i3-unfocused = ${xrdb:foreground}
@@ -26,7 +27,7 @@ font-1 = FontAwesome:pixelsize=18
 
 modules-left = wifi net updates
 modules-center = i3
-modules-right = weather date time volume battery
+modules-right = weather date time dropbox volume battery
 
 #tray-position = right
 #tray-padding = 2
@@ -118,14 +119,20 @@ label = %time%
 format-prefix = " "
 format-prefix-foreground = ${colors.icon}
 
+[module/dropbox]
+type = custom/script
+interval = 30
+
+format = <label>
+
+exec = .dotfiles/polybar/dropbox.sh
+
 [module/volume]
 type = internal/volume
 
 format-volume = <ramp-volume>
-#format-volume = <ramp-volume> <label-volume>
-
-format-muted-foreground = ${colors.icon}
-label-muted = ""
+label-muted = 
+label-muted-foreground = ${colors.inactive}
 
 ramp-volume-foreground = ${colors.icon}
 ramp-volume-0 = 
