@@ -134,8 +134,6 @@ function! ToggleTerminal(height)
     if win_gotoid(g:term_win)
         hide
     else
-        "lcd %:p:h
-
         botright new
         exec "resize " . a:height
         try
