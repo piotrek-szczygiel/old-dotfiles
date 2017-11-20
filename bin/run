@@ -1,27 +1,32 @@
 #!/usr/bin/env bash
 
-if [[ -x "$1" ]]; then
-    "$1"
+if [ -z "$1" ]; then
+    echo "No argument supplied!"
 else
-    filetype=$(file --mime-type -b -L "$1" 2> /dev/null)
+    if [[ -x "$1" ]]; then
+        "$1"
+    else
+        filetype=$(file --mime-type -b -L "$1" 2> /dev/null)
+        filename=$(basename "$1" 2> /dev/null)
 
-    case "$filetype" in
-        "text/x-c")
-            runpath="/tmp/$1.run"
-            g++ "$1" -o "$runpath"
+        case "$filetype" in
+            "text/x-c")
+                runpath="/tmp/$filename.run"
+                g++ "$1" -o "$runpath"
 
-            if [[ -x "$runpath" ]]; then
-                "$runpath"
-            fi
-            ;;
+                if [[ -x "$runpath" ]]; then
+                    "$runpath"
+                fi
+                ;;
 
-        "text/x-python")
-            python "$1"
-            ;;
+            "text/x-python")
+                python "$1"
+                ;;
 
-        *)
-            echo "Unsupported filetype: $filetype"
-            ;;
-    esac
+            *)
+                echo "Unsupported filetype: $filetype"
+                ;;
+        esac
 
+    fi
 fi
