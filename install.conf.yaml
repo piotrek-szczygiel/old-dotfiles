@@ -31,6 +31,9 @@
     ~/.config/polybar/config: polybar/config
     ~/.config/polybar/launch.sh: polybar/launch.sh
 
+    ~/.config/ranger/rc.conf: ranger/config
+    ~/.config/ranger/scope.sh: ranger/scope.sh
+
     ~/.config/rofi/config.rasi: rofi/config.rasi
 
     ~/.config/termite/config: termite/config
