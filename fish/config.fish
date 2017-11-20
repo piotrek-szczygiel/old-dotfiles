@@ -1,5 +1,4 @@
 set -xg EDITOR nvim
-set -xg VISUAL $EDITOR
 set -xg PATH $HOME/.dotfiles/bin $HOME/.local/bin $PATH
 set -xg FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow --glob "!.git/*" 2>/dev/null'
 set -xg FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
@@ -32,7 +31,6 @@ alias td "$EDITOR ~/.todo"
 alias update "pacaur -Syu"
 
 alias vi "$EDITOR"
-alias vim "$EDITOR"
 alias svi "sudo -E $EDITOR"
 
 alias yt "youtube-viewer"
