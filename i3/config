@@ -27,13 +27,14 @@ smart_borders no_gaps
 for_window [class="Code"] border pixel 0
 for_window [class="Google-chrome"] border pixel 0
 for_window [class="st-256color"] border pixel 0
+for_window [class="Termite"] border pixel 0
 for_window [class="keepassxc"] floating enable
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -42,7 +43,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show drun
 
 # start ranger
-bindsym $mod+o exec st -e fish -c ranger
+bindsym $mod+o exec termite -e "fish -c ranger"
 
 # change focus
 bindsym $mod+h focus left
