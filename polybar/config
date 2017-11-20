@@ -9,7 +9,7 @@ i3-urgent = ${xrdb:color11}
 
 [bar/top]
 width = 100%
-height = 42
+height = 36
 fixed-center = true
 
 background = ${colors.background}
@@ -22,7 +22,7 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = Fira Code:weight=semibold:pixelsize=14
-font-1 = MesloLGSDZ Nerd Font:pixelsize=24
+font-1 = FontAwesome:pixelsize=18
 
 modules-left = wifi net updates
 modules-center = i3
@@ -35,9 +35,9 @@ modules-right = weather date time volume battery
 type = internal/i3
 
 ws-icon-default = 
-ws-icon-0 = 0:terminal;
+ws-icon-0 = 0:terminal;
 ws-icon-1 = 100:web;
-ws-icon-2 = 101:code;
+ws-icon-2 = 101:code;
 ws-icon-3 = 102:music;
 
 pin-workspaces = true
