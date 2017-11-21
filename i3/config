@@ -160,7 +160,7 @@ bindsym $mod+r mode "resize"
 # i3 decoration colors
 # class                 border     backgr.    text       indicator  child_border
 client.focused          #00000000  #00000000  #eaeaea    #00000000  #00000000
-client.focused_inactive #00000000  #00000000  #ffffff11  #00000000  #00000000
+client.focused_inactive #00000000  #00000000  #ffffff33  #00000000  #00000000
 client.unfocused        #00000000  #00000000  #666666    #00000000  #00000000
 client.urgent           #00000000  #00000000  #aaffaa    #00000000  #00000000
 client.placeholder      #00000000  #00000000  #ffffff    #00000000  #00000000
