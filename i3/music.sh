@@ -9,7 +9,10 @@ if [ $status -ne 0 ]; then
     sleep 0.2s
     st -e cava &
     sleep 0.2s
-    i3-msg "focus left"
+    i3-msg "split vertical"
+    st -e pipes &
+    sleep 0.2s
+    i3-msg "split horizontal; focus left"
 fi
 
 i3-msg -t get_workspaces | grep "102:music\",\"visible\":true"
