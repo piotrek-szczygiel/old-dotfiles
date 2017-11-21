@@ -37,6 +37,7 @@ set wildmode=longest,list,full
 " Set colorscheme
 set termguicolors
 set background=dark
+set cursorline
 colorscheme one
 
 " Transparent background
