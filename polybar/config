@@ -1,5 +1,5 @@
 [colors]
-background = #44000000
+background = #aa000000
 foreground = ${xrdb:foreground}
 icon = ${xrdb:color10}
 inactive = ${xrdb:color8}
