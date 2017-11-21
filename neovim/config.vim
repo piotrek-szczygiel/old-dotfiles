@@ -34,10 +34,13 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
 
 set wildmode=longest,list,full
 
+" Set colorscheme
 set termguicolors
-
 set background=dark
 colorscheme one
+
+" Transparent background
+hi Normal guibg=none
 
 let g:one_allow_italics=1
 let g:airline_powerline_fonts=1
