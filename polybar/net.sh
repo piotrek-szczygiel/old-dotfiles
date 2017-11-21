@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COLOR=$(xrdb -query | grep color10 | cut -f2 2> /dev/null)
+COLOR=$(xrdb -query | grep color10 | cut -f2 | head -1 2> /dev/null)
 
 LOCAL_IP=$(timeout 1 ip route get 8.8.8.8 2> /dev/null |\
     head -1 | cut -d' ' -f7)

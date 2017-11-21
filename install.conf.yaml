@@ -7,8 +7,6 @@
 - clean: ['~', '~/.config']
 
 - link:
-    ~/.fehbg: fehbg
-
     ~/.gitconfig: gitconfig
 
     ~/.Xresources: Xresources
