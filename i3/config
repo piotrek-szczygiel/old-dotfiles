@@ -12,7 +12,7 @@ focus_follows_mouse false
 workspace_auto_back_and_forth yes
 
 # gaps configuration
-gaps outer 0
+gaps outer 20
 gaps inner 80
 
 workspace 100:web gaps inner 0
@@ -78,7 +78,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+x layout default
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
