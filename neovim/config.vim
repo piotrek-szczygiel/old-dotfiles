@@ -22,6 +22,10 @@ set mouse=a
 
 set number
 set relativenumber
+
+set ignorecase
+set smartcase
+
 set splitbelow
 
 set scrolloff=5
