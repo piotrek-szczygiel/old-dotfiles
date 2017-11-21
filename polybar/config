@@ -27,7 +27,7 @@ font-1 = FontAwesome:pixelsize=18
 
 modules-left = wifi net updates
 modules-center = i3
-modules-right = weather date time dropbox volume battery
+modules-right = weather date time dropbox headphones volume battery
 
 #tray-position = right
 #tray-padding = 2
@@ -121,11 +121,20 @@ format-prefix-foreground = ${colors.icon}
 
 [module/dropbox]
 type = custom/script
-interval = 30
+interval = 10
 
 format = <label>
 
 exec = .dotfiles/polybar/dropbox.sh
+
+
+[module/headphones]
+type = custom/script
+interval = 2
+
+format = <label>
+
+exec = .dotfiles/polybar/headphones.sh
 
 [module/volume]
 type = internal/volume
