@@ -10,7 +10,7 @@ if [ $status -ne 0 ]; then
     st -e cava &
     sleep 0.2s
     i3-msg "split vertical"
-    st -e pipes &
+    st -e pipes -r 0 &
     sleep 0.2s
     i3-msg "split horizontal; focus left"
 fi
