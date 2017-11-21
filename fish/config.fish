@@ -5,6 +5,7 @@ set -xg FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
 set -g theme_color_scheme zenburn
 set -g theme_title_display_process yes
+set -g theme_title_display_user yes
 
 alias ga "git add"
 alias gc "git commit"
