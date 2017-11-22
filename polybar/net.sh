@@ -7,10 +7,12 @@ LOCAL_IP=$(timeout 1 ip route get 8.8.8.8 2> /dev/null |\
 
 EXTERNAL_IP=$(timeout 5 curl https://canihazip.com/s 2> /dev/null)
 
+whois "$EXTERNAL_IP" | grep -q "CYFRONET AGH"
+AGH=$?
+
 if [ "$LOCAL_IP" == "192.168.8.100" ]; then
     echo -n "%{F${COLOR}}%{F-} LTE"
-elif [ "$EXTERNAL_IP" == "149.156.124.14" ] || \
-     [ "$EXTERNAL_IP" == "149.156.126.10" ]; then
+elif [ "$AGH" -eq 0 ]; then
     echo -n "%{F${COLOR}}%{F-} AGH"
 elif [ ! -z "$EXTERNAL_IP" ]; then
     echo -n "%{F${COLOR}}%{F-} $EXTERNAL_IP"
