@@ -26,6 +26,7 @@ smart_borders no_gaps
 # disable borders for those windows
 for_window [class="Code"] border pixel 0
 for_window [class="Google-chrome"] border pixel 0
+for_window [class="Alacritty"] border pixel 0
 for_window [class="st-256color"] border pixel 0
 for_window [class="Termite"] border pixel 0
 for_window [class="keepassxc"] floating enable
@@ -34,7 +35,7 @@ for_window [class="keepassxc"] floating enable
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec ~/.dotfiles/i3/term.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -43,7 +44,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show drun
 
 # start ranger
-bindsym $mod+o exec st -e fish -c ranger
+bindsym $mod+o exec ~/.dotfiles/i3/term.sh fish -c ranger
 
 # change focus
 bindsym $mod+h focus left
@@ -84,19 +85,19 @@ bindsym $mod+x layout default
 bindsym $mod+Shift+space floating toggle
 
 # Launch main temrinal workspace
-set $start_terminal exec --no-startup-id .dotfiles/i3/terminal.sh
+set $start_terminal exec --no-startup-id .dotfiles/i3/ws_terminal.sh
 bindsym  $mod+space $start_terminal
 
 # Launch coding workspace
-set $start_code exec --no-startup-id .dotfiles/i3/code.sh
+set $start_code exec --no-startup-id .dotfiles/i3/ws_code.sh
 bindsym $mod+semicolon $start_code
 
 # Launch music workspace
-set $start_music exec --no-startup-id .dotfiles/i3/music.sh
+set $start_music exec --no-startup-id .dotfiles/i3/ws_music.sh
 bindsym $mod+m $start_music
 
 # Launch web workspace
-set $start_web exec --no-startup-id .dotfiles/i3/web.sh
+set $start_web exec --no-startup-id .dotfiles/i3/ws_web.sh
 bindsym $mod+g $start_web
 
 bindsym $mod+Shift+w exec --no-startup-id wal -i Dropbox/wallpapers
