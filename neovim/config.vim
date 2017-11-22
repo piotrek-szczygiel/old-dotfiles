@@ -71,8 +71,8 @@ vnoremap > >gv
 " Clear search highlighting
 nnoremap <silent><leader><cr> :nohl<cr>
 
-" Toggle whitespace
-nnoremap <silent><leader>tw :set list!<cr>
+" Toggle whitespace (doesn't work on wal colorscheme)
+" nnoremap <silent><leader>tw :set list!<cr>
 
 " Quitting
 nnoremap <silent>q :q<cr>
