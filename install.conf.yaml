@@ -9,6 +9,8 @@
 - link:
     ~/.gitconfig: gitconfig
 
+    ~/.tmux.conf: tmux/tmux.conf
+
     ~/.Xresources: Xresources
 
     ~/.config/cava/config: cava/config
