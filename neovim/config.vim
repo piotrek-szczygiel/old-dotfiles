@@ -13,6 +13,7 @@ Plug 'dag/vim-fish'
 
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 
 call  plug#end()
 
