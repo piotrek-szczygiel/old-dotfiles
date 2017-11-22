@@ -79,7 +79,7 @@ type = custom/script
 interval = 5
 format = <label>
 format-foreground = ${colors.foreground}
-exec = .dotfiles/polybar/updates.sh
+exec = ~/.dotfiles/polybar/updates.sh
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 [module/net]
@@ -90,7 +90,7 @@ interval = 1
 format = <label>
 format-foreground = ${colors.foreground}
 
-exec = .dotfiles/polybar/net.sh
+exec = ~/.dotfiles/polybar/net.sh
 
 [module/weather]
 type = custom/script
@@ -99,7 +99,7 @@ interval = 30
 format = <label>
 format-foreground = ${colors.foreground}
 
-exec = .dotfiles/polybar/weather.sh
+exec = ~/.dotfiles/polybar/weather.sh
 
 [module/date]
 type = internal/date
@@ -125,7 +125,7 @@ interval = 10
 
 format = <label>
 
-exec = .dotfiles/polybar/dropbox.sh
+exec = ~/.dotfiles/polybar/dropbox.sh
 
 
 [module/headphones]
@@ -134,7 +134,7 @@ interval = 2
 
 format = <label>
 
-exec = .dotfiles/polybar/headphones.sh
+exec = ~/.dotfiles/polybar/headphones.sh
 
 [module/volume]
 type = internal/volume
