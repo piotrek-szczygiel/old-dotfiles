@@ -12,7 +12,7 @@ AGH=$?
 
 if [ "$LOCAL_IP" == "192.168.8.100" ]; then
     echo -n "%{F${COLOR}}%{F-} LTE"
-elif [ "$AGH" -eq 0 ]; then
+elif [ "$AGH" -eq 0 ] || [ "$EXTERNAL_IP" == "149.156.124.14" ]; then
     echo -n "%{F${COLOR}}%{F-} AGH"
 elif [ ! -z "$EXTERNAL_IP" ]; then
     echo -n "%{F${COLOR}}%{F-} $EXTERNAL_IP"
