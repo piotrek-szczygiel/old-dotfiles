@@ -4,7 +4,7 @@ set -xg FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow --glob "!.
 set -xg FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
 set -g default_user piotr
-set -g theme_color_scheme zenburn
+set -g theme_color_scheme terminal-dark
 set -g theme_display_user yes
 set -g theme_title_display_process yes
 
