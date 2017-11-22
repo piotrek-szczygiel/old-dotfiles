@@ -1,7 +1,9 @@
 " Plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'rakr/vim-one'
+Plug 'dylanaraps/wal.vim'
+
+Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
 
 Plug 'ntpeters/vim-better-whitespace'
@@ -38,18 +40,12 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
 
 set wildmode=longest,list,full
 
-" Set colorscheme
-set termguicolors
-set background=dark
-set cursorline
-colorscheme one
+colorscheme wal
 
 " Transparent background
 hi Normal guibg=none
 
-let g:one_allow_italics=1
 let g:airline_powerline_fonts=1
-let g:airline_theme='one'
 
 " Space bindings
 let mapleader=" "
