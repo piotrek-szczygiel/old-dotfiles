@@ -10,11 +10,11 @@ else
         filename=$(basename "$1" 2> /dev/null)
 
         case "$filetype" in
-            "text/x-c")
+            "text/x-c"|"text/x-c++")
                 runpath="/tmp/$filename.run"
                 g++ "$1" -o "$runpath"
 
-                if [[ -x "$runpath" ]]; then
+                if [ $? -eq 0 ] && [[ -x "$runpath" ]]; then
                     "$runpath"
                 fi
                 ;;
