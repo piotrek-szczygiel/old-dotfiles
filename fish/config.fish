@@ -36,7 +36,7 @@ set __color_username                 brgrey white
 
 # Aliases
 
-alias aruba "mosh piotr@szczygiel.tk ~/arubasession"
+alias aruba "ssh -t piotr@szczygiel.tk ~/arubasession"
 
 alias ga "git add"
 alias gc "git commit"
