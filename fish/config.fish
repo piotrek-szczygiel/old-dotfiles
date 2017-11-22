@@ -1,3 +1,39 @@
+# Environment variables
+
+set -xg EDITOR nvim
+set -xg PATH $HOME/.dotfiles/bin $HOME/.local/bin $PATH
+
+
+# FZF configuration
+
+set -xg FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow --glob "!.git/*" 2>/dev/null'
+set -xg FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+
+
+# Colorscheme configuration
+
+set -g default_user piotr
+set -g theme_color_scheme user
+set -g theme_display_user yes
+set -g theme_title_display_process yes
+
+set __color_initial_segment_exit     bryellow grey --bold
+set __color_initial_segment_su       bryellow red --bold
+set __color_initial_segment_jobs     bryellow green --bold
+
+set __color_path                     brblue 000
+set __color_path_basename            brblue 000 --bold
+set __color_path_nowrite             magenta 000
+set __color_path_nowrite_basename    magenta 000 --bold
+
+set __color_repo                     brgreen white --bold
+set __color_repo_work_tree           brgrey white --bold
+set __color_repo_dirty               brred yellow
+set __color_repo_staged              yellow white
+
+set __color_username                 brgrey white
+
+
 # Aliases
 
 alias aruba "mosh piotr@szczygiel.tk ~/arubasession"
@@ -43,39 +79,3 @@ function q
         exit
     end
 end
-
-
-# Environment variables
-
-set -xg EDITOR nvim
-set -xg PATH $HOME/.dotfiles/bin $HOME/.local/bin $PATH
-
-
-# FZF configuration
-
-set -xg FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow --glob "!.git/*" 2>/dev/null'
-set -xg FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
-
-
-# Colorscheme configuration
-
-set -g default_user piotr
-set -g theme_color_scheme user
-set -g theme_display_user yes
-set -g theme_title_display_process yes
-
-set __color_initial_segment_exit     bryellow grey --bold
-set __color_initial_segment_su       bryellow red --bold
-set __color_initial_segment_jobs     bryellow green --bold
-
-set __color_path                     brblue 000
-set __color_path_basename            brblue 000 --bold
-set __color_path_nowrite             magenta 000
-set __color_path_nowrite_basename    magenta 000 --bold
-
-set __color_repo                     brgreen white --bold
-set __color_repo_work_tree           brgrey white --bold
-set __color_repo_dirty               brred yellow
-set __color_repo_staged              yellow white
-
-set __color_username                 brgrey white
