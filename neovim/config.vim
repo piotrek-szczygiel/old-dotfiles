@@ -41,10 +41,6 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
 set wildmode=longest,list,full
 
 colorscheme wal
-
-" Transparent background
-hi Normal guibg=none
-
 let g:airline_powerline_fonts=1
 
 " Space bindings
