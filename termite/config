@@ -23,8 +23,8 @@ filter_unmatched_urls = true
 # Atom One Dark
 foreground = #abb2bf
 foreground_bold = #ffffff
-background = #1e2127
-#background = rgba(0x1e, 0x21, 0x27, 0.9)
+#background = #1e2127
+background = rgba(0x1e, 0x21, 0x27, 0.9)
 
 # black
 color0 =      #1e2127
