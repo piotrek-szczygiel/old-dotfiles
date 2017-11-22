@@ -5,12 +5,12 @@ status=$?
 i3-msg "workspace 102:music"
 
 if [ $status -ne 0 ]; then
-    alacritty -e ncmpcpp &
+    ~/.dotfiles/i3/term.sh ncmpcpp &
     sleep 0.2s
-    alacritty -e cava &
+    ~/.dotfiles/i3/term.sh cava &
     sleep 0.2s
     i3-msg "split vertical"
-    alacritty -e pipes -r 0 &
+    ~/.dotfiles/i3/term.sh pipes -r 0 &
     sleep 0.2s
     i3-msg "split horizontal; focus left"
 fi

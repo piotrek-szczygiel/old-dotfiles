@@ -85,19 +85,19 @@ bindsym $mod+x layout default
 bindsym $mod+Shift+space floating toggle
 
 # Launch main temrinal workspace
-set $start_terminal exec --no-startup-id .dotfiles/i3/ws_terminal.sh
+set $start_terminal exec --no-startup-id ~/.dotfiles/i3/ws_terminal.sh
 bindsym  $mod+space $start_terminal
 
 # Launch coding workspace
-set $start_code exec --no-startup-id .dotfiles/i3/ws_code.sh
+set $start_code exec --no-startup-id ~/.dotfiles/i3/ws_code.sh
 bindsym $mod+semicolon $start_code
 
 # Launch music workspace
-set $start_music exec --no-startup-id .dotfiles/i3/ws_music.sh
+set $start_music exec --no-startup-id ~/.dotfiles/i3/ws_music.sh
 bindsym $mod+m $start_music
 
 # Launch web workspace
-set $start_web exec --no-startup-id .dotfiles/i3/ws_web.sh
+set $start_web exec --no-startup-id ~/.dotfiles/i3/ws_web.sh
 bindsym $mod+g $start_web
 
 bindsym $mod+Shift+w exec --no-startup-id wal -i Dropbox/wallpapers
@@ -127,7 +127,7 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # Locking screen
-bindsym $mod+Delete exec .dotfiles/bin/lock
+bindsym $mod+Delete exec ~/.dotfiles/bin/lock
 
 # Volume controls
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
