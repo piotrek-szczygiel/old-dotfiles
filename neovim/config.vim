@@ -11,7 +11,10 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'dag/vim-fish'
 
-call plug#end()
+Plug 'scrooloose/nerdcommenter'
+Plug 'jiangmiao/auto-pairs'
+
+call  plug#end()
 
 " Some basic settings
 set expandtab
