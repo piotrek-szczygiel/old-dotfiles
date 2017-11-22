@@ -43,7 +43,7 @@ alias o "xdg-open"
 
 alias plan "feh ~/Dropbox/plan.png"
 
-alias q "exit"
+alias startpage "tmux attach-session -t i3-terminal 2> /dev/null; or tmux new-session -s i3-terminal fish -c 'neofetch; and exec fish'"
 
 alias td "$EDITOR ~/.todo"
 
@@ -54,3 +54,14 @@ alias svi "sudo -E $EDITOR"
 
 alias yt "youtube-viewer"
 
+function q
+    if env | grep -q "TMUX"
+        if env | grep -q "VIM"
+            exit
+        else
+            tmux detach ^ /dev/null
+        end
+    else
+        exit
+    end
+end
