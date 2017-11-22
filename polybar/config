@@ -1,11 +1,11 @@
 [colors]
-background = #aa000000
+background = #77000000
 foreground = ${xrdb:foreground}
 icon = ${xrdb:color10}
 inactive = ${xrdb:color8}
 
 i3-focused = ${xrdb:color10}
-i3-unfocused = ${xrdb:foreground}
+i3-unfocused = ${colors.inactive}
 i3-urgent = ${xrdb:color11}
 
 [bar/top]
