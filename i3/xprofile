@@ -2,11 +2,11 @@
 compton -cb &
 setxkbmap -option caps:escape &
 xautolock -time 3 -locker lock &
-unclutter &
+#unclutter &
 mopidy &
+wal -R &
 
 (sleep 2s; /home/piotr/.dotfiles/bin/vaio_touchpad) &
 (sleep 2s; dropbox) &
 (sleep 2s; keepassxc) &
 (sleep 2s; redshift-gtk) &
-(sleep 2s; wal -i /home/piotr/Dropbox/wallpapers) &
