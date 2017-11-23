@@ -20,13 +20,9 @@ workspace 0:terminal gaps outer 50
 workspace 100:web gaps inner 0
 workspace 100:web gaps outer 0
 
-workspace 101:code gaps inner 0
-workspace 101:code gaps outer 0
-
 smart_borders no_gaps
 
 # disable borders for those windows
-for_window [class="Code"] border pixel 0
 for_window [class="Google-chrome"] border pixel 0
 for_window [class="Alacritty"] border pixel 0
 for_window [class="st-256color"] border pixel 0
@@ -89,10 +85,6 @@ bindsym $mod+Shift+space floating toggle
 # Launch main temrinal workspace
 set $start_terminal exec --no-startup-id ~/.dotfiles/i3/ws_terminal.sh
 bindsym  $mod+space $start_terminal
-
-# Launch coding workspace
-set $start_code exec --no-startup-id ~/.dotfiles/i3/ws_code.sh
-bindsym $mod+semicolon $start_code
 
 # Launch music workspace
 set $start_music exec --no-startup-id ~/.dotfiles/i3/ws_music.sh
