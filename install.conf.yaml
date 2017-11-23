@@ -28,6 +28,9 @@
     ~/.config/nvim/init.vim: neovim/config.vim
     ~/.local/share/nvim/site/autoload/plug.vim: neovim/plug.vim
 
+    ~/.config/ncmpcpp/config: ncmpcpp/config
+    ~/.config/ncmpcpp/bindings: ncmpcpp/bindings
+
     ~/.config/polybar/config: polybar/config
     ~/.config/polybar/launch.sh: polybar/launch.sh
 
