@@ -13,26 +13,29 @@ width = 100%
 height = 36
 fixed-center = true
 
+border-size = 5
+
+radius = 5
+
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 underline-size = 2
 underline-color = ${colors.foreground}
 
-padding-left = 2
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 1
+padding = 1
+module-margin = 1
 
 font-0 = PragmataPro:weight=bold:pixelsize=16
 font-1 = FontAwesome:pixelsize=18
+
+locale = pl_PL.UTF-8
 
 modules-left = wifi net updates
 modules-center = i3
 modules-right = weather date time dropbox headphones volume battery
 
-#tray-position = right
+#tray-position = left
 #tray-padding = 2
 
 [module/i3]
@@ -108,7 +111,7 @@ exec = ~/.dotfiles/polybar/weather.sh
 [module/date]
 type = internal/date
 interval = 1
-date = %a %d
+date = %d %A
 format = <label>
 label = %date%
 format-prefix = " "
@@ -163,9 +166,6 @@ poll-interval = 3
 format-charging = <animation-charging>
 format-discharging = <ramp-capacity>
 format-full = <ramp-capacity>
-#format-charging = <animation-charging> <label-charging>
-#format-discharging = <ramp-capacity> <label-discharging>
-#format-full = <ramp-capacity> Full
 
 ramp-capacity-foreground = ${colors.icon}
 ramp-capacity-0 = 
