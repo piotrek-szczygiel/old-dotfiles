@@ -172,7 +172,7 @@ visual_bell:
   duration: 100
 
 # Background opacity
-background_opacity: 0.95
+background_opacity: 0.85
 
 # Mouse bindings
 #
