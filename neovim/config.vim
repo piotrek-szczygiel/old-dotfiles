@@ -29,6 +29,8 @@ set mouse=a
 set number
 set relativenumber
 
+set hidden
+
 set ignorecase
 set smartcase
 
@@ -76,12 +78,14 @@ nnoremap <silent><leader><cr> :nohl<cr>
 
 " Quitting
 nnoremap <silent>q :q<cr>
+nnoremap <silent>QQ :qa!<cr>
 nnoremap <silent><leader>qq :q<cr>
 nnoremap <silent><leader>qa :qa<cr>
 nnoremap <silent><leader>qw :wq<cr>
 
 " Moving through buffers
 nnoremap <silent><tab> :b#<cr>
+nnoremap <silent><leader>bd :bd<cr>
 nnoremap <silent><leader>bn :bn<cr>
 nnoremap <silent><leader>bp :bp<cr>
 
