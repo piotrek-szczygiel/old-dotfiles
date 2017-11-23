@@ -40,8 +40,9 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
 
 set wildmode=longest,list,full
 
-colorscheme wal
+colorscheme murphy
 let g:airline_powerline_fonts=1
+let g:airline_theme='wal'
 
 " Space bindings
 let mapleader=" "
