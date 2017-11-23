@@ -95,7 +95,7 @@ bindsym $mod+m $start_music
 set $start_web exec --no-startup-id ~/.dotfiles/i3/ws_web.sh
 bindsym $mod+g $start_web
 
-bindsym $mod+Shift+w exec --no-startup-id wal -i Dropbox/wallpapers
+bindsym $mod+Shift+w exec --no-startup-id ~/.dotfiles/i3/wal.sh
 
 # switch to workspace
 bindsym $mod+1 workspace 1
