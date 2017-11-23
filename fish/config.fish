@@ -66,6 +66,8 @@ alias update "pacaur -Syu"
 alias vi "$EDITOR"
 alias svi "sudo -E $EDITOR"
 
+alias root "sudo -E fish"
+
 alias yt "youtube-viewer"
 
 function q
