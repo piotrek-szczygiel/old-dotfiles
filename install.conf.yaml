@@ -37,5 +37,3 @@
     ~/.config/ranger/devicons.py: ranger/devicons.py
 
     ~/.config/rofi/config.rasi: rofi/config.rasi
-
-    ~/.config/termite/config: termite/config

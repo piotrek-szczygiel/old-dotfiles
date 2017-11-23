@@ -25,8 +25,6 @@ smart_borders no_gaps
 # disable borders for those windows
 for_window [class="Google-chrome"] border pixel 0
 for_window [class="Alacritty"] border pixel 0
-for_window [class="st-256color"] border pixel 0
-for_window [class="Termite"] border pixel 0
 for_window [class="keepassxc"] floating enable
 
 # use Mouse+$mod to drag floating windows to their wanted position
