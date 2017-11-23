@@ -1,7 +1,7 @@
 # Environment variables
 
 set -xg EDITOR nvim
-set -xg PATH $HOME/.dotfiles/bin $HOME/.local/bin $PATH
+set -xg PATH $HOME/.dotfiles/bin $HOME/.cargo/bin $HOME/.local/bin $PATH
 
 
 # FZF configuration
