@@ -45,6 +45,9 @@ set wildmode=longest,list,full
 colorscheme wal
 let g:airline_powerline_fonts=1
 
+highlight clear Visual
+highlight Visual cterm=reverse ctermbg=Black
+
 " Space bindings
 let mapleader=" "
 
