@@ -73,7 +73,11 @@ function q
         if env | grep -q "VIM"
             exit
         else
-            tmux detach ^ /dev/null
+            if tmux display-message -p '#S' ^ /dev/null | grep -q "i3"
+                tmux detach ^ /dev/null
+            else
+                exit
+            end
         end
     else
         exit
