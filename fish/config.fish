@@ -54,6 +54,7 @@ alias ls "better_ls"
 alias wifi "nmtui-connect"
 
 alias o "xdg-open"
+alias orphans "pacaur -Rns (pacaur -Qtdq)"
 
 alias plan "feh ~/Dropbox/plan.png"
 
