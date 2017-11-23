@@ -1,8 +1,8 @@
 user_interface = alternative
 progressbar_look = "─▇─"
-progressbar_elapsed_color = 248
-main_window_color = white
-song_columns_list_format = (40)[244]{a} (50)[white]{t|f:Title} (7f)[237]{l}
+progressbar_elapsed_color = 7
+main_window_color = 8
+song_columns_list_format = (40)[4]{a} (50)[8]{t|f:Title} (7f)[3]{l}
 
 ##############################################################################
 ## This is the example configuration file. Copy it to $HOME/.ncmpcpp/config ##
