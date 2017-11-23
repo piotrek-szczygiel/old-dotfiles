@@ -5,7 +5,7 @@ exec_always --no-startup-id .config/polybar/launch.sh
 set $mod Mod4
 
 # font
-font pango:Fira Code Medium 14
+font pango:PragmataPro Bold 14
 
 # various settings
 focus_follows_mouse false

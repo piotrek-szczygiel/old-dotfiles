@@ -1,9 +1,9 @@
 configuration {
-/*	modi: "window,run,ssh";*/
+	modi: "drun,run";
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
-	font: "FiraCode 20";
+	font: "PragmataPro 22";
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/
