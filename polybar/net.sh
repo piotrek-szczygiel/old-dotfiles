@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-COLOR=$(xrdb -query | grep color10 | cut -f2 | head -1 2> /dev/null)
+COLOR=$(xrdb -query | grep color11 | cut -f2 | head -1 2> /dev/null)
+INACTIVE=$(xrdb -query | grep color1 | cut -f2 | head -1 2> /dev/null)
 
 LOCAL_IP=$(timeout 1 ip route get 8.8.8.8 2> /dev/null |\
     head -1 | cut -d' ' -f7)
@@ -17,9 +18,9 @@ elif [ "$AGH" -eq 0 ] || [ "$EXTERNAL_IP" == "149.156.124.14" ]; then
 elif [ ! -z "$EXTERNAL_IP" ]; then
     echo -n "%{F${COLOR}}%{F-} $EXTERNAL_IP"
 elif [ ! -z "$LOCAL_IP" ]; then
-    echo -n "%{F${COLOR}}%{F-} $LOCAL_IP"
+    echo -n "%{F${INACTIVE}}%{F-} $LOCAL_IP"
 else
-    echo -n "%{F${COLOR}}%{F-} Unknown IP"
+    echo -n "%{F${INACTIVE}}%{F-} Unknown IP"
 fi
 
 PING=$(timeout 5 ping -c 1 www.wp.pl 2> /dev/null |\

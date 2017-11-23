@@ -1,12 +1,12 @@
 [colors]
-background = #77000000
-foreground = ${xrdb:foreground}
-icon = ${xrdb:color10}
-inactive = ${xrdb:color8}
+background = #55000000
+foreground = ${xrdb:color7}
+icon = ${xrdb:color11}
+inactive = ${xrdb:color1}
 
-i3-focused = ${xrdb:color10}
+i3-focused = ${colors.icon}
 i3-unfocused = ${colors.inactive}
-i3-urgent = ${xrdb:color11}
+i3-urgent = ${xrdb:color15}
 
 [bar/top]
 width = 100%
@@ -76,7 +76,7 @@ label-connected-foreground = ${colors.foreground}
 [module/updates]
 type = custom/script
 
-interval = 5
+interval = 120
 format = <label>
 format-foreground = ${colors.foreground}
 exec = ~/.dotfiles/polybar/updates.sh
@@ -94,7 +94,7 @@ exec = ~/.dotfiles/polybar/net.sh
 
 [module/weather]
 type = custom/script
-interval = 30
+interval = 300
 
 format = <label>
 format-foreground = ${colors.foreground}
