@@ -6,14 +6,14 @@ i3-msg "workspace 102:music"
 
 if [ $status -ne 0 ]; then
     ~/.dotfiles/i3/term.sh ncmpcpp &
-    sleep 0.2s
+    sleep 0.1s
 
     ~/.dotfiles/i3/term.sh cava &
-    sleep 0.2s
+    sleep 0.1s
 
     i3-msg "split vertical"
     ~/.dotfiles/i3/term.sh ncmpcpp -s clock &
-    sleep 0.2s
+    sleep 0.1s
 
     i3-msg "focus left"
 fi
