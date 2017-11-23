@@ -40,6 +40,7 @@ bindsym $mod+Shift+q kill
 
 # start rofi (program launcher)
 bindsym $mod+d exec rofi -show drun
+bindsym $mod+semicolon exec rofi -show run
 
 # start ranger
 bindsym $mod+o exec ~/.dotfiles/i3/term.sh fish -c ranger
