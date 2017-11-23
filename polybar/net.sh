@@ -7,7 +7,7 @@ LOCAL_IP=$(timeout 1 ip route get 8.8.8.8 2> /dev/null |\
 
 EXTERNAL_IP=$(timeout 5 curl https://canihazip.com/s 2> /dev/null)
 
-whois "$EXTERNAL_IP" | grep -q "CYFRONET AGH"
+whois "$EXTERNAL_IP" 2> /dev/null | grep -q "CYFRONET AGH"
 AGH=$?
 
 if [ "$LOCAL_IP" == "192.168.8.100" ]; then
