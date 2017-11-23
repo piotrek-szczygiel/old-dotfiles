@@ -16,6 +16,9 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
+underline-size = 2
+underline-color = ${colors.foreground}
+
 padding-left = 2
 padding-right = 2
 
@@ -53,7 +56,9 @@ label-unfocused-padding = 1
 
 label-focused = %icon%
 label-focused-foreground = ${colors.i3-focused}
+label-focused-background = #771a1a1a
 label-focused-padding = 1
+label-focused-underline = ${colors.foreground}
 
 label-urgent = %icon%
 label-urgent-foreground = ${colors.i3-urgent}
