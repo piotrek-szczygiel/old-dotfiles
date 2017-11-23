@@ -20,6 +20,8 @@ workspace 0:terminal gaps outer 50
 workspace 100:web gaps inner 0
 workspace 100:web gaps outer 0
 
+workspace 101:music gaps inner 200
+
 smart_borders no_gaps
 
 # disable borders for those windows
