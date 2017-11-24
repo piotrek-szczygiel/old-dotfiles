@@ -11,13 +11,15 @@ EXTERNAL_IP=$(timeout 5 curl https://canihazip.com/s 2> /dev/null)
 if [ "$LOCAL_IP" == "192.168.8.100" ]; then
     echo -n "%{F${COLOR}}%{F-} LTE"
 elif [ ! -z "$EXTERNAL_IP" ]; then
-    AGH=$(whois "$EXTERNAL_IP" 2> /dev/null | grep "CYFONET AGH" 2> /dev/null)
-    ADSL=$(whois "$EXTERNAL_IP" 2> /dev/null | grep "NEOSTRADA-ADSL" 2> /dev/null)
+    whois "$EXTERNAL_IP" 2> /dev/null > /tmp/whois
+    grep  -q "CYFONET AGH" /tmp/whois
 
-    if [ ! -z "$AGH"] || [ "$EXTERNAL_IP" == "149.156.124.14" ]; then
+    if grep -q "CYFRONET AGH" /tmp/whois || [ "$EXTERNAL_IP" == "149.156.124.14" ]; then
         echo -n "%{F${COLOR}}%{F-} AGH"
-    elif [ ! -z "$ADSL" ]; then
+    elif grep -q "NEOSTRADA-ADSL" /tmp/whois; then
         echo -n "%{F${COLOR}}%{F-} ADSL"
+    elif grep -q "POLKOMTEL-MNT" /tmp/whois; then
+        echo -n "%{F${COLOR}}%{F-} LTE"
     else
         echo -n "%{F${COLOR}}%{F-} $EXTERNAL_IP"
     fi
