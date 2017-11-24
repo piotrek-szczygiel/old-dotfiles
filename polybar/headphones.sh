@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-COLOR=$(xrdb -query | grep color11 | cut -f2 | head -1 2> /dev/null)
-INACTIVE=$(xrdb -query | grep color1 | cut -f2 | head -1 2> /dev/null)
+COLOR=$(xrdb -query | grep color15 | cut -f2 | head -1 2> /dev/null)
+INACTIVE=$(xrdb -query | grep color8 | cut -f2 | head -1 2> /dev/null)
 
 echo -e "quit" | bluetoothctl | grep -q "\[Philips SHB4000\]"
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-COLOR=$(xrdb -query | grep color11 | cut -f2 | head -1 2> /dev/null)
-INACTIVE=$(xrdb -query | grep color1 | cut -f2 | head -1 2> /dev/null)
+COLOR=$(xrdb -query | grep color15 | cut -f2 | head -1 2> /dev/null)
+INACTIVE=$(xrdb -query | grep color8 | cut -f2 | head -1 2> /dev/null)
 
 LOCAL_IP=$(timeout 1 ip route get 8.8.8.8 2> /dev/null |\
     head -1 | cut -d' ' -f7)

@@ -1,8 +1,8 @@
 [colors]
 background = #77000000
-foreground = ${xrdb:color7}
-icon = ${xrdb:color11}
-inactive = ${xrdb:color1}
+foreground = ${xrdb:color13}
+icon = ${xrdb:color15}
+inactive = ${xrdb:color8}
 
 i3-focused = ${colors.icon}
 i3-unfocused = ${colors.inactive}

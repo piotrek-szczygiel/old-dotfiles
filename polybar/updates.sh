@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COLOR=$(xrdb -query | grep color11 | cut -f2 | head -1 2> /dev/null)
+COLOR=$(xrdb -query | grep color15 | cut -f2 | head -1 2> /dev/null)
 
 pac=$(checkupdates 2> /dev/null | wc -l)
 aur=$(cower -u 2> /dev/null | wc -l)
