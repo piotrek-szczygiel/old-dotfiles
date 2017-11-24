@@ -5,7 +5,7 @@ status=$?
 i3-msg "workspace 101:music"
 
 if [ $status -ne 0 ]; then
-    ~/.dotfiles/i3/term.sh ncmpcpp &
+    ~/.dotfiles/i3/term.sh tmux new ncmpcpp &
     sleep 0.2s
 
     ~/.dotfiles/i3/term.sh cava &
