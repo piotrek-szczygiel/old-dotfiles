@@ -8,15 +8,19 @@ LOCAL_IP=$(timeout 1 ip route get 8.8.8.8 2> /dev/null |\
 
 EXTERNAL_IP=$(timeout 5 curl https://canihazip.com/s 2> /dev/null)
 
-whois "$EXTERNAL_IP" 2> /dev/null | grep -q "CYFRONET AGH"
-AGH=$?
-
 if [ "$LOCAL_IP" == "192.168.8.100" ]; then
     echo -n "%{F${COLOR}}%{F-} LTE"
-elif [ "$AGH" -eq 0 ] || [ "$EXTERNAL_IP" == "149.156.124.14" ]; then
-    echo -n "%{F${COLOR}}%{F-} AGH"
 elif [ ! -z "$EXTERNAL_IP" ]; then
-    echo -n "%{F${COLOR}}%{F-} $EXTERNAL_IP"
+    AGH=$(whois "$EXTERNAL_IP" 2> /dev/null | grep "CYFONET AGH" 2> /dev/null)
+    ADSL=$(whois "$EXTERNAL_IP" 2> /dev/null | grep "NEOSTRADA-ADSL" 2> /dev/null)
+
+    if [ ! -z "$AGH"] || [ "$EXTERNAL_IP" == "149.156.124.14" ]; then
+        echo -n "%{F${COLOR}}%{F-} AGH"
+    elif [ ! -z "$ADSL" ]; then
+        echo -n "%{F${COLOR}}%{F-} ADSL"
+    else
+        echo -n "%{F${COLOR}}%{F-} $EXTERNAL_IP"
+    fi
 elif [ ! -z "$LOCAL_IP" ]; then
     echo -n "%{F${INACTIVE}}%{F-} $LOCAL_IP"
 else
