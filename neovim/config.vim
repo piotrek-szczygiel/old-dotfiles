@@ -2,6 +2,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'dylanaraps/wal.vim'
+Plug 'joshdick/onedark.vim'
 
 Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
@@ -42,11 +43,15 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
 
 set wildmode=longest,list,full
 
-colorscheme wal
+colorscheme onedark
 let g:airline_powerline_fonts=1
 
-highlight clear Visual
-highlight Visual cterm=reverse ctermbg=Black
+" Transparent background
+highlight Normal guibg=NONE ctermbg=NONE
+
+" Reverse colors on selection
+"highlight clear Visual
+"highlight Visual cterm=reverse ctermbg=Black
 
 " Space bindings
 let mapleader=" "
@@ -76,8 +81,8 @@ vnoremap > >gv
 " Clear search highlighting
 nnoremap <silent><leader><cr> :nohl<cr>
 
-" Toggle whitespace (doesn't work on wal colorscheme)
-" nnoremap <silent><leader>tw :set list!<cr>
+" Toggle whitespace
+nnoremap <silent><leader>tw :set list!<cr>
 
 " Quitting
 nnoremap <silent>q :q<cr>
