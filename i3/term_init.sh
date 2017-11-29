@@ -3,7 +3,8 @@
 wal -r 2> /dev/null
 
 if [[ -z $1 ]]; then
-    tmux new
+    #tmux new
+    exec fish
 else
     $*
 fi

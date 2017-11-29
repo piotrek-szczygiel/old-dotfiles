@@ -6,4 +6,4 @@ count=$(ls -l ~/Dropbox/wallpapers | tail -n +2 | wc -l)
 index=$(($index + 1))
 index=$(($index % $count))
 
-wal -i ~/Dropbox/wallpapers/$index.jpg
+wal -a 95 -i ~/Dropbox/wallpapers/$index.jpg
