@@ -28,7 +28,7 @@ set __color_path_nowrite_basename    magenta 000 --bold
 
 set __color_repo                     brgreen white --bold
 set __color_repo_work_tree           brgrey white --bold
-set __color_repo_dirty               brred yellow
+set __color_repo_dirty               brred white
 set __color_repo_staged              yellow white
 
 set __color_username                 brgrey white
