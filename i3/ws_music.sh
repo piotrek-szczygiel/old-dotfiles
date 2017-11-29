@@ -8,7 +8,7 @@ if [ $status -ne 0 ]; then
     urxvt -e ncmpcpp &
     sleep 0.1s
 
-    urxvt -e vis &
+    urxvt -fn "xft:PragmataPro:size=7" -e vis &
     sleep 0.1s
 
     i3-msg "focus left"
