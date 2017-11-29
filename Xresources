@@ -8,5 +8,5 @@ URxvt*secondaryScroll: 0
 
 URxvt*secondaryWheel: 1
 
-URxvt*font: xft:MesloLGSDZ Nerd Font:size=16
+URxvt*font: xft:PragmataProMono Nerd Font Mono:size=18
 URxvt*depth: 32
