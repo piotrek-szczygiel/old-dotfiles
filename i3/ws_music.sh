@@ -5,10 +5,10 @@ status=$?
 i3-msg "workspace 101:music"
 
 if [ $status -ne 0 ]; then
-    urxvt -e ncmpcpp &
+    urxvt -fn "xft:PragmataPro:size=16" -e ncmpcpp &
     sleep 0.1s
 
-    urxvt -fn "xft:PragmataPro:size=7" -e vis &
+    urxvt -fn "xft:PragmataPro:size=8" -e vis &
     sleep 0.1s
 
     i3-msg "focus left"
