@@ -58,8 +58,6 @@ alias plan "feh ~/Dropbox/plan.png"
 
 alias root "sudo -E fish"
 
-alias startpage "tmux attach-session -t i3-terminal 2> /dev/null; or tmux new-session -s i3-terminal fish -c 'neofetch; and exec fish'"
-
 alias td "$EDITOR ~/.todo"
 
 alias update "pacaur -Syu"

@@ -33,7 +33,7 @@ for_window [class="keepassxc"] floating enable
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec ~/.dotfiles/i3/term.sh
+bindsym $mod+Return exec urxvt -cd "`xcwd`"
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -43,7 +43,7 @@ bindsym $mod+d exec rofi -show drun
 bindsym $mod+semicolon exec rofi -show run
 
 # start ranger
-bindsym $mod+o exec ~/.dotfiles/i3/term.sh fish -c ranger
+bindsym $mod+o exec urxvt -e ranger
 
 # change focus
 bindsym $mod+h focus left

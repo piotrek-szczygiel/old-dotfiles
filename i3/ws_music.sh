@@ -5,11 +5,11 @@ status=$?
 i3-msg "workspace 101:music"
 
 if [ $status -ne 0 ]; then
-    ~/.dotfiles/i3/term.sh tmux new ncmpcpp &
-    sleep 0.2s
+    urxvt -e ncmpcpp
+    sleep 0.1s
 
-    ~/.dotfiles/i3/term.sh vis &
-    sleep 0.2s
+    urxvt -e vis
+    sleep 0.1s
 
     i3-msg "focus left"
 fi

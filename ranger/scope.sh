@@ -60,6 +60,9 @@ if [ "$preview_images" = "True" ]; then
         # Image preview for video, disabled by default.:
         video/*)
             ffmpegthumbnailer -i "$path" -o "$cached" -s 0 && exit 6 || exit 1;;
+        # PDF
+        application/pdf)
+            evince-thumbnailer -s 800 "$path" "$cached" && exit 6;;
     esac
 fi
 

@@ -2,7 +2,7 @@
 compton -cb &
 setxkbmap -option caps:escape &
 xautolock -time 3 -locker lock &
-#unclutter &
+unclutter &
 mopidy &
 wal -R &
 
