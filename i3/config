@@ -39,8 +39,8 @@ bindsym $mod+Return exec urxvt -cd "`xcwd`"
 bindsym $mod+Shift+q kill
 
 # start rofi (program launcher)
-bindsym $mod+d exec rofi -show drun
-bindsym $mod+semicolon exec rofi -show run
+bindsym $mod+d exec ~/.dotfiles/i3/rofi.sh drun
+bindsym $mod+semicolon exec ~/.dotfiles/i3/rofi.sh run
 
 # start ranger
 bindsym $mod+o exec urxvt -e ranger
