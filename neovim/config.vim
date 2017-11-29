@@ -12,6 +12,9 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+Plug 'rbgrouleff/bclose.vim'
+Plug 'francoiscabrol/ranger.vim'
+
 Plug 'dag/vim-fish'
 
 Plug 'scrooloose/nerdcommenter'
@@ -43,6 +46,9 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
 
 set wildmode=longest,list,full
 
+let g:ranger_replace_netrw=1
+let g:ranger_map_keys=0
+
 colorscheme onedark
 let g:airline_powerline_fonts=1
 
@@ -63,11 +69,14 @@ nnoremap <silent><leader>fer :source $MYVIMRC<cr>
 " Save file
 nnoremap <silent><leader>fs :write<cr>
 
-" fzf
+" FZF
 nnoremap ; :Buffers<cr>
 nnoremap <silent><leader>ff :Files<cr>
 nnoremap <silent><leader>r :Tags<cr>
 nnoremap <silent><leader>fg :GFiles<cr>
+
+" Ranger
+nnoremap <silent><leader>fr :Ranger<cr>
 
 " Clipboard operations
 nnoremap <leader>p "+p
