@@ -46,11 +46,13 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
 
 set wildmode=longest,list,full
 
+colorscheme onedark
+
 let g:ranger_replace_netrw=1
 let g:ranger_map_keys=0
 
-colorscheme onedark
 let g:airline_powerline_fonts=1
+let g:airline_theme='wal'
 
 " Transparent background
 highlight Normal guibg=NONE ctermbg=NONE
