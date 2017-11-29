@@ -13,9 +13,9 @@ width = 100%
 height = 36
 fixed-center = true
 
-border-size = 5
+#border-size = 5
 
-radius = 5
+#radius = 5
 
 background = ${colors.background}
 foreground = ${colors.foreground}
