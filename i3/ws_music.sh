@@ -5,10 +5,10 @@ status=$?
 i3-msg "workspace 101:music"
 
 if [ $status -ne 0 ]; then
-    urxvt -e ncmpcpp
+    urxvt -e ncmpcpp &
     sleep 0.1s
 
-    urxvt -e vis
+    urxvt -e vis &
     sleep 0.1s
 
     i3-msg "focus left"
