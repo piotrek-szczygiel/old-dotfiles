@@ -52,10 +52,10 @@ let g:ranger_replace_netrw=1
 let g:ranger_map_keys=0
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='wal'
+let g:airline_theme='onedark'
 
 " Transparent background
-highlight Normal guibg=NONE ctermbg=NONE
+" highlight Normal guibg=NONE ctermbg=NONE
 
 " Reverse colors on selection
 "highlight clear Visual
