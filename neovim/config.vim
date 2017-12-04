@@ -35,6 +35,8 @@ set relativenumber
 
 set hidden
 
+set autochdir
+
 set ignorecase
 set smartcase
 
@@ -134,8 +136,7 @@ nnoremap <silent><A-J> :resize -1<cr>
 nnoremap <silent><A-K> :resize +1<cr>
 
 " Terminal
-nnoremap <silent><leader>' :call ToggleTerminal(10)<cr>
-nnoremap <silent><leader>cd :lcd %:p:h<cr>
+nnoremap <silent><leader>' :call ToggleTerminal()<cr>
 
 nnoremap <silent><leader>r :call RunCommandOnCurrentFile("run")<cr>
 
@@ -161,16 +162,16 @@ au BufReadPost *
 let g:term_buf = 0
 let g:term_win = 0
 
-function! ToggleTerminal(height)
+function! ToggleTerminal()
     if win_gotoid(g:term_win)
         hide
     else
         botright new
-        exec "resize " . a:height
+        exec "resize 7"
         try
             exec "buffer " . g:term_buf
         catch
-            call termopen($SHELL, {"detach": 0})
+            call termopen("fish", {"detach": 0})
             let g:term_buf = bufnr("")
         endtry
         startinsert!
@@ -186,7 +187,7 @@ function! RunCommand(command)
     endif
 
     topleft new
-    exec "resize 10"
+    exec "resize 5"
     call termopen(a:command)
     startinsert!
     let g:cmd_win = win_getid()
