@@ -15,7 +15,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'francoiscabrol/ranger.vim'
 
-Plug 'dag/vim-fish'
+Plug 'sheerun/vim-polyglot'
 
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
@@ -46,20 +46,24 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
 
 set wildmode=longest,list,full
 
-colorscheme onedark
+set termguicolors
+
+let g:onedark_terminal_italics=1
+
+let g:airline_powerline_fonts=1
+
 
 let g:ranger_replace_netrw=1
 let g:ranger_map_keys=0
 
-let g:airline_powerline_fonts=1
-let g:airline_theme='onedark'
+colorscheme onedark
 
 " Transparent background
 " highlight Normal guibg=NONE ctermbg=NONE
 
 " Reverse colors on selection
-"highlight clear Visual
-"highlight Visual cterm=reverse ctermbg=Black
+" highlight clear Visual
+" highlight Visual cterm=reverse ctermbg=Black
 
 " Space bindings
 let mapleader=" "

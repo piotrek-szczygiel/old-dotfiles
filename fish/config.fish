@@ -16,24 +16,7 @@ set -g default_user piotr
 set -g theme_display_user yes
 set -g theme_title_display_process yes
 
-#set -g theme_color_scheme user
-
-#set __color_initial_segment_exit     bryellow grey --bold
-#set __color_initial_segment_su       bryellow red --bold
-#set __color_initial_segment_jobs     bryellow green --bold
-
-#set __color_path                     brblue 000
-#set __color_path_basename            brblue 000 --bold
-#set __color_path_nowrite             magenta 000
-#set __color_path_nowrite_basename    magenta 000 --bold
-
-#set __color_repo                     brgreen white --bold
-#set __color_repo_work_tree           brgrey white --bold
-#set __color_repo_dirty               brred white
-#set __color_repo_staged              yellow white
-
-#set __color_username                 brgrey white
-
+set -g theme_color_scheme terminal
 
 # Aliases
 
