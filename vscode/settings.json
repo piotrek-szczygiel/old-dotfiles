@@ -1,7 +1,7 @@
 {
     "editor.fontFamily": "PragmataPro",
     "editor.fontLigatures": true,
-    "editor.fontSize": 18,
+    "editor.fontSize": 14,
     "keyboard.dispatch": "keyCode",
     "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 1,
