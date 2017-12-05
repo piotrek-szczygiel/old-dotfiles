@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# Touchpad settings
-ID=$(xinput list --id-only "ETPS/2 Elantech Touchpad")
-TAP_ID=$(xinput list-props "$ID" 2> /dev/null |\
-    grep "Tap Action" | cut -f2 | awk -F"[()]" '{print $2}')
-
-xinput set-prop "$ID" "$TAP_ID" 0, 0, 0, 0, 1, 3, 2 &

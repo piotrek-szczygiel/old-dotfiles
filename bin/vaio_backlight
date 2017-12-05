@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-# Enable keyboard backlight
-echo 1 > /sys/devices/platform/sony-laptop/kbd_backlight &
