@@ -25,9 +25,6 @@
 
     ~/.config/i3/config: i3/config
 
-    ~/.config/kitty/kitty.conf: kitty/kitty.conf
-    ~/.config/kitty/default.session: kitty/default.session
-
     ~/.config/nvim/init.vim: neovim/config.vim
     ~/.local/share/nvim/site/autoload/plug.vim: neovim/plug.vim
 

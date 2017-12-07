@@ -1,8 +1,0 @@
-new_tab terminal
-launch fish -c "neofetch; and fish"
-
-new_tab code
-launch fish -c ranger
-
-new_tab top
-launch fish -c gtop
