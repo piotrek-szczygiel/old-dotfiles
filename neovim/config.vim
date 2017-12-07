@@ -61,7 +61,7 @@ let g:ranger_map_keys=0
 colorscheme onedark
 
 " Transparent background
-" highlight Normal guibg=NONE ctermbg=NONE
+highlight Normal guibg=NONE ctermbg=NONE
 
 " Reverse colors on selection
 " highlight clear Visual
