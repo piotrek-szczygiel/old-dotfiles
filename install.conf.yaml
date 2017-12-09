@@ -4,16 +4,13 @@
         force: true
         relink: true
 
-- clean: ['~', '~/.config']
+- clean: ["~", "~/.config"]
 
 - link:
     ~/.gitconfig: gitconfig
-
     ~/.tmux.conf: tmux/tmux.conf
-
+    ~/.xprofile: xprofile
     ~/.Xresources: Xresources
-
-    ~/.config/alacritty/alacritty.yml: alacritty/config.yml
 
     ~/.config/Code/User/settings.json: vscode/settings.json
 
