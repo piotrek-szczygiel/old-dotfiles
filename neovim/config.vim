@@ -1,10 +1,8 @@
 " Plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'dylanaraps/wal.vim'
 Plug 'joshdick/onedark.vim'
 
-Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
 
 Plug 'ntpeters/vim-better-whitespace'
