@@ -1,2 +1,2 @@
 setxkbmap -option caps:escape &
-vaio_touchpad &
+vaio_backlight &
