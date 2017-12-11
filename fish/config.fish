@@ -38,7 +38,7 @@ alias ls "better_ls"
 alias o "xdg-open"
 alias orphans "pacaur -Rns (pacaur -Qtdq)"
 
-alias plan "feh ~/Dropbox/plan.png"
+alias plan "xdg-open ~/Dropbox/plan.png > /dev/null ^&1"
 
 alias root "sudo -E fish"
 
