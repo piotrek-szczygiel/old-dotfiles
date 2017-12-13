@@ -40,3 +40,7 @@
 
     ~/.config/vis/config: cli-visualizer/config
     ~/.config/vis/colors: cli-visualizer/colors
+
+- shell:
+    - mkdir -p ~/.local/bin
+    - mkdir -p ~/.cargo/bin
