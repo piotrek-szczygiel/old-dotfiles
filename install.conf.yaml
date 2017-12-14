@@ -23,7 +23,6 @@
     ~/.config/i3/config: i3/config
 
     ~/.config/nvim/init.vim: neovim/config.vim
-    ~/.local/share/nvim/site/autoload/plug.vim: neovim/plug.vim
 
     ~/.config/ncmpcpp/config: ncmpcpp/config
     ~/.config/ncmpcpp/bindings: ncmpcpp/bindings
