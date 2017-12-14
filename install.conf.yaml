@@ -1,44 +1,28 @@
+---
 - defaults:
-    link:
-        create: true
-        force: true
-        relink: true
+  link:
+    create: true
+    force: true
+    relink: true
 
 - clean: ["~", "~/.config"]
 
 - link:
-    ~/.gitconfig: gitconfig
-    ~/.tmux.conf: tmux/tmux.conf
-    ~/.xprofile: xprofile
-    ~/.Xresources: Xresources
+  ~/.gitconfig: gitconfig
+  ~/.tmux.conf: tmux/tmux.conf
+  ~/.xprofile: xprofile
+  ~/.Xresources: Xresources
 
-    ~/.config/Code/User/settings.json: vscode/settings.json
+  ~/.config/fish/config.fish: fish/config.fish
+  ~/.config/fish/functions/fisher.fish: fish/fisher.fish
+  ~/.config/fish/fishfile: fish/fishfile
 
-    ~/.config/compton.conf: compton/config.conf
+  ~/.config/nvim/init.vim: neovim/config.vim
 
-    ~/.config/fish/config.fish: fish/config.fish
-    ~/.config/fish/functions/fisher.fish: fish/fisher.fish
-    ~/.config/fish/fishfile: fish/fishfile
-
-    ~/.config/i3/config: i3/config
-
-    ~/.config/nvim/init.vim: neovim/config.vim
-
-    ~/.config/ncmpcpp/config: ncmpcpp/config
-    ~/.config/ncmpcpp/bindings: ncmpcpp/bindings
-
-    ~/.config/polybar/config: polybar/config
-    ~/.config/polybar/launch.sh: polybar/launch.sh
-
-    ~/.config/ranger/rc.conf: ranger/config
-    ~/.config/ranger/scope.sh: ranger/scope.sh
-    ~/.config/ranger/plugins: ranger/plugins
-    ~/.config/ranger/devicons.py: ranger/devicons.py
-
-    ~/.config/rofi/config.rasi: rofi/config.rasi
-
-    ~/.config/vis/config: cli-visualizer/config
-    ~/.config/vis/colors: cli-visualizer/colors
+  ~/.config/ranger/rc.conf: ranger/config
+  ~/.config/ranger/scope.sh: ranger/scope.sh
+  ~/.config/ranger/plugins: ranger/plugins
+  ~/.config/ranger/devicons.py: ranger/devicons.py
 
 - shell:
     - mkdir -p ~/.local/bin
