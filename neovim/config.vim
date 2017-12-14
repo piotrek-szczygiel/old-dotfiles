@@ -85,10 +85,10 @@ set termguicolors
 set wildmode=longest,list,full
 " }}}
 " Terminal configuration  ---------------------------------------------------{{{
-augroup TerminalGroup
-    autocmd BufWinEnter,WinEnter term://* startinsert
-    autocmd BufLeave term://* stopinsert
-augroup END
+"augroup TerminalGroup
+    "autocmd BufWinEnter,WinEnter term://* startinsert
+    "autocmd BufLeave term://* stopinsert
+"augroup END
 
 " Toggle bottom terminal window
 let g:term_buf = 0
