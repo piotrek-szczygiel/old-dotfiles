@@ -12,6 +12,8 @@
     ~/.gitconfig: gitconfig
     ~/.xprofile: xprofile
 
+    ~/.config/alacritty/alacritty.yml: alacritty/alacritty.yml
+
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/functions/fisher.fish: fish/fisher.fish
     ~/.config/fish/fishfile: fish/fishfile
