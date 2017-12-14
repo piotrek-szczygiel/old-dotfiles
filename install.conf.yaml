@@ -23,6 +23,8 @@
     ~/.config/ranger/plugins: ranger/plugins
     ~/.config/ranger/devicons.py: ranger/devicons.py
 
+    ~/.config/termite/config: termite/config
+
     ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
 
