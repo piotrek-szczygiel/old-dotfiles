@@ -1,28 +1,28 @@
 ---
 - defaults:
-  link:
-    create: true
-    force: true
-    relink: true
+    link:
+      create: true
+      force: true
+      relink: true
 
 - clean: ["~", "~/.config"]
 
 - link:
-  ~/.gitconfig: gitconfig
-  ~/.tmux.conf: tmux/tmux.conf
-  ~/.xprofile: xprofile
-  ~/.Xresources: Xresources
+    ~/.gitconfig: gitconfig
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.xprofile: xprofile
+    ~/.Xresources: Xresources
 
-  ~/.config/fish/config.fish: fish/config.fish
-  ~/.config/fish/functions/fisher.fish: fish/fisher.fish
-  ~/.config/fish/fishfile: fish/fishfile
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/functions/fisher.fish: fish/fisher.fish
+    ~/.config/fish/fishfile: fish/fishfile
 
-  ~/.config/nvim/init.vim: neovim/config.vim
+    ~/.config/nvim/init.vim: neovim/config.vim
 
-  ~/.config/ranger/rc.conf: ranger/config
-  ~/.config/ranger/scope.sh: ranger/scope.sh
-  ~/.config/ranger/plugins: ranger/plugins
-  ~/.config/ranger/devicons.py: ranger/devicons.py
+    ~/.config/ranger/rc.conf: ranger/config
+    ~/.config/ranger/scope.sh: ranger/scope.sh
+    ~/.config/ranger/plugins: ranger/plugins
+    ~/.config/ranger/devicons.py: ranger/devicons.py
 
 - shell:
     - mkdir -p ~/.local/bin
