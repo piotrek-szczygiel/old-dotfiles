@@ -67,7 +67,7 @@ set mouse=a
 set nostartofline
 set number
 set relativenumber
-set scrolloff=3
+set scrolloff=5
 set shiftwidth=4
 set showmatch
 set sidescrolloff=5
