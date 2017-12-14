@@ -175,5 +175,7 @@ augroup CursorRestoreGroup
         \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
         \ | exe "normal! g`\""
         \ | endif
+
+    autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 augroup END
 " }}}
