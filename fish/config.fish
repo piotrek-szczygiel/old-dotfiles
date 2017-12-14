@@ -16,7 +16,7 @@ set -g default_user piotr
 set -g theme_display_user yes
 set -g theme_title_display_process yes
 
-set -g theme_color_scheme terminal
+set -g theme_color_scheme gruvbox
 
 # Aliases
 
