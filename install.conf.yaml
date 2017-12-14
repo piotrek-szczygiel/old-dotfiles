@@ -8,6 +8,7 @@
 - clean: ["~", "~/.config"]
 
 - link:
+    ~/.bashrc: bash/config
     ~/.gitconfig: gitconfig
     ~/.xprofile: xprofile
 
