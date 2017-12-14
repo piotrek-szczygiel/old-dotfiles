@@ -38,6 +38,8 @@ endif
 if dein#check_install()
   call dein#install()
 endif
+
+filetype plugin indent on
 " }}}
 " Plugin configuration  -----------------------------------------------------{{{
 let g:deoplete#enable_at_startup = 1
