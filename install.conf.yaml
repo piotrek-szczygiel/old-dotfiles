@@ -22,6 +22,9 @@
     ~/.config/ranger/plugins: ranger/plugins
     ~/.config/ranger/devicons.py: ranger/devicons.py
 
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.tmux.conf.local: tmux/tmux.conf.local
+
 - shell:
     - mkdir -p ~/.local/bin
     - mkdir -p ~/.cargo/bin
