@@ -1,6 +1,7 @@
 # Environment variables
 
 set -xg EDITOR nvim
+set -xg VISUAL $EDITOR
 set -xg PATH $HOME/.dotfiles/bin $HOME/.cargo/bin $HOME/.local/bin $PATH
 
 
@@ -40,7 +41,7 @@ alias orphans "pacaur -Rns (pacaur -Qtdq)"
 
 alias plan "xdg-open ~/Dropbox/plan.png > /dev/null ^&1"
 
-alias root "sudo -E fish"
+alias root "sudo -E bash"
 
 alias td "$EDITOR ~/.todo"
 
