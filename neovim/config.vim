@@ -24,6 +24,7 @@ if dein#load_state(expand('$HOME/.local/share/dein'))
     call dein#add('sheerun/vim-polyglot')
     call dein#add('scrooloose/nerdcommenter')
     call dein#add('tpope/vim-surround')
+    call dein#add('tpope/vim-sleuth')
 
     call dein#add('majutsushi/tagbar')
     call dein#add('vim-airline/vim-airline')
