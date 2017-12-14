@@ -77,10 +77,6 @@ set termguicolors
 set wildmode=longest,list,full
 " }}}
 " Terminal configuration  ---------------------------------------------------{{{
-tnoremap <esc> <c-\><c-n>
-nnoremap <leader>' :call ToggleTerminal()<cr>
-nnoremap <leader>r :call RunCommandOnCurrentFile("run")<cr>
-
 augroup TerminalGroup
     autocmd BufWinEnter,WinEnter term://* startinsert
     autocmd BufLeave term://* stopinsert
@@ -150,6 +146,10 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
+
+tnoremap <esc> <c-\><c-n>
+nnoremap <leader>' :call ToggleTerminal()<cr>
+nnoremap <leader>r :call RunCommandOnCurrentFile("run")<cr>
 " }}}
 " Navigation  ---------------------------------------------------------------{{{
 nnoremap <A-h> <C-w>h
