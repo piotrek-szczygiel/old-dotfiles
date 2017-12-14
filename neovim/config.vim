@@ -45,13 +45,19 @@ filetype plugin indent on
 let g:deoplete#enable_at_startup = 1
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_symbols =
-\{  'space': ' ', 'paste': 'PASTE', 'maxlinenr': ' ', 'notexists': 'Ɇ',
-\   'linenr': '☰ ', 'readonly': '', 'spell': 'SPELL', 'modified': '+',
-\   'keymap': 'Keymap:', 'crypt': '🔒', 'branch': '', 'whitespace': '☲' }
+let g:airline_powerline_fonts = 1
+"let g:airline_symbols =
+"\{  'space': ' ', 'paste': 'PASTE', 'maxlinenr': ' ', 'notexists': 'Ɇ',
+"\   'linenr': '☰ ', 'readonly': '', 'spell': 'SPELL', 'modified': '+',
+"\   'keymap': 'Keymap:', 'crypt': '🔒', 'branch': '', 'whitespace': '☲' }
 
 let g:gruvbox_italic = 1
 colorscheme gruvbox
+
+let g:startify_list_order = ['bookmarks', 'sessions', 'files', 'dir',
+  \ 'commands']
+let g:startify_bookmarks = [{'n': '~/.dotfiles/neovim/config.vim'},
+  \ {'t': '~/.dotfiles/tmux/tmux.conf.local'}]
 " }}}
 " Vim configuration  --------------------------------------------------------{{{
 scriptencoding utf-8
@@ -142,6 +148,7 @@ nnoremap <leader>fed :e $MYVIMRC<cr>
 nnoremap <leader>fer :source $MYVIMRC<cr>
 nnoremap <leader>fs :w<cr>
 nnoremap <leader>qw :wq<cr>
+nnoremap <leader>s :Startify<cr>
 nnoremap <leader>tw :set list!<cr>
 
 nnoremap <leader>p "+p
