@@ -16,7 +16,7 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'scrooloose/nerdcommenter'
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 
 call  plug#end()
