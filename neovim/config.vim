@@ -147,6 +147,7 @@ nnoremap <leader>bp :bp<cr>
 nnoremap <leader>fed :e $MYVIMRC<cr>
 nnoremap <leader>fer :source $MYVIMRC<cr>
 nnoremap <leader>fs :w<cr>
+nnoremap <leader>g :Tagbar<cr>
 nnoremap <leader>qw :wq<cr>
 nnoremap <leader>s :Startify<cr>
 nnoremap <leader>tw :set list!<cr>
