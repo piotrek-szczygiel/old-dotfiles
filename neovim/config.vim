@@ -14,6 +14,7 @@ if dein#load_state(expand('$HOME/.local/share/dein'))
     call dein#add(expand('$HOME/.local/share/dein/repos/github.com/Shougo/dein.vim'))
 
     call dein#add('airblade/vim-gitgutter')
+    call dein#add('easymotion/vim-easymotion')
     call dein#add('majutsushi/tagbar')
     call dein#add('mhinz/vim-startify')
     call dein#add('morhetz/gruvbox')
@@ -44,10 +45,6 @@ let g:deoplete#enable_at_startup = 1
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-"let g:airline_symbols =
-"\{  'space': ' ', 'paste': 'PASTE', 'maxlinenr': ' ', 'notexists': 'Ɇ',
-"\   'linenr': '☰ ', 'readonly': '', 'spell': 'SPELL', 'modified': '+',
-"\   'keymap': 'Keymap:', 'crypt': '🔒', 'branch': '', 'whitespace': '☲' }
 
 let g:gruvbox_italic = 1
 colorscheme gruvbox
@@ -61,16 +58,16 @@ let g:startify_bookmarks = [{'n': '~/.dotfiles/neovim/config.vim'},
 scriptencoding utf-8
 set autochdir
 set background=dark
-set noequalalways
+set colorcolumn=80
 set expandtab
 set foldmethod=marker
 set hidden
 set ignorecase
 set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
 set mouse=a
+set noequalalways
 set nostartofline
 set number
-set relativenumber
 set scrolloff=5
 set shiftwidth=4
 set showmatch
@@ -158,6 +155,8 @@ vnoremap <leader>y "+y
 tnoremap <esc> <c-\><c-n>
 nnoremap <leader>' :call ToggleTerminal()<cr>
 nnoremap <leader>r :call RunCommandOnCurrentFile("run")<cr>
+
+" <leader>h{p,s,u} - preview, stage, undo hunk
 " }}}
 " Navigation  ---------------------------------------------------------------{{{
 nnoremap <A-h> <C-w>h
