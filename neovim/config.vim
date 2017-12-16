@@ -21,16 +21,21 @@ if dein#load_state(expand('$HOME/.local/share/dein'))
     call dein#add('mhinz/vim-startify')
     call dein#add('morhetz/gruvbox')
     call dein#add('ntpeters/vim-better-whitespace')
+    call dein#add('osyo-manga/vim-over')
+    call dein#add('Raimondi/delimitMate')
     call dein#add('scrooloose/nerdcommenter')
+    call dein#add('scrooloose/nerdtree')
     call dein#add('sheerun/vim-polyglot')
     call dein#add('Shougo/denite.nvim')
     call dein#add('Shougo/deoplete.nvim')
     call dein#add('Shougo/neosnippet-snippets')
     call dein#add('Shougo/neosnippet.vim')
+    call dein#add('tpope/vim-eunuch')
     call dein#add('tpope/vim-sleuth')
     call dein#add('tpope/vim-surround')
     call dein#add('vim-airline/vim-airline')
     call dein#add('w0rp/ale')
+    call dein#add('Xuyuanp/nerdtree-git-plugin')
 
     call dein#end()
     call dein#save_state()
@@ -48,6 +53,9 @@ let g:airline_powerline_fonts = 1
 
 let g:deoplete#enable_at_startup = 1
 
+let g:gruvbox_italic = 1
+colorscheme gruvbox
+
 let g:incsearch#auto_nohlsearch = 1
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
@@ -58,9 +66,6 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
-
-let g:gruvbox_italic = 1
-colorscheme gruvbox
 
 let g:startify_list_order = ['bookmarks', 'sessions', 'files', 'dir',
   \ 'commands']
@@ -155,6 +160,7 @@ nnoremap <leader>fed :e $MYVIMRC<cr>
 nnoremap <leader>fer :source $MYVIMRC<cr>
 nnoremap <leader>fs :w<cr>
 nnoremap <leader>g :Tagbar<cr>
+nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>qw :wq<cr>
 nnoremap <leader>s :Startify<cr>
 nnoremap <leader>tw :set list!<cr>
