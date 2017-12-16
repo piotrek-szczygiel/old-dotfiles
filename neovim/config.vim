@@ -15,6 +15,8 @@ if dein#load_state(expand('$HOME/.local/share/dein'))
 
     call dein#add('airblade/vim-gitgutter')
     call dein#add('easymotion/vim-easymotion')
+    call dein#add('editorconfig/editorconfig-vim')
+    call dein#add('haya14busa/incsearch.vim')
     call dein#add('majutsushi/tagbar')
     call dein#add('mhinz/vim-startify')
     call dein#add('morhetz/gruvbox')
@@ -41,10 +43,21 @@ endif
 filetype plugin indent on
 " }}}
 " Plugin configuration  -----------------------------------------------------{{{
-let g:deoplete#enable_at_startup = 1
-
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
+let g:deoplete#enable_at_startup = 1
+
+let g:incsearch#auto_nohlsearch = 1
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
 let g:gruvbox_italic = 1
 colorscheme gruvbox
@@ -135,7 +148,6 @@ nnoremap <tab> :b#<cr>
 
 let g:mapleader = "\<space>"
 
-nnoremap <leader><cr> :nohl<cr>
 nnoremap <leader>bd :bd<cr>
 nnoremap <leader>bn :bn<cr>
 nnoremap <leader>bp :bp<cr>
