@@ -1,0 +1,7 @@
+#!/bin/sh
+
+while true
+do
+	/home/piotr/.dotfiles/bin/backlight
+	sleep 10
+done
