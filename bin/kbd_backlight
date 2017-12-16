@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo 1 > /sys/devices/platform/sony-laptop/kbd_backlight
