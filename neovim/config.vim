@@ -240,8 +240,7 @@ nnoremap <leader>bd :bd<cr>
 nnoremap <leader>bn :bn<cr>
 nnoremap <leader>bp :bp<cr>
 
-nnoremap <leader>fed :e $MYVIMRC<cr>
-nnoremap <leader>fer :source $MYVIMRC<cr>
+nnoremap <leader>fed :e ~/.dotfiles/neovim/config.vim<cr>
 nnoremap <leader>fs :w<cr>
 
 nnoremap <leader>i24 :set ts=2 sts=2 noet<cr>:retab!<cr>
