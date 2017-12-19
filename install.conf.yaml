@@ -19,6 +19,7 @@
     ~/.config/fish/fishfile: fish/fishfile
 
     ~/.config/nvim/init.vim: neovim/config.vim
+    ~/.config/nvim/ginit.vim: neovim/guiconfig.vim
 
     ~/.config/ranger/rc.conf: ranger/config
     ~/.config/ranger/scope.sh: ranger/scope.sh
