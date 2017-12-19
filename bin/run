@@ -12,9 +12,8 @@ else
         case "$filetype" in
             "text/x-c"|"text/x-c++")
                 runpath="/tmp/$filename.run"
-                g++ "$1" -o "$runpath"
 
-                if [ $? -eq 0 ] && [[ -x "$runpath" ]]; then
+                if g++ "$1" -o "$runpath"  && [[ -x "$runpath" ]]; then
                     "$runpath"
                 fi
                 ;;
