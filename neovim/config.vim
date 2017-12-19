@@ -18,6 +18,7 @@ if dein#load_state(g:dein)
     call dein#add(g:dein)
 
     call dein#add('airblade/vim-gitgutter')
+    call dein#add('airblade/vim-rooter')
     call dein#add('easymotion/vim-easymotion')
     call dein#add('editorconfig/editorconfig-vim')
     call dein#add('haya14busa/incsearch.vim')
@@ -27,7 +28,6 @@ if dein#load_state(g:dein)
     call dein#add('mhinz/vim-startify')
     call dein#add('morhetz/gruvbox')
     call dein#add('ntpeters/vim-better-whitespace')
-    call dein#add('Raimondi/delimitMate')
     call dein#add('ryanoasis/vim-devicons')
     call dein#add('scrooloose/nerdcommenter')
     call dein#add('scrooloose/nerdtree')
@@ -37,6 +37,7 @@ if dein#load_state(g:dein)
     call dein#add('Shougo/neosnippet-snippets')
     call dein#add('Shougo/neosnippet.vim')
     call dein#add('tpope/vim-eunuch')
+    call dein#add('tpope/vim-fugitive')
     call dein#add('tpope/vim-sleuth')
     call dein#add('tpope/vim-surround')
     call dein#add('troydm/zoomwintab.vim')
@@ -94,12 +95,17 @@ let g:NERDTreeMinimalUI = 1
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree")
     \ && b:NERDTree.isTabTree()) | q | endif
 
+let g:rooter_change_directory_for_non_project_files = 'current'
+let g:rooter_resolve_links = 1
+let g:rooter_silent_chdir = 1
+
+let g:tagbar_compact = 1
+
 let g:startify_list_order = ['bookmarks', 'sessions', 'files', 'dir',
     \ 'commands']
 " }}}
 " Vim configuration  --------------------------------------------------------{{{
 scriptencoding utf-8
-set autochdir
 set colorcolumn=80
 set expandtab
 set foldmethod=marker
@@ -214,10 +220,17 @@ nnoremap <leader>wo :ZoomWinTabToggle<cr>
 nnoremap <leader>bb :Denite buffer<cr>
 nnoremap <leader>ff :Denite file_rec<cr>
 
-nnoremap <leader>g :Tagbar<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>s :Startify<cr>
+nnoremap <leader>gg :Tagbar<cr>
 nnoremap <leader>u :UndotreeToggle<cr>
+
+nnoremap <leader>gb :Gblame<cr>
+nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gl :Gpull<cr>
+nnoremap <leader>gp :Gpush<cr>
+nnoremap <leader>gs :Gstatus<cr>
 
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
