@@ -34,6 +34,7 @@ if dein#load_state(g:dein)
     call dein#add('sheerun/vim-polyglot')
     call dein#add('Shougo/denite.nvim')
     call dein#add('Shougo/deoplete.nvim')
+    call dein#add('Shougo/neco-vim')
     call dein#add('Shougo/neosnippet-snippets')
     call dein#add('Shougo/neosnippet.vim')
     call dein#add('tpope/vim-eunuch')
@@ -65,9 +66,8 @@ let g:airline_powerline_fonts = 1
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
-let g:ale_sign_error = '⨉'
+let g:ale_sign_error = '⨯'
 let g:ale_sign_warning = '⚠'
-let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '']
 
 call denite#custom#map(
     \ 'insert',
@@ -84,8 +84,6 @@ call denite#custom#map(
 call denite#custom#option('default', {
     \ 'prompt': '❯'
     \})
-call denite#custom#var('file_rec', 'command',
-    \ ['rg', '--files', '--glob', '!.git'])
 call denite#custom#var('grep', 'command', ['rg'])
 call denite#custom#var('grep', 'default_opts',
     \ ['--hidden', '--vimgrep', '--no-heading', '-S'])
@@ -97,6 +95,11 @@ call denite#custom#var('grep', 'final_opts', [])
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
 let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
+
+let g:gitgutter_sign_added = '•'
+let g:gitgutter_sign_modified = '⛬'
+let g:gitgutter_sign_removed = '⁃'
+let g:gitgutter_sign_modified_removed = '⛬⁃'
 
 let g:gruvbox_italic = 1
 colorscheme gruvbox
