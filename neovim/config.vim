@@ -166,10 +166,16 @@ nnoremap <leader>bp :bp<cr>
 nnoremap <leader>fed :e $MYVIMRC<cr>
 nnoremap <leader>fer :source $MYVIMRC<cr>
 nnoremap <leader>fs :w<cr>
-nnoremap <leader>g :Tagbar<cr>
-nnoremap <leader>n :NERDTreeToggle<cr>
-nnoremap <leader>qw :wq<cr>
-nnoremap <leader>s :Startify<cr>
+
+nnoremap <leader>i24 :set ts=2 sts=2 noet<cr>:retab!<cr>
+    \:set ts=4 sts=4 et<cr>:retab!<cr>
+nnoremap <leader>i42 :set ts=4 sts=4 noet<cr>:retab!<cr>
+    \:set ts=2 sts=2 et<cr>:retab!<cr>
+nnoremap <leader>i2t :set ts=2 sts=2 noet<cr>:retab!<cr>
+nnoremap <leader>i4t :set ts=4 sts=4 noet<cr>:retab!<cr>
+nnoremap <leader>it2 :set ts=2 sts=2 et<cr>:retab!<cr>
+nnoremap <leader>it4 :set ts=4 sts=4 et<cr>:retab!<cr>
+
 nnoremap <leader>tw :set list!<cr>
 nnoremap <leader>tt :let &background =
       \ ( &background == "dark" ? "light" : "dark" )<cr>
