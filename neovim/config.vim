@@ -75,7 +75,6 @@ let g:startify_list_order = ['bookmarks', 'sessions', 'files', 'dir',
 " Vim configuration  --------------------------------------------------------{{{
 scriptencoding utf-8
 set autochdir
-set background=dark
 set colorcolumn=80
 set expandtab
 set foldmethod=marker
@@ -96,6 +95,12 @@ set splitright
 set tabstop=4
 set termguicolors
 set wildmode=longest,list,full
+
+if strftime('%H') >= 8 && strftime('%H') <= 16
+  set background=light
+else
+  set background=dark
+endif
 " }}}
 " Terminal configuration  ---------------------------------------------------{{{
 "augroup TerminalGroup
