@@ -69,6 +69,8 @@ map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
+let g:NERDTreeMinimalUI = 1
+
 let g:startify_list_order = ['bookmarks', 'sessions', 'files', 'dir',
   \ 'commands']
 " }}}
