@@ -111,10 +111,10 @@ set tabstop=4
 set termguicolors
 set wildmode=longest,list,full
 
-if strftime('%H') >= 8 && strftime('%H') <= 16
-  set background=light
+if strftime('%H') >= 8 && strftime('%H') <= 15
+    set background=light
 else
-  set background=dark
+    set background=dark
 endif
 " }}}
 " Terminal configuration  ---------------------------------------------------{{{
