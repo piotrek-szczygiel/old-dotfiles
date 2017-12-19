@@ -42,6 +42,7 @@ if dein#load_state(g:dein)
     call dein#add('vim-airline/vim-airline')
     call dein#add('w0rp/ale')
     call dein#add('Xuyuanp/nerdtree-git-plugin')
+    call dein#add('Yggdroot/indentLine')
 
     call dein#end()
     call dein#save_state()
@@ -85,6 +86,8 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+
+let g:indentLine_color_gui = '#928374'
 
 let g:NERDTreeMinimalUI = 1
 
