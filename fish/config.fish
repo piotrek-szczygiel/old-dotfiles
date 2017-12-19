@@ -1,6 +1,10 @@
 set -xg BROWSER google-chrome-stable
+
 set -xg EDITOR nvim
 set -xg VISUAL $EDITOR
+
+set -xg MANPAGER "nvim -c 'set ft=man' -"
+
 set -xg PATH $HOME/.dotfiles/bin $HOME/.cargo/bin $HOME/.local/bin $PATH
 
 set -g default_user piotr
