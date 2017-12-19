@@ -24,6 +24,7 @@ alias gc "git commit"
 alias gca "git commit -a"
 alias gco "git checkout --"
 alias gd "git diff"
+alias gds "git diff --staged"
 alias gl "git pull"
 alias glg "git log --graph --pretty=format:\
 '%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)\
