@@ -1,3 +1,5 @@
 [user]
-	email = szczygiel.p@gmail.com
-	name = Piotr Szczygieł
+    email = szczygiel.p@gmail.com
+    name = Piotr Szczygieł
+[core]
+    editor = nvr --remote-wait-silent
