@@ -1,18 +1,21 @@
 " Neovim configuration
 
-" Setup dein  ---------------------------------------------------------------{{{
-if(!isdirectory(expand('~/.local/share/dein/repos/github.com/Shougo/dein.vim')))
+" Setup dein    ---------------------------------------------------------------{{{
+let g:dein = expand('~/.local/share/dein')
+
+if(!isdirectory(g:dein . '/repos/github.com/Shougo/dein.vim'))
     echo 'Installing dein...'
-    call system('mkdir -p' . expand('~/.local/share/dein/repos/github.com'))
+
+    call system('mkdir -p' . g:dein . 'repos/github.com')
     call system('git clone https://github.com/Shougo/dein.vim ' .
-          \ expand('~/.local/share/dein/repos/github.com/Shougo/dein.vim'))
+        \ g:dein . '/repos/github.com/Shougo/dein.vim')
 endif
 
 set runtimepath+=~/.local/share/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state(expand('$HOME/.local/share/dein'))
-    call dein#begin(expand('$HOME/.local/share/dein'))
-    call dein#add(expand('$HOME/.local/share/dein/repos/github.com/Shougo/dein.vim'))
+if dein#load_state(g:dein)
+    call dein#begin(g:dein)
+    call dein#add(g:dein)
 
     call dein#add('airblade/vim-gitgutter')
     call dein#add('easymotion/vim-easymotion')
@@ -35,6 +38,7 @@ if dein#load_state(expand('$HOME/.local/share/dein'))
     call dein#add('tpope/vim-eunuch')
     call dein#add('tpope/vim-sleuth')
     call dein#add('tpope/vim-surround')
+    call dein#add('troydm/zoomwintab.vim')
     call dein#add('vim-airline/vim-airline')
     call dein#add('w0rp/ale')
     call dein#add('Xuyuanp/nerdtree-git-plugin')
@@ -44,7 +48,7 @@ if dein#load_state(expand('$HOME/.local/share/dein'))
 endif
 
 if dein#check_install()
-  call dein#install()
+    call dein#install()
 endif
 
 filetype plugin indent on
@@ -85,7 +89,7 @@ map g# <Plug>(incsearch-nohl-g#)
 let g:NERDTreeMinimalUI = 1
 
 let g:startify_list_order = ['bookmarks', 'sessions', 'files', 'dir',
-  \ 'commands']
+    \ 'commands']
 " }}}
 " Vim configuration  --------------------------------------------------------{{{
 scriptencoding utf-8
@@ -117,11 +121,11 @@ else
     set background=dark
 endif
 " }}}
-" Terminal configuration  ---------------------------------------------------{{{
-"augroup TerminalGroup
-    "autocmd BufWinEnter,WinEnter term://* startinsert
-    "autocmd BufLeave term://* stopinsert
-"augroup END
+" Terminal configuration    ---------------------------------------------------{{{
+augroup TerminalGroup
+    autocmd BufWinEnter,WinEnter term://* startinsert
+    autocmd BufLeave term://* stopinsert
+augroup END
 
 " Toggle bottom terminal window
 let g:term_buf = 0
@@ -169,7 +173,7 @@ vnoremap < <gv
 vnoremap > >gv
 nnoremap q :q<cr>
 nnoremap <tab> :b#<cr>
-" tagbar, file explorer
+tnoremap <esc> <c-\><c-n>
 
 let g:mapleader = "\<space>"
 
@@ -237,29 +241,7 @@ nnoremap <leader>P "+P
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 
-tnoremap <esc> <c-\><c-n>
-nnoremap <leader>' :call ToggleTerminal()<cr>
-nnoremap <leader>r :call RunCommandOnCurrentFile("run")<cr>
-
-" <leader>h{p,s,u} - preview, stage, undo hunk
-" }}}
-" Navigation  ---------------------------------------------------------------{{{
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
-inoremap <A-h> <Esc><C-w>h
-inoremap <A-j> <Esc><C-w>j
-inoremap <A-k> <Esc><C-w>k
-inoremap <A-l> <Esc><C-w>l
-vnoremap <A-h> <C-w>h
-vnoremap <A-j> <C-w>j
-vnoremap <A-k> <C-w>k
-vnoremap <A-l> <C-w>l
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
+nnoremap <leader>qw :wq<cr>
 " }}}
 " Other  --------------------------------------------------------------------{{{
 augroup CursorRestoreGroup
