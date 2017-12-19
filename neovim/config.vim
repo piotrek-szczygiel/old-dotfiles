@@ -46,6 +46,7 @@ if dein#load_state(g:dein)
     call dein#add('Xuyuanp/nerdtree-git-plugin')
     call dein#add('Yggdroot/indentLine')
     call dein#add('zchee/deoplete-clang')
+    call dein#add('zchee/deoplete-jedi')
 
     call dein#end()
     call dein#save_state()
@@ -114,8 +115,10 @@ map g# <Plug>(incsearch-nohl-g#)
 let g:indentLine_color_gui = '#928374'
 
 let g:NERDTreeMinimalUI = 1
-autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree")
-    \ && b:NERDTree.isTabTree()) | q | endif
+augroup NERDTree
+    autocmd BufEnter * if (winnr('$') == 1 && exists('b:NERDTree')
+        \ && b:NERDTree.isTabTree()) | q | endif
+augroup END
 
 let g:rooter_change_directory_for_non_project_files = 'current'
 let g:rooter_resolve_links = 1
