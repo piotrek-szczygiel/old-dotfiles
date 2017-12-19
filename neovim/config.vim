@@ -24,6 +24,7 @@ if dein#load_state(expand('$HOME/.local/share/dein'))
     call dein#add('ntpeters/vim-better-whitespace')
     call dein#add('osyo-manga/vim-over')
     call dein#add('Raimondi/delimitMate')
+    call dein#add('ryanoasis/vim-devicons')
     call dein#add('scrooloose/nerdcommenter')
     call dein#add('scrooloose/nerdtree')
     call dein#add('sheerun/vim-polyglot')
@@ -163,6 +164,8 @@ nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>qw :wq<cr>
 nnoremap <leader>s :Startify<cr>
 nnoremap <leader>tw :set list!<cr>
+nnoremap <leader>tt :let &background =
+      \ ( &background == "dark" ? "light" : "dark" )<cr>
 
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
