@@ -1,10 +1,11 @@
 " Neovim configuration
 
 " Setup dein  ---------------------------------------------------------------{{{
-if(!isdirectory(expand('$HOME/.local/share/dein/repos/github.com/Shougo/dein.vim')))
+if(!isdirectory(expand('~/.local/share/dein/repos/github.com/Shougo/dein.vim')))
     echo 'Installing dein...'
-    call system(expand('mkdir -p $HOME/.local/share/dein/repos/github.com'))
-    call system(expand('git clone https://github.com/Shougo/dein.vim $HOME/.local/share/dein/repos/github.com/Shougo/dein.vim'))
+    call system('mkdir -p' . expand('~/.local/share/dein/repos/github.com'))
+    call system('git clone https://github.com/Shougo/dein.vim ' .
+          \ expand('~/.local/share/dein/repos/github.com/Shougo/dein.vim'))
 endif
 
 set runtimepath+=~/.local/share/dein/repos/github.com/Shougo/dein.vim
@@ -69,8 +70,6 @@ map g# <Plug>(incsearch-nohl-g#)
 
 let g:startify_list_order = ['bookmarks', 'sessions', 'files', 'dir',
   \ 'commands']
-let g:startify_bookmarks = [{'n': '~/.dotfiles/neovim/config.vim'},
-  \ {'t': '~/.dotfiles/tmux/tmux.conf.local'}]
 " }}}
 " Vim configuration  --------------------------------------------------------{{{
 scriptencoding utf-8
