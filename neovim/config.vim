@@ -173,9 +173,45 @@ nnoremap <tab> :b#<cr>
 
 let g:mapleader = "\<space>"
 
+" Window navigation  --------------------------------------------------------{{{
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+vnoremap <A-h> <C-w>h
+vnoremap <A-j> <C-w>j
+vnoremap <A-k> <C-w>k
+vnoremap <A-l> <C-w>l
+inoremap <A-h> <Esc><C-w>h
+inoremap <A-j> <Esc><C-w>j
+inoremap <A-k> <Esc><C-w>k
+inoremap <A-l> <Esc><C-w>l
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
+
+nnoremap <leader>wh <C-w>h
+nnoremap <leader>wj <C-w>j
+nnoremap <leader>wk <C-w>k
+nnoremap <leader>wl <C-w>l
+
+nnoremap <leader>wd <C-w>q
+nnoremap <leader>wo :ZoomWinTabToggle<cr>
+" }}}
+
+nnoremap <leader>d :Denite file_rec buffer<cr>
+nnoremap <leader>bb :Denite buffer<cr>
+nnoremap <leader>ff :Denite file_rec<cr>
+
+nnoremap <leader>g :Tagbar<cr>
+nnoremap <leader>n :NERDTreeToggle<cr>
+nnoremap <leader>s :Startify<cr>
+
 nnoremap <leader>bd :bd<cr>
 nnoremap <leader>bn :bn<cr>
 nnoremap <leader>bp :bp<cr>
+
 nnoremap <leader>fed :e $MYVIMRC<cr>
 nnoremap <leader>fer :source $MYVIMRC<cr>
 nnoremap <leader>fs :w<cr>
@@ -191,7 +227,10 @@ nnoremap <leader>it4 :set ts=4 sts=4 et<cr>:retab!<cr>
 
 nnoremap <leader>tw :set list!<cr>
 nnoremap <leader>tt :let &background =
-      \ ( &background == "dark" ? "light" : "dark" )<cr>
+    \(&background == "dark" ? "light" : "dark")<cr>
+
+nnoremap <leader>' :call ToggleTerminal()<cr>
+nnoremap <leader>r :call RunCommandOnCurrentFile("run")<cr>
 
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
