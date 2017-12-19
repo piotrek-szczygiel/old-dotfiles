@@ -21,11 +21,12 @@ if dein#load_state(g:dein)
     call dein#add('easymotion/vim-easymotion')
     call dein#add('editorconfig/editorconfig-vim')
     call dein#add('haya14busa/incsearch.vim')
+    call dein#add('jiangmiao/auto-pairs')
     call dein#add('majutsushi/tagbar')
+    call dein#add('mbbill/undotree')
     call dein#add('mhinz/vim-startify')
     call dein#add('morhetz/gruvbox')
     call dein#add('ntpeters/vim-better-whitespace')
-    call dein#add('osyo-manga/vim-over')
     call dein#add('Raimondi/delimitMate')
     call dein#add('ryanoasis/vim-devicons')
     call dein#add('scrooloose/nerdcommenter')
@@ -90,6 +91,8 @@ map g# <Plug>(incsearch-nohl-g#)
 let g:indentLine_color_gui = '#928374'
 
 let g:NERDTreeMinimalUI = 1
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree")
+    \ && b:NERDTree.isTabTree()) | q | endif
 
 let g:startify_list_order = ['bookmarks', 'sessions', 'files', 'dir',
     \ 'commands']
@@ -116,6 +119,7 @@ set splitbelow
 set splitright
 set tabstop=4
 set termguicolors
+set undofile
 set wildmode=longest,list,full
 
 if strftime('%H') >= 8 && strftime('%H') <= 15
@@ -174,7 +178,7 @@ endfunction
 " Keyboard bindings  --------------------------------------------------------{{{
 vnoremap < <gv
 vnoremap > >gv
-nnoremap q :q<cr>
+nnoremap <silent>q :q<cr>:set showtabline=2<cr>
 nnoremap <tab> :b#<cr>
 tnoremap <esc> <c-\><c-n>
 
@@ -207,13 +211,17 @@ nnoremap <leader>wd <C-w>q
 nnoremap <leader>wo :ZoomWinTabToggle<cr>
 " }}}
 
-nnoremap <leader>d :Denite file_rec buffer<cr>
 nnoremap <leader>bb :Denite buffer<cr>
 nnoremap <leader>ff :Denite file_rec<cr>
 
 nnoremap <leader>g :Tagbar<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>s :Startify<cr>
+nnoremap <leader>u :UndotreeToggle<cr>
+
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
 
 nnoremap <leader>bd :bd<cr>
 nnoremap <leader>bn :bn<cr>
