@@ -1,4 +1,9 @@
-set -xg EDITOR nvim
+set -xg BROWSER google-chrome-stable
+
+if test $EDITOR = "/usr/bin/nano"
+    set -xg EDITOR nvim
+end
+
 set -xg VISUAL $EDITOR
 set -xg PATH $HOME/.dotfiles/bin $HOME/.cargo/bin $HOME/.local/bin $PATH
 
