@@ -45,6 +45,7 @@ if dein#load_state(g:dein)
     call dein#add('w0rp/ale')
     call dein#add('Xuyuanp/nerdtree-git-plugin')
     call dein#add('Yggdroot/indentLine')
+    call dein#add('zchee/deoplete-clang')
 
     call dein#end()
     call dein#save_state()
@@ -60,6 +61,13 @@ filetype plugin indent on
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_sign_error = '⨉'
+let g:ale_sign_warning = '⚠'
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '']
+
 call denite#custom#map(
     \ 'insert',
     \ '<C-j>',
@@ -72,8 +80,22 @@ call denite#custom#map(
     \ '<denite:move_to_previous_line>',
     \ 'noremap'
     \)
+call denite#custom#option('default', {
+    \ 'prompt': '❯'
+    \})
+call denite#custom#var('file_rec', 'command',
+    \ ['rg', '--files', '--glob', '!.git'])
+call denite#custom#var('grep', 'command', ['rg'])
+call denite#custom#var('grep', 'default_opts',
+    \ ['--hidden', '--vimgrep', '--no-heading', '-S'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
+call denite#custom#var('grep', 'separator', ['--'])
+call denite#custom#var('grep', 'final_opts', [])
 
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
 
 let g:gruvbox_italic = 1
 colorscheme gruvbox
