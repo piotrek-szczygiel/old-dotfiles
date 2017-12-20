@@ -8,7 +8,7 @@ if(!isdirectory(g:dein . '/repos/github.com/Shougo/dein.vim'))
 
     call system('mkdir -p' . g:dein . 'repos/github.com')
     call system('git clone https://github.com/Shougo/dein.vim ' .
-        \ g:dein . '/repos/github.com/Shougo/dein.vim')
+\       g:dein . '/repos/github.com/Shougo/dein.vim')
 endif
 
 set runtimepath+=~/.local/share/dein/repos/github.com/Shougo/dein.vim
@@ -68,25 +68,31 @@ let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_sign_error = '⨯'
 let g:ale_sign_warning = '⚠'
+let g:ale_cpp_clangcheck_options = '-extra-arg=-std=c++14'
+let g:ale_linters = {
+\   'cpp': [
+\       'clang', 'clangcheck', 'cppcheck', 'cpplint', 'g++'
+\   ]
+\}
 
 call denite#custom#map(
-    \ 'insert',
-    \ '<C-j>',
-    \ '<denite:move_to_next_line>',
-    \ 'noremap'
-    \)
+\   'insert',
+\   '<C-j>',
+\   '<denite:move_to_next_line>',
+\   'noremap'
+\)
 call denite#custom#map(
-    \ 'insert',
-    \ '<C-k>',
-    \ '<denite:move_to_previous_line>',
-    \ 'noremap'
-    \)
+\   'insert',
+\   '<C-k>',
+\   '<denite:move_to_previous_line>',
+\   'noremap'
+\)
 call denite#custom#option('default', {
-    \ 'prompt': '❯'
-    \})
+\   'prompt': '❯'
+\})
 call denite#custom#var('grep', 'command', ['rg'])
 call denite#custom#var('grep', 'default_opts',
-    \ ['--hidden', '--vimgrep', '--no-heading', '-S'])
+\   ['--hidden', '--vimgrep', '--no-heading', '-S'])
 call denite#custom#var('grep', 'recursive_opts', [])
 call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
 call denite#custom#var('grep', 'separator', ['--'])
@@ -120,7 +126,7 @@ let g:indentLine_color_gui = '#928374'
 let g:NERDTreeMinimalUI = 1
 augroup NERDTree
     autocmd BufEnter * if (winnr('$') == 1 && exists('b:NERDTree')
-        \ && b:NERDTree.isTabTree()) | q | endif
+\       && b:NERDTree.isTabTree()) | q | endif
 augroup END
 
 let g:rooter_change_directory_for_non_project_files = 'current'
@@ -129,11 +135,13 @@ let g:rooter_silent_chdir = 1
 
 let g:tagbar_compact = 1
 
-let g:startify_list_order = ['bookmarks', 'sessions', 'files', 'dir',
-    \ 'commands']
+let g:startify_list_order = [
+\   'bookmarks', 'sessions', 'files', 'dir', 'commands'
+\]
 " }}}
 " Vim configuration  --------------------------------------------------------{{{
 scriptencoding utf-8
+set background=dark
 set colorcolumn=80
 set expandtab
 set foldmethod=marker
@@ -155,12 +163,6 @@ set tabstop=4
 set termguicolors
 set undofile
 set wildmode=longest,list,full
-
-if strftime('%H') >= 8 && strftime('%H') <= 15
-    set background=light
-else
-    set background=dark
-endif
 " }}}
 " Terminal configuration    ---------------------------------------------------{{{
 augroup TerminalGroup
@@ -168,7 +170,6 @@ augroup TerminalGroup
     autocmd BufLeave term://* stopinsert
 augroup END
 
-" Toggle bottom terminal window
 let g:term_buf = 0
 let g:term_win = 0
 
@@ -189,7 +190,6 @@ function! ToggleTerminal()
     endif
 endfunction
 
-" Run command in top window
 let g:cmd_win = 0
 
 function! RunCommand(command)
@@ -297,9 +297,9 @@ nnoremap <leader>qw :wq<cr>
 " Other  --------------------------------------------------------------------{{{
 augroup CursorRestoreGroup
     autocmd BufReadPost *
-        \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
-        \ | exe "normal! g`\""
-        \ | endif
+\       if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+\|          exe "normal! g`\""
+\|      endif
 
     autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 augroup END
