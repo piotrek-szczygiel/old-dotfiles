@@ -18,7 +18,6 @@ alias root "sudo -E bash"
 alias td "$EDITOR ~/.todo"
 alias update "pacaur -Syu"
 alias vi "$EDITOR"
-alias svi "sudo -E $EDITOR"
 
 alias ga "git add"
 alias gc "git commit"
