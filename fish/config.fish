@@ -7,10 +7,6 @@ set -xg MANPAGER "nvim -c 'set ft=man' -"
 
 set -xg PATH $HOME/.dotfiles/bin $HOME/.cargo/bin $HOME/.local/bin $PATH
 
-set -g default_user piotr
-set -g theme_display_user yes
-set -g theme_title_display_process yes
-
 set -g theme_color_scheme gruvbox
 
 alias aruba "ssh -t piotr@szczygiel.tk ~/arubasession"
