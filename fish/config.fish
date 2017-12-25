@@ -7,8 +7,6 @@ set -xg MANPAGER "nvim -c 'set ft=man' -"
 
 set -xg PATH $HOME/.dotfiles/bin $HOME/.cargo/bin $HOME/.local/bin $PATH
 
-set -g theme_color_scheme gruvbox
-
 alias aruba "ssh -t piotr@szczygiel.tk ~/arubasession"
 alias ls "better_ls"
 alias o "xdg-open"
@@ -23,12 +21,10 @@ alias ga "git add"
 alias gc "git commit"
 alias gca "git commit -a"
 alias gco "git checkout --"
-alias gd "git diff"
-alias gds "git diff --staged"
+alias gd "git difftool -y"
+alias gds "git difftool -y --staged"
 alias gl "git pull"
-alias glg "git log --graph --pretty=format:\
-'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)\
-%C(bold blue)<%an>%Creset' --abbrev-commit"
+alias glg "git lg"
 alias gp "git push"
 alias grh "git reset HEAD"
 alias gs "git status"

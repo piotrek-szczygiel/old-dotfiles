@@ -1,3 +1,20 @@
 [user]
     email = szczygiel.p@gmail.com
     name = Piotr Szczygieł
+[push]
+    default = simple
+[core]
+    editor = nvim
+[github]
+    user = szczygi
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    patch = add -p
+[diff]
+    tool = nvimdiff
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[merge]
+    tool = nvimdiff
+[mergetool "nvimdiff"]
+    cmd = nvim "+Gvdiff" "$MERGED"
