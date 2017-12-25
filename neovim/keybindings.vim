@@ -28,6 +28,8 @@ nnoremap <leader>bp :bp<cr>
 nnoremap <leader><tab> :b#<cr>
 
 nnoremap <leader>tw :set list!<cr>
+nnoremap <leader>tt :let &background =
+  \ ( &background == "dark"? "light" : "dark" )<cr>
 
 " Convert indentation
 nnoremap <leader>i24 :set ts=2 sts=2 noet<cr>:retab!<cr>
@@ -41,11 +43,11 @@ nnoremap <leader>it4 :set ts=4 sts=4 et<cr>:retab!<cr>
 
 nnoremap <leader>bb :Buffers<cr>
 nnoremap <leader>ff :Files<cr>
-nnoremap <leader>gf :GFiles<cr>
+nnoremap <leader>fg :GFiles<cr>
 nnoremap <leader>ss :BLines<cr>
 
-nnoremap <leader>tg :TagbarToggle<cr>
-nnoremap <leader>tt :Tags<cr>
+nnoremap <leader>g :TagbarToggle<cr>
+nnoremap <leader>tg :Tags<cr>
 
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)

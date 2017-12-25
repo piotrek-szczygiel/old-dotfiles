@@ -12,9 +12,14 @@ source ~/.dotfiles/neovim/keybindings.vim
 " Load other vim utilities
 source ~/.dotfiles/neovim/other.vim
 
+" 24-bit color support
+if has('termguicolors')
+  set termguicolors
+endif
 
 " Vim configuration
 set background=dark
+set cinoptions+=L0
 set colorcolumn=80
 set concealcursor=niv
 set conceallevel=2
@@ -40,10 +45,6 @@ set wildmenu
 set undofile
 set wildmode=longest,list,full
 
-colorscheme onedark
-
-if has('termguicolors')
-  set termguicolors
-endif
+colorscheme hybrid_material
 
 " vim: fdm=marker ts=2 sts=2 sw=2 expandtab
