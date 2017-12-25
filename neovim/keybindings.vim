@@ -66,11 +66,13 @@ nnoremap <silent> <C-j> <C-\><C-n><C-w>j
 nnoremap <silent> <C-h> <C-\><C-n><C-w>h
 nnoremap <silent> <C-l> <C-\><C-n><C-w>l
 
-tnoremap <Esc> <C-\><C-n>
-tnoremap <silent> <C-k> <C-\><C-n><C-w>k
-tnoremap <silent> <C-j> <C-\><C-n><C-w>j
-tnoremap <silent> <C-h> <C-\><C-n><C-w>h
-tnoremap <silent> <C-l> <C-\><C-n><C-w>l
+if v:version >= 800
+  tnoremap <Esc> <C-\><C-n>
+  tnoremap <silent> <C-k> <C-\><C-n><C-w>k
+  tnoremap <silent> <C-j> <C-\><C-n><C-w>j
+  tnoremap <silent> <C-h> <C-\><C-n><C-w>h
+  tnoremap <silent> <C-l> <C-\><C-n><C-w>l
+endif
 
 if has('nvim')
   nnoremap <leader>' :call ToggleTerminal()<cr>

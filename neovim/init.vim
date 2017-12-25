@@ -36,11 +36,14 @@ set smartcase
 set softtabstop=2
 set splitbelow
 set tabstop=2
-set termguicolors
 set wildmenu
 set undofile
 set wildmode=longest,list,full
 
 colorscheme onedark
+
+if has('termguicolors')
+  set termguicolors
+endif
 
 " vim: fdm=marker ts=2 sts=2 sw=2 expandtab

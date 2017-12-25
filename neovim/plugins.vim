@@ -63,9 +63,11 @@ let g:fzf_colors =
 let g:airline#extensions#ale#enabled = 1
 let g:bufferline_echo = 0
 let g:incsearch#auto_nohlsearch = 1
-let g:onedark_terminal_italics = 1
 let g:rooter_change_directory_for_non_project_files = 'home'
 let g:rooter_resolve_links = 1
 let g:rooter_silent_chdir = 1
 
+if has('termguicolors')
+  let g:onedark_terminal_italics = 1
+endif
 " vim: fdm=marker ts=2 sts=2 sw=2 expandtab

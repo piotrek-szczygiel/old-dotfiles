@@ -78,7 +78,7 @@ if has('nvim')
     let l:file = expand('%:p')
     call RunCommand(a:command . ' ' . l:file)
   endfunction
-else
+elseif v:version >= 800
   set termsize=7x0
 endif
 
