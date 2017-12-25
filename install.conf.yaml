@@ -21,11 +21,6 @@
     ~/.config/nvim/init.vim: neovim/init.vim
     ~/.vimrc: neovim/init.vim
 
-    ~/.config/ranger/rc.conf: ranger/config
-    ~/.config/ranger/scope.sh: ranger/scope.sh
-    ~/.config/ranger/plugins: ranger/plugins
-    ~/.config/ranger/devicons.py: ranger/devicons.py
-
     ~/.config/termite/config: termite/config
 
 - shell:
