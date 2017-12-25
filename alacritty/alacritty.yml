@@ -13,7 +13,7 @@ env:
   # Note that some xterm terminfo databases don't declare support for italics.
   # You can verify this by checking for the presence of `smso` and `sitm` in
   # `infocmp xterm-256color`.
-  TERM: xterm-termite
+  TERM: xterm-256color
 
 # Window dimensions in character columns and lines
 # Falls back to size specified by window manager if set to 0x0.
@@ -98,7 +98,7 @@ render_timer: false
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: false
 
-# Colors (Tomorrow Night Bright)
+# Colors (Gruvbox)
 colors:
   # Default colors
   primary:
@@ -186,7 +186,7 @@ mouse:
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
-hide_cursor_when_typing: false
+hide_cursor_when_typing: true
 
 # Style of the cursor
 #
