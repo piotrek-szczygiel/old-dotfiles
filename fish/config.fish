@@ -8,7 +8,10 @@ set -xg MANPAGER "nvim -c 'set ft=man' -"
 set -xg PATH $HOME/.dotfiles/bin $HOME/.cargo/bin $HOME/.local/bin $PATH
 
 alias aruba "ssh -t piotr@szczygiel.tk ~/arubasession"
-alias ls "better_ls"
+alias l "ls -l"
+alias ll "ls -la"
+alias ls "exa --git"
+alias lst "ls --tree"
 alias o "xdg-open"
 alias orphans "pacaur -Rns (pacaur -Qtdq)"
 alias plan "xdg-open ~/Dropbox/plan.png > /dev/null ^&1"

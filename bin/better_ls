@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-if uname -m | grep 64 > /dev/null 2>&1; then
-    BIN=better_ls_bin64
-else
-    BIN=better_ls_bin32
-fi
-
-LS_COLORS=$(better_ls_colors) $BIN --color=always --group-directories-first -h -w $(tput cols) $@
