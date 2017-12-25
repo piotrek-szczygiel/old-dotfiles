@@ -22,7 +22,3 @@
     ~/.vimrc: neovim/init.vim
 
     ~/.config/termite/config: termite/config
-
-- shell:
-    - mkdir -p ~/.local/bin
-    - mkdir -p ~/.cargo/bin
