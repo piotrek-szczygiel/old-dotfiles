@@ -32,7 +32,6 @@ Plug 'roxma/ncm-clang'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/neco-vim'
-Plug 'Shougo/neco-syntax'
 Plug 'w0rp/ale'
 
 call plug#end()
