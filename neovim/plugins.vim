@@ -38,13 +38,14 @@ call plug#end()
 
 
 " Plugin configuration
-let g:ale_linters = { 'cpp' : ['clang'] }
+let g:ale_linters = { 'cpp' : ['clang', 'cppcheck', 'cpplint'] }
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '✕'
 let g:ale_sign_warning = '⚠'
 augroup ALE
-  autocmd BufEnter *.cpp,*.h,*.hpp,*.hxx let g:ale_cpp_clang_options =
-    \ join(ncm_clang#compilation_info()['args'], ' ')
+  autocmd BufEnter *.cpp,*.h,*.hpp,*.hxx
+    \ let g:ale_cpp_clang_options =
+    \   join(ncm_clang#compilation_info()['args'], ' ')
 augroup END
 
 let g:AutoPairsFlyMode = 1
