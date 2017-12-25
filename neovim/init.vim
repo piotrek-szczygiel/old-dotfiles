@@ -45,6 +45,10 @@ set wildmenu
 set undofile
 set wildmode=longest,list,full
 
-colorscheme hybrid_material
+try
+  colorscheme gruvbox
+catch
+  colorscheme desert
+endtry
 
 " vim: fdm=marker ts=2 sts=2 sw=2 expandtab

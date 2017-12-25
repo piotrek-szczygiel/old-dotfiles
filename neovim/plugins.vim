@@ -6,8 +6,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
 Plug 'haya14busa/incsearch.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'majutsushi/tagbar'
+Plug 'morhetz/gruvbox'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -38,8 +38,6 @@ call plug#end()
 
 
 " Plugin configuration
-let g:airline_theme = 'hybrid'
-
 let g:ale_linters = { 'cpp' : ['clang'] }
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '✕'
@@ -51,8 +49,10 @@ augroup END
 
 let g:AutoPairsFlyMode = 1
 
-let g:enable_bold_font = 1
-let g:enable_italic_font = 1
+if has('termguicolors')
+  let g:gruvbox_bold = 1
+  let g:gruvbox_italic = 1
+endif
 
 let g:fzf_colors =
   \ { 'fg':    ['fg', 'Normal'],
