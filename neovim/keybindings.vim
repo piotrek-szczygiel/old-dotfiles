@@ -15,13 +15,16 @@ nnoremap <leader>P "+P
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 
-nnoremap <leader>fs :w<cr>
+nnoremap <leader>fec :PlugClean<cr>
 nnoremap <leader>fed :e $MYVIMRC<cr>
+nnoremap <leader>fei :PlugInstall<cr>
+nnoremap <leader>fek :e ~/.dotfiles/neovim/keybindings.vim<cr>
 nnoremap <leader>feo :e ~/.dotfiles/neovim/other.vim<cr>
 nnoremap <leader>fep :e ~/.dotfiles/neovim/plugins.vim<cr>
 nnoremap <leader>feP :e ~/.dotfiles/neovim/plug_setup.vim<cr>
-nnoremap <leader>fek :e ~/.dotfiles/neovim/keybindings.vim<cr>
 nnoremap <leader>fer :source $MYVIMRC<cr>
+nnoremap <leader>feu :PlugUpdate<cr>
+nnoremap <leader>fs :w<cr>
 
 nnoremap <leader>bn :bn<cr>
 nnoremap <leader>bp :bp<cr>
@@ -49,6 +52,8 @@ nnoremap <leader>ss :BLines<cr>
 nnoremap <leader>g :TagbarToggle<cr>
 nnoremap <leader>tg :Tags<cr>
 
+nnoremap <leader>u :UndotreeToggle<cr>
+
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
@@ -63,17 +68,32 @@ map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
-nnoremap <silent> <C-k> <C-\><C-n><C-w>k
-nnoremap <silent> <C-j> <C-\><C-n><C-w>j
-nnoremap <silent> <C-h> <C-\><C-n><C-w>h
-nnoremap <silent> <C-l> <C-\><C-n><C-w>l
+nnoremap <leader>wd <C-w>q
+nnoremap <leader>wh <C-w>h
+nnoremap <leader>wj <C-w>j
+nnoremap <leader>wk <C-w>k
+nnoremap <leader>wl <C-w>l
+nnoremap <leader>wo :ZoomWinTabToggle<cr>
+
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+vnoremap <A-h> <C-w>h
+vnoremap <A-j> <C-w>j
+vnoremap <A-k> <C-w>k
+vnoremap <A-l> <C-w>l
+inoremap <A-h> <Esc><C-w>h
+inoremap <A-j> <Esc><C-w>j
+inoremap <A-k> <Esc><C-w>k
+inoremap <A-l> <Esc><C-w>l
 
 if v:version >= 800
   tnoremap <Esc> <C-\><C-n>
-  tnoremap <silent> <C-k> <C-\><C-n><C-w>k
-  tnoremap <silent> <C-j> <C-\><C-n><C-w>j
-  tnoremap <silent> <C-h> <C-\><C-n><C-w>h
-  tnoremap <silent> <C-l> <C-\><C-n><C-w>l
+  tnoremap <A-h> <C-\><C-n><C-w>h
+  tnoremap <A-j> <C-\><C-n><C-w>j
+  tnoremap <A-k> <C-\><C-n><C-w>k
+  tnoremap <A-l> <C-\><C-n><C-w>l
 endif
 
 if has('nvim')
