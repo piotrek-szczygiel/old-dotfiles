@@ -57,17 +57,17 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Input
+    family: Input Mono
     style: Regular
 
   # The bold font face
   bold:
-    family: Input
+    family: Input Mono
     style: Bold
 
   # The italic font face
   italic:
-    family: Input
+    family: Input Mono
     style: Italic
 
   # Point size of the font
