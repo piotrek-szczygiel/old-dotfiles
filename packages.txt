@@ -3,7 +3,7 @@ Terminal:
     fish tmux exa neovim xclip python-pip clang-tools-extra
     cpplint cppcheck ripgrep ctags neofetch
   pip:
-    neovim pylint flake8 vim-vint
+    neovim pylint flake8 mypy vim-vint
   npm:
     gtop livedown
 
