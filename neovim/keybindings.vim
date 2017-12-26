@@ -15,9 +15,9 @@ nnoremap <leader>P "+P
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 
-nnoremap <leader>fec :PlugClean<cr>
+nnoremap <leader>fec :source $MYVIMRC<cr>:PlugClean<cr>
 nnoremap <leader>fed :e $MYVIMRC<cr>
-nnoremap <leader>fei :PlugInstall<cr>
+nnoremap <leader>fei :source $MYVIMRC<cr>:PlugInstall<cr>
 nnoremap <leader>fek :e ~/.dotfiles/neovim/keybindings.vim<cr>
 nnoremap <leader>feo :e ~/.dotfiles/neovim/other.vim<cr>
 nnoremap <leader>fep :e ~/.dotfiles/neovim/plugins.vim<cr>
