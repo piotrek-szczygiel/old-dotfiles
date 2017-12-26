@@ -10,6 +10,7 @@
 - link:
     ~/.bashrc: bash/config
     ~/.gitconfig: git/gitconfig
+    ~/.tmux.conf: tmux/tmux.conf
 
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/functions/fisher.fish: fish/fisher.fish

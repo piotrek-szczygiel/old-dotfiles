@@ -45,3 +45,5 @@ function q
     exit
   end
 end
+
+sh ~/.dotfiles/tmux/gruvbox.sh
