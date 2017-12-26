@@ -1,0 +1,18 @@
+Terminal:
+  arch:
+    fish tmux exa neovim xclip python-pip clang-tools-extra
+    cpplint cppcheck ripgrep ctags neofetch
+  pip:
+    neovim pylint flake8 vim-vint
+  npm:
+    gtop livedown
+
+GUI:
+  arch:
+    termite keepassxc dropbox google-chrome spotify ttf-symbola bdf-unifont
+    grub-customizer
+
+Gnome:
+  arch:
+    chrome-gnome-shell-git plank plank-theme-arc osx-arc-darker
+    capitaine-cursors macos-icon-theme otf-san-francisco
