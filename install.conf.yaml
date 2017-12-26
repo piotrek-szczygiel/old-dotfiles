@@ -9,10 +9,7 @@
 
 - link:
     ~/.bashrc: bash/config
-    ~/.gitconfig: gitconfig
-    ~/.xprofile: xprofile
-
-    ~/.config/alacritty/alacritty.yml: alacritty/alacritty.yml
+    ~/.gitconfig: git/gitconfig
 
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/functions/fisher.fish: fish/fisher.fish
@@ -21,4 +18,5 @@
     ~/.config/nvim/init.vim: neovim/init.vim
     ~/.vimrc: neovim/init.vim
 
+    ~/.config/alacritty/alacritty.yml: alacritty/alacritty.yml
     ~/.config/termite/config: termite/config
