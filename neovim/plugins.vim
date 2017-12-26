@@ -72,7 +72,6 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 let g:airline#extensions#ale#enabled = 1
-let g:bufferline_echo = 0
 let g:incsearch#auto_nohlsearch = 1
 let g:rooter_change_directory_for_non_project_files = 'home'
 let g:rooter_resolve_links = 1
