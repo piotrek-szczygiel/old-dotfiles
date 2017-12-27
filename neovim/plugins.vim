@@ -2,6 +2,9 @@
 
 scriptencoding utf-8
 
+let g:local = empty($SSH_CLIENT)
+let g:vim = !has('nvim')
+
 Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
 Plug 'haya14busa/incsearch.vim'
@@ -29,15 +32,15 @@ Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
-if !has('nvim')
-  Plug 'roxma/vim-hug-neovim-rpc'
+if g:local
+  Plug 'roxma/vim-hug-neovim-rpc', Cond(g:vim)
+  Plug 'roxma/nvim-completion-manager'
+  Plug 'roxma/ncm-clang'
+  Plug 'Shougo/neosnippet'
+  Plug 'Shougo/neosnippet-snippets'
+  Plug 'Shougo/neco-vim'
+  Plug 'w0rp/ale'
 endif
-Plug 'roxma/nvim-completion-manager'
-Plug 'roxma/ncm-clang'
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
-Plug 'Shougo/neco-vim'
-Plug 'w0rp/ale'
 
 call plug#end()
 
