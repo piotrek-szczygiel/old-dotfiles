@@ -1,23 +1,11 @@
-" szczygi's Vim8/NeoVim configuration
-
-set encoding=utf-8
+" szczygi's NeoVim configuration
 scriptencoding utf-8
 
-" Setup Vim-Plug
 source ~/.dotfiles/neovim/plug_setup.vim
-
-" Setup keybindings
+source ~/.dotfiles/neovim/plugins.vim
 source ~/.dotfiles/neovim/keybindings.vim
-
-" Load other vim utilities
 source ~/.dotfiles/neovim/other.vim
 
-" 24-bit color support
-if has('termguicolors')
-  set termguicolors
-endif
-
-" Vim configuration
 set background=dark
 set cinoptions+=L0
 set colorcolumn=80
@@ -34,6 +22,7 @@ set noswapfile
 set nowrap
 set nowritebackup
 set number
+set relativenumber
 set scrolloff=5
 set shiftwidth=2
 set sidescroll=1
@@ -41,14 +30,16 @@ set smartcase
 set softtabstop=2
 set splitbelow
 set tabstop=2
+set termguicolors
 set wildmenu
 set undofile
 set wildmode=longest,list,full
 
+" Fallback to desert if gruvbox isn't installed yet
 try
   colorscheme gruvbox
 catch
   colorscheme desert
 endtry
 
-" vim: fdm=marker ts=2 sts=2 sw=2 expandtab
+" vim: ts=2 sts=2 sw=2 expandtab

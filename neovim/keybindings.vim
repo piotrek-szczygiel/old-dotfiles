@@ -1,5 +1,4 @@
 " Key bindings
-
 let g:mapleader=' '
 
 nnoremap q :q<cr>
@@ -16,7 +15,7 @@ nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 
 nnoremap <leader>fec :source $MYVIMRC<cr>:PlugClean<cr>
-nnoremap <leader>fed :e $MYVIMRC<cr>
+nnoremap <leader>fed :e ~/.dotfiles/neovim/init.vim<cr>
 nnoremap <leader>fei :source $MYVIMRC<cr>:PlugInstall<cr>
 nnoremap <leader>fek :e ~/.dotfiles/neovim/keybindings.vim<cr>
 nnoremap <leader>feo :e ~/.dotfiles/neovim/other.vim<cr>
@@ -90,20 +89,13 @@ inoremap <A-j> <Esc><C-w>j
 inoremap <A-k> <Esc><C-w>k
 inoremap <A-l> <Esc><C-w>l
 
-if v:version >= 800
-  tnoremap <Esc> <C-\><C-n>
-  tnoremap <A-h> <C-\><C-n><C-w>h
-  tnoremap <A-j> <C-\><C-n><C-w>j
-  tnoremap <A-k> <C-\><C-n><C-w>k
-  tnoremap <A-l> <C-\><C-n><C-w>l
-endif
+tnoremap <Esc> <C-\><C-n>
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
 
-if has('nvim')
-  nnoremap <leader>' :call ToggleTerminal()<cr>
-  nnoremap <leader>r :call RunCommandOnCurrentFile('run')<cr>
-else
-  nnoremap <leader>' :terminal<cr>
-  nnoremap <leader>r :terminal run %<cr>
-endif
+nnoremap <leader>' :call ToggleTerminal()<cr>
+nnoremap <leader>r :call RunCommandOnCurrentFile('run')<cr>
 
-" vim: fdm=marker ts=2 sts=2 sw=2 expandtab
+" vim: ts=2 sts=2 sw=2 expandtab
