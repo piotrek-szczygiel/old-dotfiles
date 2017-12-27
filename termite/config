@@ -19,7 +19,7 @@ hyperlinks = false
 browser = xdg-open
 
 # "system", "on" or "off"
-cursor_blink = system
+cursor_blink = off
 
 # "block", "underline" or "ibeam"
 cursor_shape = block
