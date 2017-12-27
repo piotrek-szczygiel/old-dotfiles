@@ -17,7 +17,6 @@
     ~/.config/fish/fishfile: fish/fishfile
 
     ~/.config/nvim/init.vim: neovim/init.vim
-    ~/.vimrc: neovim/init.vim
 
     ~/.config/alacritty/alacritty.yml: alacritty/alacritty.yml
     ~/.config/termite/config: termite/config
