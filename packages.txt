@@ -9,8 +9,8 @@ Terminal:
 
 GUI:
   arch:
-    termite keepassxc dropbox google-chrome spotify ttf-symbola bdf-unifont
-    grub-customizer
+    termite keepassxc dropbox google-chrome spotify ttf-fantasque-sans-mono
+    ttf-symbola bdf-unifont grub-customizer
 
 Gnome:
   arch:
