@@ -77,18 +77,18 @@ nnoremap <leader>wk <C-w>k
 nnoremap <leader>wl <C-w>l
 nnoremap <leader>wo :ZoomWinTabToggle<cr>
 
-nnoremap <silent> <A-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <A-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <A-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <A-l> :TmuxNavigateRight<cr>
-nnoremap <silent> <A-\> :TmuxNavigatePrevious<cr>
+nnoremap <silent> <M-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <M-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <M-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <M-o> :TmuxNavigatePrevious<cr>
 
 tnoremap <esc> <C-\><C-n>
-tmap <silent> <A-h> <C-\><C-n><A-h>
-tmap <silent> <A-j> <C-\><C-n><A-j>
-tmap <silent> <A-k> <C-\><C-n><A-k>
-tmap <silent> <A-l> <C-\><C-n><A-l>
-tmap <silent> <A-\> <C-\><C-n><A-\>
+tmap <silent> <M-h> <C-\><C-n><A-h>
+tmap <silent> <M-j> <C-\><C-n><A-j>
+tmap <silent> <M-k> <C-\><C-n><A-k>
+tmap <silent> <M-l> <C-\><C-n><A-l>
+tmap <silent> <M-o> <C-\><C-n><A-\>
 
 nnoremap <leader>' :call ToggleTerminal()<cr>
 nnoremap <leader>r :call RunCommandOnCurrentFile('run')<cr>
