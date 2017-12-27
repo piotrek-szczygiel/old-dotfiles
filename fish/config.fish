@@ -18,8 +18,8 @@ end
 
 set -xg FZF_TMUX 1
 set -xg FZF_TMUX_HEIGHT 25%
-set -xg FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow\
-  --glob "!.git/*"'
+set -xg FZF_DEFAULT_COMMAND "rg --files --no-ignore --hidden"
+set -xg FZF_DEFAULT_COMMAND "$FZF_DEFAULT_COMMAND --follow --glob '!.git/*'"
 
 alias aruba "ssh -t piotr@szczygiel.tk ~/arubasession"
 alias l "ls -l"
