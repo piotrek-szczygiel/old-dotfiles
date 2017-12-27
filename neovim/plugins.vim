@@ -24,11 +24,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+
 " Don't use these plugins on SSH connection
 if empty($SSH_CLIENT)
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-  Plug 'junegunn/fzf.vim'
-
   Plug 'roxma/nvim-completion-manager'
   Plug 'roxma/ncm-clang'
   Plug 'Shougo/neosnippet'
@@ -41,13 +41,15 @@ call plug#end()
 
 
 " Plugin configuration
-let g:ale_linters = { 'cpp' : ['clang', 'cppcheck', 'cpplint'] }
-let g:ale_sign_column_always = 1
-augroup ALE
-  autocmd BufEnter *.cpp,*.h,*.hpp,*.hxx
-    \ let g:ale_cpp_clang_options =
-    \   join(ncm_clang#compilation_info()['args'], ' ')
-augroup END
+if empty($SSH_CLIENT)
+  let g:ale_linters = { 'cpp' : ['clang', 'cppcheck', 'cpplint'] }
+  let g:ale_sign_column_always = 1
+  augroup ALE
+    autocmd BufEnter *.cpp,*.h,*.hpp,*.hxx
+      \ let g:ale_cpp_clang_options =
+      \   join(ncm_clang#compilation_info()['args'], ' ')
+  augroup END
+endif
 
 let g:AutoPairsFlyMode = 1
 
