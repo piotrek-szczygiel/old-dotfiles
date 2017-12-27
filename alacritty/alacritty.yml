@@ -13,7 +13,7 @@ env:
   # Note that some xterm terminfo databases don't declare support for italics.
   # You can verify this by checking for the presence of `smso` and `sitm` in
   # `infocmp xterm-256color`.
-  TERM: xterm-256color
+  TERM: xterm-termite
 
 # Window dimensions in character columns and lines
 # Falls back to size specified by window manager if set to 0x0.
@@ -57,21 +57,21 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Input Mono
+    family: Fantasque Sans Mono
     style: Regular
 
   # The bold font face
   bold:
-    family: Input Mono
+    family: Fantasque Sans Mono
     style: Bold
 
   # The italic font face
   italic:
-    family: Input Mono
+    family: Fantasque Sans Mono
     style: Italic
 
   # Point size of the font
-  size: 18.0
+  size: 20.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
