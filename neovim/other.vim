@@ -7,6 +7,10 @@ command! -bang -nargs=* Rg
   \   <bang>0)
 
 
+" :w!! - Sudo write
+cmap w!! w !sudo tee > /dev/null %
+
+
 " Restore last cursor position
 augroup RememberCursorPosition
   autocmd BufReadPost *
