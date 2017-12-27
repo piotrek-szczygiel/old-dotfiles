@@ -8,11 +8,12 @@ nnoremap <leader>qw :wq<cr>
 vnoremap < <gv
 vnoremap > >gv
 
-" Copy, Paste from system clipboard
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
+
+nnoremap <leader><cr> :nohl<cr>
 
 nnoremap <leader>fec :source $MYVIMRC<cr>:PlugClean<cr>
 nnoremap <leader>fed :e ~/.dotfiles/neovim/init.vim<cr>
@@ -76,24 +77,18 @@ nnoremap <leader>wk <C-w>k
 nnoremap <leader>wl <C-w>l
 nnoremap <leader>wo :ZoomWinTabToggle<cr>
 
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
-vnoremap <A-h> <C-w>h
-vnoremap <A-j> <C-w>j
-vnoremap <A-k> <C-w>k
-vnoremap <A-l> <C-w>l
-inoremap <A-h> <Esc><C-w>h
-inoremap <A-j> <Esc><C-w>j
-inoremap <A-k> <Esc><C-w>k
-inoremap <A-l> <Esc><C-w>l
+nnoremap <silent> <A-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <A-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <A-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <A-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <A-\> :TmuxNavigatePrevious<cr>
 
-tnoremap <Esc> <C-\><C-n>
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
+tnoremap <esc> <C-\><C-n>
+tmap <silent> <A-h> <C-\><C-n><A-h>
+tmap <silent> <A-j> <C-\><C-n><A-j>
+tmap <silent> <A-k> <C-\><C-n><A-k>
+tmap <silent> <A-l> <C-\><C-n><A-l>
+tmap <silent> <A-\> <C-\><C-n><A-\>
 
 nnoremap <leader>' :call ToggleTerminal()<cr>
 nnoremap <leader>r :call RunCommandOnCurrentFile('run')<cr>

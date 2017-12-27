@@ -3,6 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'haya14busa/incsearch.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'justinmk/vim-sneak'
@@ -77,5 +78,6 @@ let g:incsearch#auto_nohlsearch = 1
 let g:rooter_change_directory_for_non_project_files = 'home'
 let g:rooter_resolve_links = 1
 let g:rooter_silent_chdir = 1
+let g:tmux_navigator_no_mappings = 1
 
 " vim: ts=2 sts=2 sw=2 expandtab
