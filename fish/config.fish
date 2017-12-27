@@ -12,6 +12,14 @@ end
 if test -d "$HOME/.local/bin"
   set -xg PATH $HOME/.local/bin $PATH
 end
+if test -d "$HOME/.fzf/bin"
+  set -xg PATH "$HOME/.fzf/bin" $PATH
+end
+
+set -xg FZF_TMUX 1
+set -xg FZF_TMUX_HEIGHT 25%
+set -xg FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow\
+  --glob "!.git/*"'
 
 alias aruba "ssh -t piotr@szczygiel.tk ~/arubasession"
 alias l "ls -l"
