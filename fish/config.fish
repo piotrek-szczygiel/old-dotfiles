@@ -47,5 +47,3 @@ alias glg "git lg"
 alias gp "git push"
 alias grh "git reset HEAD"
 alias gs "git status"
-
-sh ~/.dotfiles/tmux/gruvbox.sh
