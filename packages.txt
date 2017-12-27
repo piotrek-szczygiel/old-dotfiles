@@ -1,6 +1,6 @@
 Terminal:
   arch:
-    fish tmux exa neovim xclip python-pip clang-tools-extra
+    fish tmux exa fasd neovim xclip python-pip clang-tools-extra
     cpplint cppcheck ripgrep ctags neofetch
   pip:
     neovim pylint flake8 mypy vim-vint

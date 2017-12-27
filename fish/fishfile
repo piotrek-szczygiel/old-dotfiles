@@ -1,10 +1,10 @@
 fisherman/await
-oh-my-fish/theme-bobthefish
+oh-my-fish/plugin-bang-bang
+szczygi/plugin-fasd
 fisherman/fnm
 fisherman/get_file_age
-fisherman/getopts
 fisherman/gitignore
 fisherman/last_job_id
 fisherman/menu
+rafaelrinaldi/pure
 fisherman/spin
-fisherman/z
