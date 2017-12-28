@@ -16,6 +16,11 @@ if test -d "$HOME/.fzf/bin"
   set -xg PATH "$HOME/.fzf/bin" $PATH
 end
 
+if type -q rustc
+  set -xg RUST_SRC_PATH (rustc --print sysroot ^ /dev/null)
+  set -xg RUST_SRC_PATH "$RUST_SRC_PATH/lib/rustlib/src/rust/src"
+end
+
 set -xg FZF_TMUX 1
 set -xg FZF_TMUX_HEIGHT 25%
 set -xg FZF_DEFAULT_COMMAND "rg --files --no-ignore --hidden"
