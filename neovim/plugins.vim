@@ -53,8 +53,6 @@ if empty($SSH_CLIENT)
   augroup END
 endif
 
-let g:AutoPairsFlyMode = 1
-
 let g:fzf_colors =
   \ { 'fg':    ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
