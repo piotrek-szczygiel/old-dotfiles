@@ -20,6 +20,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'troydm/zoomwintab.vim'
+Plug 'scrooloose/nerdtree'
 Plug 'shime/vim-livedown'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -54,11 +55,6 @@ endif
 
 let g:AutoPairsFlyMode = 1
 
-if has('termguicolors')
-  let g:gruvbox_bold = 1
-  let g:gruvbox_italic = 1
-endif
-
 let g:fzf_colors =
   \ { 'fg':    ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
@@ -73,8 +69,14 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+if has('termguicolors')
+  let g:gruvbox_bold = 1
+  let g:gruvbox_italic = 1
+endif
+
 let g:airline#extensions#ale#enabled = 1
 let g:incsearch#auto_nohlsearch = 1
+let g:NERDTreeMinimalUI = 1
 let g:rooter_change_directory_for_non_project_files = 'home'
 let g:rooter_resolve_links = 1
 let g:rooter_silent_chdir = 1

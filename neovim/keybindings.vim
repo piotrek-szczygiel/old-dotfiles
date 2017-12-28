@@ -52,6 +52,8 @@ nnoremap <leader>ss :BLines<cr>
 nnoremap <leader>g :TagbarToggle<cr>
 nnoremap <leader>tg :Tags<cr>
 
+nnoremap <leader>n :NERDTreeToggle<cr>
+
 nnoremap <leader>u :UndotreeToggle<cr>
 
 nnoremap <leader>lp :LivedownToggle<cr>
