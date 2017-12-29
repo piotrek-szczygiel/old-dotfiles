@@ -31,6 +31,7 @@ nnoremap <leader>bp :bp<cr>
 nnoremap <leader><tab> :b#<cr>
 
 nnoremap <leader>tw :set list!<cr>
+nnoremap <leader>tc :set notermguicolors<cr>:colorscheme desert<cr>:mode<cr>
 nnoremap <leader>tt :let &background =
   \ ( &background == "dark"? "light" : "dark" )<cr>
 
