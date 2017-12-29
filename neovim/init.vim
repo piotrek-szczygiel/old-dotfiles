@@ -39,6 +39,7 @@ set wildmode=longest,list,full
 try
   colorscheme gruvbox
 catch
+  set notermguicolors
   colorscheme desert
 endtry
 
