@@ -21,8 +21,8 @@ printf "#[fg=#1d2021,bg=white,bold] "
 if [ "$username" = "root" ]; then
   printf "#[fg=colour1]root!"
 else
-  printf "$username"
+  printf "%s" "$username"
 fi
 
 printf "#[fg=colour0,nobold]"
-printf "@$hostname "
+printf "@%s" "$hostname"
