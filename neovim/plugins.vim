@@ -9,7 +9,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'justinmk/vim-sneak'
 Plug 'majutsushi/tagbar'
 Plug 'mbbill/undotree'
-Plug 'morhetz/gruvbox'
 Plug 'mhinz/vim-startify'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'sheerun/vim-polyglot'
@@ -31,12 +30,23 @@ Plug 'junegunn/fzf.vim'
 
 " Don't use these plugins on SSH connection
 if empty($SSH_CLIENT)
+  Plug 'morhetz/gruvbox'
+
   Plug 'roxma/nvim-completion-manager'
-  Plug 'roxma/ncm-clang'
+  Plug 'w0rp/ale'
   Plug 'Shougo/neosnippet'
   Plug 'Shougo/neosnippet-snippets'
+
+  " C/C++
+  Plug 'roxma/ncm-clang'
+
+  "Rust
+  Plug 'racer-rust/vim-racer'
+  Plug 'roxma/nvim-cm-racer'
+  Plug 'rust-lang/rust.vim'
+
+  " Vim
   Plug 'Shougo/neco-vim'
-  Plug 'w0rp/ale'
 endif
 
 call plug#end()

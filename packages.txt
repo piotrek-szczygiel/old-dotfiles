@@ -6,6 +6,8 @@ Terminal:
     neovim pylint flake8 mypy jedi vim-vint
   npm:
     gtop livedown
+  cargo:
+    rustfmt-nightly racer
 
 GUI:
   arch:

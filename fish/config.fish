@@ -17,8 +17,10 @@ if test -d "$HOME/.fzf/bin"
 end
 
 if type -q rustc
-  set -xg RUST_SRC_PATH (rustc --print sysroot ^ /dev/null)
-  set -xg RUST_SRC_PATH "$RUST_SRC_PATH/lib/rustlib/src/rust/src"
+  set -l RUST_ROOT (rustc --print sysroot ^ /dev/null)
+
+  set -xg RUST_SRC_PATH "$RUST_ROOT/lib/rustlib/src/rust/src"
+  set -xg LD_LIBRARY_PATH "$RUST_ROOT/lib:$LD_LIBRARY_PATH"
 end
 
 set -xg FZF_TMUX 1
