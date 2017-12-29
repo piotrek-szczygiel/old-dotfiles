@@ -4,3 +4,6 @@
 [submodule "tmux/battery"]
 	path = tmux/battery
 	url = https://github.com/tmux-plugins/tmux-battery
+[submodule "tmux/net-speed"]
+	path = tmux/net-speed
+	url = https://github.com/tmux-plugins/tmux-net-speed
