@@ -50,14 +50,16 @@ nnoremap <leader>ff :Files<cr>
 nnoremap <leader>fg :GFiles<cr>
 nnoremap <leader>ss :BLines<cr>
 
-nnoremap <leader>g :TagbarToggle<cr>
-nnoremap <leader>tg :Tags<cr>
+nnoremap <leader>lp :LivedownToggle<cr>
 
 nnoremap <leader>n :NERDTreeToggle<cr>
 
-nnoremap <leader>u :UndotreeToggle<cr>
+nnoremap <leader>st :Startify<cr>
 
-nnoremap <leader>lp :LivedownToggle<cr>
+nnoremap <leader>g :TagbarToggle<cr>
+nnoremap <leader>tg :Tags<cr>
+
+nnoremap <leader>u :UndotreeToggle<cr>
 
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
