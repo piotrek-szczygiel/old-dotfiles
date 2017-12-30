@@ -16,5 +16,5 @@ GUI:
 
 Gnome:
   arch:
-    chrome-gnome-shell-git plank plank-theme-arc osx-arc-darker
-    capitaine-cursors macos-icon-theme otf-san-francisco
+    sflock-git xss-lock chrome-gnome-shell-git plank plank-theme-arc
+    osx-arc-darker capitaine-cursors macos-icon-theme otf-san-francisco
