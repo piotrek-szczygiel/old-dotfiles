@@ -34,6 +34,10 @@ color_low_charge="#[fg=red]"
 
 percentage=$(battery_percentage | sed -e 's/%//')
 
+if [ -z "$percentage" ]; then
+  exit 0
+fi
+
 if [ "$percentage" -eq 100 ]; then
   color="$color_full_charge"
 elif [ "$percentage" -le 99 ] && [ "$percentage" -ge 51 ]; then
