@@ -14,6 +14,7 @@ set conceallevel=2
 set expandtab
 set hidden
 set ignorecase
+set list
 set listchars=tab:>-,trail:~,extends:>,precedes:<,space:·
 set mouse=a
 set nobackup
