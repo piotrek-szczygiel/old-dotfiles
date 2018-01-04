@@ -61,7 +61,7 @@ function! RunCommand(command)
   endif
 
   topleft new
-  exec 'resize 5'
+  exec 'resize 10'
   call termopen(a:command)
   startinsert!
   let g:cmd_win = win_getid()
