@@ -25,10 +25,10 @@ set nowritebackup
 set number
 set relativenumber
 set scrolloff=5
-set shiftwidth=2
+set shiftwidth=4
 set sidescroll=1
 set smartcase
-set softtabstop=2
+set softtabstop=4
 set splitbelow
 set tabstop=2
 set termguicolors
