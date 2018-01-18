@@ -25,6 +25,15 @@ command! -bang -nargs=* Rg
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
+" Rust definition bindings
+augroup RustBindings
+  autocmd FileType rust nmap gd <Plug>(rust-def)
+  autocmd FileType rust nmap gs <Plug>(rust-def-split)
+  autocmd FileType rust nmap gx <Plug>(rust-def-vertical)
+  autocmd FileType rust nmap <leader>gd <Plug>(rust-doc)
+augroup END
+
+
 " Terminal utilities
 augroup TerminalEnter
   autocmd BufWinEnter,WinEnter term://* startinsert

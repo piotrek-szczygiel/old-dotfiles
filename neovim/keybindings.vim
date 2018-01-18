@@ -34,6 +34,7 @@ nnoremap <leader>tw :set list!<cr>
 nnoremap <leader>tc :set notermguicolors<cr>:colorscheme desert<cr>:mode<cr>
 nnoremap <leader>tt :let &background =
   \ ( &background == "dark"? "light" : "dark" )<cr>
+nnoremap <leader>tz :Goyo<cr>:Limelight!!<cr>:!tmux set-option -g status<cr><cr>
 
 " Convert indentation
 nnoremap <leader>i24 :set ts=2 sts=2 noet<cr>:retab!<cr>
@@ -60,10 +61,6 @@ nnoremap <leader>g :TagbarToggle<cr>
 nnoremap <leader>tg :Tags<cr>
 
 nnoremap <leader>u :UndotreeToggle<cr>
-
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
 
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
