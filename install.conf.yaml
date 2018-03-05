@@ -12,6 +12,8 @@
     ~/.gitconfig: git/gitconfig
     ~/.tmux.conf: tmux/tmux.conf
 
+    ~/.config/Code/User/settings.json: vscode/settings.json
+
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/functions/fisher.fish: fish/fisher.fish
     ~/.config/fish/fishfile: fish/fishfile

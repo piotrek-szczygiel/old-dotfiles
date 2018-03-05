@@ -1,0 +1,65 @@
+{
+    "editor.cursorBlinking": "solid",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+
+    "keyboard.dispatch": "keyCode",
+    "pixelbyte.love2d.path": "love",
+    "workbench.colorTheme": "One Dark Pro",
+
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.sneak": true,
+    "vim.timeout": 500,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-b>": false,
+        "<C-c>": false,
+        "<C-f>": false,
+        "<C-s>": false,
+        "<C-v>": false,
+        "<C-w>": false,
+        "<C-x>": false,
+        "<C-z>": false
+    },
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "s"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": ":w"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "<cr>"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": ":nohl"
+                }
+            ]
+        },
+        {
+            "before": [
+                ":"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.showCommands",
+                    "args": []
+                }
+            ]
+        }
+    ]
+}
